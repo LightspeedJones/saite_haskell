@@ -1,2 +1,5 @@
-/        HomeR     GET
-/cliente ClienteR  GET POST
+/         HomeR     GET
+/cliente  ClienteR  GET POST
+/login    LoginR    GET POST
+/cardapio CardapioR GET
+/logout   LogoutR   POST

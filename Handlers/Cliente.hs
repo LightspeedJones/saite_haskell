@@ -28,11 +28,19 @@ getClienteR = do
            
 postClienteR :: Handler Html
 postClienteR = do
-            ((result, _), _) <- runFormPost formCliente
-            case result of
-                FormSuccess cliente -> do
-                    pid <- runDB $ insert cliente
-                    defaultLayout [whamlet|
-                        Cliente cadastrado com sucesso #{fromSqlKey pid}!
-                    |]
-                _ -> redirect HomeR
+                ((result, _), _) <- runFormPost formCliente
+                case result of
+                    FormSuccess cliente -> do
+                       unicoLogin <- runDB $ getBy $ UniqueLogin (clienteLogin cliente)
+                       case unicoLogin of
+                           Just _ -> do
+                              defaultLayout [whamlet|
+                                Login já cadastrado
+                              |]
+                           Nothing -> do 
+                              pid <- runDB $ insert cliente
+                              defaultLayout [whamlet|
+                                Cliente cadastrado com sucesso!
+                              |]
+                              --redirect (ClienteR pid)
+                    _ -> redirect HomeR

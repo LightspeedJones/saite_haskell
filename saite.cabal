@@ -8,7 +8,9 @@ executable          saite
   main-is:          Main.hs
   other-modules:    Foundation
                     Application
-                    Cliente
+                    Handlers.Cliente
+                    Handlers.Login
+                    Handlers.Produto
                     
   ghc-options:      -Wall -fwarn-tabs -O2
 
@@ -20,5 +22,6 @@ executable          saite
                 , persistent-postgresql
                 , aeson
                 , monad-logger
+                , shakespeare
 
   ghc-options:    -threaded -O2 -rtsopts -with-rtsopts=-N

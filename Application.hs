@@ -26,7 +26,7 @@ getLayoutLogado x = defaultLayout $ do
                     font-family: segoe ui light;
                     text-align: center;
                 }
-                
+            
                 ul {
                     list-style-type: none;
                     margin: 0;
@@ -37,30 +37,45 @@ getLayoutLogado x = defaultLayout $ do
 
                 li {
                     float: left;
-                    font-family: segoe ui light;
+                }
+
+                li{
                     display: block;
                     color: white;
                     text-align: center;
                     padding: 14px 16px;
                     text-decoration: none;
-                    font-color: white;
+                    font-family: segoe ui light;
+                }
+                
+                a{
+                    color: white;
+                    font-family:segoe ui light;
                 }
 
-                li :hover {
+                li a:hover:not(.active) {
                     background-color: #111;
                 }
+
+                .active {
+                    background-color: #4CAF50;
+                }
                 
+                #card{
+                    color:black;
+                }
                 
             |]
+            
             [whamlet|
                 <ul>
-                    <li> <a href=@{ClienteR}>Cadastro 
-                    <li> <a href=@{CardapioR}>Cardapio 
-                    <li style="float:right"> <a href=@{LogoutR}>Sair </a></ul>
-                
+                    <li style="float:right"> <a href=@{LogoutR}>Sair </a>
+                    <li style="float:right"> eae #{x} </ul>
                 
                 <h1> RESTAURANTE RESTAURANTOSO
-                <h1> #{x}
+                <h2> <a id="card" href=@{CardapioR}> Cardapio
+                
+                
             |]
             
             
@@ -70,50 +85,63 @@ getLayoutVisitante = defaultLayout $ do
             toWidget[lucius|
                 h1{
                     font-size: 30px;
-                    margin-top: 40px;
-                    margin-bottom: 40px;
                     font-family: segoe ui light;
                     text-align: center;
                 }
-                #teste {
-                    list-style-type: none;
+            
+                ul {
+                    
                     margin: 0;
                     padding: 0;
-                    width: 200px;
-                    background-color: #f1f1f1;
+                    overflow: hidden;
+                    background-color: #333;
                 }
 
-                li a {
+                li {
+                    float: left;
+                }
+
+                li{
                     display: block;
-                    color: #000;
-                    padding: 8px 16px;
-                    text-decoration: none;
-                    font-family: segoe ui;
-                    text-align: center;
-
-                }
-
-                li a:hover {
-                    background-color: #555;
                     color: white;
+                    text-align: center;
+                    padding: 14px 16px;
+                    text-decoration: none;
+                    font-family: segoe ui light;
                 }
                 
-                h2 {
-                    font-family: segoe ui light;
-                    text-align: right;
+                a{
+                    color: white;
                 }
+
+                li a:hover:not(.active) {
+                    background-color: #111;
+                }
+
+                .active {
+                    background-color: #4CAF50;
+                }
+                
+                h2{
+                    color: black;
+                    font-family: segoe ui light;
+                }
+                
+                #cadastro{
+                    color:black;
+                }
+                
             |]
     
             [whamlet|
-                <h1> RESTAURANTE RESTAURANTOSO
-                <ul id="teste">
-                    <li> <a href=@{ClienteR}> Cadastro
-                    <li> <a href=@{CardapioR}> Cardapio
-                    <li> <a href=@{LoginR}> Login
+                <ul>
+                    <li style="float:right"> <a href=@{LoginR}>Login </a>
+                    <li style="float:right"> eae visitante </ul>
             
+                <h1> RESTAURANTE RESTAURANTOSO
+                <h2> <a id="cadastro" href=@{ClienteR}> Faça seu cadastro!
             |]
             
-            --LoginR
 
 getHomeR :: Handler Html
 getHomeR  = do

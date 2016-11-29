@@ -13,26 +13,30 @@ data App = App {connPool :: ConnectionPool }
 
 share [mkPersist sqlSettings, mkMigrate "migrateAll"] [persistLowerCase|
 Cliente
-    nome        Text
-    endereco    Text
-    telefone    Text
-    login       Text
-    pword       Text
-    UniqueLogin login
+    nome          Text
+    endereco      Text
+    telefone      Text
+    login         Text
+    pword         Text
+    UniqueLogin   login
     
 Produto
-    nome        Text
-    valor       Double
+    nome          Text
+    valor         Double
+    tipoprodutoid TipoProdutoId      
 
 Pedido
-    clienteid   ClienteId
-    vltot       Double
-    hrpedido    Double
+    clienteid     ClienteId
+    vltot         Double
+    hrpedido      Double
     
-Item_Pedido
-    pedidoid    PedidoId
-    produtoid   ProdutoId
-    vlunit      Double
+ItemPedido
+    pedidoid      PedidoId
+    produtoid     ProdutoId
+    vlunit        Double
+
+TipoProduto
+    nometipo      Text
 |]
 
 mkYesodData "App" $(parseRoutesFile "routes")
@@ -53,3 +57,6 @@ instance RenderMessage App FormMessage where
     
 widgetForm :: Route App -> Enctype -> Widget -> Text -> Widget
 widgetForm x enctype widget y = $(whamletFile "templates/form.hamlet")
+
+-- widgetFormCss :: Route App -> Enctype -> Widget -> Text -> Widget
+-- widgetFormCss xis enctype widget z = $(toWidget "templates/form.julius")

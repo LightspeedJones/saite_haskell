@@ -8,6 +8,7 @@ import Database.Persist.Postgresql
 import Data.Text
 import Data.Maybe
 import Data.Monoid
+import Text.Julius
 
 formCliente :: Form Cliente
 formCliente = renderDivs $ Cliente <$> 
@@ -20,6 +21,8 @@ formCliente = renderDivs $ Cliente <$>
 getClienteR :: Handler Html
 getClienteR = do
           (widget, enctype) <- generateFormPost formCliente
+          
+          
           defaultLayout [whamlet|
              <form method=post action=@{ClienteR} enctype=#{enctype}>
                  ^{widget}
@@ -35,7 +38,7 @@ postClienteR = do
                        case unicoLogin of
                            Just _ -> do
                               defaultLayout [whamlet|
-                                Login já cadastrado
+                                 Login já cadastrado
                               |]
                            Nothing -> do 
                               pid <- runDB $ insert cliente

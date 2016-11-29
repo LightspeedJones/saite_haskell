@@ -13,20 +13,17 @@ import Database.Persist.Postgresql
 formLogin :: Form (Text, Text)
 formLogin = renderDivs $ (,) <$>
              areq textField "Login" Nothing <*>
-             areq passwordField "Password" Nothing
+             areq passwordField "Senha" Nothing
 
 getLoginR :: Handler Html
 getLoginR = do
-    (widget, enctype) <- generateFormPost formLogin
-    defaultLayout $ widgetForm LoginR enctype widget ""
-            -- (widget, enctype) <- generateFormPost formLogin
-            
-            -- defaultLayout [whamlet|
-            --  <form id="form" method=post action=@{LoginR} enctype=#{enctype}>
-            --      ^{widget}
-            --      <input type="submit" value="Login">
-            --      <a href=@{HomeR}>Home
-            -- |]
+            (widget, enctype) <- generateFormPost formLogin
+            defaultLayout [whamlet|
+             <form method=post action=@{LoginR} enctype=#{enctype}>
+                 ^{widget}
+                 <input type="submit" value="Login">
+                 <a href=@{HomeR}>Home
+          |]
 
 postLoginR :: Handler Html
 postLoginR = do
@@ -45,11 +42,8 @@ postLoginR = do
                            redirect HomeR
                        Nothing -> redirect LoginR
                 _ -> redirect HomeR
-
-postLogoutR:: Handler Html
-postLogoutR = do
+    
+getLogoutR :: Handler Html
+getLogoutR = do  
     deleteSession "_NOME"
     redirect HomeR
-    
--- getLogoutR :: Handler Html
--- getLogoutR = undefined

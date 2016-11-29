@@ -10,21 +10,21 @@ import Data.Maybe
 import Data.Monoid
 
 formCliente :: Form Cliente
-formCliente = renderDivs $ Cliente
-    <$> areq textField "Nome" Nothing
-    <*> areq textField "Endereco" Nothing
-    <*> areq textField "Telefone" Nothing
-    <*> areq textField "Login" Nothing
-    <*> areq textField "Senha" Nothing
+formCliente = renderDivs $ Cliente <$> 
+    areq textField "Nome" Nothing <*> 
+    areq textField "Endereco" Nothing <*> 
+    areq textField "Telefone" Nothing <*> 
+    areq textField "Login" Nothing <*> 
+    areq passwordField "Senha" Nothing
     
 getClienteR :: Handler Html
 getClienteR = do
-           (widget, enctype) <- generateFormPost formCliente
-           defaultLayout [whamlet|
+          (widget, enctype) <- generateFormPost formCliente
+          defaultLayout [whamlet|
              <form method=post action=@{ClienteR} enctype=#{enctype}>
                  ^{widget}
                  <input type="submit" value="Cadastrar">
-           |]
+          |]
            
 postClienteR :: Handler Html
 postClienteR = do
@@ -40,7 +40,10 @@ postClienteR = do
                            Nothing -> do 
                               pid <- runDB $ insert cliente
                               defaultLayout [whamlet|
-                                Cliente cadastrado com sucesso!
+                                Cliente cadastrado com sucesso!:
+                                <br>
+                                <br>
+                                <a href=@{HomeR}>Home
                               |]
                               --redirect (ClienteR pid)
                     _ -> redirect HomeR

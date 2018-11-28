@@ -55,8 +55,8 @@ type Form a = Html -> MForm Handler (FormResult a, Widget)
 instance RenderMessage App FormMessage where
     renderMessage _ _ = defaultFormMessage
     
-widgetForm :: Route App -> Enctype -> Widget -> Text -> Widget
-widgetForm x enctype widget y = $(whamletFile "templates/form.hamlet")
+--widgetForm :: Route App -> Enctype -> Widget -> Text -> Widget
+--widgetForm x enctype widget y = $(whamletFile "templates/form.hamlet")
 
 -- widgetFormCss :: Route App -> Enctype -> Widget -> Text -> Widget
 -- widgetFormCss xis enctype widget z = $(toWidget "templates/form.julius")

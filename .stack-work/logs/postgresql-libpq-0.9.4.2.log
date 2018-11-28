@@ -1,0 +1,10 @@
+[1 of 2] Compiling Main             ( /tmp/stack3637/postgresql-libpq-0.9.4.2/Setup.hs, /tmp/stack3637/postgresql-libpq-0.9.4.2/.stack-work/dist/x86_64-linux/Cabal-2.2.0.1/setup/Main.o )
+[2 of 2] Compiling StackSetupShim   ( /home/ubuntu/.stack/setup-exe-src/setup-shim-mPHDZzAJ.hs, /tmp/stack3637/postgresql-libpq-0.9.4.2/.stack-work/dist/x86_64-linux/Cabal-2.2.0.1/setup/StackSetupShim.o )
+Linking /tmp/stack3637/postgresql-libpq-0.9.4.2/.stack-work/dist/x86_64-linux/Cabal-2.2.0.1/setup/setup ...
+Configuring postgresql-libpq-0.9.4.2...
+Preprocessing library for postgresql-libpq-0.9.4.2..
+Building library for postgresql-libpq-0.9.4.2..
+[1 of 2] Compiling Database.PostgreSQL.LibPQ.Internal ( src/Database/PostgreSQL/LibPQ/Internal.hs, .stack-work/dist/x86_64-linux/Cabal-2.2.0.1/build/Database/PostgreSQL/LibPQ/Internal.o )
+[2 of 2] Compiling Database.PostgreSQL.LibPQ ( .stack-work/dist/x86_64-linux/Cabal-2.2.0.1/build/Database/PostgreSQL/LibPQ.hs, .stack-work/dist/x86_64-linux/Cabal-2.2.0.1/build/Database/PostgreSQL/LibPQ.o )
+Installing library in /home/ubuntu/.stack/snapshots/x86_64-linux/lts-12.20/8.4.4/lib/x86_64-linux-ghc-8.4.4/postgresql-libpq-0.9.4.2-1ElhWSgBlqQImeIskHNSpZ
+Registering library for postgresql-libpq-0.9.4.2..

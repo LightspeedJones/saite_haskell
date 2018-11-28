@@ -1,0 +1,43 @@
+Configuring clientsession-0.9.1.2...
+Preprocessing library for clientsession-0.9.1.2..
+Building library for clientsession-0.9.1.2..
+[1 of 2] Compiling System.LookupEnv ( src/System/LookupEnv.hs, .stack-work/dist/x86_64-linux/Cabal-2.2.0.1/build/System/LookupEnv.o )
+[2 of 2] Compiling Web.ClientSession ( src/Web/ClientSession.hs, .stack-work/dist/x86_64-linux/Cabal-2.2.0.1/build/Web/ClientSession.o )
+
+[;1msrc/Web/ClientSession.hs:91:1: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wunused-imports[0m[0m[;1m][0m[0m[;1m
+    The import of ‘Data.Tagged’ is redundant
+      except perhaps to import instances from ‘Data.Tagged’
+    To import instances alone, use: import Data.Tagged()[0m[0m
+[;1m[34m   |[0m[0m
+[;1m[34m91 |[0m[0m [;1m[35mimport Data.Tagged (Tagged, untag)[0m[0m
+[;1m[34m   |[0m[0m[;1m[35m ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m
+[0m[0m[0m
+[;1msrc/Web/ClientSession.hs:95:1: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wunused-imports[0m[0m[;1m][0m[0m[;1m
+    The import of ‘Crypto.Random’ is redundant
+      except perhaps to import instances from ‘Crypto.Random’
+    To import instances alone, use: import Crypto.Random()[0m[0m
+[;1m[34m   |[0m[0m
+[;1m[34m95 |[0m[0m [;1m[35mimport "crypto-api" Crypto.Random (genSeedLength, reseed)[0m[0m
+[;1m[34m   |[0m[0m[;1m[35m ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m
+[0m[0m[0m
+[;1msrc/Web/ClientSession.hs:96:1: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wunused-imports[0m[0m[;1m][0m[0m[;1m
+    The import of ‘Crypto.Types’ is redundant
+      except perhaps to import instances from ‘Crypto.Types’
+    To import instances alone, use: import Crypto.Types()[0m[0m
+[;1m[34m   |[0m[0m
+[;1m[34m96 |[0m[0m [;1m[35mimport Crypto.Types (ByteLength)[0m[0m
+[;1m[34m   |[0m[0m[;1m[35m ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m
+[0m[0m[0m
+[;1msrc/Web/ClientSession.hs:267:37: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wdeprecations[0m[0m[;1m][0m[0m[;1m
+    In the use of ‘initKey’ (imported from Crypto.Cipher.AES):
+    Deprecated: "use initAES"[0m[0m
+[;1m[34m    |[0m[0m
+[;1m[34m267 |[0m[0m initKey bs = Right $ Key { aesKey = [;1m[35mA.initKey[0m[0m preAesKey
+[;1m[34m    |[0m[0m[;1m[35m                                     ^^^^^^^^^[0m[0m
+[0m[0m[0mPreprocessing executable 'clientsession-generate' for clientsession-0.9.1.2..
+Building executable 'clientsession-generate' for clientsession-0.9.1.2..
+[1 of 1] Compiling Main             ( bin/generate.hs, .stack-work/dist/x86_64-linux/Cabal-2.2.0.1/build/clientsession-generate/clientsession-generate-tmp/Main.o )
+Linking .stack-work/dist/x86_64-linux/Cabal-2.2.0.1/build/clientsession-generate/clientsession-generate ...
+Installing library in /home/ubuntu/.stack/snapshots/x86_64-linux/lts-12.20/8.4.4/lib/x86_64-linux-ghc-8.4.4/clientsession-0.9.1.2-20xPP86yDSl7q5qRcD4NBc
+Installing executable clientsession-generate in /home/ubuntu/.stack/snapshots/x86_64-linux/lts-12.20/8.4.4/bin
+Registering library for clientsession-0.9.1.2..

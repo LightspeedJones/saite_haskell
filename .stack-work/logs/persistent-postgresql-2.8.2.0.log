@@ -1,0 +1,7 @@
+Configuring persistent-postgresql-2.8.2.0...
+Preprocessing library for persistent-postgresql-2.8.2.0..
+Building library for persistent-postgresql-2.8.2.0..
+[1 of 2] Compiling Database.Persist.Postgresql ( Database/Persist/Postgresql.hs, .stack-work/dist/x86_64-linux/Cabal-2.2.0.1/build/Database/Persist/Postgresql.o )
+[2 of 2] Compiling Database.Persist.Postgresql.JSON ( Database/Persist/Postgresql/JSON.hs, .stack-work/dist/x86_64-linux/Cabal-2.2.0.1/build/Database/Persist/Postgresql/JSON.o )
+Installing library in /home/ubuntu/.stack/snapshots/x86_64-linux/lts-12.20/8.4.4/lib/x86_64-linux-ghc-8.4.4/persistent-postgresql-2.8.2.0-7KULkFNTF0kAUpJvEzL2vY
+Registering library for persistent-postgresql-2.8.2.0..

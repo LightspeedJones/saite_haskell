@@ -1,0 +1,6 @@
+Configuring th-lift-instances-0.1.11...
+Preprocessing library for th-lift-instances-0.1.11..
+Building library for th-lift-instances-0.1.11..
+[1 of 1] Compiling Instances.TH.Lift ( src/Instances/TH/Lift.hs, .stack-work/dist/x86_64-linux/Cabal-2.2.0.1/build/Instances/TH/Lift.o )
+Installing library in /home/ubuntu/.stack/snapshots/x86_64-linux/lts-12.20/8.4.4/lib/x86_64-linux-ghc-8.4.4/th-lift-instances-0.1.11-5c9Vu2teaNTHkFlN1RSTBz
+Registering library for th-lift-instances-0.1.11..

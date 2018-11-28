@@ -1,0 +1,9 @@
+Configuring haskell-src-meta-0.8.0.3...
+Preprocessing library for haskell-src-meta-0.8.0.3..
+Building library for haskell-src-meta-0.8.0.3..
+[1 of 4] Compiling Language.Haskell.Meta.Syntax.Translate ( src/Language/Haskell/Meta/Syntax/Translate.hs, .stack-work/dist/x86_64-linux/Cabal-2.2.0.1/build/Language/Haskell/Meta/Syntax/Translate.o )
+[2 of 4] Compiling Language.Haskell.Meta.Parse ( src/Language/Haskell/Meta/Parse.hs, .stack-work/dist/x86_64-linux/Cabal-2.2.0.1/build/Language/Haskell/Meta/Parse.o )
+[3 of 4] Compiling Language.Haskell.Meta ( src/Language/Haskell/Meta.hs, .stack-work/dist/x86_64-linux/Cabal-2.2.0.1/build/Language/Haskell/Meta.o )
+[4 of 4] Compiling Language.Haskell.Meta.Utils ( src/Language/Haskell/Meta/Utils.hs, .stack-work/dist/x86_64-linux/Cabal-2.2.0.1/build/Language/Haskell/Meta/Utils.o )
+Installing library in /home/ubuntu/.stack/snapshots/x86_64-linux/lts-12.20/8.4.4/lib/x86_64-linux-ghc-8.4.4/haskell-src-meta-0.8.0.3-IAbu9Mpez9zBRGu6XErMjl
+Registering library for haskell-src-meta-0.8.0.3..

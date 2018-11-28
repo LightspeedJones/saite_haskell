@@ -1,0 +1,33 @@
+Configuring yesod-1.6.0...
+Preprocessing library for yesod-1.6.0..
+Building library for yesod-1.6.0..
+[1 of 6] Compiling Yesod            ( Yesod.hs, .stack-work/dist/x86_64-linux/Cabal-2.2.0.1/build/Yesod.o )
+[2 of 6] Compiling Yesod.Default.Config ( Yesod/Default/Config.hs, .stack-work/dist/x86_64-linux/Cabal-2.2.0.1/build/Yesod/Default/Config.o )
+
+[;1mYesod/Default/Config.hs:183:16: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wdeprecations[0m[0m[;1m][0m[0m[;1m
+    In the use of ‘decodeFile’ (imported from Data.Yaml):
+    Deprecated: "Please use decodeFileEither, which does not confused type-directed and runtime exceptions."[0m[0m
+[;1m[34m    |[0m[0m
+[;1m[34m183 |[0m[0m     mtopObj <- [;1m[35mdecodeFile[0m[0m fp
+[;1m[34m    |[0m[0m[;1m[35m                ^^^^^^^^^^[0m[0m
+[0m[0m[0m
+[;1mYesod/Default/Config.hs:236:13: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wdeprecations[0m[0m[;1m][0m[0m[;1m
+    In the use of ‘decodeFile’ (imported from Data.Yaml):
+    Deprecated: "Please use decodeFileEither, which does not confused type-directed and runtime exceptions."[0m[0m
+[;1m[34m    |[0m[0m
+[;1m[34m236 |[0m[0m     mval <- [;1m[35mdecodeFile[0m[0m fp
+[;1m[34m    |[0m[0m[;1m[35m             ^^^^^^^^^^[0m[0m
+[0m[0m[0m[3 of 6] Compiling Yesod.Default.Config2 ( Yesod/Default/Config2.hs, .stack-work/dist/x86_64-linux/Cabal-2.2.0.1/build/Yesod/Default/Config2.o )
+
+[;1mYesod/Default/Config2.hs:31:1: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wunused-imports[0m[0m[;1m][0m[0m[;1m
+    The import of ‘Data.Semigroup’ is redundant
+      except perhaps to import instances from ‘Data.Semigroup’
+    To import instances alone, use: import Data.Semigroup()[0m[0m
+[;1m[34m   |[0m[0m
+[;1m[34m31 |[0m[0m [;1m[35mimport Data.Semigroup[0m[0m
+[;1m[34m   |[0m[0m[;1m[35m ^^^^^^^^^^^^^^^^^^^^^[0m[0m
+[0m[0m[0m[4 of 6] Compiling Yesod.Default.Handlers ( Yesod/Default/Handlers.hs, .stack-work/dist/x86_64-linux/Cabal-2.2.0.1/build/Yesod/Default/Handlers.o )
+[5 of 6] Compiling Yesod.Default.Main ( Yesod/Default/Main.hs, .stack-work/dist/x86_64-linux/Cabal-2.2.0.1/build/Yesod/Default/Main.o )
+[6 of 6] Compiling Yesod.Default.Util ( Yesod/Default/Util.hs, .stack-work/dist/x86_64-linux/Cabal-2.2.0.1/build/Yesod/Default/Util.o )
+Installing library in /home/ubuntu/.stack/snapshots/x86_64-linux/lts-12.20/8.4.4/lib/x86_64-linux-ghc-8.4.4/yesod-1.6.0-D1X8qF8cvTdIZ7NDNnzNho
+Registering library for yesod-1.6.0..

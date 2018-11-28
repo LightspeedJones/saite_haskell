@@ -20,52 +20,7 @@ mkYesodDispatch "App" resourcesApp
 
 getLayoutLogado :: Text -> Handler Html
 getLayoutLogado x = defaultLayout $ do
-            toWidget[lucius|
-                h1{
-                    font-size: 30px;
-                    font-family: segoe ui light;
-                    text-align: center;
-                }
-            
-                ul {
-                    list-style-type: none;
-                    margin: 0;
-                    padding: 0;
-                    overflow: hidden;
-                    background-color: #333;
-                }
-
-                li {
-                    float: left;
-                }
-
-                li{
-                    display: block;
-                    color: white;
-                    text-align: center;
-                    padding: 14px 16px;
-                    text-decoration: none;
-                    font-family: segoe ui light;
-                }
-                
-                a{
-                    color: white;
-                    font-family:segoe ui light;
-                }
-
-                li a:hover:not(.active) {
-                    background-color: #111;
-                }
-
-                .active {
-                    background-color: #4CAF50;
-                }
-                
-                #card{
-                    color:black;
-                }
-                
-            |]
+            toWidget $(luciusFile "templates/home.lucius")
             
             [whamlet|
                 <ul>
@@ -82,56 +37,7 @@ getLayoutLogado x = defaultLayout $ do
 
 getLayoutVisitante :: Handler Html
 getLayoutVisitante = defaultLayout $ do
-            toWidget[lucius|
-                h1{
-                    font-size: 30px;
-                    font-family: segoe ui light;
-                    text-align: center;
-                }
-            
-                ul {
-                    
-                    margin: 0;
-                    padding: 0;
-                    overflow: hidden;
-                    background-color: #333;
-                }
-
-                li {
-                    float: left;
-                }
-
-                li{
-                    display: block;
-                    color: white;
-                    text-align: center;
-                    padding: 14px 16px;
-                    text-decoration: none;
-                    font-family: segoe ui light;
-                }
-                
-                a{
-                    color: white;
-                }
-
-                li a:hover:not(.active) {
-                    background-color: #111;
-                }
-
-                .active {
-                    background-color: #4CAF50;
-                }
-                
-                h2{
-                    color: black;
-                    font-family: segoe ui light;
-                }
-                
-                #cadastro{
-                    color:black;
-                }
-                
-            |]
+            toWidget $(luciusFile "templates/home.lucius")
     
             [whamlet|
                 <ul>

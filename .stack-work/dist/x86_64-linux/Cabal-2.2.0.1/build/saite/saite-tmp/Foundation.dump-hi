@@ -1,11 +1,11 @@
 
 ==================== FINAL INTERFACE ====================
-2018-11-27 23:42:55.357811438 UTC
+2018-11-29 20:50:01.314429993 UTC
 
 interface main:Foundation [family instance module] 8044
-  interface hash: 1a3f33f52d3b5d8aba7f7b8ea1aea91b
-  ABI hash: f8d6f14b06a10536c36966b14a5fc7b4
-  export-list hash: 04038838a93a2b8ee3b2504e948bb737
+  interface hash: dbada6135a12d4bd8b8db31f06af6bdf
+  ABI hash: 759822151ca21f88554c5d415722ac95
+  export-list hash: bf35f3a755e4679019142bf94c9bfdc7
   orphan hash: abe2774bc5704a642c1463a785e881cd
   flag hash: cc0f342816f9b87265a6b89c32186f63
   opt_hash: 2c98c95d41c045ae9c2fb565ec8aabc6
@@ -23,14 +23,14 @@ exports:
   Foundation.Handler
   Foundation.ItemPedido{Foundation.ItemPedido itemPedidoPedidoid itemPedidoProdutoid itemPedidoVlunit}
   Foundation.ItemPedidoId
-  Foundation.Pedido{Foundation.Pedido pedidoClienteid pedidoHrpedido pedidoVltot}
+  Foundation.Pedido{Foundation.Pedido pedidoClienteid pedidoFinalizado pedidoHrpedido pedidoVltot}
   Foundation.PedidoId
   Foundation.Produto{Foundation.Produto produtoNome produtoTipoprodutoid produtoValor}
   Foundation.ProdutoId
   Foundation.TipoProduto{Foundation.TipoProduto tipoProdutoNometipo}
   Foundation.TipoProdutoId
   Foundation.Widget
-  Database.Persist.Class.PersistEntity.EntityField{Foundation.ClienteEndereco Foundation.ClienteId Foundation.ClienteLogin Foundation.ClienteNome Foundation.ClientePword Foundation.ClienteTelefone Foundation.ItemPedidoId Foundation.ItemPedidoPedidoid Foundation.ItemPedidoProdutoid Foundation.ItemPedidoVlunit Foundation.PedidoClienteid Foundation.PedidoHrpedido Foundation.PedidoId Foundation.PedidoVltot Foundation.ProdutoId Foundation.ProdutoNome Foundation.ProdutoTipoprodutoid Foundation.ProdutoValor Foundation.TipoProdutoId Foundation.TipoProdutoNometipo}
+  Database.Persist.Class.PersistEntity.EntityField{Foundation.ClienteEndereco Foundation.ClienteId Foundation.ClienteLogin Foundation.ClienteNome Foundation.ClientePword Foundation.ClienteTelefone Foundation.ItemPedidoId Foundation.ItemPedidoPedidoid Foundation.ItemPedidoProdutoid Foundation.ItemPedidoVlunit Foundation.PedidoClienteid Foundation.PedidoFinalizado Foundation.PedidoHrpedido Foundation.PedidoId Foundation.PedidoVltot Foundation.ProdutoId Foundation.ProdutoNome Foundation.ProdutoTipoprodutoid Foundation.ProdutoValor Foundation.TipoProdutoId Foundation.TipoProdutoNometipo}
   Database.Persist.Class.PersistEntity.Key{Foundation.ClienteKey Foundation.ItemPedidoKey Foundation.PedidoKey Foundation.ProdutoKey Foundation.TipoProdutoKey unClienteKey unItemPedidoKey unPedidoKey unProdutoKey unTipoProdutoKey}
   Database.Persist.Class.PersistEntity.Unique{Foundation.UniqueLogin}
   Yesod.Routes.Class.Route{Foundation.CardapioR Foundation.ClienteR Foundation.HomeR Foundation.LoginR Foundation.LogoutR}
@@ -197,6 +197,7 @@ import  -/  path-pieces-0.2.1:Web.PathPieces 0430b533daa28b7f822bb78aebba8412
 import  -/  persistent-2.8.2:Database.Persist.Class.PersistEntity cb3776dad29a4f5fc118f470e79758bf
 import  -/  persistent-2.8.2:Database.Persist.Class.PersistField 2c6363cf4a9c5a9c96dc30d21c28f721
 import  -/  persistent-2.8.2:Database.Persist.Class.PersistStore d817d10fae2ea58eb963d470b8d1ec75
+import  -/  persistent-2.8.2:Database.Persist.Quasi 8aeac9c3fa7070e0d5e3df4a7976b85f
 import  -/  persistent-2.8.2:Database.Persist.Sql.Class 31fc243eb4a04d16298377995f3bd558
 import  -/  persistent-2.8.2:Database.Persist.Sql.Migration e140d68c60ac3c1e46fd22459157372c
 import  -/  persistent-2.8.2:Database.Persist.Sql.Run 6f0259998928e5aec3f138321b6775e3
@@ -222,7 +223,8 @@ import  -/  yesod-form-1.6.3:Yesod.Form.Fields fce68d328b0186733f30816379cd8110
 import  -/  yesod-form-1.6.3:Yesod.Form.Types 6d2478116d5a6949e301ceb9ff8a7feb
 import  -/  yesod-persistent-1.6.0.1:Yesod.Persist.Core dee21111217fc049e95690a79c442bb0
 addDependentFile "routes" d9dc82091cec42523276a00a23bbd617
-ea1f29db326095c0606776bf693dc9c5
+addDependentFile "config/models" 4cab76be677d7cb602f81a1b122e893a
+388dd4c04563308c88c61ef89b3610ad
   $fEqKey ::
     GHC.Classes.Eq
       (Database.Persist.Class.PersistEntity.Key Foundation.ItemPedido)
@@ -276,7 +278,7 @@ b5272135afcffe4d7282ae6ad9b22515
                   ((Sym (Database.Persist.Sql.Orphan.PersistStore.N:R:BackendKeySqlBackend[0]) ; (Sym (Database.Persist.Sql.Orphan.PersistStore.D:R:BackendKeySqlBackend0[0]) ; (Sym (Foundation.N:R:KeyTipoProduto[0]) ; Sym (Foundation.D:R:KeyTipoProduto0[0]))))
                    ->_R (Sym (Database.Persist.Sql.Orphan.PersistStore.N:R:BackendKeySqlBackend[0]) ; (Sym (Database.Persist.Sql.Orphan.PersistStore.D:R:BackendKeySqlBackend0[0]) ; (Sym (Foundation.N:R:KeyTipoProduto[0]) ; Sym (Foundation.D:R:KeyTipoProduto0[0]))))
                    ->_R <GHC.Types.Bool>_R) -}
-6fd26fcc873363416132d7f99f0bb536
+a0af1d2de58a84f46d8a9e227dc8f746
   $fEqKey2 ::
     GHC.Classes.Eq
       (Database.Persist.Class.PersistEntity.Key Foundation.Pedido)
@@ -371,7 +373,7 @@ fad4d7498437d0835053b4479d34e8e2
                    -> case ds1 `cast` (Foundation.D:R:RouteApp0[0]) of wild1 {
                         DEFAULT -> GHC.Types.False
                         Foundation.LogoutR -> GHC.Types.True } }) -}
-ea1f29db326095c0606776bf693dc9c5
+388dd4c04563308c88c61ef89b3610ad
   $fFromHttpApiDataKey ::
     Web.Internal.HttpApiData.FromHttpApiData
       (Database.Persist.Class.PersistEntity.Key Foundation.ItemPedido)
@@ -449,7 +451,7 @@ b5272135afcffe4d7282ae6ad9b22515
                    ->_R (Data.Either.Either
                            <Data.Text.Internal.Text>_R
                            (Sym (Database.Persist.Sql.Orphan.PersistStore.N:R:BackendKeySqlBackend[0]) ; (Sym (Database.Persist.Sql.Orphan.PersistStore.D:R:BackendKeySqlBackend0[0]) ; (Sym (Foundation.N:R:KeyTipoProduto[0]) ; Sym (Foundation.D:R:KeyTipoProduto0[0])))))_R) -}
-6fd26fcc873363416132d7f99f0bb536
+a0af1d2de58a84f46d8a9e227dc8f746
   $fFromHttpApiDataKey2 ::
     Web.Internal.HttpApiData.FromHttpApiData
       (Database.Persist.Class.PersistEntity.Key Foundation.Pedido)
@@ -501,7 +503,7 @@ ab0e720acfd8349912d50cf443256369
                    ->_R (Data.Either.Either
                            <Data.Text.Internal.Text>_R
                            (Sym (Database.Persist.Sql.Orphan.PersistStore.N:R:BackendKeySqlBackend[0]) ; (Sym (Database.Persist.Sql.Orphan.PersistStore.D:R:BackendKeySqlBackend0[0]) ; (Sym (Foundation.N:R:KeyCliente[0]) ; Sym (Foundation.D:R:KeyCliente0[0])))))_R) -}
-ea1f29db326095c0606776bf693dc9c5
+388dd4c04563308c88c61ef89b3610ad
   $fFromJSONKey ::
     Data.Aeson.Types.FromJSON.FromJSON
       (Database.Persist.Class.PersistEntity.Key Foundation.ItemPedido)
@@ -555,7 +557,7 @@ b5272135afcffe4d7282ae6ad9b22515
                   (<Data.Aeson.Types.Internal.Value>_R
                    ->_R (Data.Aeson.Types.Internal.Parser
                            ([Sym (Database.Persist.Sql.Orphan.PersistStore.N:R:BackendKeySqlBackend[0]) ; (Sym (Database.Persist.Sql.Orphan.PersistStore.D:R:BackendKeySqlBackend0[0]) ; (Sym (Foundation.N:R:KeyTipoProduto[0]) ; Sym (Foundation.D:R:KeyTipoProduto0[0])))])_R)_R) -}
-6fd26fcc873363416132d7f99f0bb536
+a0af1d2de58a84f46d8a9e227dc8f746
   $fFromJSONKey2 ::
     Data.Aeson.Types.FromJSON.FromJSON
       (Database.Persist.Class.PersistEntity.Key Foundation.Pedido)
@@ -591,7 +593,7 @@ ab0e720acfd8349912d50cf443256369
                   (<Data.Aeson.Types.Internal.Value>_R
                    ->_R (Data.Aeson.Types.Internal.Parser
                            ([Sym (Database.Persist.Sql.Orphan.PersistStore.N:R:BackendKeySqlBackend[0]) ; (Sym (Database.Persist.Sql.Orphan.PersistStore.D:R:BackendKeySqlBackend0[0]) ; (Sym (Foundation.N:R:KeyCliente[0]) ; Sym (Foundation.D:R:KeyCliente0[0])))])_R)_R) -}
-ea1f29db326095c0606776bf693dc9c5
+388dd4c04563308c88c61ef89b3610ad
   $fOrdKey ::
     GHC.Classes.Ord
       (Database.Persist.Class.PersistEntity.Key Foundation.ItemPedido)
@@ -723,7 +725,7 @@ b5272135afcffe4d7282ae6ad9b22515
                   ((Sym (Database.Persist.Sql.Orphan.PersistStore.N:R:BackendKeySqlBackend[0]) ; (Sym (Database.Persist.Sql.Orphan.PersistStore.D:R:BackendKeySqlBackend0[0]) ; (Sym (Foundation.N:R:KeyTipoProduto[0]) ; Sym (Foundation.D:R:KeyTipoProduto0[0]))))
                    ->_R (Sym (Database.Persist.Sql.Orphan.PersistStore.N:R:BackendKeySqlBackend[0]) ; (Sym (Database.Persist.Sql.Orphan.PersistStore.D:R:BackendKeySqlBackend0[0]) ; (Sym (Foundation.N:R:KeyTipoProduto[0]) ; Sym (Foundation.D:R:KeyTipoProduto0[0]))))
                    ->_R Sym (Database.Persist.Sql.Orphan.PersistStore.N:R:BackendKeySqlBackend[0]) ; (Sym (Database.Persist.Sql.Orphan.PersistStore.D:R:BackendKeySqlBackend0[0]) ; (Sym (Foundation.N:R:KeyTipoProduto[0]) ; Sym (Foundation.D:R:KeyTipoProduto0[0])))) -}
-6fd26fcc873363416132d7f99f0bb536
+a0af1d2de58a84f46d8a9e227dc8f746
   $fOrdKey2 ::
     GHC.Classes.Ord
       (Database.Persist.Class.PersistEntity.Key Foundation.Pedido)
@@ -892,7 +894,7 @@ fad4d7498437d0835053b4479d34e8e2
                 (\ (w :: ([Data.Text.Internal.Text],
                           [(Data.Text.Internal.Text, Data.Text.Internal.Text)])) ->
                  case w of ww { (,) ww1 ww2 -> Foundation.$w$cparseRoute ww1 }) -}
-ea1f29db326095c0606776bf693dc9c5
+388dd4c04563308c88c61ef89b3610ad
   $fPathPieceKey ::
     Web.PathPieces.PathPiece
       (Database.Persist.Class.PersistEntity.Key Foundation.ItemPedido)
@@ -943,7 +945,7 @@ b5272135afcffe4d7282ae6ad9b22515
                     `cast`
                   ((Sym (Database.Persist.Sql.Orphan.PersistStore.N:R:BackendKeySqlBackend[0]) ; (Sym (Database.Persist.Sql.Orphan.PersistStore.D:R:BackendKeySqlBackend0[0]) ; (Sym (Foundation.N:R:KeyTipoProduto[0]) ; Sym (Foundation.D:R:KeyTipoProduto0[0]))))
                    ->_R <Data.Text.Internal.Text>_R) -}
-6fd26fcc873363416132d7f99f0bb536
+a0af1d2de58a84f46d8a9e227dc8f746
   $fPathPieceKey2 ::
     Web.PathPieces.PathPiece
       (Database.Persist.Class.PersistEntity.Key Foundation.Pedido)
@@ -1611,7 +1613,7 @@ ab0e720acfd8349912d50cf443256369
     -> Data.Map.Internal.Map Data.Text.Internal.Text a
     -> Data.Map.Internal.Map Data.Text.Internal.Text a
   {- Arity: 6, Strictness: <S,U><S,U><S,U><L,U><S,1*U><S,1*U> -}
-ea1f29db326095c0606776bf693dc9c5
+388dd4c04563308c88c61ef89b3610ad
   $fPersistEntityItemPedido ::
     Database.Persist.Class.PersistEntity.PersistEntity
       Foundation.ItemPedido
@@ -1811,7 +1813,7 @@ fe3062220ba255ba33b99f2c779ca132
 dd2f418147b26fde098adee8afef114b
   $fPersistEntityItemPedido30 :: GHC.Prim.Addr#
   {- HasNoCafRefs, Unfolding: ("item_pedido"#) -}
-ea1f29db326095c0606776bf693dc9c5
+388dd4c04563308c88c61ef89b3610ad
   $fPersistEntityItemPedido31 ::
     Foundation.R:EntityFieldItemPedidotyp
       (Database.Persist.Class.PersistEntity.Key Foundation.ItemPedido)
@@ -1859,7 +1861,7 @@ a6c7b5cf95e29944788796ce1ab5e34f
   $fPersistEntityItemPedido9 :: Data.Text.Internal.Text
   {- Unfolding: (Data.Text.Show.unpackCString#
                    Foundation.$fPersistEntityItemPedido10) -}
-ea1f29db326095c0606776bf693dc9c5
+388dd4c04563308c88c61ef89b3610ad
   $fPersistEntityItemPedido_$centityDef ::
     GHC.Base.Monad m =>
     m Foundation.ItemPedido -> Database.Persist.Types.Base.EntityDef
@@ -1869,7 +1871,7 @@ ea1f29db326095c0606776bf693dc9c5
                    ($dMonad :: GHC.Base.Monad m)
                    (ds :: m Foundation.ItemPedido) ->
                  Foundation.$fPersistEntityItemPedido26) -}
-ea1f29db326095c0606776bf693dc9c5
+388dd4c04563308c88c61ef89b3610ad
   $fPersistEntityItemPedido_$cfieldLens ::
     Database.Persist.Class.PersistEntity.EntityField
       Foundation.ItemPedido field
@@ -2022,12 +2024,12 @@ ea1f29db326095c0606776bf693dc9c5
                             (GHC.Types.D# dt2) `cast` (Sub (Sym co)) } }))
                           `cast`
                         (<f>_R co) } }) -}
-ea1f29db326095c0606776bf693dc9c5
+388dd4c04563308c88c61ef89b3610ad
   $fPersistEntityItemPedido_$cfromPersistValues ::
     [Database.Persist.Types.Base.PersistValue]
     -> Data.Either.Either Data.Text.Internal.Text Foundation.ItemPedido
   {- Arity: 1, Strictness: <S,U> -}
-ea1f29db326095c0606776bf693dc9c5
+388dd4c04563308c88c61ef89b3610ad
   $fPersistEntityItemPedido_$ckeyFromValues ::
     [Database.Persist.Types.Base.PersistValue]
     -> Data.Either.Either
@@ -2053,7 +2055,7 @@ ea1f29db326095c0606776bf693dc9c5
                         @ (Database.Persist.Class.PersistEntity.Key Foundation.ItemPedido)
                         y `cast`
                         (Sym (Foundation.N:R:KeyItemPedido[0]) ; Sym (Foundation.D:R:KeyItemPedido0[0])) }) -}
-ea1f29db326095c0606776bf693dc9c5
+388dd4c04563308c88c61ef89b3610ad
   $fPersistEntityItemPedido_$ckeyToValues ::
     Database.Persist.Class.PersistEntity.Key Foundation.ItemPedido
     -> [Database.Persist.Types.Base.PersistValue]
@@ -2067,7 +2069,7 @@ ea1f29db326095c0606776bf693dc9c5
                       x `cast`
                       (Foundation.D:R:KeyItemPedido0[0] ; (Foundation.N:R:KeyItemPedido[0] ; (Database.Persist.Sql.Orphan.PersistStore.D:R:BackendKeySqlBackend0[0] ; Database.Persist.Sql.Orphan.PersistStore.N:R:BackendKeySqlBackend[0]))))
                    (GHC.Types.[] @ Database.Persist.Types.Base.PersistValue)) -}
-ea1f29db326095c0606776bf693dc9c5
+388dd4c04563308c88c61ef89b3610ad
   $fPersistEntityItemPedido_$cpersistFieldDef ::
     Database.Persist.Class.PersistEntity.EntityField
       Foundation.ItemPedido typ
@@ -2088,7 +2090,7 @@ ea1f29db326095c0606776bf693dc9c5
                    -> Foundation.$fPersistEntityItemPedido7
                    Foundation.ItemPedidoVlunit $d~
                    -> Foundation.$fPersistEntityItemPedido1 }) -}
-ea1f29db326095c0606776bf693dc9c5
+388dd4c04563308c88c61ef89b3610ad
   $fPersistEntityItemPedido_$cpersistUniqueKeys ::
     Foundation.ItemPedido
     -> [Database.Persist.Class.PersistEntity.Unique
@@ -2100,7 +2102,7 @@ ea1f29db326095c0606776bf693dc9c5
                  GHC.Types.[]
                    @ (Database.Persist.Class.PersistEntity.Unique
                         Foundation.ItemPedido) }) -}
-ea1f29db326095c0606776bf693dc9c5
+388dd4c04563308c88c61ef89b3610ad
   $fPersistEntityItemPedido_$cpersistUniqueToFieldNames ::
     Database.Persist.Class.PersistEntity.Unique Foundation.ItemPedido
     -> [(Database.Persist.Types.Base.HaskellName,
@@ -2110,7 +2112,7 @@ ea1f29db326095c0606776bf693dc9c5
                 (\ (w :: Database.Persist.Class.PersistEntity.Unique
                            Foundation.ItemPedido) ->
                  Foundation.$w$cpersistUniqueToFieldNames GHC.Prim.void#) -}
-ea1f29db326095c0606776bf693dc9c5
+388dd4c04563308c88c61ef89b3610ad
   $fPersistEntityItemPedido_$cpersistUniqueToValues ::
     Database.Persist.Class.PersistEntity.Unique Foundation.ItemPedido
     -> [Database.Persist.Types.Base.PersistValue]
@@ -2119,7 +2121,7 @@ ea1f29db326095c0606776bf693dc9c5
                 (\ (w :: Database.Persist.Class.PersistEntity.Unique
                            Foundation.ItemPedido) ->
                  Foundation.$w$cpersistUniqueToValues GHC.Prim.void#) -}
-ea1f29db326095c0606776bf693dc9c5
+388dd4c04563308c88c61ef89b3610ad
   $fPersistEntityItemPedido_$ctoPersistFields ::
     Foundation.ItemPedido
     -> [Database.Persist.Class.PersistField.SomePersistField]
@@ -2151,7 +2153,7 @@ ea1f29db326095c0606776bf693dc9c5
                             (GHC.Types.D# ww3))
                          (GHC.Types.[]
                             @ Database.Persist.Class.PersistField.SomePersistField))) }) -}
-ea1f29db326095c0606776bf693dc9c5
+388dd4c04563308c88c61ef89b3610ad
   $fPersistEntityItemPedido_$d~~ ::
     (Database.Persist.Class.PersistEntity.Key
        Foundation.ItemPedido :: *)
@@ -2165,7 +2167,7 @@ ea1f29db326095c0606776bf693dc9c5
                    @ (Database.Persist.Class.PersistEntity.Key Foundation.ItemPedido)
                    @~ <Database.Persist.Class.PersistEntity.Key
                          Foundation.ItemPedido>_N) -}
-6fd26fcc873363416132d7f99f0bb536
+a0af1d2de58a84f46d8a9e227dc8f746
   $fPersistEntityPedido ::
     Database.Persist.Class.PersistEntity.PersistEntity
       Foundation.Pedido
@@ -2182,7 +2184,7 @@ ea1f29db326095c0606776bf693dc9c5
                   Foundation.$fOrdKey2
                   Foundation.$fPersistEntityPedido_$ckeyToValues
                   Foundation.$fPersistEntityPedido_$ckeyFromValues
-                  Foundation.$fPersistEntityPedido16
+                  Foundation.$fPersistEntityPedido23
                     `cast`
                   (Sym (Foundation.D:R:EntityFieldPedidotyp0[0]) <Database.Persist.Class.PersistEntity.Key
                                                                     Foundation.Pedido>_N)
@@ -2194,9 +2196,20 @@ ea1f29db326095c0606776bf693dc9c5
                   Foundation.$fPersistEntityPedido_$cpersistUniqueToFieldNames
                   Foundation.$fPersistEntityPedido_$cpersistUniqueToValues
                   Foundation.$fPersistEntityPedido_$cfieldLens -}
-baf07a700ee32ea056fb8a86c9952c9c
+46847a6187e7527ca68e51b847aaf063
   $fPersistEntityPedido1 :: Database.Persist.Types.Base.FieldDef
-  {- Unfolding: (case Foundation.$fPersistEntityPedido2 of nt { Data.Text.Internal.Text ipv ipv1 ipv2 ->
+  {- Unfolding: (case Foundation.$fPersistEntityPedido5 of nt { Data.Text.Internal.Text ipv ipv1 ipv2 ->
+                 Database.Persist.Types.Base.FieldDef
+                   nt `cast` (Sym (Database.Persist.Types.Base.N:HaskellName[0]))
+                   nt `cast` (Sym (Database.Persist.Types.Base.N:DBName[0]))
+                   Foundation.$fPersistEntityPedido2
+                   Database.Persist.Types.Base.SqlBool
+                   (GHC.Types.[] @ Database.Persist.Types.Base.Attr)
+                   GHC.Types.True
+                   Database.Persist.Types.Base.NoReference }) -}
+f000397a326b03667913c6eb12c5b41b
+  $fPersistEntityPedido10 :: Database.Persist.Types.Base.FieldDef
+  {- Unfolding: (case Foundation.$fPersistEntityPedido11 of nt { Data.Text.Internal.Text ipv ipv1 ipv2 ->
                  Database.Persist.Types.Base.FieldDef
                    nt `cast` (Sym (Database.Persist.Types.Base.N:HaskellName[0]))
                    nt `cast` (Sym (Database.Persist.Types.Base.N:DBName[0]))
@@ -2205,8 +2218,37 @@ baf07a700ee32ea056fb8a86c9952c9c
                    (GHC.Types.[] @ Database.Persist.Types.Base.Attr)
                    GHC.Types.True
                    Database.Persist.Types.Base.NoReference }) -}
-21296e0937eff2c350efd9030636c639
-  $fPersistEntityPedido10 :: Database.Persist.Types.Base.FieldDef
+1e946e73a8542b570578359ffb356097
+  $fPersistEntityPedido11 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString#
+                   Foundation.$fPersistEntityPedido12) -}
+3a1f26444d20877a34257902860ad01e
+  $fPersistEntityPedido12 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("vltot"#) -}
+607ce106a0f44c34873b5e479a6dc556
+  $fPersistEntityPedido13 :: Database.Persist.Types.Base.FieldDef
+  {- Unfolding: (case Foundation.$fPersistEntityPedido14 of nt { Data.Text.Internal.Text ipv ipv1 ipv2 ->
+                 case Data.Text.Show.unpackCString#
+                        Foundation.$fPersistEntityCliente26 of nt1 { Data.Text.Internal.Text ipv3 ipv4 ipv5 ->
+                 Database.Persist.Types.Base.FieldDef
+                   nt `cast` (Sym (Database.Persist.Types.Base.N:HaskellName[0]))
+                   nt `cast` (Sym (Database.Persist.Types.Base.N:DBName[0]))
+                   Foundation.$fPersistEntityCliente23
+                   Database.Persist.Types.Base.SqlInt64
+                   (GHC.Types.[] @ Database.Persist.Types.Base.Attr)
+                   GHC.Types.True
+                   (Database.Persist.Types.Base.ForeignRef
+                      nt1 `cast` (Sym (Database.Persist.Types.Base.N:HaskellName[0]))
+                      Foundation.$fPersistEntityCliente17) } }) -}
+84deff0d9970aed9f32284a15206341c
+  $fPersistEntityPedido14 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString#
+                   Foundation.$fPersistEntityPedido15) -}
+91c9f5906f3da24a02960b25bb5ecd52
+  $fPersistEntityPedido15 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("clienteid"#) -}
+297db37d95c2fe79adca85337e9e937e
+  $fPersistEntityPedido16 :: Database.Persist.Types.Base.FieldDef
   {- Unfolding: (case Data.Text.Show.unpackCString#
                         Foundation.$fPersistEntityCliente28 of nt { Data.Text.Internal.Text ipv ipv1 ipv2 ->
                  case Data.Text.Show.unpackCString#
@@ -2223,12 +2265,12 @@ baf07a700ee32ea056fb8a86c9952c9c
                    (Database.Persist.Types.Base.ForeignRef
                       nt2 `cast` (Sym (Database.Persist.Types.Base.N:HaskellName[0]))
                       Foundation.$fPersistEntityCliente17) } } }) -}
-9c58489ed90a403f86f472295da5c1a8
-  $fPersistEntityPedido11 :: Database.Persist.Types.Base.EntityDef
+ef1bf75176ab76854aee024f1f5616bd
+  $fPersistEntityPedido17 :: Database.Persist.Types.Base.EntityDef
   {- Unfolding: (case Data.Text.Show.unpackCString#
                         Foundation.$fPersistEntityItemPedido18 of nt { Data.Text.Internal.Text ipv ipv1 ipv2 ->
                  case Data.Text.Show.unpackCString#
-                        Foundation.$fPersistEntityPedido15 of nt1 { Data.Text.Internal.Text ipv3 ipv4 ipv5 ->
+                        Foundation.$fPersistEntityPedido22 of nt1 { Data.Text.Internal.Text ipv3 ipv4 ipv5 ->
                  case Data.Text.Show.unpackCString#
                         Foundation.$fPersistEntityCliente28 of nt2 { Data.Text.Internal.Text ipv6 ipv7 ipv8 ->
                  case Data.Text.Show.unpackCString#
@@ -2252,38 +2294,51 @@ baf07a700ee32ea056fb8a86c9952c9c
                          nt `cast` (Sym (Database.Persist.Types.Base.N:HaskellName[0]))
                          Foundation.$fPersistEntityCliente17))
                    (GHC.Types.[] @ Database.Persist.Types.Base.Attr)
-                   Foundation.$fPersistEntityPedido12
+                   Foundation.$fPersistEntityPedido18
                    (GHC.Types.[] @ Database.Persist.Types.Base.UniqueDef)
                    (GHC.Types.[] @ Database.Persist.Types.Base.ForeignDef)
                    (GHC.Types.[] @ Data.Text.Internal.Text)
                    dt
                    GHC.Types.False } } } } }) -}
-1d643f918eafbb54d6d1f8e92a4dbf49
-  $fPersistEntityPedido12 :: [Database.Persist.Types.Base.FieldDef]
+9e061ec24ddd0eb5ebcf2fce09e2811c
+  $fPersistEntityPedido18 :: [Database.Persist.Types.Base.FieldDef]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Database.Persist.Types.Base.FieldDef
+                   Foundation.$fPersistEntityPedido13
+                   Foundation.$fPersistEntityPedido19) -}
+38c7ca234a67c522f46e125a74e79dfc
+  $fPersistEntityPedido19 :: [Database.Persist.Types.Base.FieldDef]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Database.Persist.Types.Base.FieldDef
+                   Foundation.$fPersistEntityPedido10
+                   Foundation.$fPersistEntityPedido20) -}
+ab1e844df0a0ff007d16c639e6cc4b4e
+  $fPersistEntityPedido2 :: Database.Persist.Types.Base.FieldType
+  {- Strictness: m1,
+     Unfolding: (Database.Persist.Types.Base.FTTypeCon
+                   (GHC.Base.Nothing @ Data.Text.Internal.Text)
+                   Foundation.$fPersistEntityPedido3) -}
+90d6afc209fabbf8844021f0843fde8d
+  $fPersistEntityPedido20 :: [Database.Persist.Types.Base.FieldDef]
   {- Strictness: m2,
      Unfolding: (GHC.Types.:
                    @ Database.Persist.Types.Base.FieldDef
                    Foundation.$fPersistEntityPedido7
-                   Foundation.$fPersistEntityPedido13) -}
-24ce5a7e904c024ae73d3a6651a84c31
-  $fPersistEntityPedido13 :: [Database.Persist.Types.Base.FieldDef]
-  {- Strictness: m2,
-     Unfolding: (GHC.Types.:
-                   @ Database.Persist.Types.Base.FieldDef
-                   Foundation.$fPersistEntityPedido4
-                   Foundation.$fPersistEntityPedido14) -}
-678b356b269d20571c31533f4ba48b30
-  $fPersistEntityPedido14 :: [Database.Persist.Types.Base.FieldDef]
+                   Foundation.$fPersistEntityPedido21) -}
+94a4574f242c2cfe6e9d9606ca51dfa3
+  $fPersistEntityPedido21 :: [Database.Persist.Types.Base.FieldDef]
   {- Strictness: m2,
      Unfolding: (GHC.Types.:
                    @ Database.Persist.Types.Base.FieldDef
                    Foundation.$fPersistEntityPedido1
                    (GHC.Types.[] @ Database.Persist.Types.Base.FieldDef)) -}
-abf20e756b114077aa5b38779d323893
-  $fPersistEntityPedido15 :: GHC.Prim.Addr#
+c4b2ce9006fa05a9ced2d3ffbe7fb44d
+  $fPersistEntityPedido22 :: GHC.Prim.Addr#
   {- HasNoCafRefs, Unfolding: ("pedido"#) -}
-6fd26fcc873363416132d7f99f0bb536
-  $fPersistEntityPedido16 ::
+a0af1d2de58a84f46d8a9e227dc8f746
+  $fPersistEntityPedido23 ::
     Foundation.R:EntityFieldPedidotyp
       (Database.Persist.Class.PersistEntity.Key Foundation.Pedido)
   {- HasNoCafRefs, Strictness: m1,
@@ -2295,16 +2350,23 @@ abf20e756b114077aa5b38779d323893
                              <*>_N) <Database.Persist.Class.PersistEntity.Key
                                        Foundation.Pedido>_N <Database.Persist.Class.PersistEntity.Key
                                                                Foundation.Pedido>_N)) -}
-4621e17646942ce993b448cfa21569db
-  $fPersistEntityPedido2 :: Data.Text.Internal.Text
+766b122bd2ba194dd6f17594f1b5afbc
+  $fPersistEntityPedido3 :: Data.Text.Internal.Text
   {- Unfolding: (Data.Text.Show.unpackCString#
-                   Foundation.$fPersistEntityPedido3) -}
-198ba6cb0eb213c3253229320f021f16
-  $fPersistEntityPedido3 :: GHC.Prim.Addr#
-  {- HasNoCafRefs, Unfolding: ("hrpedido"#) -}
-090d1f79599753e1f1ce5ff0e1718f1e
-  $fPersistEntityPedido4 :: Database.Persist.Types.Base.FieldDef
-  {- Unfolding: (case Foundation.$fPersistEntityPedido5 of nt { Data.Text.Internal.Text ipv ipv1 ipv2 ->
+                   Foundation.$fPersistEntityPedido4) -}
+5a5b41c188321ca1cf7a4048908b82a4
+  $fPersistEntityPedido4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Bool"#) -}
+c3c64e96064c657884caefa9b4a76621
+  $fPersistEntityPedido5 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString#
+                   Foundation.$fPersistEntityPedido6) -}
+9b5ac043d3531cabcee7139f8abc8269
+  $fPersistEntityPedido6 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("finalizado"#) -}
+9f5313df24b617671983b32a029b6e77
+  $fPersistEntityPedido7 :: Database.Persist.Types.Base.FieldDef
+  {- Unfolding: (case Foundation.$fPersistEntityPedido8 of nt { Data.Text.Internal.Text ipv ipv1 ipv2 ->
                  Database.Persist.Types.Base.FieldDef
                    nt `cast` (Sym (Database.Persist.Types.Base.N:HaskellName[0]))
                    nt `cast` (Sym (Database.Persist.Types.Base.N:DBName[0]))
@@ -2313,36 +2375,14 @@ abf20e756b114077aa5b38779d323893
                    (GHC.Types.[] @ Database.Persist.Types.Base.Attr)
                    GHC.Types.True
                    Database.Persist.Types.Base.NoReference }) -}
-d346a81e8ca43491f1ecfa895c66e4ce
-  $fPersistEntityPedido5 :: Data.Text.Internal.Text
-  {- Unfolding: (Data.Text.Show.unpackCString#
-                   Foundation.$fPersistEntityPedido6) -}
-670d24a612943a0c07b08476b6d60d3f
-  $fPersistEntityPedido6 :: GHC.Prim.Addr#
-  {- HasNoCafRefs, Unfolding: ("vltot"#) -}
-f57f84990d8eb3bf6b58ecff9fe32075
-  $fPersistEntityPedido7 :: Database.Persist.Types.Base.FieldDef
-  {- Unfolding: (case Foundation.$fPersistEntityPedido8 of nt { Data.Text.Internal.Text ipv ipv1 ipv2 ->
-                 case Data.Text.Show.unpackCString#
-                        Foundation.$fPersistEntityCliente26 of nt1 { Data.Text.Internal.Text ipv3 ipv4 ipv5 ->
-                 Database.Persist.Types.Base.FieldDef
-                   nt `cast` (Sym (Database.Persist.Types.Base.N:HaskellName[0]))
-                   nt `cast` (Sym (Database.Persist.Types.Base.N:DBName[0]))
-                   Foundation.$fPersistEntityCliente23
-                   Database.Persist.Types.Base.SqlInt64
-                   (GHC.Types.[] @ Database.Persist.Types.Base.Attr)
-                   GHC.Types.True
-                   (Database.Persist.Types.Base.ForeignRef
-                      nt1 `cast` (Sym (Database.Persist.Types.Base.N:HaskellName[0]))
-                      Foundation.$fPersistEntityCliente17) } }) -}
-e7680b6d835f428508724ad4abbde232
+e5816b3fca6e507166eca642cd92907d
   $fPersistEntityPedido8 :: Data.Text.Internal.Text
   {- Unfolding: (Data.Text.Show.unpackCString#
                    Foundation.$fPersistEntityPedido9) -}
-58493757a9d695ef72094abb377b1d47
+ea4d710dfd26c7f801416df04753491e
   $fPersistEntityPedido9 :: GHC.Prim.Addr#
-  {- HasNoCafRefs, Unfolding: ("clienteid"#) -}
-6fd26fcc873363416132d7f99f0bb536
+  {- HasNoCafRefs, Unfolding: ("hrpedido"#) -}
+a0af1d2de58a84f46d8a9e227dc8f746
   $fPersistEntityPedido_$centityDef ::
     GHC.Base.Monad m =>
     m Foundation.Pedido -> Database.Persist.Types.Base.EntityDef
@@ -2351,8 +2391,8 @@ e7680b6d835f428508724ad4abbde232
                 (\ @ m :: * -> *
                    ($dMonad :: GHC.Base.Monad m)
                    (ds :: m Foundation.Pedido) ->
-                 Foundation.$fPersistEntityPedido11) -}
-6fd26fcc873363416132d7f99f0bb536
+                 Foundation.$fPersistEntityPedido17) -}
+a0af1d2de58a84f46d8a9e227dc8f746
   $fPersistEntityPedido_$cfieldLens ::
     Database.Persist.Class.PersistEntity.EntityField
       Foundation.Pedido field
@@ -2363,144 +2403,13 @@ e7680b6d835f428508724ad4abbde232
        -> f (Database.Persist.Class.PersistEntity.Entity
                Foundation.Pedido)
   {- Arity: 4, HasNoCafRefs,
-     Strictness: <S,1*U><S(C(C(S))L),1*U(1*C1(C1(U)),A)><L,1*C1(U)><L,U(U,U(U,U,U))>,
-     Unfolding: (\ @ field
-                   (dk :: Database.Persist.Class.PersistEntity.EntityField
-                            Foundation.Pedido field)
-                   @ f :: * -> *
-                   ($dFunctor :: GHC.Base.Functor f)
-                   (eta :: field -> f field)
-                   (eta1 :: Database.Persist.Class.PersistEntity.Entity
-                              Foundation.Pedido) ->
-                 case dk
-                        `cast`
-                      (Foundation.D:R:EntityFieldPedidotyp0[0] <field>_N) of wild {
-                   Foundation.PedidoId $d~
-                   -> case GHC.Types.HEq_sc
-                             @ *
-                             @ *
-                             @ field
-                             @ (Database.Persist.Class.PersistEntity.Key Foundation.Pedido)
-                             $d~
-                               `cast`
-                             (Data.Type.Equality.N:~[0]
-                                  <*>_N <field>_N <Database.Persist.Class.PersistEntity.Key
-                                                     Foundation.Pedido>_N) of co { DEFAULT ->
-                      GHC.Base.fmap
-                        @ f
-                        $dFunctor
-                        @ (Database.Persist.Class.PersistEntity.Key Foundation.Pedido)
-                        @ (Database.Persist.Class.PersistEntity.Entity Foundation.Pedido)
-                        (\ (key :: Database.Persist.Class.PersistEntity.Key
-                                     Foundation.Pedido) ->
-                         case eta1 of wild1 { Database.Persist.Class.PersistEntity.Entity ds value ->
-                         Database.Persist.Class.PersistEntity.Entity
-                           @ Foundation.Pedido
-                           key
-                           value })
-                        (eta
-                           (case eta1 of wild1 { Database.Persist.Class.PersistEntity.Entity ds3 ds4 ->
-                            ds3 `cast` (Sub (Sym co)) }))
-                          `cast`
-                        (<f>_R co) }
-                   Foundation.PedidoClienteid $d~
-                   -> case GHC.Types.HEq_sc
-                             @ *
-                             @ *
-                             @ field
-                             @ (Database.Persist.Class.PersistEntity.Key Foundation.Cliente)
-                             $d~
-                               `cast`
-                             (Data.Type.Equality.N:~[0]
-                                  <*>_N <field>_N <Database.Persist.Class.PersistEntity.Key
-                                                     Foundation.Cliente>_N) of co { DEFAULT ->
-                      GHC.Base.fmap
-                        @ f
-                        $dFunctor
-                        @ (Database.Persist.Class.PersistEntity.Key Foundation.Cliente)
-                        @ (Database.Persist.Class.PersistEntity.Entity Foundation.Pedido)
-                        (\ (x :: Database.Persist.Class.PersistEntity.Key
-                                   Foundation.Cliente) ->
-                         case eta1 of wild1 { Database.Persist.Class.PersistEntity.Entity key value ->
-                         Database.Persist.Class.PersistEntity.Entity
-                           @ Foundation.Pedido
-                           key
-                           (case value of wild2 { Foundation.Pedido dt dt1 dt2 ->
-                            case x `cast`
-                                 (Foundation.D:R:KeyCliente0[0] ; (Foundation.N:R:KeyCliente[0] ; (Database.Persist.Sql.Orphan.PersistStore.D:R:BackendKeySqlBackend0[0] ; Database.Persist.Sql.Orphan.PersistStore.N:R:BackendKeySqlBackend[0]))) of dt3 { GHC.Int.I64# dt4 ->
-                            Foundation.Pedido dt4 dt1 dt2 } }) })
-                        (eta
-                           (case eta1 of wild1 { Database.Persist.Class.PersistEntity.Entity ds3 ds4 ->
-                            case ds4 of wild2 { Foundation.Pedido dt dt1 dt2 ->
-                            (GHC.Int.I64# dt)
-                              `cast`
-                            (Sym (Database.Persist.Sql.Orphan.PersistStore.N:R:BackendKeySqlBackend[0]) ; (Sym (Database.Persist.Sql.Orphan.PersistStore.D:R:BackendKeySqlBackend0[0]) ; (Sym (Foundation.N:R:KeyCliente[0]) ; (Sym (Foundation.D:R:KeyCliente0[0]) ; Sub (Sym co))))) } }))
-                          `cast`
-                        (<f>_R co) }
-                   Foundation.PedidoVltot $d~
-                   -> case GHC.Types.HEq_sc
-                             @ *
-                             @ *
-                             @ field
-                             @ GHC.Types.Double
-                             $d~
-                               `cast`
-                             (Data.Type.Equality.N:~[0]
-                                  <*>_N <field>_N <GHC.Types.Double>_N) of co { DEFAULT ->
-                      GHC.Base.fmap
-                        @ f
-                        $dFunctor
-                        @ GHC.Types.Double
-                        @ (Database.Persist.Class.PersistEntity.Entity Foundation.Pedido)
-                        (\ (x :: GHC.Types.Double) ->
-                         case eta1 of wild1 { Database.Persist.Class.PersistEntity.Entity key value ->
-                         Database.Persist.Class.PersistEntity.Entity
-                           @ Foundation.Pedido
-                           key
-                           (case value of wild2 { Foundation.Pedido dt dt1 dt2 ->
-                            case x of dt3 { GHC.Types.D# dt4 ->
-                            Foundation.Pedido dt dt4 dt2 } }) })
-                        (eta
-                           (case eta1 of wild1 { Database.Persist.Class.PersistEntity.Entity ds3 ds4 ->
-                            case ds4 of wild2 { Foundation.Pedido dt dt1 dt2 ->
-                            (GHC.Types.D# dt1) `cast` (Sub (Sym co)) } }))
-                          `cast`
-                        (<f>_R co) }
-                   Foundation.PedidoHrpedido $d~
-                   -> case GHC.Types.HEq_sc
-                             @ *
-                             @ *
-                             @ field
-                             @ GHC.Types.Double
-                             $d~
-                               `cast`
-                             (Data.Type.Equality.N:~[0]
-                                  <*>_N <field>_N <GHC.Types.Double>_N) of co { DEFAULT ->
-                      GHC.Base.fmap
-                        @ f
-                        $dFunctor
-                        @ GHC.Types.Double
-                        @ (Database.Persist.Class.PersistEntity.Entity Foundation.Pedido)
-                        (\ (x :: GHC.Types.Double) ->
-                         case eta1 of wild1 { Database.Persist.Class.PersistEntity.Entity key value ->
-                         Database.Persist.Class.PersistEntity.Entity
-                           @ Foundation.Pedido
-                           key
-                           (case value of wild2 { Foundation.Pedido dt dt1 dt2 ->
-                            case x of dt3 { GHC.Types.D# dt4 ->
-                            Foundation.Pedido dt dt1 dt4 } }) })
-                        (eta
-                           (case eta1 of wild1 { Database.Persist.Class.PersistEntity.Entity ds3 ds4 ->
-                            case ds4 of wild2 { Foundation.Pedido dt dt1 dt2 ->
-                            (GHC.Types.D# dt2) `cast` (Sub (Sym co)) } }))
-                          `cast`
-                        (<f>_R co) } }) -}
-6fd26fcc873363416132d7f99f0bb536
+     Strictness: <S,1*U><S(C(C(S))L),1*U(1*C1(C1(U)),A)><L,1*C1(U)><L,U(U,U(U,U,U,U))> -}
+a0af1d2de58a84f46d8a9e227dc8f746
   $fPersistEntityPedido_$cfromPersistValues ::
     [Database.Persist.Types.Base.PersistValue]
     -> Data.Either.Either Data.Text.Internal.Text Foundation.Pedido
   {- Arity: 1, Strictness: <S,U> -}
-6fd26fcc873363416132d7f99f0bb536
+a0af1d2de58a84f46d8a9e227dc8f746
   $fPersistEntityPedido_$ckeyFromValues ::
     [Database.Persist.Types.Base.PersistValue]
     -> Data.Either.Either
@@ -2526,7 +2435,7 @@ e7680b6d835f428508724ad4abbde232
                         @ (Database.Persist.Class.PersistEntity.Key Foundation.Pedido)
                         y `cast`
                         (Sym (Foundation.N:R:KeyPedido[0]) ; Sym (Foundation.D:R:KeyPedido0[0])) }) -}
-6fd26fcc873363416132d7f99f0bb536
+a0af1d2de58a84f46d8a9e227dc8f746
   $fPersistEntityPedido_$ckeyToValues ::
     Database.Persist.Class.PersistEntity.Key Foundation.Pedido
     -> [Database.Persist.Types.Base.PersistValue]
@@ -2540,7 +2449,7 @@ e7680b6d835f428508724ad4abbde232
                       x `cast`
                       (Foundation.D:R:KeyPedido0[0] ; (Foundation.N:R:KeyPedido[0] ; (Database.Persist.Sql.Orphan.PersistStore.D:R:BackendKeySqlBackend0[0] ; Database.Persist.Sql.Orphan.PersistStore.N:R:BackendKeySqlBackend[0]))))
                    (GHC.Types.[] @ Database.Persist.Types.Base.PersistValue)) -}
-6fd26fcc873363416132d7f99f0bb536
+a0af1d2de58a84f46d8a9e227dc8f746
   $fPersistEntityPedido_$cpersistFieldDef ::
     Database.Persist.Class.PersistEntity.EntityField
       Foundation.Pedido typ
@@ -2553,23 +2462,25 @@ e7680b6d835f428508724ad4abbde232
                  case ds
                         `cast`
                       (Foundation.D:R:EntityFieldPedidotyp0[0] <typ>_N) of wild {
-                   Foundation.PedidoId $d~ -> Foundation.$fPersistEntityPedido10
-                   Foundation.PedidoClienteid $d~ -> Foundation.$fPersistEntityPedido7
-                   Foundation.PedidoVltot $d~ -> Foundation.$fPersistEntityPedido4
-                   Foundation.PedidoHrpedido $d~
+                   Foundation.PedidoId $d~ -> Foundation.$fPersistEntityPedido16
+                   Foundation.PedidoClienteid $d~
+                   -> Foundation.$fPersistEntityPedido13
+                   Foundation.PedidoVltot $d~ -> Foundation.$fPersistEntityPedido10
+                   Foundation.PedidoHrpedido $d~ -> Foundation.$fPersistEntityPedido7
+                   Foundation.PedidoFinalizado $d~
                    -> Foundation.$fPersistEntityPedido1 }) -}
-6fd26fcc873363416132d7f99f0bb536
+a0af1d2de58a84f46d8a9e227dc8f746
   $fPersistEntityPedido_$cpersistUniqueKeys ::
     Foundation.Pedido
     -> [Database.Persist.Class.PersistEntity.Unique Foundation.Pedido]
   {- Arity: 1, HasNoCafRefs, Strictness: <S,1*H>,
      Unfolding: InlineRule (1, True, False)
                 (\ (ds :: Foundation.Pedido) ->
-                 case ds of wild { Foundation.Pedido dt dt1 dt2 ->
+                 case ds of wild { Foundation.Pedido dt dt1 dt2 _finalizado ->
                  GHC.Types.[]
                    @ (Database.Persist.Class.PersistEntity.Unique
                         Foundation.Pedido) }) -}
-6fd26fcc873363416132d7f99f0bb536
+a0af1d2de58a84f46d8a9e227dc8f746
   $fPersistEntityPedido_$cpersistUniqueToFieldNames ::
     Database.Persist.Class.PersistEntity.Unique Foundation.Pedido
     -> [(Database.Persist.Types.Base.HaskellName,
@@ -2579,7 +2490,7 @@ e7680b6d835f428508724ad4abbde232
                 (\ (w :: Database.Persist.Class.PersistEntity.Unique
                            Foundation.Pedido) ->
                  Foundation.$w$cpersistUniqueToFieldNames GHC.Prim.void#) -}
-6fd26fcc873363416132d7f99f0bb536
+a0af1d2de58a84f46d8a9e227dc8f746
   $fPersistEntityPedido_$cpersistUniqueToValues ::
     Database.Persist.Class.PersistEntity.Unique Foundation.Pedido
     -> [Database.Persist.Types.Base.PersistValue]
@@ -2588,14 +2499,14 @@ e7680b6d835f428508724ad4abbde232
                 (\ (w :: Database.Persist.Class.PersistEntity.Unique
                            Foundation.Pedido) ->
                  Foundation.$w$cpersistUniqueToValues GHC.Prim.void#) -}
-6fd26fcc873363416132d7f99f0bb536
+a0af1d2de58a84f46d8a9e227dc8f746
   $fPersistEntityPedido_$ctoPersistFields ::
     Foundation.Pedido
     -> [Database.Persist.Class.PersistField.SomePersistField]
-  {- Arity: 1, Strictness: <S,1*U(U,U,U)>m2, Inline: [0],
+  {- Arity: 1, Strictness: <S(LLLS),1*U(U,U,U,U)>m2, Inline: [0],
      Unfolding: InlineRule (1, True, False)
                 (\ (w :: Foundation.Pedido) ->
-                 case w of ww { Foundation.Pedido ww1 ww2 ww3 ->
+                 case w of ww { Foundation.Pedido ww1 ww2 ww3 ww4 ->
                  GHC.Types.:
                    @ Database.Persist.Class.PersistField.SomePersistField
                    (Database.Persist.Class.PersistField.SomePersistField
@@ -2616,9 +2527,15 @@ e7680b6d835f428508724ad4abbde232
                             @ GHC.Types.Double
                             Database.Persist.Class.PersistField.$fPersistFieldDouble
                             (GHC.Types.D# ww3))
-                         (GHC.Types.[]
-                            @ Database.Persist.Class.PersistField.SomePersistField))) }) -}
-6fd26fcc873363416132d7f99f0bb536
+                         (GHC.Types.:
+                            @ Database.Persist.Class.PersistField.SomePersistField
+                            (Database.Persist.Class.PersistField.SomePersistField
+                               @ GHC.Types.Bool
+                               Database.Persist.Class.PersistField.$fPersistFieldBool
+                               ww4)
+                            (GHC.Types.[]
+                               @ Database.Persist.Class.PersistField.SomePersistField)))) }) -}
+a0af1d2de58a84f46d8a9e227dc8f746
   $fPersistEntityPedido_$d~~ ::
     (Database.Persist.Class.PersistEntity.Key Foundation.Pedido :: *)
     GHC.Types.~~ (Database.Persist.Class.PersistEntity.Key
@@ -3695,7 +3612,7 @@ ab0e720acfd8349912d50cf443256369
     -> Data.HashMap.Base.HashMap
          Data.Text.Internal.Text Database.Persist.Types.Base.PersistValue
   {- Arity: 2, Strictness: <S,1*U><L,1*U> -}
-ea1f29db326095c0606776bf693dc9c5
+388dd4c04563308c88c61ef89b3610ad
   $fPersistFieldItemPedido ::
     Database.Persist.Class.PersistField.PersistField
       Foundation.ItemPedido
@@ -3795,7 +3712,7 @@ dbddb71f54280bc1f51060a58e2776a1
                    Foundation.$fPersistFieldItemPedido3
                    0#
                    ipv }) -}
-ea1f29db326095c0606776bf693dc9c5
+388dd4c04563308c88c61ef89b3610ad
   $fPersistFieldItemPedido_$cfromPersistValue ::
     Database.Persist.Types.Base.PersistValue
     -> Data.Either.Either Data.Text.Internal.Text Foundation.ItemPedido
@@ -3859,7 +3776,7 @@ ea1f29db326095c0606776bf693dc9c5
                                  @ Database.Persist.Types.Base.PersistValue
                                  (c Foundation.$fPersistFieldItemPedido1)
                                  (GHC.Types.[] @ Database.Persist.Types.Base.PersistValue)))) }) -}
-ea1f29db326095c0606776bf693dc9c5
+388dd4c04563308c88c61ef89b3610ad
   $fPersistFieldItemPedido_$ctoPersistValue ::
     Foundation.ItemPedido -> Database.Persist.Types.Base.PersistValue
   {- Arity: 1, Strictness: <L,1*U(U,U,U)>m12, Inline: [0],
@@ -3867,7 +3784,7 @@ ea1f29db326095c0606776bf693dc9c5
                 (\ (w :: Foundation.ItemPedido) ->
                  case Foundation.$w$ctoPersistValue1 w of ww { Unit# ww1 ->
                  Database.Persist.Types.Base.PersistMap ww1 }) -}
-ea1f29db326095c0606776bf693dc9c5
+388dd4c04563308c88c61ef89b3610ad
   $fPersistFieldKey ::
     Database.Persist.Class.PersistField.PersistField
       (Database.Persist.Class.PersistEntity.Key Foundation.ItemPedido)
@@ -3921,7 +3838,7 @@ b5272135afcffe4d7282ae6ad9b22515
                    ->_R (Data.Either.Either
                            <Data.Text.Internal.Text>_R
                            (Sym (Database.Persist.Sql.Orphan.PersistStore.N:R:BackendKeySqlBackend[0]) ; (Sym (Database.Persist.Sql.Orphan.PersistStore.D:R:BackendKeySqlBackend0[0]) ; (Sym (Foundation.N:R:KeyTipoProduto[0]) ; Sym (Foundation.D:R:KeyTipoProduto0[0])))))_R) -}
-6fd26fcc873363416132d7f99f0bb536
+a0af1d2de58a84f46d8a9e227dc8f746
   $fPersistFieldKey2 ::
     Database.Persist.Class.PersistField.PersistField
       (Database.Persist.Class.PersistEntity.Key Foundation.Pedido)
@@ -3957,7 +3874,7 @@ ab0e720acfd8349912d50cf443256369
                    ->_R (Data.Either.Either
                            <Data.Text.Internal.Text>_R
                            (Sym (Database.Persist.Sql.Orphan.PersistStore.N:R:BackendKeySqlBackend[0]) ; (Sym (Database.Persist.Sql.Orphan.PersistStore.D:R:BackendKeySqlBackend0[0]) ; (Sym (Foundation.N:R:KeyCliente[0]) ; Sym (Foundation.D:R:KeyCliente0[0])))))_R) -}
-6fd26fcc873363416132d7f99f0bb536
+a0af1d2de58a84f46d8a9e227dc8f746
   $fPersistFieldPedido ::
     Database.Persist.Class.PersistField.PersistField Foundation.Pedido
   DFunId
@@ -3966,80 +3883,12 @@ ab0e720acfd8349912d50cf443256369
                   @ Foundation.Pedido
                   Foundation.$fPersistFieldPedido_$ctoPersistValue
                   Foundation.$fPersistFieldPedido_$cfromPersistValue -}
-b8b9b6058e878cb5cea3880ac9cfded3
+80e3be945e81c53d14046ff5ceecbd6a
   $fPersistFieldPedido1 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString#
-                   Foundation.$fPersistEntityPedido3) -}
-e2938b6d41b9123b88be015011800c0d
-  $fPersistFieldPedido2 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString#
                    Foundation.$fPersistEntityPedido6) -}
-5c84d6cfb074a4e6a1c0656b69c6426a
-  $fPersistFieldPedido3 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString#
-                   Foundation.$fPersistEntityPedido9) -}
-852f403981af4f6299d17e848e792ef1
-  $fPersistFieldPedido4 :: Data.Text.Internal.Text
-  {- Unfolding: (case GHC.Magic.runRW#
-                        @ ('GHC.Types.TupleRep
-                             '['GHC.Types.TupleRep '[], 'GHC.Types.LiftedRep])
-                        @ (# GHC.Prim.State# GHC.Prim.RealWorld, Data.Text.Internal.Text #)
-                        Foundation.$fPersistFieldPedido5 of ds1 { (#,#) ipv ipv1 ->
-                 ipv1 }) -}
-0c7511f9df54076219596f60dc047bdf
-  $fPersistFieldPedido5 ::
-    GHC.Prim.State# GHC.Prim.RealWorld
-    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
-          Data.Text.Internal.Text #)
-  {- Arity: 1, Strictness: <S,U>,
-     Unfolding: (\ (s1 :: GHC.Prim.State#
-                            GHC.Prim.RealWorld)[OneShot] ->
-                 case GHC.Prim.newByteArray#
-                        @ GHC.Prim.RealWorld
-                        10#
-                        s1 of ds1 { (#,#) ipv ipv1 ->
-                 Foundation.$wouter1
-                   ipv1
-                   4#
-                   Foundation.$fPersistFieldPedido1
-                   0#
-                   ipv }) -}
-1f5bace4835f7872ba6bee90ed6ea554
-  $fPersistFieldPedido6 :: Data.Text.Internal.Text
-  {- Unfolding: (case GHC.Magic.runRW#
-                        @ ('GHC.Types.TupleRep
-                             '['GHC.Types.TupleRep '[], 'GHC.Types.LiftedRep])
-                        @ (# GHC.Prim.State# GHC.Prim.RealWorld, Data.Text.Internal.Text #)
-                        Foundation.$fPersistFieldPedido7 of ds1 { (#,#) ipv ipv1 ->
-                 ipv1 }) -}
-4501bf0ecf9cc535f5e29be8f8d210d2
-  $fPersistFieldPedido7 ::
-    GHC.Prim.State# GHC.Prim.RealWorld
-    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
-          Data.Text.Internal.Text #)
-  {- Arity: 1, Strictness: <S,U>,
-     Unfolding: (\ (s1 :: GHC.Prim.State#
-                            GHC.Prim.RealWorld)[OneShot] ->
-                 case GHC.Prim.newByteArray#
-                        @ GHC.Prim.RealWorld
-                        10#
-                        s1 of ds1 { (#,#) ipv ipv1 ->
-                 Foundation.$wouter1
-                   ipv1
-                   4#
-                   Foundation.$fPersistFieldPedido2
-                   0#
-                   ipv }) -}
-2ab59ce87227a9ee027b0475d7adc284
-  $fPersistFieldPedido8 :: Data.Text.Internal.Text
-  {- Unfolding: (case GHC.Magic.runRW#
-                        @ ('GHC.Types.TupleRep
-                             '['GHC.Types.TupleRep '[], 'GHC.Types.LiftedRep])
-                        @ (# GHC.Prim.State# GHC.Prim.RealWorld, Data.Text.Internal.Text #)
-                        Foundation.$fPersistFieldPedido9 of ds1 { (#,#) ipv ipv1 ->
-                 ipv1 }) -}
-98615a0b15e1f368509a4ec5f00afaa9
-  $fPersistFieldPedido9 ::
+fd4cbb4951c25bc3f6c020807d8eb26d
+  $fPersistFieldPedido10 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld,
           Data.Text.Internal.Text #)
@@ -4056,7 +3905,105 @@ e2938b6d41b9123b88be015011800c0d
                    Foundation.$fPersistFieldPedido3
                    0#
                    ipv }) -}
-6fd26fcc873363416132d7f99f0bb536
+c98ebc3b5d588bd4c28b69505bbd7a6a
+  $fPersistFieldPedido11 :: Data.Text.Internal.Text
+  {- Unfolding: (case GHC.Magic.runRW#
+                        @ ('GHC.Types.TupleRep
+                             '['GHC.Types.TupleRep '[], 'GHC.Types.LiftedRep])
+                        @ (# GHC.Prim.State# GHC.Prim.RealWorld, Data.Text.Internal.Text #)
+                        Foundation.$fPersistFieldPedido12 of ds1 { (#,#) ipv ipv1 ->
+                 ipv1 }) -}
+36ec7b88cea04a59d6dea8be426fd92a
+  $fPersistFieldPedido12 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Text.Internal.Text #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (s1 :: GHC.Prim.State#
+                            GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.Prim.newByteArray#
+                        @ GHC.Prim.RealWorld
+                        10#
+                        s1 of ds1 { (#,#) ipv ipv1 ->
+                 Foundation.$wouter1
+                   ipv1
+                   4#
+                   Foundation.$fPersistFieldPedido4
+                   0#
+                   ipv }) -}
+4e30bea95ddbaaeb9f4ca0a98d759b90
+  $fPersistFieldPedido2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   Foundation.$fPersistEntityPedido9) -}
+2403fc3cdce73f0c507d5fbe186d90e4
+  $fPersistFieldPedido3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   Foundation.$fPersistEntityPedido12) -}
+74db4585705d7b3b23cdce56fe9aafa4
+  $fPersistFieldPedido4 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   Foundation.$fPersistEntityPedido15) -}
+ad2d748c2494e93b3f356dda1f1ed249
+  $fPersistFieldPedido5 :: Data.Text.Internal.Text
+  {- Unfolding: (case GHC.Magic.runRW#
+                        @ ('GHC.Types.TupleRep
+                             '['GHC.Types.TupleRep '[], 'GHC.Types.LiftedRep])
+                        @ (# GHC.Prim.State# GHC.Prim.RealWorld, Data.Text.Internal.Text #)
+                        Foundation.$fPersistFieldPedido6 of ds1 { (#,#) ipv ipv1 ->
+                 ipv1 }) -}
+677fc1bd2be52ee886e07eea33ff58f7
+  $fPersistFieldPedido6 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Text.Internal.Text #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (s1 :: GHC.Prim.State#
+                            GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.Prim.newByteArray#
+                        @ GHC.Prim.RealWorld
+                        10#
+                        s1 of ds1 { (#,#) ipv ipv1 ->
+                 Foundation.$wouter1
+                   ipv1
+                   4#
+                   Foundation.$fPersistFieldPedido1
+                   0#
+                   ipv }) -}
+a6af8ea0a78744c4a1f3c32f990d9b14
+  $fPersistFieldPedido7 :: Data.Text.Internal.Text
+  {- Unfolding: (case GHC.Magic.runRW#
+                        @ ('GHC.Types.TupleRep
+                             '['GHC.Types.TupleRep '[], 'GHC.Types.LiftedRep])
+                        @ (# GHC.Prim.State# GHC.Prim.RealWorld, Data.Text.Internal.Text #)
+                        Foundation.$fPersistFieldPedido8 of ds1 { (#,#) ipv ipv1 ->
+                 ipv1 }) -}
+87d45556ae13da094ad4c87c90f7c669
+  $fPersistFieldPedido8 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Text.Internal.Text #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (s1 :: GHC.Prim.State#
+                            GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.Prim.newByteArray#
+                        @ GHC.Prim.RealWorld
+                        10#
+                        s1 of ds1 { (#,#) ipv ipv1 ->
+                 Foundation.$wouter1
+                   ipv1
+                   4#
+                   Foundation.$fPersistFieldPedido2
+                   0#
+                   ipv }) -}
+e99186b71bf1e40a217c6748b63b9088
+  $fPersistFieldPedido9 :: Data.Text.Internal.Text
+  {- Unfolding: (case GHC.Magic.runRW#
+                        @ ('GHC.Types.TupleRep
+                             '['GHC.Types.TupleRep '[], 'GHC.Types.LiftedRep])
+                        @ (# GHC.Prim.State# GHC.Prim.RealWorld, Data.Text.Internal.Text #)
+                        Foundation.$fPersistFieldPedido10 of ds1 { (#,#) ipv ipv1 ->
+                 ipv1 }) -}
+a0af1d2de58a84f46d8a9e227dc8f746
   $fPersistFieldPedido_$cfromPersistValue ::
     Database.Persist.Types.Base.PersistValue
     -> Data.Either.Either Data.Text.Internal.Text Foundation.Pedido
@@ -4109,18 +4056,22 @@ e2938b6d41b9123b88be015011800c0d
                       Foundation.$fPersistEntityPedido_$cfromPersistValues
                         (GHC.Types.:
                            @ Database.Persist.Types.Base.PersistValue
-                           (c Foundation.$fPersistFieldPedido3)
+                           (c Foundation.$fPersistFieldPedido4)
                            (GHC.Types.:
                               @ Database.Persist.Types.Base.PersistValue
-                              (c Foundation.$fPersistFieldPedido2)
+                              (c Foundation.$fPersistFieldPedido3)
                               (GHC.Types.:
                                  @ Database.Persist.Types.Base.PersistValue
-                                 (c Foundation.$fPersistFieldPedido1)
-                                 (GHC.Types.[] @ Database.Persist.Types.Base.PersistValue)))) }) -}
-6fd26fcc873363416132d7f99f0bb536
+                                 (c Foundation.$fPersistFieldPedido2)
+                                 (GHC.Types.:
+                                    @ Database.Persist.Types.Base.PersistValue
+                                    (c Foundation.$fPersistFieldPedido1)
+                                    (GHC.Types.[]
+                                       @ Database.Persist.Types.Base.PersistValue))))) }) -}
+a0af1d2de58a84f46d8a9e227dc8f746
   $fPersistFieldPedido_$ctoPersistValue ::
     Foundation.Pedido -> Database.Persist.Types.Base.PersistValue
-  {- Arity: 1, Strictness: <L,1*U(U,U,U)>m12, Inline: [0],
+  {- Arity: 1, Strictness: <L,1*U(U,U,U,U)>m12, Inline: [0],
      Unfolding: InlineRule (1, True, False)
                 (\ (w :: Foundation.Pedido) ->
                  case Foundation.$w$ctoPersistValue2 w of ww { Unit# ww1 ->
@@ -4283,7 +4234,7 @@ ab0e720acfd8349912d50cf443256369
      Unfolding: InlineRule (1, True, True)
                 (\ (ds :: Data.Proxy.Proxy Foundation.Cliente) ->
                  Database.Persist.Types.Base.SqlString) -}
-ea1f29db326095c0606776bf693dc9c5
+388dd4c04563308c88c61ef89b3610ad
   $fPersistFieldSqlItemPedido ::
     Database.Persist.Sql.Class.PersistFieldSql Foundation.ItemPedido
   DFunId
@@ -4292,7 +4243,7 @@ ea1f29db326095c0606776bf693dc9c5
                   @ Foundation.ItemPedido
                   Foundation.$fPersistFieldItemPedido
                   Foundation.$fPersistFieldSqlItemPedido_$csqlType -}
-ea1f29db326095c0606776bf693dc9c5
+388dd4c04563308c88c61ef89b3610ad
   $fPersistFieldSqlItemPedido_$csqlType ::
     Data.Proxy.Proxy Foundation.ItemPedido
     -> Database.Persist.Types.Base.SqlType
@@ -4300,7 +4251,7 @@ ea1f29db326095c0606776bf693dc9c5
      Unfolding: InlineRule (1, True, True)
                 (\ (ds :: Data.Proxy.Proxy Foundation.ItemPedido) ->
                  Database.Persist.Types.Base.SqlString) -}
-ea1f29db326095c0606776bf693dc9c5
+388dd4c04563308c88c61ef89b3610ad
   $fPersistFieldSqlKey ::
     Database.Persist.Sql.Class.PersistFieldSql
       (Database.Persist.Class.PersistEntity.Key Foundation.ItemPedido)
@@ -4348,7 +4299,7 @@ b5272135afcffe4d7282ae6ad9b22515
                       <GHC.Int.Int64, Database.Persist.Class.PersistEntity.Key
                                         Foundation.TipoProduto>)_R
                    ->_R <Database.Persist.Types.Base.SqlType>_R) -}
-6fd26fcc873363416132d7f99f0bb536
+a0af1d2de58a84f46d8a9e227dc8f746
   $fPersistFieldSqlKey2 ::
     Database.Persist.Sql.Class.PersistFieldSql
       (Database.Persist.Class.PersistEntity.Key Foundation.Pedido)
@@ -4380,7 +4331,7 @@ ab0e720acfd8349912d50cf443256369
                       <GHC.Int.Int64, Database.Persist.Class.PersistEntity.Key
                                         Foundation.Cliente>)_R
                    ->_R <Database.Persist.Types.Base.SqlType>_R) -}
-6fd26fcc873363416132d7f99f0bb536
+a0af1d2de58a84f46d8a9e227dc8f746
   $fPersistFieldSqlPedido ::
     Database.Persist.Sql.Class.PersistFieldSql Foundation.Pedido
   DFunId
@@ -4389,7 +4340,7 @@ ab0e720acfd8349912d50cf443256369
                   @ Foundation.Pedido
                   Foundation.$fPersistFieldPedido
                   Foundation.$fPersistFieldSqlPedido_$csqlType -}
-6fd26fcc873363416132d7f99f0bb536
+a0af1d2de58a84f46d8a9e227dc8f746
   $fPersistFieldSqlPedido_$csqlType ::
     Data.Proxy.Proxy Foundation.Pedido
     -> Database.Persist.Types.Base.SqlType
@@ -4614,7 +4565,7 @@ b5272135afcffe4d7282ae6ad9b22515
           Data.HashMap.Base.HashMap Data.Text.Internal.Text v #)
   {- Arity: 9,
      Strictness: <S,U><S,U><S,U><S,U><L,U><L,U><L,U><L,U><S,U> -}
-ea1f29db326095c0606776bf693dc9c5
+388dd4c04563308c88c61ef89b3610ad
   $fReadKey ::
     GHC.Read.Read
       (Database.Persist.Class.PersistEntity.Key Foundation.ItemPedido)
@@ -4780,7 +4731,7 @@ ab0e720acfd8349912d50cf443256369
                    (Text.ParserCombinators.ReadP.$fApplicativeP_$cpure
                       @ [Database.Persist.Class.PersistEntity.Key
                            Foundation.Cliente])) -}
-ea1f29db326095c0606776bf693dc9c5
+388dd4c04563308c88c61ef89b3610ad
   $fReadKey17 ::
     Text.ParserCombinators.ReadPrec.Prec
     -> forall b.
@@ -4798,7 +4749,7 @@ ea1f29db326095c0606776bf693dc9c5
                                       Foundation.ItemPedido>_R)) ; Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
                                                                             <Database.Persist.Class.PersistEntity.Key
                                                                                Foundation.ItemPedido>_R))) -}
-ea1f29db326095c0606776bf693dc9c5
+388dd4c04563308c88c61ef89b3610ad
   $fReadKey18 ::
     Text.ParserCombinators.ReadPrec.Prec
     -> forall b.
@@ -4865,7 +4816,7 @@ b5272135afcffe4d7282ae6ad9b22515
                       (Text.ParserCombinators.ReadP.$fApplicativeP_$cpure
                          @ (Database.Persist.Class.PersistEntity.Key
                               Foundation.TipoProduto)))) -}
-6fd26fcc873363416132d7f99f0bb536
+a0af1d2de58a84f46d8a9e227dc8f746
   $fReadKey2 ::
     GHC.Read.Read
       (Database.Persist.Class.PersistEntity.Key Foundation.Pedido)
@@ -4894,7 +4845,7 @@ d60104b577fed217c3d38955d8ca6cda
 253314065a2b9aac99be0f142f16a558
   $fReadKey22 :: GHC.Prim.Addr#
   {- HasNoCafRefs, Unfolding: ("unItemPedidoKey"#) -}
-ea1f29db326095c0606776bf693dc9c5
+388dd4c04563308c88c61ef89b3610ad
   $fReadKey23 ::
     Text.ParserCombinators.ReadP.P
       [Database.Persist.Class.PersistEntity.Key Foundation.ItemPedido]
@@ -4912,7 +4863,7 @@ ea1f29db326095c0606776bf693dc9c5
                    (Text.ParserCombinators.ReadP.$fApplicativeP_$cpure
                       @ [Database.Persist.Class.PersistEntity.Key
                            Foundation.ItemPedido])) -}
-6fd26fcc873363416132d7f99f0bb536
+a0af1d2de58a84f46d8a9e227dc8f746
   $fReadKey24 ::
     Text.ParserCombinators.ReadPrec.Prec
     -> forall b.
@@ -4930,7 +4881,7 @@ ea1f29db326095c0606776bf693dc9c5
                                       Foundation.Pedido>_R)) ; Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
                                                                         <Database.Persist.Class.PersistEntity.Key
                                                                            Foundation.Pedido>_R))) -}
-6fd26fcc873363416132d7f99f0bb536
+a0af1d2de58a84f46d8a9e227dc8f746
   $fReadKey25 ::
     Text.ParserCombinators.ReadPrec.Prec
     -> forall b.
@@ -4959,7 +4910,7 @@ ab7ce6ec58658b2c84990a742e98a630
 fb0fb85b08f159045e79aff1f9863c3e
   $fReadKey29 :: GHC.Prim.Addr#
   {- HasNoCafRefs, Unfolding: ("unPedidoKey"#) -}
-6fd26fcc873363416132d7f99f0bb536
+a0af1d2de58a84f46d8a9e227dc8f746
   $fReadKey2_$creadList ::
     Text.ParserCombinators.ReadP.ReadS
       [Database.Persist.Class.PersistEntity.Key Foundation.Pedido]
@@ -4967,7 +4918,7 @@ fb0fb85b08f159045e79aff1f9863c3e
      Unfolding: (Text.ParserCombinators.ReadP.run
                    @ [Database.Persist.Class.PersistEntity.Key Foundation.Pedido]
                    Foundation.$fReadKey30) -}
-6fd26fcc873363416132d7f99f0bb536
+a0af1d2de58a84f46d8a9e227dc8f746
   $fReadKey2_$creadListPrec ::
     Text.ParserCombinators.ReadPrec.ReadPrec
       [Database.Persist.Class.PersistEntity.Key Foundation.Pedido]
@@ -4981,7 +4932,7 @@ fb0fb85b08f159045e79aff1f9863c3e
                                       Foundation.Pedido>_R)) ; Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
                                                                         <Database.Persist.Class.PersistEntity.Key
                                                                            Foundation.Pedido>_R))) -}
-6fd26fcc873363416132d7f99f0bb536
+a0af1d2de58a84f46d8a9e227dc8f746
   $fReadKey2_$creadsPrec ::
     GHC.Types.Int
     -> Text.ParserCombinators.ReadP.ReadS
@@ -5025,7 +4976,7 @@ ab0e720acfd8349912d50cf443256369
                                                                         <Database.Persist.Class.PersistEntity.Key
                                                                            Foundation.Cliente>_R))
                   Foundation.$fReadKey3_$creadListPrec -}
-6fd26fcc873363416132d7f99f0bb536
+a0af1d2de58a84f46d8a9e227dc8f746
   $fReadKey30 ::
     Text.ParserCombinators.ReadP.P
       [Database.Persist.Class.PersistEntity.Key Foundation.Pedido]
@@ -5261,7 +5212,7 @@ a119aa22bf33fc75f665fef16f768771
 2a52b287d118b318d8361eddd388e53c
   $fReadKey9 :: GHC.Prim.Addr#
   {- HasNoCafRefs, Unfolding: ("{"#) -}
-ea1f29db326095c0606776bf693dc9c5
+388dd4c04563308c88c61ef89b3610ad
   $fReadKey_$creadList ::
     Text.ParserCombinators.ReadP.ReadS
       [Database.Persist.Class.PersistEntity.Key Foundation.ItemPedido]
@@ -5269,7 +5220,7 @@ ea1f29db326095c0606776bf693dc9c5
      Unfolding: (Text.ParserCombinators.ReadP.run
                    @ [Database.Persist.Class.PersistEntity.Key Foundation.ItemPedido]
                    Foundation.$fReadKey23) -}
-ea1f29db326095c0606776bf693dc9c5
+388dd4c04563308c88c61ef89b3610ad
   $fReadKey_$creadListPrec ::
     Text.ParserCombinators.ReadPrec.ReadPrec
       [Database.Persist.Class.PersistEntity.Key Foundation.ItemPedido]
@@ -5283,7 +5234,7 @@ ea1f29db326095c0606776bf693dc9c5
                                       Foundation.ItemPedido>_R)) ; Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
                                                                             <Database.Persist.Class.PersistEntity.Key
                                                                                Foundation.ItemPedido>_R))) -}
-ea1f29db326095c0606776bf693dc9c5
+388dd4c04563308c88c61ef89b3610ad
   $fReadKey_$creadsPrec ::
     GHC.Types.Int
     -> Text.ParserCombinators.ReadP.ReadS
@@ -5854,7 +5805,7 @@ c508301d62c3f1d10cc783062f318242
     -> Data.Set.Internal.Set Data.Text.Internal.Text
     -> Data.Set.Internal.Set Data.Text.Internal.Text
   {- Arity: 5, Strictness: <S,U><S,U><S,U><S,1*U><S,1*U> -}
-ea1f29db326095c0606776bf693dc9c5
+388dd4c04563308c88c61ef89b3610ad
   $fShowKey ::
     GHC.Show.Show
       (Database.Persist.Class.PersistEntity.Key Foundation.ItemPedido)
@@ -5930,7 +5881,7 @@ b5272135afcffe4d7282ae6ad9b22515
                   Foundation.$fShowKey1_$cshowsPrec
                   Foundation.$fShowKey1_$cshow
                   Foundation.$fShowKey1_$cshowList -}
-6fd26fcc873363416132d7f99f0bb536
+a0af1d2de58a84f46d8a9e227dc8f746
   $fShowKey10 ::
     Database.Persist.Class.PersistEntity.Key Foundation.Pedido
     -> GHC.Show.ShowS
@@ -6019,7 +5970,7 @@ b5272135afcffe4d7282ae6ad9b22515
                    (w2 :: GHC.Base.String) ->
                  case w of ww { GHC.Types.I# ww1 ->
                  Foundation.$w$cshowsPrec4 ww1 w1 w2 }) -}
-6fd26fcc873363416132d7f99f0bb536
+a0af1d2de58a84f46d8a9e227dc8f746
   $fShowKey2 ::
     GHC.Show.Show
       (Database.Persist.Class.PersistEntity.Key Foundation.Pedido)
@@ -6030,7 +5981,7 @@ b5272135afcffe4d7282ae6ad9b22515
                   Foundation.$fShowKey2_$cshowsPrec
                   Foundation.$fShowKey2_$cshow
                   Foundation.$fShowKey2_$cshowList -}
-6fd26fcc873363416132d7f99f0bb536
+a0af1d2de58a84f46d8a9e227dc8f746
   $fShowKey2_$cshow ::
     Database.Persist.Class.PersistEntity.Key Foundation.Pedido
     -> GHC.Base.String
@@ -6046,7 +5997,7 @@ b5272135afcffe4d7282ae6ad9b22515
                          x `cast`
                          (Foundation.D:R:KeyPedido0[0] ; Foundation.N:R:KeyPedido[0])
                          Foundation.$fReadKey10))) -}
-6fd26fcc873363416132d7f99f0bb536
+a0af1d2de58a84f46d8a9e227dc8f746
   $fShowKey2_$cshowList ::
     [Database.Persist.Class.PersistEntity.Key Foundation.Pedido]
     -> GHC.Show.ShowS
@@ -6060,7 +6011,7 @@ b5272135afcffe4d7282ae6ad9b22515
                    Foundation.$fShowKey10
                    ls
                    s) -}
-6fd26fcc873363416132d7f99f0bb536
+a0af1d2de58a84f46d8a9e227dc8f746
   $fShowKey2_$cshowsPrec ::
     GHC.Types.Int
     -> Database.Persist.Class.PersistEntity.Key Foundation.Pedido
@@ -6142,7 +6093,7 @@ b824f6e600b3d904f17077d624a95d6b
 2b4ce5d0fde26b639f6105defc3c9978
   $fShowKey6 :: GHC.Prim.Addr#
   {- HasNoCafRefs, Unfolding: ("ClienteKey {"#) -}
-ea1f29db326095c0606776bf693dc9c5
+388dd4c04563308c88c61ef89b3610ad
   $fShowKey7 ::
     Database.Persist.Class.PersistEntity.Key Foundation.ItemPedido
     -> GHC.Show.ShowS
@@ -6157,7 +6108,7 @@ ea1f29db326095c0606776bf693dc9c5
 7491f56602946348d0e6b25da3aeb14f
   $fShowKey9 :: GHC.Prim.Addr#
   {- HasNoCafRefs, Unfolding: ("ItemPedidoKey {"#) -}
-ea1f29db326095c0606776bf693dc9c5
+388dd4c04563308c88c61ef89b3610ad
   $fShowKey_$cshow ::
     Database.Persist.Class.PersistEntity.Key Foundation.ItemPedido
     -> GHC.Base.String
@@ -6173,7 +6124,7 @@ ea1f29db326095c0606776bf693dc9c5
                          x `cast`
                          (Foundation.D:R:KeyItemPedido0[0] ; Foundation.N:R:KeyItemPedido[0])
                          Foundation.$fReadKey10))) -}
-ea1f29db326095c0606776bf693dc9c5
+388dd4c04563308c88c61ef89b3610ad
   $fShowKey_$cshowList ::
     [Database.Persist.Class.PersistEntity.Key Foundation.ItemPedido]
     -> GHC.Show.ShowS
@@ -6187,7 +6138,7 @@ ea1f29db326095c0606776bf693dc9c5
                    Foundation.$fShowKey7
                    ls
                    s) -}
-ea1f29db326095c0606776bf693dc9c5
+388dd4c04563308c88c61ef89b3610ad
   $fShowKey_$cshowsPrec ::
     GHC.Types.Int
     -> Database.Persist.Class.PersistEntity.Key Foundation.ItemPedido
@@ -6291,7 +6242,7 @@ ab0e720acfd8349912d50cf443256369
                    @ Database.Persist.Sql.Types.Internal.SqlBackend
                    @ Database.Persist.Sql.Types.Internal.SqlBackend
                    @~ <Database.Persist.Sql.Types.Internal.SqlBackend>_N) -}
-ea1f29db326095c0606776bf693dc9c5
+388dd4c04563308c88c61ef89b3610ad
   $fToBackendKeySqlBackendItemPedido ::
     Database.Persist.Class.PersistStore.ToBackendKey
       Database.Persist.Sql.Types.Internal.SqlBackend
@@ -6318,7 +6269,7 @@ ea1f29db326095c0606776bf693dc9c5
                   (<Database.Persist.Class.PersistStore.BackendKey
                       Database.Persist.Sql.Types.Internal.SqlBackend>_R
                    ->_R Sym (Foundation.N:R:KeyItemPedido[0]) ; Sym (Foundation.D:R:KeyItemPedido0[0])) -}
-ea1f29db326095c0606776bf693dc9c5
+388dd4c04563308c88c61ef89b3610ad
   $fToBackendKeySqlBackendItemPedido1 ::
     Database.Persist.Class.PersistEntity.Key Foundation.ItemPedido
     -> Database.Persist.Class.PersistEntity.Key Foundation.ItemPedido
@@ -6327,7 +6278,7 @@ ea1f29db326095c0606776bf693dc9c5
                 (\ (ds :: Database.Persist.Class.PersistEntity.Key
                             Foundation.ItemPedido) ->
                  ds) -}
-6fd26fcc873363416132d7f99f0bb536
+a0af1d2de58a84f46d8a9e227dc8f746
   $fToBackendKeySqlBackendPedido ::
     Database.Persist.Class.PersistStore.ToBackendKey
       Database.Persist.Sql.Types.Internal.SqlBackend Foundation.Pedido
@@ -6353,7 +6304,7 @@ ea1f29db326095c0606776bf693dc9c5
                   (<Database.Persist.Class.PersistStore.BackendKey
                       Database.Persist.Sql.Types.Internal.SqlBackend>_R
                    ->_R Sym (Foundation.N:R:KeyPedido[0]) ; Sym (Foundation.D:R:KeyPedido0[0])) -}
-6fd26fcc873363416132d7f99f0bb536
+a0af1d2de58a84f46d8a9e227dc8f746
   $fToBackendKeySqlBackendPedido1 ::
     Database.Persist.Class.PersistEntity.Key Foundation.Pedido
     -> Database.Persist.Class.PersistEntity.Key Foundation.Pedido
@@ -6434,7 +6385,7 @@ b5272135afcffe4d7282ae6ad9b22515
                 (\ (ds :: Database.Persist.Class.PersistEntity.Key
                             Foundation.TipoProduto) ->
                  ds) -}
-ea1f29db326095c0606776bf693dc9c5
+388dd4c04563308c88c61ef89b3610ad
   $fToHttpApiDataKey ::
     Web.Internal.HttpApiData.ToHttpApiData
       (Database.Persist.Class.PersistEntity.Key Foundation.ItemPedido)
@@ -6506,7 +6457,7 @@ b5272135afcffe4d7282ae6ad9b22515
                     `cast`
                   ((Sym (Database.Persist.Sql.Orphan.PersistStore.N:R:BackendKeySqlBackend[0]) ; (Sym (Database.Persist.Sql.Orphan.PersistStore.D:R:BackendKeySqlBackend0[0]) ; (Sym (Foundation.N:R:KeyTipoProduto[0]) ; Sym (Foundation.D:R:KeyTipoProduto0[0]))))
                    ->_R <Data.Text.Internal.Text>_R) -}
-6fd26fcc873363416132d7f99f0bb536
+a0af1d2de58a84f46d8a9e227dc8f746
   $fToHttpApiDataKey2 ::
     Web.Internal.HttpApiData.ToHttpApiData
       (Database.Persist.Class.PersistEntity.Key Foundation.Pedido)
@@ -6554,7 +6505,7 @@ ab0e720acfd8349912d50cf443256369
                     `cast`
                   ((Sym (Database.Persist.Sql.Orphan.PersistStore.N:R:BackendKeySqlBackend[0]) ; (Sym (Database.Persist.Sql.Orphan.PersistStore.D:R:BackendKeySqlBackend0[0]) ; (Sym (Foundation.N:R:KeyCliente[0]) ; Sym (Foundation.D:R:KeyCliente0[0]))))
                    ->_R <Data.Text.Internal.Text>_R) -}
-ea1f29db326095c0606776bf693dc9c5
+388dd4c04563308c88c61ef89b3610ad
   $fToJSONKey ::
     Data.Aeson.Types.ToJSON.ToJSON
       (Database.Persist.Class.PersistEntity.Key Foundation.ItemPedido)
@@ -6632,7 +6583,7 @@ b5272135afcffe4d7282ae6ad9b22515
                   (([Sym (Database.Persist.Sql.Orphan.PersistStore.N:R:BackendKeySqlBackend[0]) ; (Sym (Database.Persist.Sql.Orphan.PersistStore.D:R:BackendKeySqlBackend0[0]) ; (Sym (Foundation.N:R:KeyTipoProduto[0]) ; Sym (Foundation.D:R:KeyTipoProduto0[0])))])_R
                    ->_R <Data.Aeson.Encoding.Internal.Encoding'
                            Data.Aeson.Types.Internal.Value>_R) -}
-6fd26fcc873363416132d7f99f0bb536
+a0af1d2de58a84f46d8a9e227dc8f746
   $fToJSONKey2 ::
     Data.Aeson.Types.ToJSON.ToJSON
       (Database.Persist.Class.PersistEntity.Key Foundation.Pedido)
@@ -8433,6 +8384,26 @@ f778a81eacd0128ceb060cfed8f63b3e
 d3dafe0b518baed0238025aaa6cf5d0c
   $tc'PedidoClienteid3 :: GHC.Prim.Addr#
   {- HasNoCafRefs, Unfolding: ("'PedidoClienteid"#) -}
+569cbf9ed53efbc637632d33004f7052
+  $tc'PedidoFinalizado :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   18358563416204969398##
+                   4048682581227359609##
+                   Foundation.$trModule
+                   Foundation.$tc'PedidoFinalizado2
+                   1#
+                   Foundation.$tc'PedidoFinalizado1) -}
+9e942df2799776d4cbf8b2332f1d3c35
+  $tc'PedidoFinalizado1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+c6568dfbb38a43cbc3d8ff01efded911
+  $tc'PedidoFinalizado2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Foundation.$tc'PedidoFinalizado3) -}
+9f91ffe8c871f0a556ce36bf906ff83d
+  $tc'PedidoFinalizado3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'PedidoFinalizado"#) -}
 5bf7385e9091a2133ba65e7a7ee9dd57
   $tc'PedidoHrpedido :: GHC.Types.TyCon
   {- HasNoCafRefs, Strictness: m,
@@ -9462,7 +9433,7 @@ ab0e720acfd8349912d50cf443256369
                         @ b
                         (\ (a :: GHC.Base.String) ->
                          Text.ParserCombinators.ReadP.skipSpaces2 a @ b k) }) -}
-ea1f29db326095c0606776bf693dc9c5
+388dd4c04563308c88c61ef89b3610ad
   $w$creadPrec1 ::
     GHC.Prim.Int#
     -> forall b.
@@ -9590,7 +9561,7 @@ ea1f29db326095c0606776bf693dc9c5
                         @ b
                         (\ (a :: GHC.Base.String) ->
                          Text.ParserCombinators.ReadP.skipSpaces2 a @ b k) }) -}
-6fd26fcc873363416132d7f99f0bb536
+a0af1d2de58a84f46d8a9e227dc8f746
   $w$creadPrec2 ::
     GHC.Prim.Int#
     -> forall b.
@@ -10009,7 +9980,7 @@ ab0e720acfd8349912d50cf443256369
                                  (GHC.CString.unpackAppendCString#
                                     Foundation.$fReadKey11
                                     (GHC.Types.: @ GHC.Types.Char GHC.Show.$fShow(,)2 w1))))) }) -}
-ea1f29db326095c0606776bf693dc9c5
+388dd4c04563308c88c61ef89b3610ad
   $w$cshowsPrec1 ::
     GHC.Prim.Int#
     -> Database.Persist.Class.PersistEntity.Key Foundation.ItemPedido
@@ -10047,7 +10018,7 @@ ea1f29db326095c0606776bf693dc9c5
                                  (GHC.CString.unpackAppendCString#
                                     Foundation.$fReadKey11
                                     (GHC.Types.: @ GHC.Types.Char GHC.Show.$fShow(,)2 w1))))) }) -}
-6fd26fcc873363416132d7f99f0bb536
+a0af1d2de58a84f46d8a9e227dc8f746
   $w$cshowsPrec2 ::
     GHC.Prim.Int#
     -> Database.Persist.Class.PersistEntity.Key Foundation.Pedido
@@ -10273,7 +10244,7 @@ ab0e720acfd8349912d50cf443256369
                                                            (GHC.Types.[]
                                                               @ (Data.Text.Internal.Text,
                                                                  Database.Persist.Types.Base.PersistValue)) }) }) }) }) } } #)) -}
-ea1f29db326095c0606776bf693dc9c5
+388dd4c04563308c88c61ef89b3610ad
   $w$ctoPersistValue1 ::
     Foundation.ItemPedido
     -> (# [(Data.Text.Internal.Text,
@@ -10341,14 +10312,14 @@ ea1f29db326095c0606776bf693dc9c5
                                            (GHC.Types.[]
                                               @ (Data.Text.Internal.Text,
                                                  Database.Persist.Types.Base.PersistValue)) }) }) } } #)) -}
-6fd26fcc873363416132d7f99f0bb536
+a0af1d2de58a84f46d8a9e227dc8f746
   $w$ctoPersistValue2 ::
     Foundation.Pedido
     -> (# [(Data.Text.Internal.Text,
             Database.Persist.Types.Base.PersistValue)] #)
-  {- Arity: 1, Strictness: <L,1*U(U,U,U)>, Inline: [0],
+  {- Arity: 1, Strictness: <L,1*U(U,U,U,U)>, Inline: [0],
      Unfolding: (\ (w :: Foundation.Pedido) ->
-                 (# case w of wild { Foundation.Pedido dt dt1 dt2 ->
+                 (# case w of wild { Foundation.Pedido dt dt1 dt2 x ->
                     case GHC.Base.map
                            @ Database.Persist.Class.PersistField.SomePersistField
                            @ Database.Persist.Types.Base.PersistValue
@@ -10373,8 +10344,14 @@ ea1f29db326095c0606776bf693dc9c5
                                        @ GHC.Types.Double
                                        Database.Persist.Class.PersistField.$fPersistFieldDouble
                                        (GHC.Types.D# dt2))
-                                    (GHC.Types.[]
-                                       @ Database.Persist.Class.PersistField.SomePersistField)))) of wild1 {
+                                    (GHC.Types.:
+                                       @ Database.Persist.Class.PersistField.SomePersistField
+                                       (Database.Persist.Class.PersistField.SomePersistField
+                                          @ GHC.Types.Bool
+                                          Database.Persist.Class.PersistField.$fPersistFieldBool
+                                          x)
+                                       (GHC.Types.[]
+                                          @ Database.Persist.Class.PersistField.SomePersistField))))) of wild1 {
                       []
                       -> GHC.Types.[]
                            @ (Data.Text.Internal.Text,
@@ -10383,7 +10360,7 @@ ea1f29db326095c0606776bf693dc9c5
                       -> GHC.Types.:
                            @ (Data.Text.Internal.Text,
                               Database.Persist.Types.Base.PersistValue)
-                           (Foundation.$fPersistFieldPedido8, y)
+                           (Foundation.$fPersistFieldPedido11, y)
                            (case ys of wild2 {
                               []
                               -> GHC.Types.[]
@@ -10393,7 +10370,7 @@ ea1f29db326095c0606776bf693dc9c5
                               -> GHC.Types.:
                                    @ (Data.Text.Internal.Text,
                                       Database.Persist.Types.Base.PersistValue)
-                                   (Foundation.$fPersistFieldPedido6, y1)
+                                   (Foundation.$fPersistFieldPedido9, y1)
                                    (case ys1 of wild3 {
                                       []
                                       -> GHC.Types.[]
@@ -10403,10 +10380,20 @@ ea1f29db326095c0606776bf693dc9c5
                                       -> GHC.Types.:
                                            @ (Data.Text.Internal.Text,
                                               Database.Persist.Types.Base.PersistValue)
-                                           (Foundation.$fPersistFieldPedido4, y2)
-                                           (GHC.Types.[]
-                                              @ (Data.Text.Internal.Text,
-                                                 Database.Persist.Types.Base.PersistValue)) }) }) } } #)) -}
+                                           (Foundation.$fPersistFieldPedido7, y2)
+                                           (case ys2 of wild4 {
+                                              []
+                                              -> GHC.Types.[]
+                                                   @ (Data.Text.Internal.Text,
+                                                      Database.Persist.Types.Base.PersistValue)
+                                              : y3 ys3
+                                              -> GHC.Types.:
+                                                   @ (Data.Text.Internal.Text,
+                                                      Database.Persist.Types.Base.PersistValue)
+                                                   (Foundation.$fPersistFieldPedido5, y3)
+                                                   (GHC.Types.[]
+                                                      @ (Data.Text.Internal.Text,
+                                                         Database.Persist.Types.Base.PersistValue)) }) }) }) } } #)) -}
 d115186e041a4b3c4d5ea956a0e873a2
   $w$ctoPersistValue3 ::
     Foundation.Produto
@@ -10956,12 +10943,12 @@ ab0e720acfd8349912d50cf443256369
   axiom Foundation.D:R:EntityFieldClientetyp0::
       Database.Persist.Class.PersistEntity.EntityField Foundation.Cliente
         = Foundation.R:EntityFieldClientetyp
-ea1f29db326095c0606776bf693dc9c5
+388dd4c04563308c88c61ef89b3610ad
   axiom Foundation.D:R:EntityFieldItemPedidotyp0::
       Database.Persist.Class.PersistEntity.EntityField
         Foundation.ItemPedido
         = Foundation.R:EntityFieldItemPedidotyp
-6fd26fcc873363416132d7f99f0bb536
+a0af1d2de58a84f46d8a9e227dc8f746
   axiom Foundation.D:R:EntityFieldPedidotyp0::
       Database.Persist.Class.PersistEntity.EntityField Foundation.Pedido
         = Foundation.R:EntityFieldPedidotyp
@@ -10978,11 +10965,11 @@ ab0e720acfd8349912d50cf443256369
   axiom Foundation.D:R:KeyCliente0::
       Database.Persist.Class.PersistEntity.Key Foundation.Cliente
         = Foundation.R:KeyCliente
-ea1f29db326095c0606776bf693dc9c5
+388dd4c04563308c88c61ef89b3610ad
   axiom Foundation.D:R:KeyItemPedido0::
       Database.Persist.Class.PersistEntity.Key Foundation.ItemPedido
         = Foundation.R:KeyItemPedido
-6fd26fcc873363416132d7f99f0bb536
+a0af1d2de58a84f46d8a9e227dc8f746
   axiom Foundation.D:R:KeyPedido0::
       Database.Persist.Class.PersistEntity.Key Foundation.Pedido
         = Foundation.R:KeyPedido
@@ -10999,12 +10986,12 @@ ab0e720acfd8349912d50cf443256369
       Database.Persist.Class.PersistEntity.PersistEntityBackend
         Foundation.Cliente
         = Database.Persist.Sql.Types.Internal.SqlBackend
-ea1f29db326095c0606776bf693dc9c5
+388dd4c04563308c88c61ef89b3610ad
   axiom Foundation.D:R:PersistEntityBackendItemPedido::
       Database.Persist.Class.PersistEntity.PersistEntityBackend
         Foundation.ItemPedido
         = Database.Persist.Sql.Types.Internal.SqlBackend
-6fd26fcc873363416132d7f99f0bb536
+a0af1d2de58a84f46d8a9e227dc8f746
   axiom Foundation.D:R:PersistEntityBackendPedido::
       Database.Persist.Class.PersistEntity.PersistEntityBackend
         Foundation.Pedido
@@ -11026,11 +11013,11 @@ ab0e720acfd8349912d50cf443256369
   axiom Foundation.D:R:UniqueCliente0::
       Database.Persist.Class.PersistEntity.Unique Foundation.Cliente
         = Foundation.R:UniqueCliente
-ea1f29db326095c0606776bf693dc9c5
+388dd4c04563308c88c61ef89b3610ad
   axiom Foundation.D:R:UniqueItemPedido0::
       Database.Persist.Class.PersistEntity.Unique Foundation.ItemPedido
         = Foundation.R:UniqueItemPedido
-6fd26fcc873363416132d7f99f0bb536
+a0af1d2de58a84f46d8a9e227dc8f746
   axiom Foundation.D:R:UniquePedido0::
       Database.Persist.Class.PersistEntity.Unique Foundation.Pedido
         = Foundation.R:UniquePedido
@@ -11054,23 +11041,24 @@ fad4d7498437d0835053b4479d34e8e2
          (Yesod.Form.Types.FormResult a, Foundation.Widget)
 75ae7b29b0bc8728adc2f28c19257c8c
   type Handler = Yesod.Core.Types.HandlerFor Foundation.App :: * -> *
-ea1f29db326095c0606776bf693dc9c5
+388dd4c04563308c88c61ef89b3610ad
   data ItemPedido
     = ItemPedido {itemPedidoPedidoid :: ! {-# UNPACK #-}(((Foundation.D:R:KeyPedido0[0] ; Foundation.N:R:KeyPedido[0]) ; Database.Persist.Sql.Orphan.PersistStore.D:R:BackendKeySqlBackend0[0]) ; Database.Persist.Sql.Orphan.PersistStore.N:R:BackendKeySqlBackend[0])(Database.Persist.Class.PersistEntity.Key
                                                                                                                                                                                                                                                                           Foundation.Pedido),
                   itemPedidoProdutoid :: ! {-# UNPACK #-}(((Foundation.D:R:KeyProduto0[0] ; Foundation.N:R:KeyProduto[0]) ; Database.Persist.Sql.Orphan.PersistStore.D:R:BackendKeySqlBackend0[0]) ; Database.Persist.Sql.Orphan.PersistStore.N:R:BackendKeySqlBackend[0])(Database.Persist.Class.PersistEntity.Key
                                                                                                                                                                                                                                                                              Foundation.Produto),
                   itemPedidoVlunit :: {-# UNPACK #-}GHC.Types.Double}
-3f627da71c71c8b0f11a5cad63697470
+037d9a0f5ead04e6909f34fa8d6489e8
   type ItemPedidoId =
     Database.Persist.Class.PersistEntity.Key Foundation.ItemPedido
-6fd26fcc873363416132d7f99f0bb536
+a0af1d2de58a84f46d8a9e227dc8f746
   data Pedido
     = Pedido {pedidoClienteid :: ! {-# UNPACK #-}(((Foundation.D:R:KeyCliente0[0] ; Foundation.N:R:KeyCliente[0]) ; Database.Persist.Sql.Orphan.PersistStore.D:R:BackendKeySqlBackend0[0]) ; Database.Persist.Sql.Orphan.PersistStore.N:R:BackendKeySqlBackend[0])(Database.Persist.Class.PersistEntity.Key
                                                                                                                                                                                                                                                                      Foundation.Cliente),
               pedidoVltot :: {-# UNPACK #-}GHC.Types.Double,
-              pedidoHrpedido :: {-# UNPACK #-}GHC.Types.Double}
-0d8cf648decc1709208a8059ea0384c7
+              pedidoHrpedido :: {-# UNPACK #-}GHC.Types.Double,
+              pedidoFinalizado :: !GHC.Types.Bool}
+35ded3d7cb092b2704f87707e3e1217d
   type PedidoId =
     Database.Persist.Class.PersistEntity.Key Foundation.Pedido
 d115186e041a4b3c4d5ea956a0e873a2
@@ -11104,7 +11092,7 @@ ab0e720acfd8349912d50cf443256369
     | ((typ :: *)
        Data.Type.Equality.~ (Data.Text.Internal.Text :: *)) =>
       ClientePword
-ea1f29db326095c0606776bf693dc9c5
+388dd4c04563308c88c61ef89b3610ad
   data instance Database.Persist.Class.PersistEntity.EntityField
                   Foundation.ItemPedido typ
     = ((typ :: *)
@@ -11121,7 +11109,7 @@ ea1f29db326095c0606776bf693dc9c5
       ItemPedidoProdutoid
     | ((typ :: *) Data.Type.Equality.~ (GHC.Types.Double :: *)) =>
       ItemPedidoVlunit
-6fd26fcc873363416132d7f99f0bb536
+a0af1d2de58a84f46d8a9e227dc8f746
   data instance Database.Persist.Class.PersistEntity.EntityField
                   Foundation.Pedido typ
     = ((typ :: *)
@@ -11136,6 +11124,8 @@ ea1f29db326095c0606776bf693dc9c5
       PedidoVltot
     | ((typ :: *) Data.Type.Equality.~ (GHC.Types.Double :: *)) =>
       PedidoHrpedido
+    | ((typ :: *) Data.Type.Equality.~ (GHC.Types.Bool :: *)) =>
+      PedidoFinalizado
 d115186e041a4b3c4d5ea956a0e873a2
   data instance Database.Persist.Class.PersistEntity.EntityField
                   Foundation.Produto typ
@@ -11167,12 +11157,12 @@ ab0e720acfd8349912d50cf443256369
                      Foundation.Cliente
     = ClienteKey {unClienteKey :: Database.Persist.Class.PersistStore.BackendKey
                                     Database.Persist.Sql.Types.Internal.SqlBackend}
-ea1f29db326095c0606776bf693dc9c5
+388dd4c04563308c88c61ef89b3610ad
   newtype instance Database.Persist.Class.PersistEntity.Key
                      Foundation.ItemPedido
     = ItemPedidoKey {unItemPedidoKey :: Database.Persist.Class.PersistStore.BackendKey
                                           Database.Persist.Sql.Types.Internal.SqlBackend}
-6fd26fcc873363416132d7f99f0bb536
+a0af1d2de58a84f46d8a9e227dc8f746
   newtype instance Database.Persist.Class.PersistEntity.Key
                      Foundation.Pedido
     = PedidoKey {unPedidoKey :: Database.Persist.Class.PersistStore.BackendKey
@@ -11194,10 +11184,10 @@ ab0e720acfd8349912d50cf443256369
   data instance Database.Persist.Class.PersistEntity.Unique
                   Foundation.Cliente
     = UniqueLogin Data.Text.Internal.Text
-ea1f29db326095c0606776bf693dc9c5
+388dd4c04563308c88c61ef89b3610ad
   data instance Database.Persist.Class.PersistEntity.Unique
                   Foundation.ItemPedido
-6fd26fcc873363416132d7f99f0bb536
+a0af1d2de58a84f46d8a9e227dc8f746
   data instance Database.Persist.Class.PersistEntity.Unique
                   Foundation.Pedido
 d115186e041a4b3c4d5ea956a0e873a2
@@ -11268,7 +11258,7 @@ fad4d7498437d0835053b4479d34e8e2
      Unfolding: InlineRule (1, True, False)
                 (\ (ds :: Foundation.App) ->
                  case ds of wild { Foundation.App ds1 -> ds1 }) -}
-ea1f29db326095c0606776bf693dc9c5
+388dd4c04563308c88c61ef89b3610ad
   itemPedidoPedidoid ::
     Foundation.ItemPedido
     -> Database.Persist.Class.PersistEntity.Key Foundation.Pedido
@@ -11280,7 +11270,7 @@ ea1f29db326095c0606776bf693dc9c5
                  (GHC.Int.I64# dt)
                    `cast`
                  (Sym (Database.Persist.Sql.Orphan.PersistStore.N:R:BackendKeySqlBackend[0]) ; (Sym (Database.Persist.Sql.Orphan.PersistStore.D:R:BackendKeySqlBackend0[0]) ; (Sym (Foundation.N:R:KeyPedido[0]) ; Sym (Foundation.D:R:KeyPedido0[0])))) }) -}
-ea1f29db326095c0606776bf693dc9c5
+388dd4c04563308c88c61ef89b3610ad
   itemPedidoProdutoid ::
     Foundation.ItemPedido
     -> Database.Persist.Class.PersistEntity.Key Foundation.Produto
@@ -11292,7 +11282,7 @@ ea1f29db326095c0606776bf693dc9c5
                  (GHC.Int.I64# dt1)
                    `cast`
                  (Sym (Database.Persist.Sql.Orphan.PersistStore.N:R:BackendKeySqlBackend[0]) ; (Sym (Database.Persist.Sql.Orphan.PersistStore.D:R:BackendKeySqlBackend0[0]) ; (Sym (Foundation.N:R:KeyProduto[0]) ; Sym (Foundation.D:R:KeyProduto0[0])))) }) -}
-ea1f29db326095c0606776bf693dc9c5
+388dd4c04563308c88c61ef89b3610ad
   itemPedidoVlunit :: Foundation.ItemPedido -> GHC.Types.Double
   RecSel Left Foundation.ItemPedido
   {- Arity: 1, HasNoCafRefs, Strictness: <S(LLS),1*U(A,A,U)>m,
@@ -11348,33 +11338,40 @@ ea1f29db326095c0606776bf693dc9c5
                    (w1 :: GHC.Prim.State# GHC.Prim.RealWorld) ->
                  case w of ww { Database.Persist.Sql.Types.Internal.SqlBackend ww1 ww2 ww3 ww4 ww5 ww6 ww7 ww8 ww9 ww10 ww11 ww12 ww13 ww14 ww15 ww16 ww17 ->
                  Foundation.$wmigrateAll ww1 ww6 ww8 w1 }) -}
-6fd26fcc873363416132d7f99f0bb536
+a0af1d2de58a84f46d8a9e227dc8f746
   pedidoClienteid ::
     Foundation.Pedido
     -> Database.Persist.Class.PersistEntity.Key Foundation.Cliente
   RecSel Left Foundation.Pedido
-  {- Arity: 1, HasNoCafRefs, Strictness: <S(SLL),1*U(U,A,A)>m,
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(SLLL),1*U(U,A,A,A)>m,
      Unfolding: InlineRule (1, True, False)
                 (\ (ds :: Foundation.Pedido) ->
-                 case ds of wild { Foundation.Pedido dt dt1 dt2 ->
+                 case ds of wild { Foundation.Pedido dt dt1 dt2 ds1 ->
                  (GHC.Int.I64# dt)
                    `cast`
                  (Sym (Database.Persist.Sql.Orphan.PersistStore.N:R:BackendKeySqlBackend[0]) ; (Sym (Database.Persist.Sql.Orphan.PersistStore.D:R:BackendKeySqlBackend0[0]) ; (Sym (Foundation.N:R:KeyCliente[0]) ; Sym (Foundation.D:R:KeyCliente0[0])))) }) -}
-6fd26fcc873363416132d7f99f0bb536
+a0af1d2de58a84f46d8a9e227dc8f746
+  pedidoFinalizado :: Foundation.Pedido -> GHC.Types.Bool
+  RecSel Left Foundation.Pedido
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LLLS),1*U(A,A,A,U)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Foundation.Pedido) ->
+                 case ds of wild { Foundation.Pedido dt dt1 dt2 ds1 -> ds1 }) -}
+a0af1d2de58a84f46d8a9e227dc8f746
   pedidoHrpedido :: Foundation.Pedido -> GHC.Types.Double
   RecSel Left Foundation.Pedido
-  {- Arity: 1, HasNoCafRefs, Strictness: <S(LLS),1*U(A,A,U)>m,
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LLSL),1*U(A,A,U,A)>m,
      Unfolding: InlineRule (1, True, False)
                 (\ (ds :: Foundation.Pedido) ->
-                 case ds of wild { Foundation.Pedido dt dt1 dt2 ->
+                 case ds of wild { Foundation.Pedido dt dt1 dt2 ds1 ->
                  GHC.Types.D# dt2 }) -}
-6fd26fcc873363416132d7f99f0bb536
+a0af1d2de58a84f46d8a9e227dc8f746
   pedidoVltot :: Foundation.Pedido -> GHC.Types.Double
   RecSel Left Foundation.Pedido
-  {- Arity: 1, HasNoCafRefs, Strictness: <S(LSL),1*U(A,U,A)>m,
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LSLL),1*U(A,U,A,A)>m,
      Unfolding: InlineRule (1, True, False)
                 (\ (ds :: Foundation.Pedido) ->
-                 case ds of wild { Foundation.Pedido dt dt1 dt2 ->
+                 case ds of wild { Foundation.Pedido dt dt1 dt2 ds1 ->
                  GHC.Types.D# dt1 }) -}
 d115186e041a4b3c4d5ea956a0e873a2
   produtoNome :: Foundation.Produto -> Data.Text.Internal.Text
@@ -11658,7 +11655,7 @@ ab0e720acfd8349912d50cf443256369
                   `cast`
                 (<Database.Persist.Class.PersistEntity.Key Foundation.Cliente>_R
                  ->_R Foundation.D:R:KeyCliente0[0] ; Foundation.N:R:KeyCliente[0]) -}
-ea1f29db326095c0606776bf693dc9c5
+388dd4c04563308c88c61ef89b3610ad
   unItemPedidoKey ::
     Database.Persist.Class.PersistEntity.Key Foundation.ItemPedido
     -> Database.Persist.Class.PersistStore.BackendKey
@@ -11670,7 +11667,7 @@ ea1f29db326095c0606776bf693dc9c5
                   `cast`
                 (<Database.Persist.Class.PersistEntity.Key Foundation.ItemPedido>_R
                  ->_R Foundation.D:R:KeyItemPedido0[0] ; Foundation.N:R:KeyItemPedido[0]) -}
-6fd26fcc873363416132d7f99f0bb536
+a0af1d2de58a84f46d8a9e227dc8f746
   unPedidoKey ::
     Database.Persist.Class.PersistEntity.Key Foundation.Pedido
     -> Database.Persist.Class.PersistStore.BackendKey

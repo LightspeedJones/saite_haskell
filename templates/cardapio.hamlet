@@ -1,0 +1,25 @@
+<ul>
+    <li> <a href=@{HomeR}>Home
+    <li style="float:right"> <a href=@{LogoutR}>Sair </a>
+    <li style="float:right"> eae #{nome} </ul>
+                
+ <table id="tblprod">
+     <tr>
+         <th> Pratos
+         <th>
+         <th> Adicionar
+     $forall Entity pid prod <- card
+         <tr>
+             <td> #{produtoNome prod}
+             <td> R$ #{produtoValor prod}
+             <td> <input id="btnAdd" onclick="coiso()" type="submit" value="+"/> <input id="btnRem" type="submit" value="-"/>
+ <table>
+     <tr>
+         <th> Bebidas
+         <th>  
+         <th> Adicionar
+     $forall Entity pid prod <- beb
+         <tr>
+             <td> #{produtoNome prod}
+             <td> R$ #{produtoValor prod}
+             <td> <input id="btnAdd" type="submit" value="+"/> <input id="btnRem" type="submit" value="-"/>

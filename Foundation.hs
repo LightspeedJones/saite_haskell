@@ -6,38 +6,13 @@ module Foundation where
 
 import Yesod
 import Data.Text
+import Database.Persist.Quasi
 import Database.Persist.Postgresql
     ( ConnectionPool, SqlBackend, runSqlPool)
 
 data App = App {connPool :: ConnectionPool }
 
-share [mkPersist sqlSettings, mkMigrate "migrateAll"] [persistLowerCase|
-Cliente
-    nome          Text
-    endereco      Text
-    telefone      Text
-    login         Text
-    pword         Text
-    UniqueLogin   login
-    
-Produto
-    nome          Text
-    valor         Double
-    tipoprodutoid TipoProdutoId      
-
-Pedido
-    clienteid     ClienteId
-    vltot         Double
-    hrpedido      Double
-    
-ItemPedido
-    pedidoid      PedidoId
-    produtoid     ProdutoId
-    vlunit        Double
-
-TipoProduto
-    nometipo      Text
-|]
+share [mkPersist sqlSettings, mkMigrate "migrateAll"] $(persistFileWith lowerCaseSettings "config/models")
 
 mkYesodData "App" $(parseRoutesFile "routes")
 

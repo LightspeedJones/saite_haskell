@@ -1,0 +1,27 @@
+Cliente
+    nome          Text
+    endereco      Text
+    telefone      Text
+    login         Text
+    pword         Text
+    UniqueLogin   login
+    
+Produto
+    nome          Text
+    valor         Double
+    tipoprodutoid TipoProdutoId      
+
+Pedido
+    clienteid     ClienteId
+    vltot         Double
+    hrpedido      Double
+    finalizado    Bool
+    
+ItemPedido
+    pedidoid      PedidoId
+    produtoid     ProdutoId
+    vlunit        Double
+
+TipoProduto
+    nometipo      Text
+    

@@ -1,4 +1,6 @@
-{-# LANGUAGE OverloadedStrings #-}
+{-# LANGUAGE OverloadedStrings    #-}
+{-# LANGUAGE TemplateHaskell      #-}
+{-# LANGUAGE ViewPatterns         #-}
 {-# LANGUAGE QuasiQuotes       #-}
 module Handlers.Produto where
 
@@ -10,6 +12,7 @@ import Data.Maybe
 import Data.Monoid
 import Text.Hamlet (HtmlUrl, hamlet)
 import Text.Julius
+import Text.Lucius
 
 formPedido :: Form (Text, Text)
 formPedido = renderDivs $ (,) <$>
@@ -22,104 +25,14 @@ getItens nome = do
             card <- runDB $ selectList [ProdutoTipoprodutoid ==. (toSqlKey $ fromIntegral 1)] [Asc ProdutoNome]
             beb <- runDB $ selectList [ProdutoTipoprodutoid ==. (toSqlKey $ fromIntegral 2)] [Asc ProdutoNome]
             defaultLayout $ do
-                toWidget[lucius|
-                    table {
-                        margin-top: 20px;
-                        border-collapse: collapse;
-                        width: 100%;
-                    }
-
-                    th, td {
-                        text-align: left;
-                        padding: 8px;
-                        font-family: segoe ui light;
-                    }
-
-                    tr:nth-child(even){background-color: #f2f2f2}
-
-                    th {
-                        background-color: #555;
-                        color: white;
-                    }
-                    
-                    ul {
-                        list-style-type: none;
-                        margin: 0;
-                        padding: 0;
-                        overflow: hidden;
-                        background-color: #333;
-                    }
-
-                    li {
-                        float: left;
-                    }
-
-                    li{
-                        display: block;
-                        color: white;
-                        text-align: center;
-                        padding: 14px 16px;
-                        text-decoration: none;
-                        font-family: segoe ui light;
-                    }
+                toWidget $(juliusFile "templates/cardapio.julius")
+                toWidget $(luciusFile "templates/cardapio.lucius")
+                $(whamletFile "templates/cardapio.hamlet")
                 
-                    a{
-                        color: white;
-                    }
-
-                    li a:hover:not(.active) {
-                        background-color: #111;
-                    }
-
-                    .active {
-                        background-color: #4CAF50;
-                    }
-
-                |]
-                [whamlet|
-                    <ul>
-                        <li> <a href=@{HomeR}>Home
-                        <li style="float:right"> <a href=@{LogoutR}>Sair </a>
-                        <li style="float:right"> eae #{nome} </ul>
+                --vatdadasddasdas
+                -- pedidoId <- insert $ Pedido 10 $ 18.00
                 
-                     <table>
-                         <tr>
-                             <th> Pratos
-                             <th>   
-                         $forall Entity pid prod <- card
-                             <tr>
-                                 <td> #{produtoNome prod}
-                                 <td> R$ #{produtoValor prod}
-                                 
-                     <table>
-                         <tr>
-                             <th> Bebidas
-                             <th>  
-                         $forall Entity pid prod <- beb
-                             <tr>
-                                 <td> #{produtoNome prod}
-                                 <td> R$ #{produtoValor prod}
-                                 
-                    
-                |]
-                
-                --pedidoId <- insert $ Pedido 10 $ 18.00
-                
-                toWidget [julius|
-                    checkboxes = document.getElementsByTagName("input"); 
 
-                    for (var i = 0; i < checkboxes.length; i++) {
-                        var checkbox = checkboxes[i];
-                        checkbox.onclick = function() {
-                            var currentRow = this.parentNode.parentNode;
-                            var secondColumn = currentRow.getElementsByTagName("td")[];
-
-                            alert("My text is: " + secondColumn.textContent);
-                            
-                        };
-                    } 
-                |]
-                
                 
                 
 getItensVisitante :: Handler Html
@@ -254,15 +167,15 @@ postCardapioR = undefined
 --                 FormSuccess (pid, _) -> do
 --                     x <- fmap (\w -> read w::(Int,Double)) (words pid)
 --                     pedido <- runDB $ insert $ Pedido 
-                --   cara <- runDB $ selectFirst [ClienteLogin ==. login,
-                --                                 ClientePword ==. pword] []
-                --   case cara of
-                --       Just (Entity pid cliente) -> do
-                --           setSession "_ID" (pack $ show $ fromSqlKey pid)
-                --           setSession "_NOME" (pack $ show $ clienteNome cliente)
-                --         --   defaultLayout [whamlet|
-                --         --         Bem-vindo #{clienteLogin cliente}
-                --         --   |]
-                --           redirect HomeR
-                --       Nothing -> redirect LoginR
-               -- _ -> redirect CardapioR
+--                   cara <- runDB $ selectFirst [ClienteLogin ==. login,
+--                                                 ClientePword ==. pword] []
+--                   case cara of
+--                       Just (Entity pid cliente) -> do
+--                           setSession "_ID" (pack $ show $ fromSqlKey pid)
+--                           setSession "_NOME" (pack $ show $ clienteNome cliente)
+--                         --   defaultLayout [whamlet|
+--                         --         Bem-vindo #{clienteLogin cliente}
+--                         --   |]
+--                           redirect HomeR
+--                       Nothing -> redirect LoginR
+--                 _ -> redirect CardapioR

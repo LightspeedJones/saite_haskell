@@ -21,7 +21,7 @@ mkYesodDispatch "App" resourcesApp
 getLayoutLogado :: Text -> Handler Html
 getLayoutLogado x = defaultLayout $ do
             toWidget $(luciusFile "templates/home.lucius")
-            
+            --bumb
             [whamlet|
                 <ul>
                     <li style="float:right"> <a href=@{LogoutR}>Sair </a>

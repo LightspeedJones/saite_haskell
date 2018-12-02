@@ -1,10 +1,10 @@
 
 ==================== FINAL INTERFACE ====================
-2018-11-29 20:12:19.970275307 UTC
+2018-12-01 22:34:29.380808152 UTC
 
 interface main:Main 8044
-  interface hash: 04b68af4bf31945331fbccc0b86aa335
-  ABI hash: 893b0fcb44ca3bbb15f21d93837189c7
+  interface hash: 1088f601667ae6c95ba92c93047625a8
+  ABI hash: e4fe6ba60fcee31a81d45bec01be669a
   export-list hash: f6ea89929dc02afee8296854fbd3c5b7
   orphan hash: 75ed41540468a234cedc8651e7274fda
   flag hash: f5e73c5b064141a86732e596eac25b0e
@@ -1244,7 +1244,7 @@ d026be77cb9ced20e35a61514e0458aa
                    Main.main2
                    (Foundation.App w)
                    ipv }) -}
-169081cef65352a68f872bbbc650a0a7
+6a22e1d0ec7ee0de9d7570cd7b10b5b8
   connStr :: Database.Persist.Postgresql.ConnectionString
   {- Unfolding: (case GHC.Prim.newMutVar#
                         @ GHC.ForeignPtr.Finalizers
@@ -1262,11 +1262,11 @@ d026be77cb9ced20e35a61514e0458aa
                    (GHC.ForeignPtr.PlainForeignPtr ipv1)
                    0#
                    (GHC.Prim.word2Int# ds2) } }) -}
-ad4c24d07439a4ff2110fa72f133c178
+b54a72f4f1a9c7914e1b0e41830bafbb
   connStr_addr# :: GHC.Prim.Addr#
   {- HasNoCafRefs,
-     Unfolding: ("dbname=d7f2o1s09j6k37 host=ec2-107-22-238-96.compute-1.amazonaws.com user=euiflrvvoqtphn password=cneAb8rnPXLKltdvfac-6G6dLU port=5432"#) -}
-45a51b49315393d1c73a47db0397c08a
+     Unfolding: ("dbname=d2u93juttrkmet host=ec2-54-225-76-201.compute-1.amazonaws.com user=vqfphlebxqsdmn password=d3437208dc39b23262ba0aa9cc0d17e7a08c0d4b847dcb656c89bad866e73f53 port=5432"#) -}
+6375f6f1acc109f2039700bb5034743c
   main :: GHC.Types.IO ()
   {- Unfolding: ((Database.Persist.Postgresql.withPostgresqlPoolWithVersion
                     @ (Control.Monad.Logger.LoggingT GHC.Types.IO)
@@ -1389,7 +1389,7 @@ a322396d61b55b4f2029ca643fdca5b5
 2ec05e9b815ed11befdff954c4ff1bd2
   main5 :: GHC.Types.Int
   {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 10#) -}
-96b0b153320204f239725e608e63e4f7
+6f43249836f69db3c547de99b8e5e286
   main6 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)

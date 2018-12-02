@@ -1,9 +1,9 @@
 
 ==================== FINAL INTERFACE ====================
-2018-11-29 22:02:02.902323367 UTC
+2018-12-02 00:05:49.703359396 UTC
 
 interface main:Application [orphan module] 8044
-  interface hash: cfca24ec343daa6f7e33947d78b07f1d
+  interface hash: c1faf9d9c3bc817180c8772109396e1f
   ABI hash: f3efd95a56e65391752394dbd35ec657
   export-list hash: 9a1c4302670016c0278a38d9037abecf
   orphan hash: bce5d011e560d2955a164787dfa9e4df
@@ -172,14 +172,14 @@ import  -/  Handlers.Cliente 6e137413fb5dd8bd17e672d1fdb16d65
   exports: 3c2e56b0f2bb11d45c4b9e894313682f
   getClienteR 53b4f783afa0cceb5659d1d44b35fb5d
   postClienteR 875d215c7ab2be5ccb86154479f3efaa
-import  -/  Handlers.Login b2739267e82dce008a84048d5636061a
+import  -/  Handlers.Login e6eea3af2ff568e8dab478ba0e6171e0
   exports: bc54a4c0f9101cd541fb9f399985c8f1
-  getLoginR 6fe8003e47d5b8f5d36cf6c3287c47a6
+  getLoginR b01694190d07b16e0eb947614f6955d6
   getLogoutR 28bc76c742e55f1d598dcb6d9d102c3f
   postLoginR 710c62db10d9e0a57d2654a77e9d6c80
-import  -/  Handlers.Produto d16d39367751b9f96910f3246694f7ec
-  exports: 1efb3f09bd204ca317896fbb09832abf
-  getCardapioR 4732dfdb20b9924f1c6f47fe3ea4f89d
+import  -/  Handlers.Produto e6994622f364535032baf3b4bd6b1571
+  exports: 3de1fd0dd3f864c63d64524d00106462
+  getCardapioR af65c9dc5da9558d46f18258088021c9
 import  -/  monad-logger-0.3.30:Control.Monad.Logger 8543a8ea2bc3183d80bcc2e19c1fd67d
 import  -/  shakespeare-2.0.20:Text.Internal.Css 17c2e6de13b11d0d8e75d34fa99c9d4a
 import  -/  shakespeare-2.0.20:Text.Lucius b430c66fd9a3ba305bfbf21371e6ecf1

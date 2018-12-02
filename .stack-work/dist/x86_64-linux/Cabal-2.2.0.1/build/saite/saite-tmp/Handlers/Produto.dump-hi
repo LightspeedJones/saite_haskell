@@ -1,11 +1,11 @@
 
 ==================== FINAL INTERFACE ====================
-2018-11-29 22:01:34.02849502 UTC
+2018-12-01 22:32:28.190984723 UTC
 
 interface main:Handlers.Produto 8044
-  interface hash: 813596a8ca46a7dea3bc98e6bb69842f
-  ABI hash: d16d39367751b9f96910f3246694f7ec
-  export-list hash: 1efb3f09bd204ca317896fbb09832abf
+  interface hash: 053126bd563e6565fe4d07da010a94a9
+  ABI hash: e6994622f364535032baf3b4bd6b1571
+  export-list hash: 3de1fd0dd3f864c63d64524d00106462
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
   flag hash: b3b1d09742290a21c7d4cc3b0f082b59
   opt_hash: 2c98c95d41c045ae9c2fb565ec8aabc6
@@ -18,7 +18,6 @@ exports:
   Handlers.Produto.getCardapioR
   Handlers.Produto.getItens
   Handlers.Produto.getItensVisitante
-  Handlers.Produto.postCardapioR
 module dependencies: Foundation
 package dependencies: aeson-1.3.1.1 aeson-compat-0.3.9
                       ansi-terminal-0.8.2 appar-0.1.4 array-0.5.2.0 async-2.2.1
@@ -157,16 +156,17 @@ import  -/  base-4.11.1.0:Data.Functor f522c3501272159820fd6f242510732f
 import  -/  base-4.11.1.0:Data.Maybe 409c3da2b142470b68be39ce1d97a9f7
 import  -/  base-4.11.1.0:Data.Monoid c40cd435d79b84293ce5503253ee6d44
 import  -/  base-4.11.1.0:GHC.Base 604111500e81281298777e721c75643b
-import  -/  base-4.11.1.0:GHC.Err 5e26aa744981f14e0f1e4d29c44ac52e
 import  -/  base-4.11.1.0:GHC.Real b4beb0389ba1ad5d9640aae67848c5d3
 import  -/  base-4.11.1.0:Prelude 0750c25585e2b797cd78291d423d39dd
 import  -/  blaze-html-0.9.1.1:Text.Blaze.Html fdd818245cad1bbfcedd87b21c62946f
 import  -/  blaze-markup-0.8.2.2:Text.Blaze.Internal 7539c43623397f23e7aba6515d74b4b1
 import  -/  Foundation 759822151ca21f88554c5d415722ac95
   exports: bf35f3a755e4679019142bf94c9bfdc7
+  CardapioR 79a69a1a4e990bdd225ed0e5ebab70bd
   Form 13f3aeb51611925276de418d03a20948
   Handler 75ae7b29b0bc8728adc2f28c19257c8c
   HomeR e02ee93d63494a36efbb06c3c46b9774
+  LoginR 73c262bba89870ff65909bd48a395702
   LogoutR 2e7c434db91d939b51683981f88daa19
   ProdutoNome c34c42d82d6265f6ac69cda7f2802f26
   ProdutoTipoprodutoid ec65f6c3a0310515616b11a9efc4a6c2
@@ -192,9 +192,9 @@ import  -/  yesod-core-1.6.8.1:Yesod.Core.Widget 876e385706692ff3cccbda9bd1bf970
 import  -/  yesod-form-1.6.3:Yesod.Form.Fields fce68d328b0186733f30816379cd8110
 import  -/  yesod-form-1.6.3:Yesod.Form.Functions 3bfc50dd9c7122835a1ae46eb47e08d6
 import  -/  yesod-persistent-1.6.0.1:Yesod.Persist.Core dee21111217fc049e95690a79c442bb0
-addDependentFile "templates/cardapio.hamlet" c406f4b90814a79fd244eea76e5ef36c
+addDependentFile "templates/cardapio.hamlet" 6631d76df5bb364c815f79772717895b
 addDependentFile "templates/cardapio.lucius" 9030cc5f7f5f7eafa762a78ebf97bb99
-addDependentFile "templates/cardapio.julius" dd4ab28e857d463a760e4ec2485b7cc0
+addDependentFile "templates/cardapio.julius" e57c205271ad07df9d3d99d8ec5b57f8
 9286e7fc734f07bd2d8a259ace6a0473
   $s$WProdutoNome_$d~~ ::
     (Data.Text.Internal.Text :: *)
@@ -250,7 +250,7 @@ b7869548695a6f0d7dcec4940f2355bc
 dc4b8b4d7e8f76ff357b4cd935f7e1a8
   $trModule4 :: GHC.Prim.Addr#
   {- HasNoCafRefs, Unfolding: ("main"#) -}
-0afb5da8e0077daa6d0e26a56c941f92
+fa97f37b7a208fae14703ff93bf6a5c5
   $wds ::
     [Data.Text.Internal.Text]
     -> Foundation.Handler
@@ -299,10 +299,10 @@ dc4b8b4d7e8f76ff357b4cd935f7e1a8
                                  @ (GHC.Base.Maybe Data.Text.Internal.Text)
                                  x
                            } in
-                           (\ (eta40 :: Yesod.Core.Types.HandlerData
+                           (\ (eta44 :: Yesod.Core.Types.HandlerData
                                           Foundation.App Foundation.App)
-                              (eta41 :: GHC.Prim.State# GHC.Prim.RealWorld) ->
-                            (# eta41, x1 #))
+                              (eta45 :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                            (# eta45, x1 #))
                              `cast`
                            ((<Yesod.Core.Types.HandlerData Foundation.App Foundation.App>_R
                              ->_R Sym (GHC.Types.N:IO[0]
@@ -353,10 +353,10 @@ dc4b8b4d7e8f76ff357b4cd935f7e1a8
                                       @ (GHC.Base.Maybe Data.Text.Internal.Text)
                                       x
                                 } in
-                                (\ (eta40 :: Yesod.Core.Types.HandlerData
+                                (\ (eta44 :: Yesod.Core.Types.HandlerData
                                                Foundation.App Foundation.App)
-                                   (eta41 :: GHC.Prim.State# GHC.Prim.RealWorld) ->
-                                 (# eta41, x1 #))
+                                   (eta45 :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                                 (# eta45, x1 #))
                                   `cast`
                                 ((<Yesod.Core.Types.HandlerData Foundation.App Foundation.App>_R
                                   ->_R Sym (GHC.Types.N:IO[0]
@@ -391,7 +391,7 @@ dc4b8b4d7e8f76ff357b4cd935f7e1a8
                                                                                                         Foundation.Handler))
                                                                                                   (GHC.Base.Maybe
                                                                                                      Data.Text.Internal.Text)>_R)) } } } } } }) -}
-8e0132f1c592dcf19d3c3ac5f79d05ed
+0efa76e62e3503231f3b05487df871f7
   formPedido ::
     Foundation.Form (Data.Text.Internal.Text, Data.Text.Internal.Text)
   {- Arity: 3,
@@ -413,7 +413,7 @@ dc4b8b4d7e8f76ff357b4cd935f7e1a8
                                      (Sym (Yesod.Core.Class.Handler.D:R:HandlerSiteHandlerFor[0]
                                                <Foundation.App>_N))
                                      <()>_N)_N)_N)) -}
-4531009e7db0d569ef91c01fbaed8552
+c78f0d51161ca6884144f31adf98c8a4
   formPedido1 ::
     Text.Blaze.Internal.Markup
     -> (GHC.Base.Maybe
@@ -438,7 +438,7 @@ dc4b8b4d7e8f76ff357b4cd935f7e1a8
                    (Sym (Yesod.Form.Types.N:AForm[0]
                              <Yesod.Core.Types.HandlerFor Foundation.App>_N
                              <(Data.Text.Internal.Text, Data.Text.Internal.Text)>_N))) -}
-9f40b6c79905624fa466eb951cc84b5f
+a119a6c5ed3b4f221b437d686d215a93
   formPedido10 ::
     [Data.Text.Internal.Text]
     -> [Yesod.Core.Types.FileInfo]
@@ -452,7 +452,7 @@ dc4b8b4d7e8f76ff357b4cd935f7e1a8
                 (\ (w :: [Data.Text.Internal.Text])
                    (w1 :: [Yesod.Core.Types.FileInfo]) ->
                  Handlers.Produto.$wds w) -}
-5ddef252863765d61cad6aab894d7404
+26b78ac782c7398e4cd854cec69da1f5
   formPedido11 ::
     Yesod.Core.Types.HandlerData Foundation.App Foundation.App
     -> GHC.Prim.State# GHC.Prim.RealWorld
@@ -462,14 +462,14 @@ dc4b8b4d7e8f76ff357b4cd935f7e1a8
                (Yesod.Core.Class.Handler.HandlerSite Foundation.Handler))
             (GHC.Base.Maybe Data.Text.Internal.Text) #)
   {- Arity: 2, HasNoCafRefs, Strictness: <L,A><S,U>,
-     Unfolding: (\ (eta40 :: Yesod.Core.Types.HandlerData
+     Unfolding: (\ (eta44 :: Yesod.Core.Types.HandlerData
                                Foundation.App Foundation.App)
-                   (eta41 :: GHC.Prim.State# GHC.Prim.RealWorld) ->
-                 (# eta41,
+                   (eta45 :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 (# eta45,
                     Yesod.Form.Functions.parseHelperGen1
                       @ Data.Text.Internal.Text
                       @ (Yesod.Core.Class.Handler.HandlerSite Foundation.Handler) #)) -}
-429b5ee0b0868ed82ba90cb18b773293
+94de59a62c0672fbff8daef30c9fad4c
   formPedido2 ::
     (Yesod.Core.Class.Handler.HandlerSite
        (Yesod.Core.Types.HandlerFor Foundation.App),
@@ -657,7 +657,7 @@ c83136218e28312afe15648ed802e495
 b323796438eed4bb70bd51c58809d09e
   formPedido8 :: GHC.Prim.Addr#
   {- HasNoCafRefs, Unfolding: ("Login"#) -}
-97136b96ab255ac2892b8e4f6e395c7e
+420a9cf583e10591ab143ce9009daf94
   formPedido9 ::
     Yesod.Form.Types.Field Foundation.Handler Data.Text.Internal.Text
   {- Strictness: m,
@@ -671,7 +671,7 @@ b323796438eed4bb70bd51c58809d09e
   formPedido_x :: Data.Text.Internal.Text
   {- Unfolding: (Data.Text.Show.unpackCString#
                    Handlers.Produto.formPedido3) -}
-4732dfdb20b9924f1c6f47fe3ea4f89d
+af65c9dc5da9558d46f18258088021c9
   getCardapioR :: Foundation.Handler Text.Blaze.Html.Html
   {- Arity: 2,
      Strictness: <L,U(U,U(U,U,U,U(U(U,U,U(U),U,U(U),U(U,U,U),U)),U,U,U,U,U),U,U)><S,U>,
@@ -683,7 +683,7 @@ b323796438eed4bb70bd51c58809d09e
                                 <Text.Blaze.Html.Html>_R)) ; Sym (Yesod.Core.Types.N:HandlerFor[0]
                                                                       <Foundation.App>_N
                                                                       <Text.Blaze.Html.Html>_R)) -}
-1d17f39e68f5951f78a825278be7d158
+b4c6e0f40e1b64fa443cfb67ed008732
   getCardapioR1 ::
     Yesod.Core.Types.HandlerData Foundation.App Foundation.App
     -> GHC.Prim.State# GHC.Prim.RealWorld
@@ -707,7 +707,7 @@ b323796438eed4bb70bd51c58809d09e
                           @ (Yesod.Core.Types.HandlerFor Foundation.App)
                           (Yesod.Core.Class.Handler.$fMonadHandlerHandlerFor
                              @ Foundation.App)
-                          Handlers.Produto.getCardapioR8)
+                          Handlers.Produto.getCardapioR4)
                          `cast`
                        (Yesod.Core.Types.N:HandlerFor[0]
                             <Foundation.App>_N
@@ -719,19 +719,7 @@ b323796438eed4bb70bd51c58809d09e
                         ipv of ds2 { (#,#) ipv2 ipv3 ->
                  case ipv3 of wild {
                    GHC.Base.Nothing
-                   -> Foundation.$fYesodApp44
-                        Handlers.Produto.getCardapioR3
-                          `cast`
-                        ((<Yesod.Core.Types.WidgetData
-                             (Yesod.Core.Class.Handler.HandlerSite
-                                (Yesod.Core.Types.WidgetFor Foundation.App))>_R
-                          ->_R Sym (GHC.Types.N:IO[0]
-                                        <()>_R)) ; Sym (Yesod.Core.Types.N:WidgetFor[0]
-                                                            (Sym (Yesod.Core.Class.Handler.D:R:HandlerSiteWidgetFor[0]
-                                                                      <Foundation.App>_N))
-                                                            <()>_R))
-                        r
-                        ipv2
+                   -> Foundation.$fYesodApp44 Handlers.Produto.getCardapioR3 r ipv2
                    GHC.Base.Just a1
                    -> Handlers.Produto.getCardapioR2
                         (case a1 of ww { Data.ByteString.Internal.PS ww1 ww2 ww3 ww4 ->
@@ -743,13 +731,6 @@ b323796438eed4bb70bd51c58809d09e
                            ww4 })
                         r
                         ipv2 } } }) -}
-ed0458cb8e0907b6f699b4e06952656d
-  getCardapioR10 :: Data.Text.Internal.Text
-  {- Unfolding: (Data.Text.Show.unpackCString#
-                   Handlers.Produto.getCardapioR11) -}
-1e13742df4e1e94f3f479d58197ca61b
-  getCardapioR11 :: GHC.Prim.Addr#
-  {- HasNoCafRefs, Unfolding: ("_ID"#) -}
 178b71002ba11af1d60f7818d9fa6b4f
   getCardapioR2 ::
     Data.Text.Internal.Text
@@ -758,117 +739,36 @@ ed0458cb8e0907b6f699b4e06952656d
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, Text.Blaze.Html.Html #)
   {- Arity: 3,
      Strictness: <L,U><L,U(U,U(U,U,U,U(U(U,U,U(U),U,U(U),U(U,U,U),U)),U,U,U,U,U),U,U)><S,U> -}
-70df134a86f8a131599c3c357b35c113
-  getCardapioR3 ::
-    Yesod.Core.Types.WidgetData
-      (Yesod.Core.Class.Handler.HandlerSite
-         (Yesod.Core.Types.WidgetFor Foundation.App))
-    -> GHC.Prim.State# GHC.Prim.RealWorld
-    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
-  {- Arity: 2, Strictness: <S(SLLLL),1*U(U,A,A,A,A)><S,U>,
-     Unfolding: InlineRule (2, True, False)
-                (\ (wd :: Yesod.Core.Types.WidgetData
-                            (Yesod.Core.Class.Handler.HandlerSite
-                               (Yesod.Core.Types.WidgetFor Foundation.App)))
-                   (s :: GHC.Prim.State# GHC.Prim.RealWorld) ->
-                 case wd of wild { Yesod.Core.Types.WidgetData dt114 dt115 dt116 dt117 dt118 ->
-                 case GHC.Prim.readMutVar#
-                        @ GHC.Prim.RealWorld
-                        @ (Yesod.Core.Types.GWData
-                             (Yesod.Routes.Class.Route
-                                (Yesod.Core.Class.Handler.HandlerSite
-                                   (Yesod.Core.Types.WidgetFor Foundation.App))))
-                        dt114
-                        s of ds1 { (#,#) ipv ipv1 ->
-                 case Yesod.Core.Types.$fIsStringWidgetFor_$c<>
-                        @ (Yesod.Routes.Class.Route
-                             (Yesod.Core.Class.Handler.HandlerSite
-                                (Yesod.Core.Types.WidgetFor Foundation.App)))
-                        ipv1
-                        Handlers.Produto.getCardapioR_d
-                          `cast`
-                        (Yesod.Core.Types.GWData
-                           (Yesod.Routes.Class.Route
-                              (Sym (Yesod.Core.Class.Handler.D:R:HandlerSiteWidgetFor[0]
-                                        <Foundation.App>_N)))_R)_R of x' { Yesod.Core.Types.GWData ipv2 ipv3 ipv4 ipv5 ipv6 ipv7 ipv8 ->
-                 case GHC.Prim.writeMutVar#
-                        @ GHC.Prim.RealWorld
-                        @ (Yesod.Core.Types.GWData
-                             (Yesod.Routes.Class.Route
-                                (Yesod.Core.Class.Handler.HandlerSite
-                                   (Yesod.Core.Types.WidgetFor Foundation.App))))
-                        dt114
-                        x'
-                        ipv of s2# { DEFAULT ->
-                 (# s2#, GHC.Tuple.() #) } } } }) -}
-d2bedd23c9f5862ee23f1981a0549e77
-  getCardapioR4 :: Text.Blaze.Internal.ChoiceString
-  {- Strictness: m5,
-     Unfolding: (Text.Blaze.Internal.PreEscaped
+aaba7ebe20a38726fc3f58e6f0cbf013
+  getCardapioR3 :: Yesod.Core.Types.WidgetFor Foundation.App ()
+  {- Unfolding: (Yesod.Core.Handler.redirect
+                   @ (Yesod.Core.Types.WidgetFor Foundation.App)
+                   @ (Yesod.Routes.Class.Route Foundation.App)
+                   @ ()
+                   (Yesod.Core.Class.Handler.$fMonadHandlerWidgetFor @ Foundation.App)
+                   (Yesod.Core.Handler.$fRedirectUrlmasterRoute_$ctoTextUrl
+                      @ Foundation.App)
+                     `cast`
+                   (Sym (Yesod.Core.Handler.N:RedirectUrl[0]
+                             (Yesod.Core.Class.Handler.D:R:HandlerSiteWidgetFor[0]
+                                  <Foundation.App>_N)
+                             <Yesod.Routes.Class.Route Foundation.App>_N))
+                   Foundation.LoginR `cast` (Sym (Foundation.D:R:RouteApp0[0]))) -}
+897b9d4444639d9022b370abd98d7ed9
+  getCardapioR4 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString#
                    Handlers.Produto.getCardapioR5) -}
-cb7317f103757b3de3c62949d27cab8f
-  getCardapioR5 :: Text.Blaze.Internal.ChoiceString
-  {- Strictness: m3,
-     Unfolding: (Text.Blaze.Internal.Text
-                   Handlers.Produto.getCardapioR6) -}
-a3084080877b3943f8812f48aa8b9d2a
+ec07625d337997dacda0954430ed1c0c
+  getCardapioR5 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("_NOME"#) -}
+31154d8ab2eda848373ecbc233f2b1e4
   getCardapioR6 :: Data.Text.Internal.Text
   {- Unfolding: (Data.Text.Show.unpackCString#
                    Handlers.Produto.getCardapioR7) -}
-dca250d29248b574e1541412de841605
+df9a2eb6a528378811996f1763cc05b8
   getCardapioR7 :: GHC.Prim.Addr#
-  {- HasNoCafRefs, Unfolding: ("nem"#) -}
-b1d13751b038e2b7478cdb303610bab7
-  getCardapioR8 :: Data.Text.Internal.Text
-  {- Unfolding: (Data.Text.Show.unpackCString#
-                   Handlers.Produto.getCardapioR9) -}
-72511fbf5c598b03e32d08adf41deaa6
-  getCardapioR9 :: GHC.Prim.Addr#
-  {- HasNoCafRefs, Unfolding: ("_NOME"#) -}
-c668540ea80124a829ad289cfa990a41
-  getCardapioR_d ::
-    Yesod.Core.Types.GWData (Yesod.Routes.Class.Route Foundation.App)
-  {- Strictness: m,
-     Unfolding: (Yesod.Core.Types.GWData
-                   @ (Yesod.Routes.Class.Route Foundation.App)
-                   Handlers.Produto.getCardapioR_nt
-                     `cast`
-                   (Sym (Yesod.Core.Types.N:Body[0]
-                             <Yesod.Routes.Class.Route Foundation.App>_R))
-                   (GHC.Base.Nothing @ Yesod.Core.Types.Title)
-                     `cast`
-                   (Sym (Data.Monoid.N:Last[0]) <Yesod.Core.Types.Title>_N)
-                   (GHC.Base.id
-                      @ [Yesod.Core.Types.Script
-                           (Yesod.Routes.Class.Route Foundation.App)])
-                     `cast`
-                   (Sym (Yesod.Core.Types.N:UniqueList[0]
-                             <Yesod.Core.Types.Script
-                                (Yesod.Routes.Class.Route Foundation.App)>_R))
-                   (GHC.Base.id
-                      @ [Yesod.Core.Types.Stylesheet
-                           (Yesod.Routes.Class.Route Foundation.App)])
-                     `cast`
-                   (Sym (Yesod.Core.Types.N:UniqueList[0]
-                             <Yesod.Core.Types.Stylesheet
-                                (Yesod.Routes.Class.Route Foundation.App)>_R))
-                   (Data.Map.Internal.Tip
-                      @ (GHC.Base.Maybe Data.Text.Internal.Text)
-                      @ ((Yesod.Routes.Class.Route Foundation.App
-                          -> [(Data.Text.Internal.Text, Data.Text.Internal.Text)]
-                          -> Data.Text.Internal.Text)
-                         -> Data.Text.Internal.Builder.Builder))
-                   (GHC.Base.Nothing
-                      @ ((Yesod.Routes.Class.Route Foundation.App
-                          -> [(Data.Text.Internal.Text, Data.Text.Internal.Text)]
-                          -> Data.Text.Internal.Text)
-                         -> Text.Julius.Javascript))
-                   (Yesod.Core.Types.$fIsStringWidgetFor2
-                      @ (Yesod.Routes.Class.Route Foundation.App))
-                     `cast`
-                   (Sym (Yesod.Core.Types.N:Head[0]
-                             <Yesod.Routes.Class.Route Foundation.App>_R))) -}
-3b083b037013dfb3cc386721c79a9662
+  {- HasNoCafRefs, Unfolding: ("_ID"#) -}
+632e435f8d41614dcb00be0fdd1dd818
   getCardapioR_ds ::
     Yesod.Core.Types.HandlerFor
       Foundation.App (GHC.Base.Maybe Data.ByteString.Internal.ByteString)
@@ -876,23 +776,7 @@ c668540ea80124a829ad289cfa990a41
                    @ (Yesod.Core.Types.HandlerFor Foundation.App)
                    (Yesod.Core.Class.Handler.$fMonadHandlerHandlerFor
                       @ Foundation.App)
-                   Handlers.Produto.getCardapioR10) -}
-7f00fc692bd4233cb8504708a82818e6
-  getCardapioR_eta :: Text.Blaze.Html.Html
-  {- Strictness: m5,
-     Unfolding: (Text.Blaze.Internal.Content
-                   @ ()
-                   Handlers.Produto.getCardapioR4
-                   GHC.Tuple.()) -}
-a5fb0db7e1a0e8919e7fe274eeafd538
-  getCardapioR_nt ::
-    Yesod.Core.Types.RY Foundation.App -> Text.Blaze.Html.Html
-  {- Arity: 1, Strictness: <L,A>m5,
-     Unfolding: InlineRule (1, True, True)
-                (\ (ds1 :: Yesod.Routes.Class.Route Foundation.App
-                           -> [(Data.Text.Internal.Text, Data.Text.Internal.Text)]
-                           -> Data.Text.Internal.Text) ->
-                 Handlers.Produto.getCardapioR_eta) -}
+                   Handlers.Produto.getCardapioR6) -}
 022bab970e9a4affbfce9fa0c4e1afb6
   getItens ::
     Data.Text.Internal.Text -> Foundation.Handler Text.Blaze.Html.Html
@@ -908,7 +792,7 @@ a5fb0db7e1a0e8919e7fe274eeafd538
                                      <Text.Blaze.Html.Html>_R)) ; Sym (Yesod.Core.Types.N:HandlerFor[0]
                                                                            <Foundation.App>_N
                                                                            <Text.Blaze.Html.Html>_R)) -}
-33db37ef8bcd66b283df54c15d59a4c2
+21c7b423162fbc452b6abc56e7b1367b
   getItensVisitante :: Foundation.Handler Text.Blaze.Html.Html
   {- Arity: 2,
      Unfolding: InlineRule (0, True, True)
@@ -919,7 +803,7 @@ a5fb0db7e1a0e8919e7fe274eeafd538
                                 <Text.Blaze.Html.Html>_R)) ; Sym (Yesod.Core.Types.N:HandlerFor[0]
                                                                       <Foundation.App>_N
                                                                       <Text.Blaze.Html.Html>_R)) -}
-7f9133cc7abffbfcc47df72dc8d70fec
+6285e7443933c40c1e64529ee0d149f6
   getItensVisitante1 ::
     Yesod.Core.Types.HandlerData Foundation.App Foundation.App
     -> GHC.Prim.State# GHC.Prim.RealWorld
@@ -927,19 +811,7 @@ a5fb0db7e1a0e8919e7fe274eeafd538
           Text.Blaze.Internal.MarkupM () #)
   {- Arity: 2,
      Unfolding: (Foundation.$fYesodApp44
-                   Handlers.Produto.getCardapioR3
-                     `cast`
-                   ((<Yesod.Core.Types.WidgetData
-                        (Yesod.Core.Class.Handler.HandlerSite
-                           (Yesod.Core.Types.WidgetFor Foundation.App))>_R
-                     ->_R Sym (GHC.Types.N:IO[0]
-                                   <()>_R)) ; Sym (Yesod.Core.Types.N:WidgetFor[0]
-                                                       (Sym (Yesod.Core.Class.Handler.D:R:HandlerSiteWidgetFor[0]
-                                                                 <Foundation.App>_N))
-                                                       <()>_R))) -}
-089561fb0b2ddfad9a4be7564210a123
-  postCardapioR :: Foundation.Handler Text.Blaze.Html.Html
-  {- Strictness: x -}
+                   Handlers.Produto.getCardapioR3) -}
 vectorised variables:
 vectorised tycons:
 vectorised reused tycons:

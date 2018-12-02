@@ -29,126 +29,22 @@ getItens nome = do
                 toWidget $(luciusFile "templates/cardapio.lucius")
                 $(whamletFile "templates/cardapio.hamlet")
                 
-                --vatdadasddasdas
+                --vatdadasddasdasdasddasddasddasdddasddasd
                 -- pedidoId <- insert $ Pedido 10 $ 18.00
                 
-
-                
+coisoCoiso :: ClienteId -> Handler Html
+coisoCoiso coisa = do
+            (widget, enctype) <- generateFormPost formPedido
+            -- now <- liftIO getCurrentTime
+            pid <- runDB $ insert $ coisa Pedido 0 19 False
+            defaultLayout [whamlet|
+                foi
+            |]
                 
 getItensVisitante :: Handler Html
 getItensVisitante = do
-            -- card <- runDB $ selectList [ProdutoTipoprodutoid ==. (toSqlKey $ fromIntegral 1)] [Asc ProdutoNome]
-            -- beb <- runDB $ selectList [ProdutoTipoprodutoid ==. (toSqlKey $ fromIntegral 2)] [Asc ProdutoNome]
-            -- defaultLayout $ do
-            --     toWidget[lucius|
-            --         table {
-            --             margin-top: 20px;
-            --             border-collapse: collapse;
-            --             width: 100%;
-            --         }
-
-            --         th, td {
-            --             text-align: left;
-            --             padding: 8px;
-            --             font-family: segoe ui light;
-            --         }
-
-            --         tr:nth-child(even){background-color: #f2f2f2}
-
-            --         th {
-            --             background-color: #555;
-            --             color: white;
-            --         }
-                    
-            --         ul {
-            --             list-style-type: none;
-            --             margin: 0;
-            --             padding: 0;
-            --             overflow: hidden;
-            --             background-color: #333;
-            --         }
-
-            --         li {
-            --             float: left;
-            --         }
-
-            --         li{
-            --             display: block;
-            --             color: white;
-            --             text-align: center;
-            --             padding: 14px 16px;
-            --             text-decoration: none;
-            --             font-family: segoe ui light;
-            --         }
-                
-            --         a{
-            --             color: white;
-            --         }
-
-            --         li a:hover:not(.active) {
-            --             background-color: #111;
-            --         }
-
-            --         .active {
-            --             background-color: #4CAF50;
-            --         }
-                    
-            --         #cadastra{
-            --             color: black;
-            --         }
-
-            --     |]
-            --     [whamlet|
-            --         <ul>
-            --             <li> <a href=@{HomeR}>Home
-            --             <li style="float:right"> <a href=@{LoginR}>Login </a>
-            --             <li style="float:right"> eae visitante </ul>
-                
-            --          <table>
-            --              <tr>
-            --                  <th> Pratos
-                             
-            --              $forall Entity pid prod <- card
-            --                  <tr input type="checkbox">
-            --                      <td> #{produtoNome prod}
-            --                      <td> R$ #{produtoValor prod}
-                                 
-            --          <table>
-            --              <tr>
-            --                  <th> Bebidas
-                             
-            --              $forall Entity pid prod <- beb
-            --                  <tr input type="checkbox">
-            --                      <td> #{produtoNome prod}
-            --                      <td> R$ #{produtoValor prod}
-                                 
-            --          <h3> <a id="cadastra" href=@{ClienteR}> Cadastre-se </a> para fazer o seu pedido
-            --     |]
-                
-            --     toWidget [julius|
-            --         var table = document.getElementsByTagName("table")[0];
-            --         var tbody = table.getElementsByTagName("tbody")[0];
-            --         tbody.onclick = function (e) {
-            --             e = e || window.event;
-            --             var foi = [];
-            --             var target = e.srcElement || e.target;
-            --             while (target && target.nodeName !== "TR") {
-            --                 target = target.parentNode;
-            --             }
-            --             if (target) {
-            --                 var cells = target.getElementsByTagName("td");
-            --                 for (var i = 0; i < cells.length; i++) {
-            --                     foi.push(cells[i].innerHTML);
-            --                 }
-            --             }
-                        
-            --             alert(foi);
-            --         };
-            --     |]
             defaultLayout $ do
-                [whamlet|
-                    nem
-                |]
+                redirect LoginR
       
 getCardapioR :: Handler Html
 getCardapioR = do
@@ -160,7 +56,45 @@ getCardapioR = do
         (Just nome) -> (getItens nome)
 
 postCardapioR :: Handler Html
-postCardapioR = undefined
+postCardapioR = do
+    prodName <- "pastel"
+    prodVl <- 20
+    prodTipo <- 1
+    produtoid <- runDB $ insert $ Produto prodName prodVl prodTipo
+    redirect HomeR
+
+
+-- postCardapioR :: Text -> Handler
+-- postCardapioR prod = do
+--     runDB $ insert $ Produto prod 3 1
+    -- clienteid <- lookupSession "_ID"
+    -- --vltot 
+    -- item <- runDB $ selectFirst [ProdutoId ==. prodid] []
+    -- runDB $ insert $ Pedido clienteid 30 19:48 0 
+    
+
+-- postCardapioR :: ProdutoId
+-- postCardapioR prodid = do
+--     item <- runDB $ selectField [ProdutoId ==. prodid] []
+--     runDB $ insert item
+
+-- postCardapioR :: ProdutoId
+-- postCardapioR prodid = do
+--     runDB $ insert prodid
+
+
+
+-- main :: IO ()
+-- main = runResourceT $ withSqliteConn ":memory:" $ runSqlConn $ do
+--     runMigration migrateAll
+
+--     ids <- forM input insert
+--     liftIO $ print ids
+
+--   where
+--     input = [Person "John Doe", Person "Jane Doe"]
+
+
 -- postCardapioR = do
 --             ((result, _), _) <- runFormPost formPedido
 --             case result of

@@ -12,8 +12,8 @@ import Database.Persist.Postgresql
 
 formLogin :: Form (Text, Text)
 formLogin = renderDivs $ (,) <$>
-             areq textField "Login" Nothing <*>
-             areq passwordField "Senha" Nothing
+             areq textField "Login: " Nothing <*>
+             areq passwordField "Senha: " Nothing
 
 getLoginR :: Handler Html
 getLoginR = do

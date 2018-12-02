@@ -32,14 +32,47 @@ getItens nome = do
                 --vatdadasddasdasdasddasddasddasdddasddasd
                 -- pedidoId <- insert $ Pedido 10 $ 18.00
                 
-coisoCoiso :: ClienteId -> Handler Html
-coisoCoiso coisa = do
-            (widget, enctype) <- generateFormPost formPedido
-            -- now <- liftIO getCurrentTime
-            pid <- runDB $ insert $ coisa Pedido 0 19 False
-            defaultLayout [whamlet|
-                foi
-            |]
+                
+postItens :: ClienteId -> Handler Html
+postItens coisa = do
+                    ((result, _), _) <- runFormPost formPedido
+                    pid <- runDB $ insert $ Pedido coisa 0 19 False
+                    defaultLayout [whamlet|
+                        coisa
+                    |]
+
+
+-- postClienteR :: Handler Html
+-- postClienteR = do
+--                 ((result, _), _) <- runFormPost formCliente
+--                 case result of
+--                     FormSuccess cliente -> do
+--                       unicoLogin <- runDB $ getBy $ UniqueLogin (clienteLogin cliente)
+--                       case unicoLogin of
+--                           Just _ -> do
+--                               defaultLayout [whamlet|
+--                                  Login já cadastrado
+--                               |]
+--                           Nothing -> do 
+--                               pid <- runDB $ insert cliente
+--                               defaultLayout [whamlet|
+--                                 Cliente cadastrado com sucesso!:
+--                                 <br>
+--                                 <br>
+--                                 <a href=@{HomeR}>Home
+--                               |]
+--                               --redirect (ClienteR pid)
+--                     _ -> redirect HomeR
+
+
+-- coisoCoiso :: ClienteId -> Handler Html
+-- coisoCoiso coisa = do
+--             (widget, enctype) <- generateFormPost formPedido
+--             -- now <- liftIO getCurrentTime
+--             pid <- runDB $ insert $ coisa Pedido 0 19 False
+--             defaultLayout [whamlet|
+--                 foi
+--             |]
                 
 getItensVisitante :: Handler Html
 getItensVisitante = do
@@ -55,13 +88,13 @@ getCardapioR = do
         Nothing -> (getItensVisitante)
         (Just nome) -> (getItens nome)
 
-postCardapioR :: Handler Html
-postCardapioR = do
-    prodName <- "pastel"
-    prodVl <- 20
-    prodTipo <- 1
-    produtoid <- runDB $ insert $ Produto prodName prodVl prodTipo
-    redirect HomeR
+-- postCardapioR :: Handler Html
+-- postCardapioR = do
+--     prodName <- "pastel"
+--     prodVl <- 20
+--     prodTipo <- 1
+--     produtoid <- runDB $ insert $ Produto prodName prodVl prodTipo
+--     redirect HomeR
 
 
 -- postCardapioR :: Text -> Handler

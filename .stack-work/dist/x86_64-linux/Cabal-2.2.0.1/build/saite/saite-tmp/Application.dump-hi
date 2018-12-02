@@ -1,9 +1,9 @@
 
 ==================== FINAL INTERFACE ====================
-2018-12-02 00:05:49.703359396 UTC
+2018-12-02 02:17:13.741257577 UTC
 
 interface main:Application [orphan module] 8044
-  interface hash: c1faf9d9c3bc817180c8772109396e1f
+  interface hash: 8baae07a50e23d377c6b102cb362c978
   ABI hash: f3efd95a56e65391752394dbd35ec657
   export-list hash: 9a1c4302670016c0278a38d9037abecf
   orphan hash: bce5d011e560d2955a164787dfa9e4df
@@ -177,8 +177,8 @@ import  -/  Handlers.Login e6eea3af2ff568e8dab478ba0e6171e0
   getLoginR b01694190d07b16e0eb947614f6955d6
   getLogoutR 28bc76c742e55f1d598dcb6d9d102c3f
   postLoginR 710c62db10d9e0a57d2654a77e9d6c80
-import  -/  Handlers.Produto e6994622f364535032baf3b4bd6b1571
-  exports: 3de1fd0dd3f864c63d64524d00106462
+import  -/  Handlers.Produto 61a08b937e823b5c84afaecb82ebbe44
+  exports: e2479415d7c33ebd89529d66ec207d8a
   getCardapioR af65c9dc5da9558d46f18258088021c9
 import  -/  monad-logger-0.3.30:Control.Monad.Logger 8543a8ea2bc3183d80bcc2e19c1fd67d
 import  -/  shakespeare-2.0.20:Text.Internal.Css 17c2e6de13b11d0d8e75d34fa99c9d4a

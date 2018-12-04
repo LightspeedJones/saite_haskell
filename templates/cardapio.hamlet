@@ -12,8 +12,8 @@
          <tr>
              <td> #{produtoNome prod}
              <td> R$ #{produtoValor prod}
-             <td> <form action=@{CardapioR} method=post > 
-                                    <input type="submit" onClick=treco() value="+">
+             <td> <form action=@{CardapioR} method=post> 
+                        <input type="submit" value="+">
  <table>
      <tr>
          <th> Bebidas

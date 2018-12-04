@@ -29,12 +29,12 @@ getItens nome = do
                 toWidget $(luciusFile "templates/cardapio.lucius")
                 $(whamletFile "templates/cardapio.hamlet")
                 
-                --daddadaadaddadadasdadadaddaddadsdddadasadaddadsadasddasaddadsdadadaddadads
+                --adaddadsdadssadsdadsdddaddaasddadasadaddadadsdsadasddasaddadsdadadaddadads
                 -- pedidoId <- insert $ Pedido 10 $ 18.00
                 
                 
-postCoiso :: Text -> Text -> Handler Html
-postCoiso coisa treco = do
+postCoisa :: Text -> Text -> Handler Html
+postCoisa coisa treco = do
                     -- ((result, _), _) <- runFormPost formPedido
                     runDB $ insert $ Pedido coisa 0 19 False
                     prod <- runDB $ selectFirst [ProdutoNome ==. treco] []
@@ -47,7 +47,7 @@ postCoiso coisa treco = do
 postCardapioR :: Handler Html
 postCardapioR = do
     (Just usrid) <- lookupSession "_ID"
-    postCoiso usrid "Pastel"
+    postCoisa usrid "Pastel"
     redirect CardapioR
     -- defaultLayout [whamlet|
     --     <a> usrid

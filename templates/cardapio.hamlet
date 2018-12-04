@@ -12,7 +12,8 @@
          <tr>
              <td> #{produtoNome prod}
              <td> R$ #{produtoValor prod}
-             <td> <input id="btnAdd" onclick="coiso(this.parentNode.parentNode.rowIndex)" method=post action=@{CardapioR} type="submit" value="+"/> <input id="btnRem" type="submit" value="-"/>
+             <td> <form action=@{CardapioR} method=post > 
+                                    <input type="submit" onClick=treco() value="+">
  <table>
      <tr>
          <th> Bebidas

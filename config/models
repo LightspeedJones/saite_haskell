@@ -12,14 +12,14 @@ Produto
     tipoprodutoid TipoProdutoId      
 
 Pedido
-    clienteid     ClienteId
+    clienteid     Text
     vltot         Double
     hrpedido      Double
     finalizado    Bool
     
 ItemPedido
     pedidoid      PedidoId
-    produtoid     ProdutoId
+    produtoid     Text
     vlunit        Double
 
 TipoProduto

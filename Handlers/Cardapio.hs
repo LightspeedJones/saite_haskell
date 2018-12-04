@@ -1,0 +1,65 @@
+{-# LANGUAGE OverloadedStrings    #-}
+{-# LANGUAGE TemplateHaskell      #-}
+{-# LANGUAGE ViewPatterns         #-}
+{-# LANGUAGE QuasiQuotes       #-}
+module Handlers.Cardapio where
+
+import Foundation
+import Yesod
+import Database.Persist.Postgresql
+import Data.Text
+import Data.Maybe
+import Data.Monoid
+import Text.Hamlet (HtmlUrl, hamlet)
+import Text.Julius
+import Text.Lucius
+
+formPedido :: Form (Text, Text)
+formPedido = renderDivs $ (,) <$>
+             areq textField "Login" Nothing <*>
+             pure "1"
+
+getItens :: Text -> Handler Html
+getItens nome = do
+            (widget, enctype) <- generateFormPost formPedido
+            card <- runDB $ selectList [ProdutoTipoprodutoid ==. (toSqlKey $ fromIntegral 1)] [Asc ProdutoNome]
+            beb <- runDB $ selectList [ProdutoTipoprodutoid ==. (toSqlKey $ fromIntegral 2)] [Asc ProdutoNome]
+            defaultLayout $ do
+                toWidget $(juliusFile "templates/cardapio.julius")
+                toWidget $(luciusFile "templates/cardapio.lucius")
+                $(whamletFile "templates/cardapio.hamlet")
+                
+                --daddadaadaddadadasdadadaddaddadsdddadasadaddadsadasddasaddadsdadadaddadads
+                -- pedidoId <- insert $ Pedido 10 $ 18.00
+                
+                
+postCoiso :: Text -> Text -> Handler Html
+postCoiso coisa treco = do
+                    -- ((result, _), _) <- runFormPost formPedido
+                    runDB $ insert $ Pedido coisa 0 19 False
+                    -- (Just prodId) <- runDB $ selectFirst [ProdutoNome ==. treco] []
+                    -- ideProd <- ProdutoNome prodId
+                    -- runDB $ insert $ ItemPedido 1 ideProd 20
+                    redirect HomeR
+
+postCardapioR :: Handler Html
+postCardapioR = do
+    (Just usrid) <- lookupSession "_ID"
+    postCoiso usrid "Pastel"
+    redirect CardapioR
+    -- defaultLayout [whamlet|
+    --     <a> usrid
+    -- |]
+                
+getItensVisitante :: Handler Html
+getItensVisitante = do
+            defaultLayout $ do
+                redirect LoginR
+      
+getCardapioR :: Handler Html
+getCardapioR = do
+    maybenome <- lookupSession "_NOME"
+    
+    case maybenome of
+        Nothing -> (getItensVisitante)
+        (Just nome) -> (getItens nome)

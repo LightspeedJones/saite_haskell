@@ -38,7 +38,7 @@ postLoginR = do
                            setSession "_NOME" (pack $ show $ clienteNome cliente)
                         --   defaultLayout [whamlet|
                         --         Bem-vindo #{clienteLogin cliente}
-                        --   |]
+                        --   |]dad
                            redirect HomeR
                        Nothing -> redirect LoginR
                 _ -> redirect HomeR

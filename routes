@@ -1,5 +1,5 @@
 /         HomeR      GET
 /cliente  ClienteR   GET    POST
 /login    LoginR     GET    POST
-/cardapio CardapioR  GET
+/cardapio CardapioR  GET    POST
 /logout   LogoutR    GET

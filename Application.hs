@@ -9,7 +9,7 @@ import Foundation
 import Yesod
 import Handlers.Cliente
 import Handlers.Login
-import Handlers.Produto
+import Handlers.Cardapio
 import Control.Monad.Logger (runStdoutLoggingT)
 import Control.Applicative
 import Data.Text

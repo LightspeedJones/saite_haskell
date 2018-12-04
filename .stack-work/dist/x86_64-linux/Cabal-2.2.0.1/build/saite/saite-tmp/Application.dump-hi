@@ -1,9 +1,9 @@
 
 ==================== FINAL INTERFACE ====================
-2018-12-02 02:17:13.741257577 UTC
+2018-12-04 15:36:07.642152733 UTC
 
 interface main:Application [orphan module] 8044
-  interface hash: 8baae07a50e23d377c6b102cb362c978
+  interface hash: d0d6e098130f970ae2b76b514dba868a
   ABI hash: f3efd95a56e65391752394dbd35ec657
   export-list hash: 9a1c4302670016c0278a38d9037abecf
   orphan hash: bce5d011e560d2955a164787dfa9e4df
@@ -17,8 +17,8 @@ exports:
   Application.getHomeR
   Application.getLayoutLogado
   Application.getLayoutVisitante
-module dependencies: Foundation Handlers.Cliente Handlers.Login
-                     Handlers.Produto
+module dependencies: Foundation Handlers.Cardapio Handlers.Cliente
+                     Handlers.Login
 package dependencies: aeson-1.3.1.1 aeson-compat-0.3.9
                       ansi-terminal-0.8.2 appar-0.1.4 array-0.5.2.0 async-2.2.1
                       attoparsec-0.13.2.2 attoparsec-iso8601-1.0.1.0 auto-update-0.1.4
@@ -158,7 +158,7 @@ import  -/  base-4.11.1.0:GHC.Base 604111500e81281298777e721c75643b
 import  -/  base-4.11.1.0:Prelude 0750c25585e2b797cd78291d423d39dd
 import  -/  blaze-html-0.9.1.1:Text.Blaze.Html fdd818245cad1bbfcedd87b21c62946f
 import  -/  blaze-markup-0.8.2.2:Text.Blaze.Internal 7539c43623397f23e7aba6515d74b4b1
-import  -/  Foundation 759822151ca21f88554c5d415722ac95
+import  -/  Foundation a3595186f27cfbe7ebb68c28fce42b5e
   exports: bf35f3a755e4679019142bf94c9bfdc7
   App fad4d7498437d0835053b4479d34e8e2
   CardapioR 79a69a1a4e990bdd225ed0e5ebab70bd
@@ -167,7 +167,11 @@ import  -/  Foundation 759822151ca21f88554c5d415722ac95
   HomeR e02ee93d63494a36efbb06c3c46b9774
   LoginR 73c262bba89870ff65909bd48a395702
   LogoutR 2e7c434db91d939b51683981f88daa19
-  resourcesApp 70ddf22613765e2f7bb68e3b4d6122b4
+  resourcesApp c616500b82e02e972567fdc8898e97f7
+import  -/  Handlers.Cardapio cb3f44372e245f35ffdae5318acb0ad0
+  exports: b95bb0b53f559782759c4f3cde752e1b
+  getCardapioR 4d2b16abd8f5c34a431995b30af16505
+  postCardapioR ec91ffb84460103bf22d0fdc2742c68e
 import  -/  Handlers.Cliente 6e137413fb5dd8bd17e672d1fdb16d65
   exports: 3c2e56b0f2bb11d45c4b9e894313682f
   getClienteR 53b4f783afa0cceb5659d1d44b35fb5d
@@ -177,9 +181,6 @@ import  -/  Handlers.Login e6eea3af2ff568e8dab478ba0e6171e0
   getLoginR b01694190d07b16e0eb947614f6955d6
   getLogoutR 28bc76c742e55f1d598dcb6d9d102c3f
   postLoginR 710c62db10d9e0a57d2654a77e9d6c80
-import  -/  Handlers.Produto 61a08b937e823b5c84afaecb82ebbe44
-  exports: e2479415d7c33ebd89529d66ec207d8a
-  getCardapioR af65c9dc5da9558d46f18258088021c9
 import  -/  monad-logger-0.3.30:Control.Monad.Logger 8543a8ea2bc3183d80bcc2e19c1fd67d
 import  -/  shakespeare-2.0.20:Text.Internal.Css 17c2e6de13b11d0d8e75d34fa99c9d4a
 import  -/  shakespeare-2.0.20:Text.Lucius b430c66fd9a3ba305bfbf21371e6ecf1

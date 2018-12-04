@@ -10,7 +10,7 @@ executable          saite
                     Application
                     Handlers.Cliente
                     Handlers.Login
-                    Handlers.Produto
+                    Handlers.Cardapio
                     
   ghc-options:      -Wall -fwarn-tabs -O2
 

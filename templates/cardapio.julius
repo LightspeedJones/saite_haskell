@@ -5,6 +5,7 @@ function treco(){
     alert(this.parentNode.parentNode.rowIndex);
 }
 
+
 function coiso(index){
     alert(tbl.rows.item(index).cells.item(0).innerHTML);
 }

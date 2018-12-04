@@ -18,8 +18,8 @@ Pedido
     finalizado    Bool
     
 ItemPedido
-    pedidoid      PedidoId
-    produtoid     Text
+    pedidoid      Text
+    produtoid     ProdutoId
     vlunit        Double
 
 TipoProduto

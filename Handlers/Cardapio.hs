@@ -37,9 +37,11 @@ postCoiso :: Text -> Text -> Handler Html
 postCoiso coisa treco = do
                     -- ((result, _), _) <- runFormPost formPedido
                     runDB $ insert $ Pedido coisa 0 19 False
-                    -- (Just prodId) <- runDB $ selectFirst [ProdutoNome ==. treco] []
-                    -- ideProd <- ProdutoNome prodId
-                    -- runDB $ insert $ ItemPedido 1 ideProd 20
+                    prod <- runDB $ selectFirst [ProdutoNome ==. treco] []
+                    case prod of
+                        Just (Entity prod produto) -> do
+                            runDB $ insert $ ItemPedido "1" prod 20
+                            
                     redirect HomeR
 
 postCardapioR :: Handler Html

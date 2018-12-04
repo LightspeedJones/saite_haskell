@@ -1,9 +1,9 @@
 
 ==================== FINAL INTERFACE ====================
-2018-12-04 15:36:07.642152733 UTC
+2018-12-04 18:14:51.946427007 UTC
 
 interface main:Application [orphan module] 8044
-  interface hash: d0d6e098130f970ae2b76b514dba868a
+  interface hash: 7012877d82fd0ba7c5ea1fc3ed6f6e09
   ABI hash: f3efd95a56e65391752394dbd35ec657
   export-list hash: 9a1c4302670016c0278a38d9037abecf
   orphan hash: bce5d011e560d2955a164787dfa9e4df
@@ -158,7 +158,7 @@ import  -/  base-4.11.1.0:GHC.Base 604111500e81281298777e721c75643b
 import  -/  base-4.11.1.0:Prelude 0750c25585e2b797cd78291d423d39dd
 import  -/  blaze-html-0.9.1.1:Text.Blaze.Html fdd818245cad1bbfcedd87b21c62946f
 import  -/  blaze-markup-0.8.2.2:Text.Blaze.Internal 7539c43623397f23e7aba6515d74b4b1
-import  -/  Foundation a3595186f27cfbe7ebb68c28fce42b5e
+import  -/  Foundation 94334e874657207f8b48f126eed43e4a
   exports: bf35f3a755e4679019142bf94c9bfdc7
   App fad4d7498437d0835053b4479d34e8e2
   CardapioR 79a69a1a4e990bdd225ed0e5ebab70bd
@@ -168,10 +168,10 @@ import  -/  Foundation a3595186f27cfbe7ebb68c28fce42b5e
   LoginR 73c262bba89870ff65909bd48a395702
   LogoutR 2e7c434db91d939b51683981f88daa19
   resourcesApp c616500b82e02e972567fdc8898e97f7
-import  -/  Handlers.Cardapio cb3f44372e245f35ffdae5318acb0ad0
+import  -/  Handlers.Cardapio 54cc65da13b1e27c578e04ce73bf9d74
   exports: b95bb0b53f559782759c4f3cde752e1b
   getCardapioR 4d2b16abd8f5c34a431995b30af16505
-  postCardapioR ec91ffb84460103bf22d0fdc2742c68e
+  postCardapioR a851c21c5442f25b9057af65063393bc
 import  -/  Handlers.Cliente 6e137413fb5dd8bd17e672d1fdb16d65
   exports: 3c2e56b0f2bb11d45c4b9e894313682f
   getClienteR 53b4f783afa0cceb5659d1d44b35fb5d

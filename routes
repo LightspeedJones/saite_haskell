@@ -3,3 +3,4 @@
 /login    LoginR     GET    POST
 /cardapio CardapioR  GET    POST
 /logout   LogoutR    GET
+/admin    AdminR     GET

@@ -16,7 +16,12 @@ share [mkPersist sqlSettings, mkMigrate "migrateAll"] $(persistFileWith lowerCas
 
 mkYesodData "App" $(parseRoutesFile "routes")
 
-instance Yesod App
+instance Yesod App where
+    isAuthorized AdminR _ = isAdmin
+    isAuthorized HomeR _ = return Authorized
+    isAuthorized LoginR _ = return Authorized
+    isAuthorized CardapioR _ = return Authorized
+    isAuthorized LogoutR _ = return Authorized
 
 instance YesodPersist App where
    type YesodPersistBackend App = SqlBackend
@@ -29,6 +34,13 @@ type Form a = Html -> MForm Handler (FormResult a, Widget)
 
 instance RenderMessage App FormMessage where
     renderMessage _ _ = defaultFormMessage
+    
+isAdmin = do
+    logado <- lookupSession "_USR"
+    case logado of
+        Just "admin" -> return Authorized
+        Just _ -> return $ Unauthorized "sai"
+        Nothing -> return AuthenticationRequired
     
 --widgetForm :: Route App -> Enctype -> Widget -> Text -> Widget
 --widgetForm x enctype widget y = $(whamletFile "templates/form.hamlet")

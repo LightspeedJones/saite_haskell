@@ -2,11 +2,14 @@
 {-# LANGUAGE TemplateHaskell      #-}
 {-# LANGUAGE ViewPatterns         #-}
 {-# LANGUAGE QuasiQuotes       #-}
+
 module Handlers.Cardapio where
 
 import Foundation
 import Yesod
 import Database.Persist.Postgresql
+import Control.Monad.Logger (runStdoutLoggingT)
+import Control.Applicative
 import Data.Text
 import Data.Maybe
 import Data.Monoid
@@ -29,29 +32,31 @@ getItens nome = do
                 toWidget $(luciusFile "templates/cardapio.lucius")
                 $(whamletFile "templates/cardapio.hamlet")
                 
-                --adaddadsdadssadsdadsdddaddaasddadasadaddadadsdsadasddasaddadsdadadaddadads
+                --adaddadsdadssadsdadsdddaddaasddadasadaddadadsdsadasddaddasaddadsdadadaddadads
                 -- pedidoId <- insert $ Pedido 10 $ 18.00
                 
                 
-postCoisa :: Text -> Text -> Handler Html
-postCoisa coisa treco = do
-                    -- ((result, _), _) <- runFormPost formPedido
-                    runDB $ insert $ Pedido coisa 0 19 False
-                    prod <- runDB $ selectFirst [ProdutoNome ==. treco] []
-                    case prod of
-                        Just (Entity prod produto) -> do
-                            runDB $ insert $ ItemPedido "1" prod 20
+-- postCoisa :: Text -> Text -> Handler Html
+-- postCoisa coisa treco = do
+--                     -- ((result, _), _) <- runFormPost formPedido
+--                     runDB $ insert $ Pedido coisa 0 19 False
+--                     prod <- runDB $ selectFirst [ProdutoNome ==. treco] []
+--                     case prod of
+--                         Just (Entity prod produto) -> do
+--                             runDB $ insert $ ItemPedido "1" prod 20
                             
-                    redirect HomeR
+--                     redirect HomeR
 
 postCardapioR :: Handler Html
 postCardapioR = do
     (Just usrid) <- lookupSession "_ID"
-    postCoisa usrid "Pastel"
+    --postCoisa usrid "Pastel"
+    runDB $ insert $ Pedido usrid 0 19 False
+    prod <- runDB $ selectFirst [ProdutoNome ==. "coiso"] []
+    case prod of
+        Just (Entity prod produto) -> do
+            runDB $ insert $ ItemPedido "1" prod 20
     redirect CardapioR
-    -- defaultLayout [whamlet|
-    --     <a> usrid
-    -- |]
                 
 getItensVisitante :: Handler Html
 getItensVisitante = do

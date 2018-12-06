@@ -10,6 +10,7 @@ import Yesod
 import Handlers.Cliente
 import Handlers.Login
 import Handlers.Cardapio
+import Handlers.Admin
 import Control.Monad.Logger (runStdoutLoggingT)
 import Control.Applicative
 import Data.Text
@@ -48,6 +49,19 @@ getLayoutVisitante = defaultLayout $ do
                 <h2> <a id="cadastro" href=@{ClienteR}> Faça seu cadastro!
             |]
             
+getLayoutAdmin :: Handler Html
+getLayoutAdmin = defaultLayout $ do
+            toWidget $(luciusFile "templates/home.lucius")
+            
+            [whamlet|
+                <ul>
+                    <li style="float:right"> <a href=@{LoginR}>Login </a>
+                    <li style="float:right"> eae visitante </ul>
+            
+                <h1> RESTAURANTE RESTAURANTOSO
+                <h2> <a id="prod" href=@{ClienteR}> Produtos
+                <h2> <a id="prod" href=@{ClienteR}> Pedidos
+            |]
 
 getHomeR :: Handler Html
 getHomeR  = do
@@ -56,57 +70,6 @@ getHomeR  = do
     case maybenome of
         Nothing -> (getLayoutVisitante)
         (Just nome) -> (getLayoutLogado nome)
-    
-
--- getHomeR = defaultLayout $ do
-
---     toWidget[lucius|
---         h1{
---             font-size: 30px;
---             margin-top: 40px;
---             margin-bottom: 40px;
---             font-family: segoe ui light;
---             text-align: center;
---         }
---         ul {
---             list-style-type: none;
---             margin: 0;
---             padding: 0;
---             width: 200px;
---             background-color: #f1f1f1;
---         }
-
---         li a {
---             display: block;
---             color: #000;
---             padding: 8px 16px;
---             text-decoration: none;
---             font-family: segoe ui;
---             text-align: center;
-
---         }
-
---         li a:hover {
---             background-color: #555;
---             color: white;
---         }
---     |]
-    
---     [whamlet|
---         <h1> RESTAURANTE RESTAURANTOSO
         
---         <ul>
---             <li> <a href=@{ClienteR}> Cadastro
---             <li> <a href=@{CardapioR}> Cardapio
---             <li> <a href=@{LoginR}> Login
-            
---     |]
     
-    -- [whamlet|
-    --      <h1> Sistema academico
-    --      <ul>
-    --         <li> <a href=@{ProfR}> prof
-    --         <li> <a href=@{CursoR}> curso
-    --         <li> <a href=@{ListProfR}> lista prof
-    --         <li> <a href=@{ListCursoR}> lista curso
-    -- |]
+

@@ -1,0 +1,2975 @@
+
+==================== FINAL INTERFACE ====================
+2018-12-06 23:02:47.300659317 UTC
+
+interface main:Handlers.Admin 8044
+  interface hash: 43dc7aa62a6d1aa9d1cbefe14f42f348
+  ABI hash: 4b549444b49775abbaa8fe7ddae4fccd
+  export-list hash: a09d9b8cd9554d67ce8a73101059dba1
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: b3b1d09742290a21c7d4cc3b0f082b59
+  opt_hash: 2c98c95d41c045ae9c2fb565ec8aabc6
+  hpc_hash: 93b885adfe0da089cdf634904fd59f71
+  sig of: Nothing
+  used TH splices: True
+  where
+exports:
+  Handlers.Admin.getAdminR
+module dependencies: Foundation
+package dependencies: aeson-1.3.1.1 aeson-compat-0.3.9
+                      ansi-terminal-0.8.2 appar-0.1.4 array-0.5.2.0 async-2.2.1
+                      attoparsec-0.13.2.2 attoparsec-iso8601-1.0.1.0 auto-update-0.1.4
+                      base-4.11.1.0 base-compat-0.10.5 base64-bytestring-1.0.0.1
+                      basement-0.0.8 binary-0.8.5.1 blaze-builder-0.4.1.0
+                      blaze-html-0.9.1.1 blaze-markup-0.8.2.2 bsb-http-chunked-0.0.0.4
+                      byteable-0.1.1 byteorder-1.0.4 bytestring-0.10.8.2
+                      case-insensitive-1.2.0.11 cereal-0.5.7.0 cipher-aes-0.2.11
+                      clientsession-0.9.1.2 colour-2.3.4 conduit-1.3.1
+                      conduit-extra-1.3.0 containers-0.5.11.0 cookie-0.4.4
+                      cprng-aes-0.6.1 crypto-api-0.13.3 crypto-cipher-types-0.0.9
+                      crypto-random-0.0.9 css-text-0.1.3.0 data-default-class-0.1.2.0
+                      deepseq-1.4.3.0 directory-1.3.1.5 dlist-0.8.0.5 easy-file-0.2.2
+                      email-validate-2.3.2.9 entropy-0.4.1.4 exceptions-0.10.0
+                      fast-logger-2.4.11 filepath-1.4.2 ghc-boot-th-8.4.4
+                      ghc-prim-0.5.2.0 hashable-1.2.7.0 haskell-src-exts-1.20.3
+                      haskell-src-meta-0.8.0.3 http-api-data-0.3.8.1 http-date-0.0.8
+                      http-types-0.12.2 http2-1.6.4 integer-gmp-1.0.2.0
+                      integer-logarithms-1.0.2.2 iproute-1.7.6 lifted-base-0.2.3.12
+                      memory-0.14.18 monad-control-1.0.2.3 monad-logger-0.3.30
+                      monad-loops-0.4.3 mono-traversable-1.0.9.0 mtl-2.2.2
+                      network-2.6.3.6 network-byte-order-0.0.0.0 network-uri-2.6.1.0
+                      old-locale-1.0.0.7 old-time-1.1.0.3 parsec-3.1.13.0
+                      path-pieces-0.2.1 persistent-2.8.2 persistent-postgresql-2.8.2.0
+                      persistent-template-2.5.4 postgresql-libpq-0.9.4.2
+                      postgresql-simple-0.5.4.0 pretty-1.1.3.6 primitive-0.6.3.0
+                      process-1.6.3.0 psqueues-0.2.7.0 random-1.1 resource-pool-0.2.3.2
+                      resourcet-1.2.2 scientific-0.3.6.2 securemem-0.1.10
+                      shakespeare-2.0.20 silently-1.2.5 simple-sendfile-0.2.27
+                      skein-1.0.9.4 split-0.2.3.3 stm-2.4.5.1 stm-chans-3.0.0.4
+                      streaming-commons-0.2.1.0 tagged-0.8.5 tagsoup-0.14.7
+                      template-haskell-2.13.0.0 text-1.2.3.1 time-1.8.0.2
+                      time-locale-compat-0.1.1.5 transformers-0.5.5.0
+                      transformers-base-0.4.5.2 unix-2.7.2.2 unix-compat-0.5.1
+                      unix-time-0.3.8 unliftio-0.2.8.1 unliftio-core-0.1.2.0
+                      unordered-containers-0.2.9.0 utf8-string-1.0.1.1 uuid-types-1.0.3
+                      vault-0.3.1.2 vector-0.12.0.1 vector-algorithms-0.7.0.4 wai-3.2.1.2
+                      wai-extra-3.0.24.3 wai-logger-2.3.2 warp-3.2.25 word8-0.1.3
+                      xss-sanitize-0.3.6 yesod-1.6.0 yesod-core-1.6.8.1 yesod-form-1.6.3
+                      yesod-persistent-1.6.0.1 zlib-0.6.2
+orphans: persistent-template-2.5.4:Database.Persist.TH
+         aeson-compat-0.3.9:Data.Aeson.Compat colour-2.3.4:Data.Colour
+         crypto-api-0.13.3:Crypto.Classes
+         basement-0.0.8:Basement.UArray.Base basement-0.0.8:Basement.Block
+         network-2.6.3.6:Network.Socket
+         haskell-src-exts-1.20.3:Language.Haskell.Exts.Parser
+         persistent-2.8.2:Database.Persist.Sql.Orphan.PersistQuery
+         persistent-2.8.2:Database.Persist.Sql.Orphan.PersistUnique
+         persistent-2.8.2:Database.Persist.Sql.Orphan.PersistStore
+         unix-time-0.3.8:Data.UnixTime.Diff stm-2.4.5.1:Control.Monad.STM
+         attoparsec-0.13.2.2:Data.Attoparsec.Text.Internal
+         attoparsec-0.13.2.2:Data.Attoparsec.ByteString.Char8
+         vector-0.12.0.1:Data.Vector.Unboxed
+         vector-0.12.0.1:Data.Vector.Fusion.Bundle
+         hashable-1.2.7.0:Data.Hashable.Generic
+         transformers-0.5.5.0:Control.Monad.Trans.Error
+         text-1.2.3.1:Data.Text.Lazy text-1.2.3.1:Data.Text
+         binary-0.8.5.1:Data.Binary.Generic
+         bytestring-0.10.8.2:Data.ByteString.Builder
+         text-1.2.3.1:Data.Text.Show time-1.8.0.2:Data.Time.Format.Parse
+         time-1.8.0.2:Data.Time.LocalTime.Internal.ZonedTime
+         time-1.8.0.2:Data.Time.LocalTime.Internal.LocalTime
+         time-1.8.0.2:Data.Time.Calendar.Gregorian base-4.11.1.0:GHC.Float
+         base-4.11.1.0:GHC.Base
+family instance modules: aeson-1.3.1.1:Data.Aeson.Types.Internal
+                         attoparsec-0.13.2.2:Data.Attoparsec.Internal.Types
+                         base-4.11.1.0:Control.Applicative base-4.11.1.0:Data.Complex
+                         base-4.11.1.0:Data.Functor.Compose base-4.11.1.0:Data.Functor.Const
+                         base-4.11.1.0:Data.Functor.Identity
+                         base-4.11.1.0:Data.Functor.Product base-4.11.1.0:Data.Functor.Sum
+                         base-4.11.1.0:Data.Monoid base-4.11.1.0:Data.Semigroup
+                         base-4.11.1.0:Data.Semigroup.Internal base-4.11.1.0:Data.Version
+                         base-4.11.1.0:Data.Void base-4.11.1.0:GHC.Exts
+                         base-4.11.1.0:GHC.Generics base-4.11.1.0:GHC.IO.Exception
+                         basement-0.0.8:Basement.Block.Base basement-0.0.8:Basement.Monad
+                         basement-0.0.8:Basement.MutableBuilder basement-0.0.8:Basement.Nat
+                         basement-0.0.8:Basement.NonEmpty
+                         basement-0.0.8:Basement.Numerical.Subtractive
+                         basement-0.0.8:Basement.PrimType basement-0.0.8:Basement.String
+                         basement-0.0.8:Basement.String.Encoding.ASCII7
+                         basement-0.0.8:Basement.String.Encoding.ISO_8859_1
+                         basement-0.0.8:Basement.String.Encoding.UTF16
+                         basement-0.0.8:Basement.String.Encoding.UTF32
+                         basement-0.0.8:Basement.Types.OffsetSize
+                         basement-0.0.8:Basement.UArray.Base
+                         basement-0.0.8:Basement.UTF8.Base
+                         conduit-1.3.1:Data.Conduit.Internal.Conduit
+                         conduit-1.3.1:Data.Conduit.Internal.Pipe
+                         containers-0.5.11.0:Data.IntMap.Internal
+                         containers-0.5.11.0:Data.IntSet.Internal
+                         containers-0.5.11.0:Data.Map.Internal
+                         containers-0.5.11.0:Data.Sequence.Internal
+                         containers-0.5.11.0:Data.Set.Internal containers-0.5.11.0:Data.Tree
+                         dlist-0.8.0.5:Data.DList email-validate-2.3.2.9:Text.Email.Parser
+                         ghc-boot-th-8.4.4:GHC.ForeignSrcLang.Type
+                         ghc-boot-th-8.4.4:GHC.LanguageExtensions.Type
+                         haskell-src-exts-1.20.3:Language.Haskell.Exts.SrcLoc
+                         haskell-src-exts-1.20.3:Language.Haskell.Exts.Syntax
+                         iproute-1.7.6:Data.IP.Addr iproute-1.7.6:Data.IP.Range
+                         main:Foundation monad-control-1.0.2.3:Control.Monad.Trans.Control
+                         monad-logger-0.3.30:Control.Monad.Logger
+                         mono-traversable-1.0.9.0:Data.MonoTraversable
+                         mono-traversable-1.0.9.0:Data.NonNull
+                         mono-traversable-1.0.9.0:Data.Sequences
+                         network-uri-2.6.1.0:Network.URI
+                         persistent-2.8.2:Database.Persist.Class.PersistConfig
+                         persistent-2.8.2:Database.Persist.Class.PersistEntity
+                         persistent-2.8.2:Database.Persist.Sql.Orphan.PersistStore
+                         persistent-2.8.2:Database.Persist.Sql.Types.Internal
+                         persistent-postgresql-2.8.2.0:Database.Persist.Postgresql
+                         pretty-1.1.3.6:Text.PrettyPrint.Annotated.HughesPJ
+                         pretty-1.1.3.6:Text.PrettyPrint.HughesPJ
+                         primitive-0.6.3.0:Control.Monad.Primitive
+                         primitive-0.6.3.0:Data.Primitive.Array
+                         primitive-0.6.3.0:Data.Primitive.ByteArray
+                         resourcet-1.2.2:Control.Monad.Trans.Resource.Internal
+                         shakespeare-2.0.20:Text.Internal.Css
+                         shakespeare-2.0.20:Text.Shakespeare tagged-0.8.5:Data.Tagged
+                         template-haskell-2.13.0.0:Language.Haskell.TH.Syntax
+                         text-1.2.3.1:Data.Text text-1.2.3.1:Data.Text.Lazy
+                         unordered-containers-0.2.9.0:Data.HashMap.Base
+                         unordered-containers-0.2.9.0:Data.HashSet
+                         uuid-types-1.0.3:Data.UUID.Types.Internal
+                         uuid-types-1.0.3:Data.UUID.Types.Internal.Builder
+                         vector-0.12.0.1:Data.Vector vector-0.12.0.1:Data.Vector.Primitive
+                         vector-0.12.0.1:Data.Vector.Storable
+                         vector-0.12.0.1:Data.Vector.Unboxed
+                         vector-0.12.0.1:Data.Vector.Unboxed.Base
+                         yesod-core-1.6.8.1:Yesod.Core.Class.Handler
+                         yesod-core-1.6.8.1:Yesod.Core.Internal.LiteApp
+                         yesod-core-1.6.8.1:Yesod.Core.Types
+                         zlib-0.6.2:Codec.Compression.Zlib.Stream
+import  -/  base-4.11.1.0:Control.Applicative 55d9b3a7491623b0362290e162d67308
+import  -/  base-4.11.1.0:Data.Foldable 8ed35c38958063956af33c935ea03444
+import  -/  base-4.11.1.0:Data.Maybe 409c3da2b142470b68be39ce1d97a9f7
+import  -/  base-4.11.1.0:Data.Monoid c40cd435d79b84293ce5503253ee6d44
+import  -/  base-4.11.1.0:GHC.Base 604111500e81281298777e721c75643b
+import  -/  base-4.11.1.0:Prelude 0750c25585e2b797cd78291d423d39dd
+import  -/  blaze-html-0.9.1.1:Text.Blaze.Html fdd818245cad1bbfcedd87b21c62946f
+import  -/  blaze-markup-0.8.2.2:Text.Blaze.Internal 7539c43623397f23e7aba6515d74b4b1
+import  -/  Foundation be3d333a75bfa3e86c4ced648f1189de
+  exports: 21ec649e8eacf647359bb5bc31157a7f
+  ClienteR c692ee3ccfb971faa929b014d54c2a93
+  Handler a00ba8e4209ea3bff10df922e701f89f
+  LogoutR 07480751cd1af5c57678bfd6e1bada10
+import  -/  monad-logger-0.3.30:Control.Monad.Logger 8543a8ea2bc3183d80bcc2e19c1fd67d
+import  -/  persistent-postgresql-2.8.2.0:Database.Persist.Postgresql 67d2c206a72e3c251d29d480a26581a7
+import  -/  shakespeare-2.0.20:Text.Hamlet 492ff1ebebfc64e862ec951f3f2d79f2
+import  -/  shakespeare-2.0.20:Text.Internal.Css 17c2e6de13b11d0d8e75d34fa99c9d4a
+import  -/  shakespeare-2.0.20:Text.Julius 1d27bc7a7ec71e631eb6a5ef8aa6672b
+import  -/  shakespeare-2.0.20:Text.Lucius b430c66fd9a3ba305bfbf21371e6ecf1
+import  -/  text-1.2.3.1:Data.Text cb97f965b33763b648b5393c0517cf50
+import  -/  yesod-1.6.0:Yesod 12dd731b07dae980742b80692ae0952f
+import  -/  yesod-core-1.6.8.1:Yesod.Core.Class.Yesod b52f2d36e084040c2f01914b6a7090fc
+import  -/  yesod-core-1.6.8.1:Yesod.Core.Handler e612adc064f65691fdfb53152b949d63
+import  -/  yesod-core-1.6.8.1:Yesod.Core.Widget 876e385706692ff3cccbda9bd1bf970b
+addDependentFile "templates/home.lucius" 0148a1ab3d0c4961bb4509a8a82ccc50
+5ce765a1616eff3ad097d8346d3caa46
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   Handlers.Admin.$trModule3
+                   Handlers.Admin.$trModule1) -}
+b6c23b2ec346a6329d0be5f5bdb6d23e
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Handlers.Admin.$trModule2) -}
+1678eee388d15ed21cf7914009a5d5cc
+  $trModule2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Handlers.Admin"#) -}
+61856a96239b3621237945515652e8c4
+  $trModule3 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Handlers.Admin.$trModule4) -}
+834d96e367bf335688f4061805feb577
+  $trModule4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("main"#) -}
+47d96714d597ff29c5473c796e2ef642
+  getAdminR :: Foundation.Handler Text.Blaze.Html.Html
+  {- Arity: 2,
+     Unfolding: InlineRule (0, True, True)
+                Handlers.Admin.getAdminR1
+                  `cast`
+                ((<Yesod.Core.Types.HandlerData Foundation.App Foundation.App>_R
+                  ->_R Sym (GHC.Types.N:IO[0]
+                                <Text.Blaze.Html.Html>_R)) ; Sym (Yesod.Core.Types.N:HandlerFor[0]
+                                                                      <Foundation.App>_N
+                                                                      <Text.Blaze.Html.Html>_R)) -}
+a80bf340e2af79e52fff105c596dbbf2
+  getAdminR1 ::
+    Yesod.Core.Types.HandlerData Foundation.App Foundation.App
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Text.Blaze.Internal.MarkupM () #)
+  {- Arity: 2,
+     Unfolding: (Foundation.$fYesodApp49
+                   Handlers.Admin.getAdminR2
+                     `cast`
+                   ((<Yesod.Core.Types.WidgetData Foundation.App>_R
+                     ->_R Sym (GHC.Types.N:IO[0]
+                                   <()>_R)) ; Sym (Yesod.Core.Types.N:WidgetFor[0]
+                                                       <Foundation.App>_N <()>_R))) -}
+53b50a5105d0d7a5cf2316569eca949e
+  getAdminR10 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("> Produtos</h2>\n\
+                 \<h2> <a id=\"ped\" href="#) -}
+2b9ad3be81f1425e04a76fb93cde1e95
+  getAdminR100 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("a"#) -}
+583c1506c9ac2ebea25ccd0169a5fc3f
+  getAdminR101 ::
+    Text.Internal.Css.TopLevel Text.Internal.Css.Resolved
+  {- Strictness: m1,
+     Unfolding: (Text.Internal.Css.TopBlock
+                   @ Text.Internal.Css.Resolved
+                   Handlers.Admin.getAdminR102) -}
+217aa79a8706c8916c2326ef16cd4480
+  getAdminR102 :: Text.Internal.Css.Block Text.Internal.Css.Resolved
+  {- Strictness: m,
+     Unfolding: (Text.Internal.Css.Block
+                   @ Text.Internal.Css.Resolved
+                   Handlers.Admin.getAdminR136
+                     `cast`
+                   ((forall (s :: <*>_N).
+                     <Data.Text.Internal.Builder.Buffer s
+                      -> GHC.ST.ST s [Data.Text.Internal.Text]>_R
+                     ->_R <Data.Text.Internal.Builder.Buffer s>_R
+                     ->_R Sym (GHC.ST.N:ST[0]
+                                   <s>_N
+                                   <[Data.Text.Internal.Text]>_R)) ; (Sym (Data.Text.Internal.Builder.N:Builder[0]) ; Sub (Sym (Text.Internal.Css.D:R:SelectorResolved[0]))))
+                   Handlers.Admin.getAdminR103
+                   GHC.Tuple.()
+                     `cast`
+                   (Sub (Sym (Text.Internal.Css.D:R:ChildBlocksResolved[0])))
+                   GHC.Tuple.()
+                     `cast`
+                   (Sub (Sym (Text.Internal.Css.D:R:MixinsResolved[0])))) -}
+ac11d7d652ae3450f4ad2c512ee47ff7
+  getAdminR103 :: [Text.Internal.Css.Attr Text.Internal.Css.Resolved]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (Text.Internal.Css.Attr Text.Internal.Css.Resolved)
+                   Handlers.Admin.getAdminR129
+                   Handlers.Admin.getAdminR104) -}
+6416e8839ceb4755717b4aada351adb5
+  getAdminR104 :: [Text.Internal.Css.Attr Text.Internal.Css.Resolved]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (Text.Internal.Css.Attr Text.Internal.Css.Resolved)
+                   Handlers.Admin.getAdminR94
+                   Handlers.Admin.getAdminR105) -}
+818745d995ab977c688fb9bc2beb5afd
+  getAdminR105 :: [Text.Internal.Css.Attr Text.Internal.Css.Resolved]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (Text.Internal.Css.Attr Text.Internal.Css.Resolved)
+                   Handlers.Admin.getAdminR122
+                   Handlers.Admin.getAdminR106) -}
+d5de08c6537ee47154263bc2c4b187b4
+  getAdminR106 :: [Text.Internal.Css.Attr Text.Internal.Css.Resolved]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (Text.Internal.Css.Attr Text.Internal.Css.Resolved)
+                   Handlers.Admin.getAdminR115
+                   Handlers.Admin.getAdminR107) -}
+de29696caaf06d10f778aaae94b07c84
+  getAdminR107 :: [Text.Internal.Css.Attr Text.Internal.Css.Resolved]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (Text.Internal.Css.Attr Text.Internal.Css.Resolved)
+                   Handlers.Admin.getAdminR108
+                   Handlers.Admin.getAdminR86) -}
+8a0f8505298d8e779c87fed6d7434173
+  getAdminR108 :: Text.Internal.Css.Attr Text.Internal.Css.Resolved
+  {- Strictness: m,
+     Unfolding: (Text.Internal.Css.Attr
+                   @ Text.Internal.Css.Resolved
+                   Handlers.Admin.getAdminR112
+                     `cast`
+                   ((forall (s :: <*>_N).
+                     <Data.Text.Internal.Builder.Buffer s
+                      -> GHC.ST.ST s [Data.Text.Internal.Text]>_R
+                     ->_R <Data.Text.Internal.Builder.Buffer s>_R
+                     ->_R Sym (GHC.ST.N:ST[0]
+                                   <s>_N
+                                   <[Data.Text.Internal.Text]>_R)) ; (Sym (Data.Text.Internal.Builder.N:Builder[0]) ; Sub (Sym (Text.Internal.Css.D:R:StrResolved[0]))))
+                   Handlers.Admin.getAdminR109
+                     `cast`
+                   ((forall (s :: <*>_N).
+                     <Data.Text.Internal.Builder.Buffer s
+                      -> GHC.ST.ST s [Data.Text.Internal.Text]>_R
+                     ->_R <Data.Text.Internal.Builder.Buffer s>_R
+                     ->_R Sym (GHC.ST.N:ST[0]
+                                   <s>_N
+                                   <[Data.Text.Internal.Text]>_R)) ; (Sym (Data.Text.Internal.Builder.N:Builder[0]) ; Sub (Sym (Text.Internal.Css.D:R:StrResolved[0]))))) -}
+fdd818408ec51386181560f0e9b64020
+  getAdminR109 ::
+    (Data.Text.Internal.Builder.Buffer s
+     -> GHC.ST.ST s [Data.Text.Internal.Text])
+    -> Data.Text.Internal.Builder.Buffer s
+    -> GHC.Prim.State# s
+    -> (# GHC.Prim.State# s, [Data.Text.Internal.Text] #)
+  {- Arity: 3, Strictness: <L,1*C1(C1(U(U,U)))><L,U(U,U,U,U)><S,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ s
+                   (x :: Data.Text.Internal.Builder.Buffer s
+                         -> GHC.ST.ST s [Data.Text.Internal.Text])
+                   (eta :: Data.Text.Internal.Builder.Buffer s)
+                   (eta1 :: GHC.Prim.State# s) ->
+                 ((Text.Internal.Css.fromText Handlers.Admin.getAdminR110)
+                    `cast`
+                  (Data.Text.Internal.Builder.N:Builder[0])
+                    @ s
+                    (\ (buf :: Data.Text.Internal.Builder.Buffer s) -> x buf)
+                    eta)
+                   `cast`
+                 (GHC.ST.N:ST[0] <s>_N <[Data.Text.Internal.Text]>_R)
+                   eta1) -}
+c26bf85c36210de28bd4a479751e6cd5
+  getAdminR11 :: Text.Blaze.Internal.ChoiceString
+  {- Strictness: m5,
+     Unfolding: (Text.Blaze.Internal.PreEscaped
+                   Handlers.Admin.getAdminR12) -}
+535ed14a4ccd1b819ac7d073d6467e68
+  getAdminR110 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString#
+                   Handlers.Admin.getAdminR111) -}
+65fa4c675ca0ea43a6e9724cee9ec0e1
+  getAdminR111 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("none"#) -}
+ad172cd6e65c070b62c4ece117b36599
+  getAdminR112 ::
+    (Data.Text.Internal.Builder.Buffer s
+     -> GHC.ST.ST s [Data.Text.Internal.Text])
+    -> Data.Text.Internal.Builder.Buffer s
+    -> GHC.Prim.State# s
+    -> (# GHC.Prim.State# s, [Data.Text.Internal.Text] #)
+  {- Arity: 3, Strictness: <L,1*C1(C1(U(U,U)))><L,U(U,U,U,U)><S,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ s
+                   (x :: Data.Text.Internal.Builder.Buffer s
+                         -> GHC.ST.ST s [Data.Text.Internal.Text])
+                   (eta :: Data.Text.Internal.Builder.Buffer s)
+                   (eta1 :: GHC.Prim.State# s) ->
+                 ((Text.Internal.Css.fromText Handlers.Admin.getAdminR113)
+                    `cast`
+                  (Data.Text.Internal.Builder.N:Builder[0])
+                    @ s
+                    (\ (buf :: Data.Text.Internal.Builder.Buffer s) -> x buf)
+                    eta)
+                   `cast`
+                 (GHC.ST.N:ST[0] <s>_N <[Data.Text.Internal.Text]>_R)
+                   eta1) -}
+a1204cdb45c00235b7781a50e8d283d8
+  getAdminR113 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString#
+                   Handlers.Admin.getAdminR114) -}
+385ee384dea0a9329c847818acf9e023
+  getAdminR114 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("text-decoration"#) -}
+1c6f7540e26db76b7c71c1a650ece001
+  getAdminR115 :: Text.Internal.Css.Attr Text.Internal.Css.Resolved
+  {- Strictness: m,
+     Unfolding: (Text.Internal.Css.Attr
+                   @ Text.Internal.Css.Resolved
+                   Handlers.Admin.getAdminR119
+                     `cast`
+                   ((forall (s :: <*>_N).
+                     <Data.Text.Internal.Builder.Buffer s
+                      -> GHC.ST.ST s [Data.Text.Internal.Text]>_R
+                     ->_R <Data.Text.Internal.Builder.Buffer s>_R
+                     ->_R Sym (GHC.ST.N:ST[0]
+                                   <s>_N
+                                   <[Data.Text.Internal.Text]>_R)) ; (Sym (Data.Text.Internal.Builder.N:Builder[0]) ; Sub (Sym (Text.Internal.Css.D:R:StrResolved[0]))))
+                   Handlers.Admin.getAdminR116
+                     `cast`
+                   ((forall (s :: <*>_N).
+                     <Data.Text.Internal.Builder.Buffer s
+                      -> GHC.ST.ST s [Data.Text.Internal.Text]>_R
+                     ->_R <Data.Text.Internal.Builder.Buffer s>_R
+                     ->_R Sym (GHC.ST.N:ST[0]
+                                   <s>_N
+                                   <[Data.Text.Internal.Text]>_R)) ; (Sym (Data.Text.Internal.Builder.N:Builder[0]) ; Sub (Sym (Text.Internal.Css.D:R:StrResolved[0]))))) -}
+f5b23ff834d9ac7002101847344b37bf
+  getAdminR116 ::
+    (Data.Text.Internal.Builder.Buffer s
+     -> GHC.ST.ST s [Data.Text.Internal.Text])
+    -> Data.Text.Internal.Builder.Buffer s
+    -> GHC.Prim.State# s
+    -> (# GHC.Prim.State# s, [Data.Text.Internal.Text] #)
+  {- Arity: 3, Strictness: <L,1*C1(C1(U(U,U)))><L,U(U,U,U,U)><S,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ s
+                   (x :: Data.Text.Internal.Builder.Buffer s
+                         -> GHC.ST.ST s [Data.Text.Internal.Text])
+                   (eta :: Data.Text.Internal.Builder.Buffer s)
+                   (eta1 :: GHC.Prim.State# s) ->
+                 ((Text.Internal.Css.fromText Handlers.Admin.getAdminR117)
+                    `cast`
+                  (Data.Text.Internal.Builder.N:Builder[0])
+                    @ s
+                    (\ (buf :: Data.Text.Internal.Builder.Buffer s) -> x buf)
+                    eta)
+                   `cast`
+                 (GHC.ST.N:ST[0] <s>_N <[Data.Text.Internal.Text]>_R)
+                   eta1) -}
+192dad863ea0fabe36f205056f9c83d8
+  getAdminR117 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString#
+                   Handlers.Admin.getAdminR118) -}
+1d6e145b4e2d28fd5afe6f30256e91e7
+  getAdminR118 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("14px 16px"#) -}
+f16b94a2bc54360a0ab6c92581a9a280
+  getAdminR119 ::
+    (Data.Text.Internal.Builder.Buffer s
+     -> GHC.ST.ST s [Data.Text.Internal.Text])
+    -> Data.Text.Internal.Builder.Buffer s
+    -> GHC.Prim.State# s
+    -> (# GHC.Prim.State# s, [Data.Text.Internal.Text] #)
+  {- Arity: 3, Strictness: <L,1*C1(C1(U(U,U)))><L,U(U,U,U,U)><S,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ s
+                   (x :: Data.Text.Internal.Builder.Buffer s
+                         -> GHC.ST.ST s [Data.Text.Internal.Text])
+                   (eta :: Data.Text.Internal.Builder.Buffer s)
+                   (eta1 :: GHC.Prim.State# s) ->
+                 ((Text.Internal.Css.fromText Handlers.Admin.getAdminR120)
+                    `cast`
+                  (Data.Text.Internal.Builder.N:Builder[0])
+                    @ s
+                    (\ (buf :: Data.Text.Internal.Builder.Buffer s) -> x buf)
+                    eta)
+                   `cast`
+                 (GHC.ST.N:ST[0] <s>_N <[Data.Text.Internal.Text]>_R)
+                   eta1) -}
+34d43b826029cd33a17ba39ba5058e0e
+  getAdminR12 :: Text.Blaze.Internal.ChoiceString
+  {- Strictness: m3,
+     Unfolding: (Text.Blaze.Internal.Text Handlers.Admin.getAdminR13) -}
+44e1abaf3bcba5423145c36b33e76deb
+  getAdminR120 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString#
+                   Handlers.Admin.getAdminR121) -}
+61ccb1dc5fc0a1ad4e47c92fddb4f8af
+  getAdminR121 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("padding"#) -}
+cd5be6753c5a07116a2b4e3a6de194db
+  getAdminR122 :: Text.Internal.Css.Attr Text.Internal.Css.Resolved
+  {- Strictness: m,
+     Unfolding: (Text.Internal.Css.Attr
+                   @ Text.Internal.Css.Resolved
+                   Handlers.Admin.getAdminR126
+                     `cast`
+                   ((forall (s :: <*>_N).
+                     <Data.Text.Internal.Builder.Buffer s
+                      -> GHC.ST.ST s [Data.Text.Internal.Text]>_R
+                     ->_R <Data.Text.Internal.Builder.Buffer s>_R
+                     ->_R Sym (GHC.ST.N:ST[0]
+                                   <s>_N
+                                   <[Data.Text.Internal.Text]>_R)) ; (Sym (Data.Text.Internal.Builder.N:Builder[0]) ; Sub (Sym (Text.Internal.Css.D:R:StrResolved[0]))))
+                   Handlers.Admin.getAdminR123
+                     `cast`
+                   ((forall (s :: <*>_N).
+                     <Data.Text.Internal.Builder.Buffer s
+                      -> GHC.ST.ST s [Data.Text.Internal.Text]>_R
+                     ->_R <Data.Text.Internal.Builder.Buffer s>_R
+                     ->_R Sym (GHC.ST.N:ST[0]
+                                   <s>_N
+                                   <[Data.Text.Internal.Text]>_R)) ; (Sym (Data.Text.Internal.Builder.N:Builder[0]) ; Sub (Sym (Text.Internal.Css.D:R:StrResolved[0]))))) -}
+0b251b79c340d1e6a65067c14309c8b5
+  getAdminR123 ::
+    (Data.Text.Internal.Builder.Buffer s
+     -> GHC.ST.ST s [Data.Text.Internal.Text])
+    -> Data.Text.Internal.Builder.Buffer s
+    -> GHC.Prim.State# s
+    -> (# GHC.Prim.State# s, [Data.Text.Internal.Text] #)
+  {- Arity: 3, Strictness: <L,1*C1(C1(U(U,U)))><L,U(U,U,U,U)><S,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ s
+                   (x :: Data.Text.Internal.Builder.Buffer s
+                         -> GHC.ST.ST s [Data.Text.Internal.Text])
+                   (eta :: Data.Text.Internal.Builder.Buffer s)
+                   (eta1 :: GHC.Prim.State# s) ->
+                 ((Text.Internal.Css.fromText Handlers.Admin.getAdminR124)
+                    `cast`
+                  (Data.Text.Internal.Builder.N:Builder[0])
+                    @ s
+                    (\ (buf :: Data.Text.Internal.Builder.Buffer s) -> x buf)
+                    eta)
+                   `cast`
+                 (GHC.ST.N:ST[0] <s>_N <[Data.Text.Internal.Text]>_R)
+                   eta1) -}
+74c38a4b58e1b0c578bc67e5321a3d47
+  getAdminR124 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString#
+                   Handlers.Admin.getAdminR125) -}
+abb2d52e74fbd5e33e44ade989e28539
+  getAdminR125 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("center"#) -}
+b5f464a821c35fa4992fb278138993dc
+  getAdminR126 ::
+    (Data.Text.Internal.Builder.Buffer s
+     -> GHC.ST.ST s [Data.Text.Internal.Text])
+    -> Data.Text.Internal.Builder.Buffer s
+    -> GHC.Prim.State# s
+    -> (# GHC.Prim.State# s, [Data.Text.Internal.Text] #)
+  {- Arity: 3, Strictness: <L,1*C1(C1(U(U,U)))><L,U(U,U,U,U)><S,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ s
+                   (x :: Data.Text.Internal.Builder.Buffer s
+                         -> GHC.ST.ST s [Data.Text.Internal.Text])
+                   (eta :: Data.Text.Internal.Builder.Buffer s)
+                   (eta1 :: GHC.Prim.State# s) ->
+                 ((Text.Internal.Css.fromText Handlers.Admin.getAdminR127)
+                    `cast`
+                  (Data.Text.Internal.Builder.N:Builder[0])
+                    @ s
+                    (\ (buf :: Data.Text.Internal.Builder.Buffer s) -> x buf)
+                    eta)
+                   `cast`
+                 (GHC.ST.N:ST[0] <s>_N <[Data.Text.Internal.Text]>_R)
+                   eta1) -}
+367fa3b5918ce732b6d506cde8697b65
+  getAdminR127 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString#
+                   Handlers.Admin.getAdminR128) -}
+ba3b31c5c9c60caa4615bcb7d69b55f9
+  getAdminR128 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("text-align"#) -}
+65b511da4d9f8999ce23a1b515f90551
+  getAdminR129 :: Text.Internal.Css.Attr Text.Internal.Css.Resolved
+  {- Strictness: m,
+     Unfolding: (Text.Internal.Css.Attr
+                   @ Text.Internal.Css.Resolved
+                   Handlers.Admin.getAdminR133
+                     `cast`
+                   ((forall (s :: <*>_N).
+                     <Data.Text.Internal.Builder.Buffer s
+                      -> GHC.ST.ST s [Data.Text.Internal.Text]>_R
+                     ->_R <Data.Text.Internal.Builder.Buffer s>_R
+                     ->_R Sym (GHC.ST.N:ST[0]
+                                   <s>_N
+                                   <[Data.Text.Internal.Text]>_R)) ; (Sym (Data.Text.Internal.Builder.N:Builder[0]) ; Sub (Sym (Text.Internal.Css.D:R:StrResolved[0]))))
+                   Handlers.Admin.getAdminR130
+                     `cast`
+                   ((forall (s :: <*>_N).
+                     <Data.Text.Internal.Builder.Buffer s
+                      -> GHC.ST.ST s [Data.Text.Internal.Text]>_R
+                     ->_R <Data.Text.Internal.Builder.Buffer s>_R
+                     ->_R Sym (GHC.ST.N:ST[0]
+                                   <s>_N
+                                   <[Data.Text.Internal.Text]>_R)) ; (Sym (Data.Text.Internal.Builder.N:Builder[0]) ; Sub (Sym (Text.Internal.Css.D:R:StrResolved[0]))))) -}
+e68e38f7efaca30abde6082a7fcc7ac2
+  getAdminR13 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString#
+                   Handlers.Admin.getAdminR14) -}
+8d6b05a363cd0795baa793958e245534
+  getAdminR130 ::
+    (Data.Text.Internal.Builder.Buffer s
+     -> GHC.ST.ST s [Data.Text.Internal.Text])
+    -> Data.Text.Internal.Builder.Buffer s
+    -> GHC.Prim.State# s
+    -> (# GHC.Prim.State# s, [Data.Text.Internal.Text] #)
+  {- Arity: 3, Strictness: <L,1*C1(C1(U(U,U)))><L,U(U,U,U,U)><S,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ s
+                   (x :: Data.Text.Internal.Builder.Buffer s
+                         -> GHC.ST.ST s [Data.Text.Internal.Text])
+                   (eta :: Data.Text.Internal.Builder.Buffer s)
+                   (eta1 :: GHC.Prim.State# s) ->
+                 ((Text.Internal.Css.fromText Handlers.Admin.getAdminR131)
+                    `cast`
+                  (Data.Text.Internal.Builder.N:Builder[0])
+                    @ s
+                    (\ (buf :: Data.Text.Internal.Builder.Buffer s) -> x buf)
+                    eta)
+                   `cast`
+                 (GHC.ST.N:ST[0] <s>_N <[Data.Text.Internal.Text]>_R)
+                   eta1) -}
+9a4dfc72d93dc1ad69fb6e6e1b2f50a8
+  getAdminR131 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString#
+                   Handlers.Admin.getAdminR132) -}
+9d445f84936b173d03a4b655388c5b1d
+  getAdminR132 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("block"#) -}
+fe4e227b5417913d6080d21061a41ada
+  getAdminR133 ::
+    (Data.Text.Internal.Builder.Buffer s
+     -> GHC.ST.ST s [Data.Text.Internal.Text])
+    -> Data.Text.Internal.Builder.Buffer s
+    -> GHC.Prim.State# s
+    -> (# GHC.Prim.State# s, [Data.Text.Internal.Text] #)
+  {- Arity: 3, Strictness: <L,1*C1(C1(U(U,U)))><L,U(U,U,U,U)><S,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ s
+                   (x :: Data.Text.Internal.Builder.Buffer s
+                         -> GHC.ST.ST s [Data.Text.Internal.Text])
+                   (eta :: Data.Text.Internal.Builder.Buffer s)
+                   (eta1 :: GHC.Prim.State# s) ->
+                 ((Text.Internal.Css.fromText Handlers.Admin.getAdminR134)
+                    `cast`
+                  (Data.Text.Internal.Builder.N:Builder[0])
+                    @ s
+                    (\ (buf :: Data.Text.Internal.Builder.Buffer s) -> x buf)
+                    eta)
+                   `cast`
+                 (GHC.ST.N:ST[0] <s>_N <[Data.Text.Internal.Text]>_R)
+                   eta1) -}
+582feec0a0902a8b016c0ef34deaa252
+  getAdminR134 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString#
+                   Handlers.Admin.getAdminR135) -}
+42828c932970863d53503086f72a765c
+  getAdminR135 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("display"#) -}
+d53b566a4b200867fccc43e2038039fb
+  getAdminR136 ::
+    (Data.Text.Internal.Builder.Buffer s
+     -> GHC.ST.ST s [Data.Text.Internal.Text])
+    -> Data.Text.Internal.Builder.Buffer s
+    -> GHC.Prim.State# s
+    -> (# GHC.Prim.State# s, [Data.Text.Internal.Text] #)
+  {- Arity: 3, Strictness: <L,1*C1(C1(U(U,U)))><L,U(U,U,U,U)><S,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ s
+                   (x :: Data.Text.Internal.Builder.Buffer s
+                         -> GHC.ST.ST s [Data.Text.Internal.Text])
+                   (eta :: Data.Text.Internal.Builder.Buffer s)
+                   (eta1 :: GHC.Prim.State# s) ->
+                 ((Text.Internal.Css.fromText Handlers.Admin.getAdminR137)
+                    `cast`
+                  (Data.Text.Internal.Builder.N:Builder[0])
+                    @ s
+                    (\ (buf :: Data.Text.Internal.Builder.Buffer s) -> x buf)
+                    eta)
+                   `cast`
+                 (GHC.ST.N:ST[0] <s>_N <[Data.Text.Internal.Text]>_R)
+                   eta1) -}
+03d6693523fde2cd7dffd8e9f5be4c8c
+  getAdminR137 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString#
+                   Handlers.Admin.getAdminR138) -}
+15af135c6ced8e9219c7dc3cea4517f2
+  getAdminR138 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("li"#) -}
+5b0f403f936ec6205293fd4216867821
+  getAdminR139 ::
+    Text.Internal.Css.TopLevel Text.Internal.Css.Resolved
+  {- Strictness: m1,
+     Unfolding: (Text.Internal.Css.TopBlock
+                   @ Text.Internal.Css.Resolved
+                   Handlers.Admin.getAdminR140) -}
+b7044319e6890f1666edcaf9035fd40f
+  getAdminR14 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: (">Sair </a></li>\n\
+                 \<li style=\"float:right\"> ola ademir </ul></li>\n\
+                 \</ul>\n\
+                 \<h1> RESTAURANTE RESTAURANTOSO</h1>\n\
+                 \<h2> <a id=\"prod\" href="#) -}
+ee71ac239e6e2bc8b4e50031ff32c895
+  getAdminR140 :: Text.Internal.Css.Block Text.Internal.Css.Resolved
+  {- Strictness: m,
+     Unfolding: (Text.Internal.Css.Block
+                   @ Text.Internal.Css.Resolved
+                   Handlers.Admin.getAdminR136
+                     `cast`
+                   ((forall (s :: <*>_N).
+                     <Data.Text.Internal.Builder.Buffer s
+                      -> GHC.ST.ST s [Data.Text.Internal.Text]>_R
+                     ->_R <Data.Text.Internal.Builder.Buffer s>_R
+                     ->_R Sym (GHC.ST.N:ST[0]
+                                   <s>_N
+                                   <[Data.Text.Internal.Text]>_R)) ; (Sym (Data.Text.Internal.Builder.N:Builder[0]) ; Sub (Sym (Text.Internal.Css.D:R:SelectorResolved[0]))))
+                   Handlers.Admin.getAdminR141
+                   GHC.Tuple.()
+                     `cast`
+                   (Sub (Sym (Text.Internal.Css.D:R:ChildBlocksResolved[0])))
+                   GHC.Tuple.()
+                     `cast`
+                   (Sub (Sym (Text.Internal.Css.D:R:MixinsResolved[0])))) -}
+038650a7d45ecb037d53fb5d311d1773
+  getAdminR141 :: [Text.Internal.Css.Attr Text.Internal.Css.Resolved]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (Text.Internal.Css.Attr Text.Internal.Css.Resolved)
+                   Handlers.Admin.getAdminR142
+                   (GHC.Types.[]
+                      @ (Text.Internal.Css.Attr Text.Internal.Css.Resolved))) -}
+2c2544990bcfa9d292761908770fbea7
+  getAdminR142 :: Text.Internal.Css.Attr Text.Internal.Css.Resolved
+  {- Strictness: m,
+     Unfolding: (Text.Internal.Css.Attr
+                   @ Text.Internal.Css.Resolved
+                   Handlers.Admin.getAdminR146
+                     `cast`
+                   ((forall (s :: <*>_N).
+                     <Data.Text.Internal.Builder.Buffer s
+                      -> GHC.ST.ST s [Data.Text.Internal.Text]>_R
+                     ->_R <Data.Text.Internal.Builder.Buffer s>_R
+                     ->_R Sym (GHC.ST.N:ST[0]
+                                   <s>_N
+                                   <[Data.Text.Internal.Text]>_R)) ; (Sym (Data.Text.Internal.Builder.N:Builder[0]) ; Sub (Sym (Text.Internal.Css.D:R:StrResolved[0]))))
+                   Handlers.Admin.getAdminR143
+                     `cast`
+                   ((forall (s :: <*>_N).
+                     <Data.Text.Internal.Builder.Buffer s
+                      -> GHC.ST.ST s [Data.Text.Internal.Text]>_R
+                     ->_R <Data.Text.Internal.Builder.Buffer s>_R
+                     ->_R Sym (GHC.ST.N:ST[0]
+                                   <s>_N
+                                   <[Data.Text.Internal.Text]>_R)) ; (Sym (Data.Text.Internal.Builder.N:Builder[0]) ; Sub (Sym (Text.Internal.Css.D:R:StrResolved[0]))))) -}
+bb42058c5b00c0f7ee52e703beecf015
+  getAdminR143 ::
+    (Data.Text.Internal.Builder.Buffer s
+     -> GHC.ST.ST s [Data.Text.Internal.Text])
+    -> Data.Text.Internal.Builder.Buffer s
+    -> GHC.Prim.State# s
+    -> (# GHC.Prim.State# s, [Data.Text.Internal.Text] #)
+  {- Arity: 3, Strictness: <L,1*C1(C1(U(U,U)))><L,U(U,U,U,U)><S,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ s
+                   (x :: Data.Text.Internal.Builder.Buffer s
+                         -> GHC.ST.ST s [Data.Text.Internal.Text])
+                   (eta :: Data.Text.Internal.Builder.Buffer s)
+                   (eta1 :: GHC.Prim.State# s) ->
+                 ((Text.Internal.Css.fromText Handlers.Admin.getAdminR144)
+                    `cast`
+                  (Data.Text.Internal.Builder.N:Builder[0])
+                    @ s
+                    (\ (buf :: Data.Text.Internal.Builder.Buffer s) -> x buf)
+                    eta)
+                   `cast`
+                 (GHC.ST.N:ST[0] <s>_N <[Data.Text.Internal.Text]>_R)
+                   eta1) -}
+58f6039d9f4ae0a8991441f24261c77d
+  getAdminR144 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString#
+                   Handlers.Admin.getAdminR145) -}
+be032abd01914a58929dc431d4600b2d
+  getAdminR145 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("left"#) -}
+bcf1665287aac67815552ead82710833
+  getAdminR146 ::
+    (Data.Text.Internal.Builder.Buffer s
+     -> GHC.ST.ST s [Data.Text.Internal.Text])
+    -> Data.Text.Internal.Builder.Buffer s
+    -> GHC.Prim.State# s
+    -> (# GHC.Prim.State# s, [Data.Text.Internal.Text] #)
+  {- Arity: 3, Strictness: <L,1*C1(C1(U(U,U)))><L,U(U,U,U,U)><S,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ s
+                   (x :: Data.Text.Internal.Builder.Buffer s
+                         -> GHC.ST.ST s [Data.Text.Internal.Text])
+                   (eta :: Data.Text.Internal.Builder.Buffer s)
+                   (eta1 :: GHC.Prim.State# s) ->
+                 ((Text.Internal.Css.fromText Handlers.Admin.getAdminR147)
+                    `cast`
+                  (Data.Text.Internal.Builder.N:Builder[0])
+                    @ s
+                    (\ (buf :: Data.Text.Internal.Builder.Buffer s) -> x buf)
+                    eta)
+                   `cast`
+                 (GHC.ST.N:ST[0] <s>_N <[Data.Text.Internal.Text]>_R)
+                   eta1) -}
+33367f435ca8421732db284678f23d76
+  getAdminR147 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString#
+                   Handlers.Admin.getAdminR148) -}
+7888bbef7f14556478c6d51268cf47a9
+  getAdminR148 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("float"#) -}
+9d374a6a6487642bfe4adab47e453198
+  getAdminR149 ::
+    Text.Internal.Css.TopLevel Text.Internal.Css.Resolved
+  {- Strictness: m1,
+     Unfolding: (Text.Internal.Css.TopBlock
+                   @ Text.Internal.Css.Resolved
+                   Handlers.Admin.getAdminR150) -}
+f50cc20dddb5365b66237de1a36dffbd
+  getAdminR15 :: Text.Blaze.Internal.ChoiceString
+  {- Strictness: m5,
+     Unfolding: (Text.Blaze.Internal.PreEscaped
+                   Handlers.Admin.getAdminR16) -}
+f0c98f43da6b73a731b8d940fa3950d7
+  getAdminR150 :: Text.Internal.Css.Block Text.Internal.Css.Resolved
+  {- Strictness: m,
+     Unfolding: (Text.Internal.Css.Block
+                   @ Text.Internal.Css.Resolved
+                   Handlers.Admin.getAdminR179
+                     `cast`
+                   ((forall (s :: <*>_N).
+                     <Data.Text.Internal.Builder.Buffer s
+                      -> GHC.ST.ST s [Data.Text.Internal.Text]>_R
+                     ->_R <Data.Text.Internal.Builder.Buffer s>_R
+                     ->_R Sym (GHC.ST.N:ST[0]
+                                   <s>_N
+                                   <[Data.Text.Internal.Text]>_R)) ; (Sym (Data.Text.Internal.Builder.N:Builder[0]) ; Sub (Sym (Text.Internal.Css.D:R:SelectorResolved[0]))))
+                   Handlers.Admin.getAdminR151
+                   GHC.Tuple.()
+                     `cast`
+                   (Sub (Sym (Text.Internal.Css.D:R:ChildBlocksResolved[0])))
+                   GHC.Tuple.()
+                     `cast`
+                   (Sub (Sym (Text.Internal.Css.D:R:MixinsResolved[0])))) -}
+114dfef8d7914df67d6a8c8b3caafd64
+  getAdminR151 :: [Text.Internal.Css.Attr Text.Internal.Css.Resolved]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (Text.Internal.Css.Attr Text.Internal.Css.Resolved)
+                   Handlers.Admin.getAdminR175
+                   Handlers.Admin.getAdminR152) -}
+bdfd17fd066ce085e75a30f099df2e1e
+  getAdminR152 :: [Text.Internal.Css.Attr Text.Internal.Css.Resolved]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (Text.Internal.Css.Attr Text.Internal.Css.Resolved)
+                   Handlers.Admin.getAdminR171
+                   Handlers.Admin.getAdminR153) -}
+3042e2a1579cd1c7206c68f04237d9c3
+  getAdminR153 :: [Text.Internal.Css.Attr Text.Internal.Css.Resolved]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (Text.Internal.Css.Attr Text.Internal.Css.Resolved)
+                   Handlers.Admin.getAdminR167
+                   Handlers.Admin.getAdminR154) -}
+8a80a1d6f88e523839e0a07805175956
+  getAdminR154 :: [Text.Internal.Css.Attr Text.Internal.Css.Resolved]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (Text.Internal.Css.Attr Text.Internal.Css.Resolved)
+                   Handlers.Admin.getAdminR160
+                   Handlers.Admin.getAdminR155) -}
+68cdbcd420c3f78bd0fc1f85fd6ee1fa
+  getAdminR155 :: [Text.Internal.Css.Attr Text.Internal.Css.Resolved]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (Text.Internal.Css.Attr Text.Internal.Css.Resolved)
+                   Handlers.Admin.getAdminR156
+                   (GHC.Types.[]
+                      @ (Text.Internal.Css.Attr Text.Internal.Css.Resolved))) -}
+393f9b87e61ce4572d4e5bcb7f6daf00
+  getAdminR156 :: Text.Internal.Css.Attr Text.Internal.Css.Resolved
+  {- Strictness: m,
+     Unfolding: (Text.Internal.Css.Attr
+                   @ Text.Internal.Css.Resolved
+                   Handlers.Admin.getAdminR67
+                     `cast`
+                   ((forall (s :: <*>_N).
+                     <Data.Text.Internal.Builder.Buffer s
+                      -> GHC.ST.ST s [Data.Text.Internal.Text]>_R
+                     ->_R <Data.Text.Internal.Builder.Buffer s>_R
+                     ->_R Sym (GHC.ST.N:ST[0]
+                                   <s>_N
+                                   <[Data.Text.Internal.Text]>_R)) ; (Sym (Data.Text.Internal.Builder.N:Builder[0]) ; Sub (Sym (Text.Internal.Css.D:R:StrResolved[0]))))
+                   Handlers.Admin.getAdminR157
+                     `cast`
+                   ((forall (s :: <*>_N).
+                     <Data.Text.Internal.Builder.Buffer s
+                      -> GHC.ST.ST s [Data.Text.Internal.Text]>_R
+                     ->_R <Data.Text.Internal.Builder.Buffer s>_R
+                     ->_R Sym (GHC.ST.N:ST[0]
+                                   <s>_N
+                                   <[Data.Text.Internal.Text]>_R)) ; (Sym (Data.Text.Internal.Builder.N:Builder[0]) ; Sub (Sym (Text.Internal.Css.D:R:StrResolved[0]))))) -}
+4c490f058c5d45f4e7fbfcfb9931c740
+  getAdminR157 ::
+    (Data.Text.Internal.Builder.Buffer s
+     -> GHC.ST.ST s [Data.Text.Internal.Text])
+    -> Data.Text.Internal.Builder.Buffer s
+    -> GHC.Prim.State# s
+    -> (# GHC.Prim.State# s, [Data.Text.Internal.Text] #)
+  {- Arity: 3, Strictness: <L,1*C1(C1(U(U,U)))><L,U(U,U,U,U)><S,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ s
+                   (x :: Data.Text.Internal.Builder.Buffer s
+                         -> GHC.ST.ST s [Data.Text.Internal.Text])
+                   (eta :: Data.Text.Internal.Builder.Buffer s)
+                   (eta1 :: GHC.Prim.State# s) ->
+                 ((Text.Internal.Css.fromText Handlers.Admin.getAdminR158)
+                    `cast`
+                  (Data.Text.Internal.Builder.N:Builder[0])
+                    @ s
+                    (\ (buf :: Data.Text.Internal.Builder.Buffer s) -> x buf)
+                    eta)
+                   `cast`
+                 (GHC.ST.N:ST[0] <s>_N <[Data.Text.Internal.Text]>_R)
+                   eta1) -}
+f435d7b08d55c662a1001ccb9e28cf6b
+  getAdminR158 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString#
+                   Handlers.Admin.getAdminR159) -}
+be43fc5a282c135e44c5ce164a8ba847
+  getAdminR159 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("#333"#) -}
+0ef11de7ed7e757aa55a6650af3feca6
+  getAdminR16 :: Text.Blaze.Internal.ChoiceString
+  {- Strictness: m3,
+     Unfolding: (Text.Blaze.Internal.Text Handlers.Admin.getAdminR17) -}
+17bf5c6c656f17e74ff26dd79dfdeca2
+  getAdminR160 :: Text.Internal.Css.Attr Text.Internal.Css.Resolved
+  {- Strictness: m,
+     Unfolding: (Text.Internal.Css.Attr
+                   @ Text.Internal.Css.Resolved
+                   Handlers.Admin.getAdminR164
+                     `cast`
+                   ((forall (s :: <*>_N).
+                     <Data.Text.Internal.Builder.Buffer s
+                      -> GHC.ST.ST s [Data.Text.Internal.Text]>_R
+                     ->_R <Data.Text.Internal.Builder.Buffer s>_R
+                     ->_R Sym (GHC.ST.N:ST[0]
+                                   <s>_N
+                                   <[Data.Text.Internal.Text]>_R)) ; (Sym (Data.Text.Internal.Builder.N:Builder[0]) ; Sub (Sym (Text.Internal.Css.D:R:StrResolved[0]))))
+                   Handlers.Admin.getAdminR161
+                     `cast`
+                   ((forall (s :: <*>_N).
+                     <Data.Text.Internal.Builder.Buffer s
+                      -> GHC.ST.ST s [Data.Text.Internal.Text]>_R
+                     ->_R <Data.Text.Internal.Builder.Buffer s>_R
+                     ->_R Sym (GHC.ST.N:ST[0]
+                                   <s>_N
+                                   <[Data.Text.Internal.Text]>_R)) ; (Sym (Data.Text.Internal.Builder.N:Builder[0]) ; Sub (Sym (Text.Internal.Css.D:R:StrResolved[0]))))) -}
+4c5836e344d3860fc669d00e06084e6d
+  getAdminR161 ::
+    (Data.Text.Internal.Builder.Buffer s
+     -> GHC.ST.ST s [Data.Text.Internal.Text])
+    -> Data.Text.Internal.Builder.Buffer s
+    -> GHC.Prim.State# s
+    -> (# GHC.Prim.State# s, [Data.Text.Internal.Text] #)
+  {- Arity: 3, Strictness: <L,1*C1(C1(U(U,U)))><L,U(U,U,U,U)><S,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ s
+                   (x :: Data.Text.Internal.Builder.Buffer s
+                         -> GHC.ST.ST s [Data.Text.Internal.Text])
+                   (eta :: Data.Text.Internal.Builder.Buffer s)
+                   (eta1 :: GHC.Prim.State# s) ->
+                 ((Text.Internal.Css.fromText Handlers.Admin.getAdminR162)
+                    `cast`
+                  (Data.Text.Internal.Builder.N:Builder[0])
+                    @ s
+                    (\ (buf :: Data.Text.Internal.Builder.Buffer s) -> x buf)
+                    eta)
+                   `cast`
+                 (GHC.ST.N:ST[0] <s>_N <[Data.Text.Internal.Text]>_R)
+                   eta1) -}
+9a1d677f20e8e43ef9bda10c66cf1f1c
+  getAdminR162 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString#
+                   Handlers.Admin.getAdminR163) -}
+0cce9ce6e9ca7fff402119514b27eaf1
+  getAdminR163 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("hidden"#) -}
+f9274f43257b2cdb022ef7e91dcbb675
+  getAdminR164 ::
+    (Data.Text.Internal.Builder.Buffer s
+     -> GHC.ST.ST s [Data.Text.Internal.Text])
+    -> Data.Text.Internal.Builder.Buffer s
+    -> GHC.Prim.State# s
+    -> (# GHC.Prim.State# s, [Data.Text.Internal.Text] #)
+  {- Arity: 3, Strictness: <L,1*C1(C1(U(U,U)))><L,U(U,U,U,U)><S,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ s
+                   (x :: Data.Text.Internal.Builder.Buffer s
+                         -> GHC.ST.ST s [Data.Text.Internal.Text])
+                   (eta :: Data.Text.Internal.Builder.Buffer s)
+                   (eta1 :: GHC.Prim.State# s) ->
+                 ((Text.Internal.Css.fromText Handlers.Admin.getAdminR165)
+                    `cast`
+                  (Data.Text.Internal.Builder.N:Builder[0])
+                    @ s
+                    (\ (buf :: Data.Text.Internal.Builder.Buffer s) -> x buf)
+                    eta)
+                   `cast`
+                 (GHC.ST.N:ST[0] <s>_N <[Data.Text.Internal.Text]>_R)
+                   eta1) -}
+4a73c021c457f17faf17434f13329100
+  getAdminR165 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString#
+                   Handlers.Admin.getAdminR166) -}
+c1cb2348bc67db89abdf49532020c844
+  getAdminR166 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("overflow"#) -}
+622d7bf37c74772a18fbeda61784321a
+  getAdminR167 :: Text.Internal.Css.Attr Text.Internal.Css.Resolved
+  {- Strictness: m,
+     Unfolding: (Text.Internal.Css.Attr
+                   @ Text.Internal.Css.Resolved
+                   Handlers.Admin.getAdminR119
+                     `cast`
+                   ((forall (s :: <*>_N).
+                     <Data.Text.Internal.Builder.Buffer s
+                      -> GHC.ST.ST s [Data.Text.Internal.Text]>_R
+                     ->_R <Data.Text.Internal.Builder.Buffer s>_R
+                     ->_R Sym (GHC.ST.N:ST[0]
+                                   <s>_N
+                                   <[Data.Text.Internal.Text]>_R)) ; (Sym (Data.Text.Internal.Builder.N:Builder[0]) ; Sub (Sym (Text.Internal.Css.D:R:StrResolved[0]))))
+                   Handlers.Admin.getAdminR168
+                     `cast`
+                   ((forall (s :: <*>_N).
+                     <Data.Text.Internal.Builder.Buffer s
+                      -> GHC.ST.ST s [Data.Text.Internal.Text]>_R
+                     ->_R <Data.Text.Internal.Builder.Buffer s>_R
+                     ->_R Sym (GHC.ST.N:ST[0]
+                                   <s>_N
+                                   <[Data.Text.Internal.Text]>_R)) ; (Sym (Data.Text.Internal.Builder.N:Builder[0]) ; Sub (Sym (Text.Internal.Css.D:R:StrResolved[0]))))) -}
+26f9f45b64f6f80910f1035faa703cb0
+  getAdminR168 ::
+    (Data.Text.Internal.Builder.Buffer s
+     -> GHC.ST.ST s [Data.Text.Internal.Text])
+    -> Data.Text.Internal.Builder.Buffer s
+    -> GHC.Prim.State# s
+    -> (# GHC.Prim.State# s, [Data.Text.Internal.Text] #)
+  {- Arity: 3, Strictness: <L,1*C1(C1(U(U,U)))><L,U(U,U,U,U)><S,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ s
+                   (x :: Data.Text.Internal.Builder.Buffer s
+                         -> GHC.ST.ST s [Data.Text.Internal.Text])
+                   (eta :: Data.Text.Internal.Builder.Buffer s)
+                   (eta1 :: GHC.Prim.State# s) ->
+                 ((Text.Internal.Css.fromText Handlers.Admin.getAdminR169)
+                    `cast`
+                  (Data.Text.Internal.Builder.N:Builder[0])
+                    @ s
+                    (\ (buf :: Data.Text.Internal.Builder.Buffer s) -> x buf)
+                    eta)
+                   `cast`
+                 (GHC.ST.N:ST[0] <s>_N <[Data.Text.Internal.Text]>_R)
+                   eta1) -}
+4c2dc98d36a44ea08c7d9c83c92024cd
+  getAdminR169 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString#
+                   Handlers.Admin.getAdminR170) -}
+d5699bbefd6442ac7fb62d32698d0107
+  getAdminR17 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString#
+                   Handlers.Admin.getAdminR18) -}
+88df9ff85684deecc9a0c936f2a19fee
+  getAdminR170 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("0"#) -}
+30f6f58d0a26002a75a662d2b303d840
+  getAdminR171 :: Text.Internal.Css.Attr Text.Internal.Css.Resolved
+  {- Strictness: m,
+     Unfolding: (Text.Internal.Css.Attr
+                   @ Text.Internal.Css.Resolved
+                   Handlers.Admin.getAdminR172
+                     `cast`
+                   ((forall (s :: <*>_N).
+                     <Data.Text.Internal.Builder.Buffer s
+                      -> GHC.ST.ST s [Data.Text.Internal.Text]>_R
+                     ->_R <Data.Text.Internal.Builder.Buffer s>_R
+                     ->_R Sym (GHC.ST.N:ST[0]
+                                   <s>_N
+                                   <[Data.Text.Internal.Text]>_R)) ; (Sym (Data.Text.Internal.Builder.N:Builder[0]) ; Sub (Sym (Text.Internal.Css.D:R:StrResolved[0]))))
+                   Handlers.Admin.getAdminR168
+                     `cast`
+                   ((forall (s :: <*>_N).
+                     <Data.Text.Internal.Builder.Buffer s
+                      -> GHC.ST.ST s [Data.Text.Internal.Text]>_R
+                     ->_R <Data.Text.Internal.Builder.Buffer s>_R
+                     ->_R Sym (GHC.ST.N:ST[0]
+                                   <s>_N
+                                   <[Data.Text.Internal.Text]>_R)) ; (Sym (Data.Text.Internal.Builder.N:Builder[0]) ; Sub (Sym (Text.Internal.Css.D:R:StrResolved[0]))))) -}
+8aa71aa22fef24f0de4b17bbf964b5c3
+  getAdminR172 ::
+    (Data.Text.Internal.Builder.Buffer s
+     -> GHC.ST.ST s [Data.Text.Internal.Text])
+    -> Data.Text.Internal.Builder.Buffer s
+    -> GHC.Prim.State# s
+    -> (# GHC.Prim.State# s, [Data.Text.Internal.Text] #)
+  {- Arity: 3, Strictness: <L,1*C1(C1(U(U,U)))><L,U(U,U,U,U)><S,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ s
+                   (x :: Data.Text.Internal.Builder.Buffer s
+                         -> GHC.ST.ST s [Data.Text.Internal.Text])
+                   (eta :: Data.Text.Internal.Builder.Buffer s)
+                   (eta1 :: GHC.Prim.State# s) ->
+                 ((Text.Internal.Css.fromText Handlers.Admin.getAdminR173)
+                    `cast`
+                  (Data.Text.Internal.Builder.N:Builder[0])
+                    @ s
+                    (\ (buf :: Data.Text.Internal.Builder.Buffer s) -> x buf)
+                    eta)
+                   `cast`
+                 (GHC.ST.N:ST[0] <s>_N <[Data.Text.Internal.Text]>_R)
+                   eta1) -}
+cf7c285021d4f1034165560d7449134c
+  getAdminR173 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString#
+                   Handlers.Admin.getAdminR174) -}
+4f8be4db0164de606e93b4e7d90ac50a
+  getAdminR174 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("margin"#) -}
+bc822ca1366b710b216451096aab62b9
+  getAdminR175 :: Text.Internal.Css.Attr Text.Internal.Css.Resolved
+  {- Strictness: m,
+     Unfolding: (Text.Internal.Css.Attr
+                   @ Text.Internal.Css.Resolved
+                   Handlers.Admin.getAdminR176
+                     `cast`
+                   ((forall (s :: <*>_N).
+                     <Data.Text.Internal.Builder.Buffer s
+                      -> GHC.ST.ST s [Data.Text.Internal.Text]>_R
+                     ->_R <Data.Text.Internal.Builder.Buffer s>_R
+                     ->_R Sym (GHC.ST.N:ST[0]
+                                   <s>_N
+                                   <[Data.Text.Internal.Text]>_R)) ; (Sym (Data.Text.Internal.Builder.N:Builder[0]) ; Sub (Sym (Text.Internal.Css.D:R:StrResolved[0]))))
+                   Handlers.Admin.getAdminR109
+                     `cast`
+                   ((forall (s :: <*>_N).
+                     <Data.Text.Internal.Builder.Buffer s
+                      -> GHC.ST.ST s [Data.Text.Internal.Text]>_R
+                     ->_R <Data.Text.Internal.Builder.Buffer s>_R
+                     ->_R Sym (GHC.ST.N:ST[0]
+                                   <s>_N
+                                   <[Data.Text.Internal.Text]>_R)) ; (Sym (Data.Text.Internal.Builder.N:Builder[0]) ; Sub (Sym (Text.Internal.Css.D:R:StrResolved[0]))))) -}
+713528fe6f71f9153c8e233a44d104a1
+  getAdminR176 ::
+    (Data.Text.Internal.Builder.Buffer s
+     -> GHC.ST.ST s [Data.Text.Internal.Text])
+    -> Data.Text.Internal.Builder.Buffer s
+    -> GHC.Prim.State# s
+    -> (# GHC.Prim.State# s, [Data.Text.Internal.Text] #)
+  {- Arity: 3, Strictness: <L,1*C1(C1(U(U,U)))><L,U(U,U,U,U)><S,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ s
+                   (x :: Data.Text.Internal.Builder.Buffer s
+                         -> GHC.ST.ST s [Data.Text.Internal.Text])
+                   (eta :: Data.Text.Internal.Builder.Buffer s)
+                   (eta1 :: GHC.Prim.State# s) ->
+                 ((Text.Internal.Css.fromText Handlers.Admin.getAdminR177)
+                    `cast`
+                  (Data.Text.Internal.Builder.N:Builder[0])
+                    @ s
+                    (\ (buf :: Data.Text.Internal.Builder.Buffer s) -> x buf)
+                    eta)
+                   `cast`
+                 (GHC.ST.N:ST[0] <s>_N <[Data.Text.Internal.Text]>_R)
+                   eta1) -}
+2037f7a212bfd09130f951b5bbaa305d
+  getAdminR177 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString#
+                   Handlers.Admin.getAdminR178) -}
+89c9ede3553b7b251464ed9d19790cba
+  getAdminR178 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("list-style-type"#) -}
+4505dbae137edee54c0e02a02c58bf49
+  getAdminR179 ::
+    (Data.Text.Internal.Builder.Buffer s
+     -> GHC.ST.ST s [Data.Text.Internal.Text])
+    -> Data.Text.Internal.Builder.Buffer s
+    -> GHC.Prim.State# s
+    -> (# GHC.Prim.State# s, [Data.Text.Internal.Text] #)
+  {- Arity: 3, Strictness: <L,1*C1(C1(U(U,U)))><L,U(U,U,U,U)><S,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ s
+                   (x :: Data.Text.Internal.Builder.Buffer s
+                         -> GHC.ST.ST s [Data.Text.Internal.Text])
+                   (eta :: Data.Text.Internal.Builder.Buffer s)
+                   (eta1 :: GHC.Prim.State# s) ->
+                 ((Text.Internal.Css.fromText Handlers.Admin.getAdminR180)
+                    `cast`
+                  (Data.Text.Internal.Builder.N:Builder[0])
+                    @ s
+                    (\ (buf :: Data.Text.Internal.Builder.Buffer s) -> x buf)
+                    eta)
+                   `cast`
+                 (GHC.ST.N:ST[0] <s>_N <[Data.Text.Internal.Text]>_R)
+                   eta1) -}
+d9a42285692fc7066b68854fd52b2de5
+  getAdminR18 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("<ul><li style=\"float:right\"> <a href="#) -}
+3e479c14d18d1fa5a7669a0c3f80b204
+  getAdminR180 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString#
+                   Handlers.Admin.getAdminR181) -}
+22f985d40e48960b7ae20395216dfd44
+  getAdminR181 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("ul"#) -}
+bcb30a990d25b3507ea866b4ed351d0e
+  getAdminR182 ::
+    Text.Internal.Css.TopLevel Text.Internal.Css.Resolved
+  {- Strictness: m1,
+     Unfolding: (Text.Internal.Css.TopBlock
+                   @ Text.Internal.Css.Resolved
+                   Handlers.Admin.getAdminR183) -}
+5f7d08b099c0e94f715c5fd2e6870a86
+  getAdminR183 :: Text.Internal.Css.Block Text.Internal.Css.Resolved
+  {- Strictness: m,
+     Unfolding: (Text.Internal.Css.Block
+                   @ Text.Internal.Css.Resolved
+                   Handlers.Admin.getAdminR194
+                     `cast`
+                   ((forall (s :: <*>_N).
+                     <Data.Text.Internal.Builder.Buffer s
+                      -> GHC.ST.ST s [Data.Text.Internal.Text]>_R
+                     ->_R <Data.Text.Internal.Builder.Buffer s>_R
+                     ->_R Sym (GHC.ST.N:ST[0]
+                                   <s>_N
+                                   <[Data.Text.Internal.Text]>_R)) ; (Sym (Data.Text.Internal.Builder.N:Builder[0]) ; Sub (Sym (Text.Internal.Css.D:R:SelectorResolved[0]))))
+                   Handlers.Admin.getAdminR184
+                   GHC.Tuple.()
+                     `cast`
+                   (Sub (Sym (Text.Internal.Css.D:R:ChildBlocksResolved[0])))
+                   GHC.Tuple.()
+                     `cast`
+                   (Sub (Sym (Text.Internal.Css.D:R:MixinsResolved[0])))) -}
+5c2a5bce4521992fc95c9d7a02bd9d85
+  getAdminR184 :: [Text.Internal.Css.Attr Text.Internal.Css.Resolved]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (Text.Internal.Css.Attr Text.Internal.Css.Resolved)
+                   Handlers.Admin.getAdminR187
+                   Handlers.Admin.getAdminR185) -}
+6f3eac399f697946cb88305727916f5a
+  getAdminR185 :: [Text.Internal.Css.Attr Text.Internal.Css.Resolved]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (Text.Internal.Css.Attr Text.Internal.Css.Resolved)
+                   Handlers.Admin.getAdminR87
+                   Handlers.Admin.getAdminR186) -}
+956a82e68d4eb6b8ae8ccfd92e777f24
+  getAdminR186 :: [Text.Internal.Css.Attr Text.Internal.Css.Resolved]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (Text.Internal.Css.Attr Text.Internal.Css.Resolved)
+                   Handlers.Admin.getAdminR122
+                   (GHC.Types.[]
+                      @ (Text.Internal.Css.Attr Text.Internal.Css.Resolved))) -}
+58838d0184b47cb91ef399a499bbf909
+  getAdminR187 :: Text.Internal.Css.Attr Text.Internal.Css.Resolved
+  {- Strictness: m,
+     Unfolding: (Text.Internal.Css.Attr
+                   @ Text.Internal.Css.Resolved
+                   Handlers.Admin.getAdminR191
+                     `cast`
+                   ((forall (s :: <*>_N).
+                     <Data.Text.Internal.Builder.Buffer s
+                      -> GHC.ST.ST s [Data.Text.Internal.Text]>_R
+                     ->_R <Data.Text.Internal.Builder.Buffer s>_R
+                     ->_R Sym (GHC.ST.N:ST[0]
+                                   <s>_N
+                                   <[Data.Text.Internal.Text]>_R)) ; (Sym (Data.Text.Internal.Builder.N:Builder[0]) ; Sub (Sym (Text.Internal.Css.D:R:StrResolved[0]))))
+                   Handlers.Admin.getAdminR188
+                     `cast`
+                   ((forall (s :: <*>_N).
+                     <Data.Text.Internal.Builder.Buffer s
+                      -> GHC.ST.ST s [Data.Text.Internal.Text]>_R
+                     ->_R <Data.Text.Internal.Builder.Buffer s>_R
+                     ->_R Sym (GHC.ST.N:ST[0]
+                                   <s>_N
+                                   <[Data.Text.Internal.Text]>_R)) ; (Sym (Data.Text.Internal.Builder.N:Builder[0]) ; Sub (Sym (Text.Internal.Css.D:R:StrResolved[0]))))) -}
+693cb12dadb472495549bdbfc2387e85
+  getAdminR188 ::
+    (Data.Text.Internal.Builder.Buffer s
+     -> GHC.ST.ST s [Data.Text.Internal.Text])
+    -> Data.Text.Internal.Builder.Buffer s
+    -> GHC.Prim.State# s
+    -> (# GHC.Prim.State# s, [Data.Text.Internal.Text] #)
+  {- Arity: 3, Strictness: <L,1*C1(C1(U(U,U)))><L,U(U,U,U,U)><S,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ s
+                   (x :: Data.Text.Internal.Builder.Buffer s
+                         -> GHC.ST.ST s [Data.Text.Internal.Text])
+                   (eta :: Data.Text.Internal.Builder.Buffer s)
+                   (eta1 :: GHC.Prim.State# s) ->
+                 ((Text.Internal.Css.fromText Handlers.Admin.getAdminR189)
+                    `cast`
+                  (Data.Text.Internal.Builder.N:Builder[0])
+                    @ s
+                    (\ (buf :: Data.Text.Internal.Builder.Buffer s) -> x buf)
+                    eta)
+                   `cast`
+                 (GHC.ST.N:ST[0] <s>_N <[Data.Text.Internal.Text]>_R)
+                   eta1) -}
+43a3961a1bc45063783610ca776f0adb
+  getAdminR189 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString#
+                   Handlers.Admin.getAdminR190) -}
+d10d1ba84e6f7c9d5bbbd5bd467280d8
+  getAdminR19 ::
+    (Yesod.Routes.Class.Route Foundation.App
+     -> [(Data.Text.Internal.Text, Data.Text.Internal.Text)]
+     -> Data.Text.Internal.Text)
+    -> Text.Internal.Css.Css
+  {- Arity: 1, Strictness: <L,A>m2,
+     Unfolding: (\ (_render :: Yesod.Routes.Class.Route Foundation.App
+                               -> [(Data.Text.Internal.Text, Data.Text.Internal.Text)]
+                               -> Data.Text.Internal.Text) ->
+                 Handlers.Admin.getAdminR20) -}
+a61100bff1607b9de5681efd1239baff
+  getAdminR190 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("30px"#) -}
+e311bea4e7d0f817d366f63e275fb51a
+  getAdminR191 ::
+    (Data.Text.Internal.Builder.Buffer s
+     -> GHC.ST.ST s [Data.Text.Internal.Text])
+    -> Data.Text.Internal.Builder.Buffer s
+    -> GHC.Prim.State# s
+    -> (# GHC.Prim.State# s, [Data.Text.Internal.Text] #)
+  {- Arity: 3, Strictness: <L,1*C1(C1(U(U,U)))><L,U(U,U,U,U)><S,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ s
+                   (x :: Data.Text.Internal.Builder.Buffer s
+                         -> GHC.ST.ST s [Data.Text.Internal.Text])
+                   (eta :: Data.Text.Internal.Builder.Buffer s)
+                   (eta1 :: GHC.Prim.State# s) ->
+                 ((Text.Internal.Css.fromText Handlers.Admin.getAdminR192)
+                    `cast`
+                  (Data.Text.Internal.Builder.N:Builder[0])
+                    @ s
+                    (\ (buf :: Data.Text.Internal.Builder.Buffer s) -> x buf)
+                    eta)
+                   `cast`
+                 (GHC.ST.N:ST[0] <s>_N <[Data.Text.Internal.Text]>_R)
+                   eta1) -}
+e0b27fe4d120e5b43f709f60c349b129
+  getAdminR192 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString#
+                   Handlers.Admin.getAdminR193) -}
+16040dc7ede75f37002d67838b4c7592
+  getAdminR193 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("font-size"#) -}
+cb04fe0b34cf1b19e8ae573677431f4b
+  getAdminR194 ::
+    (Data.Text.Internal.Builder.Buffer s
+     -> GHC.ST.ST s [Data.Text.Internal.Text])
+    -> Data.Text.Internal.Builder.Buffer s
+    -> GHC.Prim.State# s
+    -> (# GHC.Prim.State# s, [Data.Text.Internal.Text] #)
+  {- Arity: 3, Strictness: <L,1*C1(C1(U(U,U)))><L,U(U,U,U,U)><S,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ s
+                   (x :: Data.Text.Internal.Builder.Buffer s
+                         -> GHC.ST.ST s [Data.Text.Internal.Text])
+                   (eta :: Data.Text.Internal.Builder.Buffer s)
+                   (eta1 :: GHC.Prim.State# s) ->
+                 ((Text.Internal.Css.fromText Handlers.Admin.getAdminR195)
+                    `cast`
+                  (Data.Text.Internal.Builder.N:Builder[0])
+                    @ s
+                    (\ (buf :: Data.Text.Internal.Builder.Buffer s) -> x buf)
+                    eta)
+                   `cast`
+                 (GHC.ST.N:ST[0] <s>_N <[Data.Text.Internal.Text]>_R)
+                   eta1) -}
+f289cba6d56d318e989b5e8c09197b6d
+  getAdminR195 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString#
+                   Handlers.Admin.getAdminR196) -}
+7d2ac31c4d02082ef58e96b8e61947f9
+  getAdminR196 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("h1"#) -}
+06dc63e719332f1cd7f33f3dc7fc7339
+  getAdminR2 ::
+    Yesod.Core.Types.WidgetData Foundation.App
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 2, Strictness: <L,U(U,U,U(U,U,U,U,U,U,U,U,U),U,U)><S,U>,
+     Unfolding: (\ (wd :: Yesod.Core.Types.WidgetData Foundation.App)
+                   (s :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 case (Handlers.Admin.getAdminR_m1
+                         `cast`
+                       (Yesod.Core.Types.N:WidgetFor[0] <Foundation.App>_N <()>_R)
+                         wd)
+                        `cast`
+                      (GHC.Types.N:IO[0] <()>_R)
+                        s of ds1 { (#,#) ipv ipv1 ->
+                 case wd
+                        `cast`
+                      (Yesod.Core.Types.WidgetData
+                         (Sym (Yesod.Core.Class.Handler.D:R:HandlerSiteWidgetFor[0]
+                                   <Foundation.App>_N)))_R of wild { Yesod.Core.Types.WidgetData dt dt1 dt2 dt3 dt4 ->
+                 case dt2 of wild1 { Yesod.Core.Types.RunHandlerEnv ds2 ds3 ds4 ds5 ds6 ds7 ds8 ds9 ds10 ->
+                 case GHC.Prim.readMutVar#
+                        @ GHC.Prim.RealWorld
+                        @ (Yesod.Core.Types.GWData
+                             (Yesod.Routes.Class.Route
+                                (Yesod.Core.Class.Handler.HandlerSite
+                                   (Yesod.Core.Types.WidgetFor Foundation.App))))
+                        dt
+                        ipv of ds11 { (#,#) ipv2 ipv3 ->
+                 case Yesod.Core.Types.$fIsStringWidgetFor_$c<>
+                        @ (Yesod.Routes.Class.Route
+                             (Yesod.Core.Class.Handler.HandlerSite
+                                (Yesod.Core.Types.WidgetFor Foundation.App)))
+                        ipv3
+                        Handlers.Admin.getAdminR_d3
+                          `cast`
+                        (Yesod.Core.Types.GWData
+                           (Yesod.Routes.Class.Route
+                              (Sym (Yesod.Core.Class.Handler.D:R:HandlerSiteWidgetFor[0]
+                                        <Foundation.App>_N)))_R)_R of x' { Yesod.Core.Types.GWData ipv4 ipv5 ipv6 ipv7 ipv8 ipv9 ipv10 ->
+                 case GHC.Prim.writeMutVar#
+                        @ GHC.Prim.RealWorld
+                        @ (Yesod.Core.Types.GWData
+                             (Yesod.Routes.Class.Route
+                                (Yesod.Core.Class.Handler.HandlerSite
+                                   (Yesod.Core.Types.WidgetFor Foundation.App))))
+                        dt
+                        x'
+                        ipv2 of s2# { DEFAULT ->
+                 case GHC.Prim.readMutVar#
+                        @ GHC.Prim.RealWorld
+                        @ (Yesod.Core.Types.GWData
+                             (Yesod.Routes.Class.Route
+                                (Yesod.Core.Class.Handler.HandlerSite
+                                   (Yesod.Core.Types.WidgetFor Foundation.App))))
+                        dt
+                        s2# of ds12 { (#,#) ipv11 ipv12 ->
+                 let {
+                   eta :: Data.Text.Internal.Text
+                   = ds2
+                       Foundation.LogoutR
+                         `cast`
+                       (Sym (Foundation.D:R:RouteApp0[0]) ; (Yesod.Routes.Class.Route
+                                                               (Sym (Yesod.Core.Class.Handler.D:R:HandlerSiteWidgetFor[0]
+                                                                         <Foundation.App>_N)))_R)
+                       (GHC.Types.[] @ (Data.Text.Internal.Text, Data.Text.Internal.Text))
+                 } in
+                 let {
+                   eta1 :: Text.Blaze.Internal.ChoiceString
+                   = Text.Blaze.Internal.Text eta
+                 } in
+                 let {
+                   eta2 :: Text.Blaze.Html.Html
+                   = Text.Blaze.Internal.Content @ () eta1 GHC.Tuple.()
+                 } in
+                 case Yesod.Core.Types.$fIsStringWidgetFor_$c<>
+                        @ (Yesod.Routes.Class.Route
+                             (Yesod.Core.Class.Handler.HandlerSite
+                                (Yesod.Core.Types.WidgetFor Foundation.App)))
+                        ipv12
+                        (Yesod.Core.Types.GWData
+                           @ (Yesod.Routes.Class.Route Foundation.App)
+                           (\ (ds :: Yesod.Routes.Class.Route Foundation.App
+                                     -> [(Data.Text.Internal.Text, Data.Text.Internal.Text)]
+                                     -> Data.Text.Internal.Text) ->
+                            eta2)
+                             `cast`
+                           (Sym (Yesod.Core.Types.N:Body[0]
+                                     <Yesod.Routes.Class.Route Foundation.App>_R))
+                           (GHC.Base.Nothing @ Yesod.Core.Types.Title)
+                             `cast`
+                           (Sym (Data.Monoid.N:Last[0]) <Yesod.Core.Types.Title>_N)
+                           (GHC.Base.id
+                              @ [Yesod.Core.Types.Script
+                                   (Yesod.Routes.Class.Route Foundation.App)])
+                             `cast`
+                           (Sym (Yesod.Core.Types.N:UniqueList[0]
+                                     <Yesod.Core.Types.Script
+                                        (Yesod.Routes.Class.Route Foundation.App)>_R))
+                           (GHC.Base.id
+                              @ [Yesod.Core.Types.Stylesheet
+                                   (Yesod.Routes.Class.Route Foundation.App)])
+                             `cast`
+                           (Sym (Yesod.Core.Types.N:UniqueList[0]
+                                     <Yesod.Core.Types.Stylesheet
+                                        (Yesod.Routes.Class.Route Foundation.App)>_R))
+                           (Data.Map.Internal.Tip
+                              @ (GHC.Base.Maybe Data.Text.Internal.Text)
+                              @ ((Yesod.Routes.Class.Route Foundation.App
+                                  -> [(Data.Text.Internal.Text, Data.Text.Internal.Text)]
+                                  -> Data.Text.Internal.Text)
+                                 -> Data.Text.Internal.Builder.Builder))
+                           (GHC.Base.Nothing
+                              @ ((Yesod.Routes.Class.Route Foundation.App
+                                  -> [(Data.Text.Internal.Text, Data.Text.Internal.Text)]
+                                  -> Data.Text.Internal.Text)
+                                 -> Text.Julius.Javascript))
+                           (Yesod.Core.Types.$fIsStringWidgetFor2
+                              @ (Yesod.Routes.Class.Route Foundation.App))
+                             `cast`
+                           (Sym (Yesod.Core.Types.N:Head[0]
+                                     <Yesod.Routes.Class.Route Foundation.App>_R)))
+                          `cast`
+                        (Yesod.Core.Types.GWData
+                           (Yesod.Routes.Class.Route
+                              (Sym (Yesod.Core.Class.Handler.D:R:HandlerSiteWidgetFor[0]
+                                        <Foundation.App>_N)))_R)_R of x'1 { Yesod.Core.Types.GWData ipv13 ipv14 ipv15 ipv16 ipv17 ipv18 ipv19 ->
+                 case GHC.Prim.writeMutVar#
+                        @ GHC.Prim.RealWorld
+                        @ (Yesod.Core.Types.GWData
+                             (Yesod.Routes.Class.Route
+                                (Yesod.Core.Class.Handler.HandlerSite
+                                   (Yesod.Core.Types.WidgetFor Foundation.App))))
+                        dt
+                        x'1
+                        ipv11 of s2#1 { DEFAULT ->
+                 case GHC.Prim.readMutVar#
+                        @ GHC.Prim.RealWorld
+                        @ (Yesod.Core.Types.GWData
+                             (Yesod.Routes.Class.Route
+                                (Yesod.Core.Class.Handler.HandlerSite
+                                   (Yesod.Core.Types.WidgetFor Foundation.App))))
+                        dt
+                        s2#1 of ds13 { (#,#) ipv20 ipv21 ->
+                 case Yesod.Core.Types.$fIsStringWidgetFor_$c<>
+                        @ (Yesod.Routes.Class.Route
+                             (Yesod.Core.Class.Handler.HandlerSite
+                                (Yesod.Core.Types.WidgetFor Foundation.App)))
+                        ipv21
+                        Handlers.Admin.getAdminR_d2
+                          `cast`
+                        (Yesod.Core.Types.GWData
+                           (Yesod.Routes.Class.Route
+                              (Sym (Yesod.Core.Class.Handler.D:R:HandlerSiteWidgetFor[0]
+                                        <Foundation.App>_N)))_R)_R of x'2 { Yesod.Core.Types.GWData ipv22 ipv23 ipv24 ipv25 ipv26 ipv27 ipv28 ->
+                 case GHC.Prim.writeMutVar#
+                        @ GHC.Prim.RealWorld
+                        @ (Yesod.Core.Types.GWData
+                             (Yesod.Routes.Class.Route
+                                (Yesod.Core.Class.Handler.HandlerSite
+                                   (Yesod.Core.Types.WidgetFor Foundation.App))))
+                        dt
+                        x'2
+                        ipv20 of s2#2 { DEFAULT ->
+                 case GHC.Prim.readMutVar#
+                        @ GHC.Prim.RealWorld
+                        @ (Yesod.Core.Types.GWData
+                             (Yesod.Routes.Class.Route
+                                (Yesod.Core.Class.Handler.HandlerSite
+                                   (Yesod.Core.Types.WidgetFor Foundation.App))))
+                        dt
+                        s2#2 of ds14 { (#,#) ipv29 ipv30 ->
+                 let {
+                   eta3 :: Data.Text.Internal.Text
+                   = ds2
+                       Foundation.ClienteR
+                         `cast`
+                       (Sym (Foundation.D:R:RouteApp0[0]) ; (Yesod.Routes.Class.Route
+                                                               (Sym (Yesod.Core.Class.Handler.D:R:HandlerSiteWidgetFor[0]
+                                                                         <Foundation.App>_N)))_R)
+                       (GHC.Types.[] @ (Data.Text.Internal.Text, Data.Text.Internal.Text))
+                 } in
+                 let {
+                   eta4 :: Text.Blaze.Internal.ChoiceString
+                   = Text.Blaze.Internal.Text eta3
+                 } in
+                 let {
+                   eta5 :: Text.Blaze.Html.Html
+                   = Text.Blaze.Internal.Content @ () eta4 GHC.Tuple.()
+                 } in
+                 case Yesod.Core.Types.$fIsStringWidgetFor_$c<>
+                        @ (Yesod.Routes.Class.Route
+                             (Yesod.Core.Class.Handler.HandlerSite
+                                (Yesod.Core.Types.WidgetFor Foundation.App)))
+                        ipv30
+                        (Yesod.Core.Types.GWData
+                           @ (Yesod.Routes.Class.Route Foundation.App)
+                           (\ (ds :: Yesod.Routes.Class.Route Foundation.App
+                                     -> [(Data.Text.Internal.Text, Data.Text.Internal.Text)]
+                                     -> Data.Text.Internal.Text) ->
+                            eta5)
+                             `cast`
+                           (Sym (Yesod.Core.Types.N:Body[0]
+                                     <Yesod.Routes.Class.Route Foundation.App>_R))
+                           (GHC.Base.Nothing @ Yesod.Core.Types.Title)
+                             `cast`
+                           (Sym (Data.Monoid.N:Last[0]) <Yesod.Core.Types.Title>_N)
+                           (GHC.Base.id
+                              @ [Yesod.Core.Types.Script
+                                   (Yesod.Routes.Class.Route Foundation.App)])
+                             `cast`
+                           (Sym (Yesod.Core.Types.N:UniqueList[0]
+                                     <Yesod.Core.Types.Script
+                                        (Yesod.Routes.Class.Route Foundation.App)>_R))
+                           (GHC.Base.id
+                              @ [Yesod.Core.Types.Stylesheet
+                                   (Yesod.Routes.Class.Route Foundation.App)])
+                             `cast`
+                           (Sym (Yesod.Core.Types.N:UniqueList[0]
+                                     <Yesod.Core.Types.Stylesheet
+                                        (Yesod.Routes.Class.Route Foundation.App)>_R))
+                           (Data.Map.Internal.Tip
+                              @ (GHC.Base.Maybe Data.Text.Internal.Text)
+                              @ ((Yesod.Routes.Class.Route Foundation.App
+                                  -> [(Data.Text.Internal.Text, Data.Text.Internal.Text)]
+                                  -> Data.Text.Internal.Text)
+                                 -> Data.Text.Internal.Builder.Builder))
+                           (GHC.Base.Nothing
+                              @ ((Yesod.Routes.Class.Route Foundation.App
+                                  -> [(Data.Text.Internal.Text, Data.Text.Internal.Text)]
+                                  -> Data.Text.Internal.Text)
+                                 -> Text.Julius.Javascript))
+                           (Yesod.Core.Types.$fIsStringWidgetFor2
+                              @ (Yesod.Routes.Class.Route Foundation.App))
+                             `cast`
+                           (Sym (Yesod.Core.Types.N:Head[0]
+                                     <Yesod.Routes.Class.Route Foundation.App>_R)))
+                          `cast`
+                        (Yesod.Core.Types.GWData
+                           (Yesod.Routes.Class.Route
+                              (Sym (Yesod.Core.Class.Handler.D:R:HandlerSiteWidgetFor[0]
+                                        <Foundation.App>_N)))_R)_R of x'3 { Yesod.Core.Types.GWData ipv31 ipv32 ipv33 ipv34 ipv35 ipv36 ipv37 ->
+                 case GHC.Prim.writeMutVar#
+                        @ GHC.Prim.RealWorld
+                        @ (Yesod.Core.Types.GWData
+                             (Yesod.Routes.Class.Route
+                                (Yesod.Core.Class.Handler.HandlerSite
+                                   (Yesod.Core.Types.WidgetFor Foundation.App))))
+                        dt
+                        x'3
+                        ipv29 of s2#3 { DEFAULT ->
+                 case GHC.Prim.readMutVar#
+                        @ GHC.Prim.RealWorld
+                        @ (Yesod.Core.Types.GWData
+                             (Yesod.Routes.Class.Route
+                                (Yesod.Core.Class.Handler.HandlerSite
+                                   (Yesod.Core.Types.WidgetFor Foundation.App))))
+                        dt
+                        s2#3 of ds15 { (#,#) ipv38 ipv39 ->
+                 case Yesod.Core.Types.$fIsStringWidgetFor_$c<>
+                        @ (Yesod.Routes.Class.Route
+                             (Yesod.Core.Class.Handler.HandlerSite
+                                (Yesod.Core.Types.WidgetFor Foundation.App)))
+                        ipv39
+                        Handlers.Admin.getAdminR_d1
+                          `cast`
+                        (Yesod.Core.Types.GWData
+                           (Yesod.Routes.Class.Route
+                              (Sym (Yesod.Core.Class.Handler.D:R:HandlerSiteWidgetFor[0]
+                                        <Foundation.App>_N)))_R)_R of x'4 { Yesod.Core.Types.GWData ipv40 ipv41 ipv42 ipv43 ipv44 ipv45 ipv46 ->
+                 case GHC.Prim.writeMutVar#
+                        @ GHC.Prim.RealWorld
+                        @ (Yesod.Core.Types.GWData
+                             (Yesod.Routes.Class.Route
+                                (Yesod.Core.Class.Handler.HandlerSite
+                                   (Yesod.Core.Types.WidgetFor Foundation.App))))
+                        dt
+                        x'4
+                        ipv38 of s2#4 { DEFAULT ->
+                 case GHC.Prim.readMutVar#
+                        @ GHC.Prim.RealWorld
+                        @ (Yesod.Core.Types.GWData
+                             (Yesod.Routes.Class.Route
+                                (Yesod.Core.Class.Handler.HandlerSite
+                                   (Yesod.Core.Types.WidgetFor Foundation.App))))
+                        dt
+                        s2#4 of ds16 { (#,#) ipv47 ipv48 ->
+                 let {
+                   eta6 :: Data.Text.Internal.Text
+                   = ds2
+                       Foundation.ClienteR
+                         `cast`
+                       (Sym (Foundation.D:R:RouteApp0[0]) ; (Yesod.Routes.Class.Route
+                                                               (Sym (Yesod.Core.Class.Handler.D:R:HandlerSiteWidgetFor[0]
+                                                                         <Foundation.App>_N)))_R)
+                       (GHC.Types.[] @ (Data.Text.Internal.Text, Data.Text.Internal.Text))
+                 } in
+                 let {
+                   eta7 :: Text.Blaze.Internal.ChoiceString
+                   = Text.Blaze.Internal.Text eta6
+                 } in
+                 let {
+                   eta8 :: Text.Blaze.Html.Html
+                   = Text.Blaze.Internal.Content @ () eta7 GHC.Tuple.()
+                 } in
+                 case Yesod.Core.Types.$fIsStringWidgetFor_$c<>
+                        @ (Yesod.Routes.Class.Route
+                             (Yesod.Core.Class.Handler.HandlerSite
+                                (Yesod.Core.Types.WidgetFor Foundation.App)))
+                        ipv48
+                        (Yesod.Core.Types.GWData
+                           @ (Yesod.Routes.Class.Route Foundation.App)
+                           (\ (ds :: Yesod.Routes.Class.Route Foundation.App
+                                     -> [(Data.Text.Internal.Text, Data.Text.Internal.Text)]
+                                     -> Data.Text.Internal.Text) ->
+                            eta8)
+                             `cast`
+                           (Sym (Yesod.Core.Types.N:Body[0]
+                                     <Yesod.Routes.Class.Route Foundation.App>_R))
+                           (GHC.Base.Nothing @ Yesod.Core.Types.Title)
+                             `cast`
+                           (Sym (Data.Monoid.N:Last[0]) <Yesod.Core.Types.Title>_N)
+                           (GHC.Base.id
+                              @ [Yesod.Core.Types.Script
+                                   (Yesod.Routes.Class.Route Foundation.App)])
+                             `cast`
+                           (Sym (Yesod.Core.Types.N:UniqueList[0]
+                                     <Yesod.Core.Types.Script
+                                        (Yesod.Routes.Class.Route Foundation.App)>_R))
+                           (GHC.Base.id
+                              @ [Yesod.Core.Types.Stylesheet
+                                   (Yesod.Routes.Class.Route Foundation.App)])
+                             `cast`
+                           (Sym (Yesod.Core.Types.N:UniqueList[0]
+                                     <Yesod.Core.Types.Stylesheet
+                                        (Yesod.Routes.Class.Route Foundation.App)>_R))
+                           (Data.Map.Internal.Tip
+                              @ (GHC.Base.Maybe Data.Text.Internal.Text)
+                              @ ((Yesod.Routes.Class.Route Foundation.App
+                                  -> [(Data.Text.Internal.Text, Data.Text.Internal.Text)]
+                                  -> Data.Text.Internal.Text)
+                                 -> Data.Text.Internal.Builder.Builder))
+                           (GHC.Base.Nothing
+                              @ ((Yesod.Routes.Class.Route Foundation.App
+                                  -> [(Data.Text.Internal.Text, Data.Text.Internal.Text)]
+                                  -> Data.Text.Internal.Text)
+                                 -> Text.Julius.Javascript))
+                           (Yesod.Core.Types.$fIsStringWidgetFor2
+                              @ (Yesod.Routes.Class.Route Foundation.App))
+                             `cast`
+                           (Sym (Yesod.Core.Types.N:Head[0]
+                                     <Yesod.Routes.Class.Route Foundation.App>_R)))
+                          `cast`
+                        (Yesod.Core.Types.GWData
+                           (Yesod.Routes.Class.Route
+                              (Sym (Yesod.Core.Class.Handler.D:R:HandlerSiteWidgetFor[0]
+                                        <Foundation.App>_N)))_R)_R of x'5 { Yesod.Core.Types.GWData ipv49 ipv50 ipv51 ipv52 ipv53 ipv54 ipv55 ->
+                 case GHC.Prim.writeMutVar#
+                        @ GHC.Prim.RealWorld
+                        @ (Yesod.Core.Types.GWData
+                             (Yesod.Routes.Class.Route
+                                (Yesod.Core.Class.Handler.HandlerSite
+                                   (Yesod.Core.Types.WidgetFor Foundation.App))))
+                        dt
+                        x'5
+                        ipv47 of s2#5 { DEFAULT ->
+                 case GHC.Prim.readMutVar#
+                        @ GHC.Prim.RealWorld
+                        @ (Yesod.Core.Types.GWData
+                             (Yesod.Routes.Class.Route
+                                (Yesod.Core.Class.Handler.HandlerSite
+                                   (Yesod.Core.Types.WidgetFor Foundation.App))))
+                        dt
+                        s2#5 of ds17 { (#,#) ipv56 ipv57 ->
+                 case Yesod.Core.Types.$fIsStringWidgetFor_$c<>
+                        @ (Yesod.Routes.Class.Route
+                             (Yesod.Core.Class.Handler.HandlerSite
+                                (Yesod.Core.Types.WidgetFor Foundation.App)))
+                        ipv57
+                        Handlers.Admin.getAdminR_d
+                          `cast`
+                        (Yesod.Core.Types.GWData
+                           (Yesod.Routes.Class.Route
+                              (Sym (Yesod.Core.Class.Handler.D:R:HandlerSiteWidgetFor[0]
+                                        <Foundation.App>_N)))_R)_R of x'6 { Yesod.Core.Types.GWData ipv58 ipv59 ipv60 ipv61 ipv62 ipv63 ipv64 ->
+                 case GHC.Prim.writeMutVar#
+                        @ GHC.Prim.RealWorld
+                        @ (Yesod.Core.Types.GWData
+                             (Yesod.Routes.Class.Route
+                                (Yesod.Core.Class.Handler.HandlerSite
+                                   (Yesod.Core.Types.WidgetFor Foundation.App))))
+                        dt
+                        x'6
+                        ipv56 of s2#6 { DEFAULT ->
+                 (# s2#6,
+                    GHC.Tuple.() #) } } } } } } } } } } } } } } } } } } } } } } } }) -}
+22ee9e52e005dacd94eff358f5b9a3e7
+  getAdminR20 :: Text.Internal.Css.Css
+  {- Strictness: m2,
+     Unfolding: (Text.Internal.Css.CssNoWhitespace
+                   Handlers.Admin.getAdminR21) -}
+96a7d389b804dc95046c652c756fed68
+  getAdminR21 ::
+    [Text.Internal.Css.TopLevel Text.Internal.Css.Resolved]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (Text.Internal.Css.TopLevel Text.Internal.Css.Resolved)
+                   Handlers.Admin.getAdminR182
+                   Handlers.Admin.getAdminR22) -}
+e6ed02f883b15bdbca4d06471bf8559f
+  getAdminR22 ::
+    [Text.Internal.Css.TopLevel Text.Internal.Css.Resolved]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (Text.Internal.Css.TopLevel Text.Internal.Css.Resolved)
+                   Handlers.Admin.getAdminR149
+                   Handlers.Admin.getAdminR23) -}
+89a6e7e3f1e1b081edffcabc1640f739
+  getAdminR23 ::
+    [Text.Internal.Css.TopLevel Text.Internal.Css.Resolved]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (Text.Internal.Css.TopLevel Text.Internal.Css.Resolved)
+                   Handlers.Admin.getAdminR139
+                   Handlers.Admin.getAdminR24) -}
+f86d3c9537310ca5def4dfc22a34534f
+  getAdminR24 ::
+    [Text.Internal.Css.TopLevel Text.Internal.Css.Resolved]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (Text.Internal.Css.TopLevel Text.Internal.Css.Resolved)
+                   Handlers.Admin.getAdminR101
+                   Handlers.Admin.getAdminR25) -}
+50dd79e8eedf1b71b2abcdb58fbee53f
+  getAdminR25 ::
+    [Text.Internal.Css.TopLevel Text.Internal.Css.Resolved]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (Text.Internal.Css.TopLevel Text.Internal.Css.Resolved)
+                   Handlers.Admin.getAdminR83
+                   Handlers.Admin.getAdminR26) -}
+3d533dfc07e7581e334240e86cc0035b
+  getAdminR26 ::
+    [Text.Internal.Css.TopLevel Text.Internal.Css.Resolved]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (Text.Internal.Css.TopLevel Text.Internal.Css.Resolved)
+                   Handlers.Admin.getAdminR73
+                   Handlers.Admin.getAdminR27) -}
+d413732d2ee5ccbf235309a6c8c0b721
+  getAdminR27 ::
+    [Text.Internal.Css.TopLevel Text.Internal.Css.Resolved]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (Text.Internal.Css.TopLevel Text.Internal.Css.Resolved)
+                   Handlers.Admin.getAdminR60
+                   Handlers.Admin.getAdminR28) -}
+7e395170f6d6761f47c2b2fad3a26f3a
+  getAdminR28 ::
+    [Text.Internal.Css.TopLevel Text.Internal.Css.Resolved]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (Text.Internal.Css.TopLevel Text.Internal.Css.Resolved)
+                   Handlers.Admin.getAdminR55
+                   Handlers.Admin.getAdminR29) -}
+1ba97e6046471f1bd16c69940b406549
+  getAdminR29 ::
+    [Text.Internal.Css.TopLevel Text.Internal.Css.Resolved]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (Text.Internal.Css.TopLevel Text.Internal.Css.Resolved)
+                   Handlers.Admin.getAdminR50
+                   Handlers.Admin.getAdminR30) -}
+698a32f41258e9ceafa278fc7f33a8e1
+  getAdminR3 :: Text.Blaze.Internal.ChoiceString
+  {- Strictness: m5,
+     Unfolding: (Text.Blaze.Internal.PreEscaped
+                   Handlers.Admin.getAdminR4) -}
+8e067e3b19c8a287cab330f60751c14b
+  getAdminR30 ::
+    [Text.Internal.Css.TopLevel Text.Internal.Css.Resolved]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (Text.Internal.Css.TopLevel Text.Internal.Css.Resolved)
+                   Handlers.Admin.getAdminR45
+                   Handlers.Admin.getAdminR31) -}
+a7f7cf467d75504f7abf66e59f4d5e44
+  getAdminR31 ::
+    [Text.Internal.Css.TopLevel Text.Internal.Css.Resolved]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (Text.Internal.Css.TopLevel Text.Internal.Css.Resolved)
+                   Handlers.Admin.getAdminR32
+                   (GHC.Types.[]
+                      @ (Text.Internal.Css.TopLevel Text.Internal.Css.Resolved))) -}
+cd57392f7dfe339e094b34beef3bb2c1
+  getAdminR32 ::
+    Text.Internal.Css.TopLevel Text.Internal.Css.Resolved
+  {- Strictness: m1,
+     Unfolding: (Text.Internal.Css.TopBlock
+                   @ Text.Internal.Css.Resolved
+                   Handlers.Admin.getAdminR33) -}
+05c621fd3389c44088f967b6f4f6949a
+  getAdminR33 :: Text.Internal.Css.Block Text.Internal.Css.Resolved
+  {- Strictness: m,
+     Unfolding: (Text.Internal.Css.Block
+                   @ Text.Internal.Css.Resolved
+                   Handlers.Admin.getAdminR42
+                     `cast`
+                   ((forall (s :: <*>_N).
+                     <Data.Text.Internal.Builder.Buffer s
+                      -> GHC.ST.ST s [Data.Text.Internal.Text]>_R
+                     ->_R <Data.Text.Internal.Builder.Buffer s>_R
+                     ->_R Sym (GHC.ST.N:ST[0]
+                                   <s>_N
+                                   <[Data.Text.Internal.Text]>_R)) ; (Sym (Data.Text.Internal.Builder.N:Builder[0]) ; Sub (Sym (Text.Internal.Css.D:R:SelectorResolved[0]))))
+                   Handlers.Admin.getAdminR34
+                   GHC.Tuple.()
+                     `cast`
+                   (Sub (Sym (Text.Internal.Css.D:R:ChildBlocksResolved[0])))
+                   GHC.Tuple.()
+                     `cast`
+                   (Sub (Sym (Text.Internal.Css.D:R:MixinsResolved[0])))) -}
+3d171c838d5aa15f9dab1848c18bf4b1
+  getAdminR34 :: [Text.Internal.Css.Attr Text.Internal.Css.Resolved]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (Text.Internal.Css.Attr Text.Internal.Css.Resolved)
+                   Handlers.Admin.getAdminR35
+                   (GHC.Types.[]
+                      @ (Text.Internal.Css.Attr Text.Internal.Css.Resolved))) -}
+b093aa8957339479647f4b53758ac41b
+  getAdminR35 :: Text.Internal.Css.Attr Text.Internal.Css.Resolved
+  {- Strictness: m,
+     Unfolding: (Text.Internal.Css.Attr
+                   @ Text.Internal.Css.Resolved
+                   Handlers.Admin.getAdminR39
+                     `cast`
+                   ((forall (s :: <*>_N).
+                     <Data.Text.Internal.Builder.Buffer s
+                      -> GHC.ST.ST s [Data.Text.Internal.Text]>_R
+                     ->_R <Data.Text.Internal.Builder.Buffer s>_R
+                     ->_R Sym (GHC.ST.N:ST[0]
+                                   <s>_N
+                                   <[Data.Text.Internal.Text]>_R)) ; (Sym (Data.Text.Internal.Builder.N:Builder[0]) ; Sub (Sym (Text.Internal.Css.D:R:StrResolved[0]))))
+                   Handlers.Admin.getAdminR36
+                     `cast`
+                   ((forall (s :: <*>_N).
+                     <Data.Text.Internal.Builder.Buffer s
+                      -> GHC.ST.ST s [Data.Text.Internal.Text]>_R
+                     ->_R <Data.Text.Internal.Builder.Buffer s>_R
+                     ->_R Sym (GHC.ST.N:ST[0]
+                                   <s>_N
+                                   <[Data.Text.Internal.Text]>_R)) ; (Sym (Data.Text.Internal.Builder.N:Builder[0]) ; Sub (Sym (Text.Internal.Css.D:R:StrResolved[0]))))) -}
+becd60deba604126ddf81d5cb09e6c45
+  getAdminR36 ::
+    (Data.Text.Internal.Builder.Buffer s
+     -> GHC.ST.ST s [Data.Text.Internal.Text])
+    -> Data.Text.Internal.Builder.Buffer s
+    -> GHC.Prim.State# s
+    -> (# GHC.Prim.State# s, [Data.Text.Internal.Text] #)
+  {- Arity: 3, Strictness: <L,1*C1(C1(U(U,U)))><L,U(U,U,U,U)><S,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ s
+                   (x :: Data.Text.Internal.Builder.Buffer s
+                         -> GHC.ST.ST s [Data.Text.Internal.Text])
+                   (eta :: Data.Text.Internal.Builder.Buffer s)
+                   (eta1 :: GHC.Prim.State# s) ->
+                 ((Text.Internal.Css.fromText Handlers.Admin.getAdminR37)
+                    `cast`
+                  (Data.Text.Internal.Builder.N:Builder[0])
+                    @ s
+                    (\ (buf :: Data.Text.Internal.Builder.Buffer s) -> x buf)
+                    eta)
+                   `cast`
+                 (GHC.ST.N:ST[0] <s>_N <[Data.Text.Internal.Text]>_R)
+                   eta1) -}
+22463471f653d0fd554762c50a1d5e14
+  getAdminR37 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString#
+                   Handlers.Admin.getAdminR38) -}
+e5205a83c8f5c78350711bb9793e240a
+  getAdminR38 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("black"#) -}
+af2e5a08bf3d99dc290b12233c09f5d8
+  getAdminR39 ::
+    (Data.Text.Internal.Builder.Buffer s
+     -> GHC.ST.ST s [Data.Text.Internal.Text])
+    -> Data.Text.Internal.Builder.Buffer s
+    -> GHC.Prim.State# s
+    -> (# GHC.Prim.State# s, [Data.Text.Internal.Text] #)
+  {- Arity: 3, Strictness: <L,1*C1(C1(U(U,U)))><L,U(U,U,U,U)><S,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ s
+                   (x :: Data.Text.Internal.Builder.Buffer s
+                         -> GHC.ST.ST s [Data.Text.Internal.Text])
+                   (eta :: Data.Text.Internal.Builder.Buffer s)
+                   (eta1 :: GHC.Prim.State# s) ->
+                 ((Text.Internal.Css.fromText Handlers.Admin.getAdminR40)
+                    `cast`
+                  (Data.Text.Internal.Builder.N:Builder[0])
+                    @ s
+                    (\ (buf :: Data.Text.Internal.Builder.Buffer s) -> x buf)
+                    eta)
+                   `cast`
+                 (GHC.ST.N:ST[0] <s>_N <[Data.Text.Internal.Text]>_R)
+                   eta1) -}
+f3be8fbb1f0754f07fe9d2525ac83f6c
+  getAdminR4 :: Text.Blaze.Internal.ChoiceString
+  {- Strictness: m3,
+     Unfolding: (Text.Blaze.Internal.Text Handlers.Admin.getAdminR5) -}
+43110fe3aa3085477b979116f7f56102
+  getAdminR40 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString#
+                   Handlers.Admin.getAdminR41) -}
+cad69e44c9d445917a1ad23cbf32fd3f
+  getAdminR41 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("color"#) -}
+c655c18b0b6a946b2ef7569d694025b2
+  getAdminR42 ::
+    (Data.Text.Internal.Builder.Buffer s
+     -> GHC.ST.ST s [Data.Text.Internal.Text])
+    -> Data.Text.Internal.Builder.Buffer s
+    -> GHC.Prim.State# s
+    -> (# GHC.Prim.State# s, [Data.Text.Internal.Text] #)
+  {- Arity: 3, Strictness: <L,1*C1(C1(U(U,U)))><L,U(U,U,U,U)><S,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ s
+                   (x :: Data.Text.Internal.Builder.Buffer s
+                         -> GHC.ST.ST s [Data.Text.Internal.Text])
+                   (eta :: Data.Text.Internal.Builder.Buffer s)
+                   (eta1 :: GHC.Prim.State# s) ->
+                 ((Text.Internal.Css.fromText Handlers.Admin.getAdminR43)
+                    `cast`
+                  (Data.Text.Internal.Builder.N:Builder[0])
+                    @ s
+                    (\ (buf :: Data.Text.Internal.Builder.Buffer s) -> x buf)
+                    eta)
+                   `cast`
+                 (GHC.ST.N:ST[0] <s>_N <[Data.Text.Internal.Text]>_R)
+                   eta1) -}
+4164c8841fbe8c874d076251a883b9b7
+  getAdminR43 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString#
+                   Handlers.Admin.getAdminR44) -}
+650629731668e15815eefc17738633f3
+  getAdminR44 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("#ped"#) -}
+5ec3f7b95db643cfb5c36341f17fa45d
+  getAdminR45 ::
+    Text.Internal.Css.TopLevel Text.Internal.Css.Resolved
+  {- Strictness: m1,
+     Unfolding: (Text.Internal.Css.TopBlock
+                   @ Text.Internal.Css.Resolved
+                   Handlers.Admin.getAdminR46) -}
+cae0760b6b6b2424362c38618aff5003
+  getAdminR46 :: Text.Internal.Css.Block Text.Internal.Css.Resolved
+  {- Strictness: m,
+     Unfolding: (Text.Internal.Css.Block
+                   @ Text.Internal.Css.Resolved
+                   Handlers.Admin.getAdminR47
+                     `cast`
+                   ((forall (s :: <*>_N).
+                     <Data.Text.Internal.Builder.Buffer s
+                      -> GHC.ST.ST s [Data.Text.Internal.Text]>_R
+                     ->_R <Data.Text.Internal.Builder.Buffer s>_R
+                     ->_R Sym (GHC.ST.N:ST[0]
+                                   <s>_N
+                                   <[Data.Text.Internal.Text]>_R)) ; (Sym (Data.Text.Internal.Builder.N:Builder[0]) ; Sub (Sym (Text.Internal.Css.D:R:SelectorResolved[0]))))
+                   Handlers.Admin.getAdminR34
+                   GHC.Tuple.()
+                     `cast`
+                   (Sub (Sym (Text.Internal.Css.D:R:ChildBlocksResolved[0])))
+                   GHC.Tuple.()
+                     `cast`
+                   (Sub (Sym (Text.Internal.Css.D:R:MixinsResolved[0])))) -}
+4e3c820c89513b173b7220a3bda0fa8d
+  getAdminR47 ::
+    (Data.Text.Internal.Builder.Buffer s
+     -> GHC.ST.ST s [Data.Text.Internal.Text])
+    -> Data.Text.Internal.Builder.Buffer s
+    -> GHC.Prim.State# s
+    -> (# GHC.Prim.State# s, [Data.Text.Internal.Text] #)
+  {- Arity: 3, Strictness: <L,1*C1(C1(U(U,U)))><L,U(U,U,U,U)><S,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ s
+                   (x :: Data.Text.Internal.Builder.Buffer s
+                         -> GHC.ST.ST s [Data.Text.Internal.Text])
+                   (eta :: Data.Text.Internal.Builder.Buffer s)
+                   (eta1 :: GHC.Prim.State# s) ->
+                 ((Text.Internal.Css.fromText Handlers.Admin.getAdminR48)
+                    `cast`
+                  (Data.Text.Internal.Builder.N:Builder[0])
+                    @ s
+                    (\ (buf :: Data.Text.Internal.Builder.Buffer s) -> x buf)
+                    eta)
+                   `cast`
+                 (GHC.ST.N:ST[0] <s>_N <[Data.Text.Internal.Text]>_R)
+                   eta1) -}
+80f964fa9eaf4d63374c8afb7faf1ba9
+  getAdminR48 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString#
+                   Handlers.Admin.getAdminR49) -}
+a273a0f23e9709f82428bb31c098a5dd
+  getAdminR49 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("#prod"#) -}
+66e0303ddfc5369848c0721f9ef80505
+  getAdminR5 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString#
+                   Handlers.Admin.getAdminR6) -}
+bbbd3e1febdacab3bca03cca5202a772
+  getAdminR50 ::
+    Text.Internal.Css.TopLevel Text.Internal.Css.Resolved
+  {- Strictness: m1,
+     Unfolding: (Text.Internal.Css.TopBlock
+                   @ Text.Internal.Css.Resolved
+                   Handlers.Admin.getAdminR51) -}
+60c965c9d251f2cdfb498b26baba1aec
+  getAdminR51 :: Text.Internal.Css.Block Text.Internal.Css.Resolved
+  {- Strictness: m,
+     Unfolding: (Text.Internal.Css.Block
+                   @ Text.Internal.Css.Resolved
+                   Handlers.Admin.getAdminR52
+                     `cast`
+                   ((forall (s :: <*>_N).
+                     <Data.Text.Internal.Builder.Buffer s
+                      -> GHC.ST.ST s [Data.Text.Internal.Text]>_R
+                     ->_R <Data.Text.Internal.Builder.Buffer s>_R
+                     ->_R Sym (GHC.ST.N:ST[0]
+                                   <s>_N
+                                   <[Data.Text.Internal.Text]>_R)) ; (Sym (Data.Text.Internal.Builder.N:Builder[0]) ; Sub (Sym (Text.Internal.Css.D:R:SelectorResolved[0]))))
+                   Handlers.Admin.getAdminR34
+                   GHC.Tuple.()
+                     `cast`
+                   (Sub (Sym (Text.Internal.Css.D:R:ChildBlocksResolved[0])))
+                   GHC.Tuple.()
+                     `cast`
+                   (Sub (Sym (Text.Internal.Css.D:R:MixinsResolved[0])))) -}
+b16f1967f55b65169f2dab18f8719387
+  getAdminR52 ::
+    (Data.Text.Internal.Builder.Buffer s
+     -> GHC.ST.ST s [Data.Text.Internal.Text])
+    -> Data.Text.Internal.Builder.Buffer s
+    -> GHC.Prim.State# s
+    -> (# GHC.Prim.State# s, [Data.Text.Internal.Text] #)
+  {- Arity: 3, Strictness: <L,1*C1(C1(U(U,U)))><L,U(U,U,U,U)><S,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ s
+                   (x :: Data.Text.Internal.Builder.Buffer s
+                         -> GHC.ST.ST s [Data.Text.Internal.Text])
+                   (eta :: Data.Text.Internal.Builder.Buffer s)
+                   (eta1 :: GHC.Prim.State# s) ->
+                 ((Text.Internal.Css.fromText Handlers.Admin.getAdminR53)
+                    `cast`
+                  (Data.Text.Internal.Builder.N:Builder[0])
+                    @ s
+                    (\ (buf :: Data.Text.Internal.Builder.Buffer s) -> x buf)
+                    eta)
+                   `cast`
+                 (GHC.ST.N:ST[0] <s>_N <[Data.Text.Internal.Text]>_R)
+                   eta1) -}
+2b3851f6757108b3c626077b46921c57
+  getAdminR53 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString#
+                   Handlers.Admin.getAdminR54) -}
+6b28bb94325fe0595d85c15151bbe455
+  getAdminR54 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("#cadastro"#) -}
+03c4e07e2cd61fc620bcb7ee9c53626a
+  getAdminR55 ::
+    Text.Internal.Css.TopLevel Text.Internal.Css.Resolved
+  {- Strictness: m1,
+     Unfolding: (Text.Internal.Css.TopBlock
+                   @ Text.Internal.Css.Resolved
+                   Handlers.Admin.getAdminR56) -}
+f36be5fd95f81c4e7ca843b93f8a0a70
+  getAdminR56 :: Text.Internal.Css.Block Text.Internal.Css.Resolved
+  {- Strictness: m,
+     Unfolding: (Text.Internal.Css.Block
+                   @ Text.Internal.Css.Resolved
+                   Handlers.Admin.getAdminR57
+                     `cast`
+                   ((forall (s :: <*>_N).
+                     <Data.Text.Internal.Builder.Buffer s
+                      -> GHC.ST.ST s [Data.Text.Internal.Text]>_R
+                     ->_R <Data.Text.Internal.Builder.Buffer s>_R
+                     ->_R Sym (GHC.ST.N:ST[0]
+                                   <s>_N
+                                   <[Data.Text.Internal.Text]>_R)) ; (Sym (Data.Text.Internal.Builder.N:Builder[0]) ; Sub (Sym (Text.Internal.Css.D:R:SelectorResolved[0]))))
+                   Handlers.Admin.getAdminR34
+                   GHC.Tuple.()
+                     `cast`
+                   (Sub (Sym (Text.Internal.Css.D:R:ChildBlocksResolved[0])))
+                   GHC.Tuple.()
+                     `cast`
+                   (Sub (Sym (Text.Internal.Css.D:R:MixinsResolved[0])))) -}
+5188fa8c082030f5282dd42c79199138
+  getAdminR57 ::
+    (Data.Text.Internal.Builder.Buffer s
+     -> GHC.ST.ST s [Data.Text.Internal.Text])
+    -> Data.Text.Internal.Builder.Buffer s
+    -> GHC.Prim.State# s
+    -> (# GHC.Prim.State# s, [Data.Text.Internal.Text] #)
+  {- Arity: 3, Strictness: <L,1*C1(C1(U(U,U)))><L,U(U,U,U,U)><S,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ s
+                   (x :: Data.Text.Internal.Builder.Buffer s
+                         -> GHC.ST.ST s [Data.Text.Internal.Text])
+                   (eta :: Data.Text.Internal.Builder.Buffer s)
+                   (eta1 :: GHC.Prim.State# s) ->
+                 ((Text.Internal.Css.fromText Handlers.Admin.getAdminR58)
+                    `cast`
+                  (Data.Text.Internal.Builder.N:Builder[0])
+                    @ s
+                    (\ (buf :: Data.Text.Internal.Builder.Buffer s) -> x buf)
+                    eta)
+                   `cast`
+                 (GHC.ST.N:ST[0] <s>_N <[Data.Text.Internal.Text]>_R)
+                   eta1) -}
+0edf61f94f6f89d60c2382b4b7bde70a
+  getAdminR58 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString#
+                   Handlers.Admin.getAdminR59) -}
+343130d1124e5181959d6a7a31801df5
+  getAdminR59 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("#card"#) -}
+ae11be5b4c2c28af510f37eb00dcd32d
+  getAdminR6 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("> Pedidos</h2>\n"#) -}
+aaa07d18683e5d8fb83768cd876e8816
+  getAdminR60 ::
+    Text.Internal.Css.TopLevel Text.Internal.Css.Resolved
+  {- Strictness: m1,
+     Unfolding: (Text.Internal.Css.TopBlock
+                   @ Text.Internal.Css.Resolved
+                   Handlers.Admin.getAdminR61) -}
+9ea64f5f1aea66c82e118706b4cf68d9
+  getAdminR61 :: Text.Internal.Css.Block Text.Internal.Css.Resolved
+  {- Strictness: m,
+     Unfolding: (Text.Internal.Css.Block
+                   @ Text.Internal.Css.Resolved
+                   Handlers.Admin.getAdminR70
+                     `cast`
+                   ((forall (s :: <*>_N).
+                     <Data.Text.Internal.Builder.Buffer s
+                      -> GHC.ST.ST s [Data.Text.Internal.Text]>_R
+                     ->_R <Data.Text.Internal.Builder.Buffer s>_R
+                     ->_R Sym (GHC.ST.N:ST[0]
+                                   <s>_N
+                                   <[Data.Text.Internal.Text]>_R)) ; (Sym (Data.Text.Internal.Builder.N:Builder[0]) ; Sub (Sym (Text.Internal.Css.D:R:SelectorResolved[0]))))
+                   Handlers.Admin.getAdminR62
+                   GHC.Tuple.()
+                     `cast`
+                   (Sub (Sym (Text.Internal.Css.D:R:ChildBlocksResolved[0])))
+                   GHC.Tuple.()
+                     `cast`
+                   (Sub (Sym (Text.Internal.Css.D:R:MixinsResolved[0])))) -}
+dec9ba0625c873da457aefa1f58c1ed0
+  getAdminR62 :: [Text.Internal.Css.Attr Text.Internal.Css.Resolved]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (Text.Internal.Css.Attr Text.Internal.Css.Resolved)
+                   Handlers.Admin.getAdminR63
+                   (GHC.Types.[]
+                      @ (Text.Internal.Css.Attr Text.Internal.Css.Resolved))) -}
+a7e2652e195f24bd15db5f93829a0cfc
+  getAdminR63 :: Text.Internal.Css.Attr Text.Internal.Css.Resolved
+  {- Strictness: m,
+     Unfolding: (Text.Internal.Css.Attr
+                   @ Text.Internal.Css.Resolved
+                   Handlers.Admin.getAdminR67
+                     `cast`
+                   ((forall (s :: <*>_N).
+                     <Data.Text.Internal.Builder.Buffer s
+                      -> GHC.ST.ST s [Data.Text.Internal.Text]>_R
+                     ->_R <Data.Text.Internal.Builder.Buffer s>_R
+                     ->_R Sym (GHC.ST.N:ST[0]
+                                   <s>_N
+                                   <[Data.Text.Internal.Text]>_R)) ; (Sym (Data.Text.Internal.Builder.N:Builder[0]) ; Sub (Sym (Text.Internal.Css.D:R:StrResolved[0]))))
+                   Handlers.Admin.getAdminR64
+                     `cast`
+                   ((forall (s :: <*>_N).
+                     <Data.Text.Internal.Builder.Buffer s
+                      -> GHC.ST.ST s [Data.Text.Internal.Text]>_R
+                     ->_R <Data.Text.Internal.Builder.Buffer s>_R
+                     ->_R Sym (GHC.ST.N:ST[0]
+                                   <s>_N
+                                   <[Data.Text.Internal.Text]>_R)) ; (Sym (Data.Text.Internal.Builder.N:Builder[0]) ; Sub (Sym (Text.Internal.Css.D:R:StrResolved[0]))))) -}
+e744f0963b9357e926bf12ddafea866f
+  getAdminR64 ::
+    (Data.Text.Internal.Builder.Buffer s
+     -> GHC.ST.ST s [Data.Text.Internal.Text])
+    -> Data.Text.Internal.Builder.Buffer s
+    -> GHC.Prim.State# s
+    -> (# GHC.Prim.State# s, [Data.Text.Internal.Text] #)
+  {- Arity: 3, Strictness: <L,1*C1(C1(U(U,U)))><L,U(U,U,U,U)><S,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ s
+                   (x :: Data.Text.Internal.Builder.Buffer s
+                         -> GHC.ST.ST s [Data.Text.Internal.Text])
+                   (eta :: Data.Text.Internal.Builder.Buffer s)
+                   (eta1 :: GHC.Prim.State# s) ->
+                 ((Text.Internal.Css.fromText Handlers.Admin.getAdminR65)
+                    `cast`
+                  (Data.Text.Internal.Builder.N:Builder[0])
+                    @ s
+                    (\ (buf :: Data.Text.Internal.Builder.Buffer s) -> x buf)
+                    eta)
+                   `cast`
+                 (GHC.ST.N:ST[0] <s>_N <[Data.Text.Internal.Text]>_R)
+                   eta1) -}
+4578f2e14cb8d01b61bfe88a71f5a09c
+  getAdminR65 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString#
+                   Handlers.Admin.getAdminR66) -}
+4c62b95a574c962b850cfe77cf4f971a
+  getAdminR66 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("#4CAF50"#) -}
+5ee4fc0126394d35fb67d6f22f6aaa2b
+  getAdminR67 ::
+    (Data.Text.Internal.Builder.Buffer s
+     -> GHC.ST.ST s [Data.Text.Internal.Text])
+    -> Data.Text.Internal.Builder.Buffer s
+    -> GHC.Prim.State# s
+    -> (# GHC.Prim.State# s, [Data.Text.Internal.Text] #)
+  {- Arity: 3, Strictness: <L,1*C1(C1(U(U,U)))><L,U(U,U,U,U)><S,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ s
+                   (x :: Data.Text.Internal.Builder.Buffer s
+                         -> GHC.ST.ST s [Data.Text.Internal.Text])
+                   (eta :: Data.Text.Internal.Builder.Buffer s)
+                   (eta1 :: GHC.Prim.State# s) ->
+                 ((Text.Internal.Css.fromText Handlers.Admin.getAdminR68)
+                    `cast`
+                  (Data.Text.Internal.Builder.N:Builder[0])
+                    @ s
+                    (\ (buf :: Data.Text.Internal.Builder.Buffer s) -> x buf)
+                    eta)
+                   `cast`
+                 (GHC.ST.N:ST[0] <s>_N <[Data.Text.Internal.Text]>_R)
+                   eta1) -}
+53805eb3ae4499442340f4503a638967
+  getAdminR68 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString#
+                   Handlers.Admin.getAdminR69) -}
+8df5b5ea314f19822a47c86a42cc231f
+  getAdminR69 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("background-color"#) -}
+bdb05ab6114bc63857e1618ea47c57d5
+  getAdminR7 :: Text.Blaze.Internal.ChoiceString
+  {- Strictness: m5,
+     Unfolding: (Text.Blaze.Internal.PreEscaped
+                   Handlers.Admin.getAdminR8) -}
+ca1fed4ac30025e4c2d622cc693b29b4
+  getAdminR70 ::
+    (Data.Text.Internal.Builder.Buffer s
+     -> GHC.ST.ST s [Data.Text.Internal.Text])
+    -> Data.Text.Internal.Builder.Buffer s
+    -> GHC.Prim.State# s
+    -> (# GHC.Prim.State# s, [Data.Text.Internal.Text] #)
+  {- Arity: 3, Strictness: <L,1*C1(C1(U(U,U)))><L,U(U,U,U,U)><S,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ s
+                   (x :: Data.Text.Internal.Builder.Buffer s
+                         -> GHC.ST.ST s [Data.Text.Internal.Text])
+                   (eta :: Data.Text.Internal.Builder.Buffer s)
+                   (eta1 :: GHC.Prim.State# s) ->
+                 ((Text.Internal.Css.fromText Handlers.Admin.getAdminR71)
+                    `cast`
+                  (Data.Text.Internal.Builder.N:Builder[0])
+                    @ s
+                    (\ (buf :: Data.Text.Internal.Builder.Buffer s) -> x buf)
+                    eta)
+                   `cast`
+                 (GHC.ST.N:ST[0] <s>_N <[Data.Text.Internal.Text]>_R)
+                   eta1) -}
+4c85ce8fae67e9fef4bce46aeec8bc70
+  getAdminR71 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString#
+                   Handlers.Admin.getAdminR72) -}
+2e8c2b23497d4cf60efb4364777dbce1
+  getAdminR72 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: (".active"#) -}
+ab10b34dbd5165c6753445449c41336c
+  getAdminR73 ::
+    Text.Internal.Css.TopLevel Text.Internal.Css.Resolved
+  {- Strictness: m1,
+     Unfolding: (Text.Internal.Css.TopBlock
+                   @ Text.Internal.Css.Resolved
+                   Handlers.Admin.getAdminR74) -}
+06b857d59dc6fb4125783386e82cd8e3
+  getAdminR74 :: Text.Internal.Css.Block Text.Internal.Css.Resolved
+  {- Strictness: m,
+     Unfolding: (Text.Internal.Css.Block
+                   @ Text.Internal.Css.Resolved
+                   Handlers.Admin.getAdminR80
+                     `cast`
+                   ((forall (s :: <*>_N).
+                     <Data.Text.Internal.Builder.Buffer s
+                      -> GHC.ST.ST s [Data.Text.Internal.Text]>_R
+                     ->_R <Data.Text.Internal.Builder.Buffer s>_R
+                     ->_R Sym (GHC.ST.N:ST[0]
+                                   <s>_N
+                                   <[Data.Text.Internal.Text]>_R)) ; (Sym (Data.Text.Internal.Builder.N:Builder[0]) ; Sub (Sym (Text.Internal.Css.D:R:SelectorResolved[0]))))
+                   Handlers.Admin.getAdminR75
+                   GHC.Tuple.()
+                     `cast`
+                   (Sub (Sym (Text.Internal.Css.D:R:ChildBlocksResolved[0])))
+                   GHC.Tuple.()
+                     `cast`
+                   (Sub (Sym (Text.Internal.Css.D:R:MixinsResolved[0])))) -}
+4ea39774fa702566c9a5ce1ffbb5ab60
+  getAdminR75 :: [Text.Internal.Css.Attr Text.Internal.Css.Resolved]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (Text.Internal.Css.Attr Text.Internal.Css.Resolved)
+                   Handlers.Admin.getAdminR76
+                   (GHC.Types.[]
+                      @ (Text.Internal.Css.Attr Text.Internal.Css.Resolved))) -}
+cd114f751f19510b539267e6cc949c6d
+  getAdminR76 :: Text.Internal.Css.Attr Text.Internal.Css.Resolved
+  {- Strictness: m,
+     Unfolding: (Text.Internal.Css.Attr
+                   @ Text.Internal.Css.Resolved
+                   Handlers.Admin.getAdminR67
+                     `cast`
+                   ((forall (s :: <*>_N).
+                     <Data.Text.Internal.Builder.Buffer s
+                      -> GHC.ST.ST s [Data.Text.Internal.Text]>_R
+                     ->_R <Data.Text.Internal.Builder.Buffer s>_R
+                     ->_R Sym (GHC.ST.N:ST[0]
+                                   <s>_N
+                                   <[Data.Text.Internal.Text]>_R)) ; (Sym (Data.Text.Internal.Builder.N:Builder[0]) ; Sub (Sym (Text.Internal.Css.D:R:StrResolved[0]))))
+                   Handlers.Admin.getAdminR77
+                     `cast`
+                   ((forall (s :: <*>_N).
+                     <Data.Text.Internal.Builder.Buffer s
+                      -> GHC.ST.ST s [Data.Text.Internal.Text]>_R
+                     ->_R <Data.Text.Internal.Builder.Buffer s>_R
+                     ->_R Sym (GHC.ST.N:ST[0]
+                                   <s>_N
+                                   <[Data.Text.Internal.Text]>_R)) ; (Sym (Data.Text.Internal.Builder.N:Builder[0]) ; Sub (Sym (Text.Internal.Css.D:R:StrResolved[0]))))) -}
+bd4f8f09f3c63ae1a47fa237f530d03e
+  getAdminR77 ::
+    (Data.Text.Internal.Builder.Buffer s
+     -> GHC.ST.ST s [Data.Text.Internal.Text])
+    -> Data.Text.Internal.Builder.Buffer s
+    -> GHC.Prim.State# s
+    -> (# GHC.Prim.State# s, [Data.Text.Internal.Text] #)
+  {- Arity: 3, Strictness: <L,1*C1(C1(U(U,U)))><L,U(U,U,U,U)><S,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ s
+                   (x :: Data.Text.Internal.Builder.Buffer s
+                         -> GHC.ST.ST s [Data.Text.Internal.Text])
+                   (eta :: Data.Text.Internal.Builder.Buffer s)
+                   (eta1 :: GHC.Prim.State# s) ->
+                 ((Text.Internal.Css.fromText Handlers.Admin.getAdminR78)
+                    `cast`
+                  (Data.Text.Internal.Builder.N:Builder[0])
+                    @ s
+                    (\ (buf :: Data.Text.Internal.Builder.Buffer s) -> x buf)
+                    eta)
+                   `cast`
+                 (GHC.ST.N:ST[0] <s>_N <[Data.Text.Internal.Text]>_R)
+                   eta1) -}
+c54f95cc2a0c47421a8c6d8685e0404d
+  getAdminR78 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString#
+                   Handlers.Admin.getAdminR79) -}
+f786c9f3341bfe979d89bccb75a3eb59
+  getAdminR79 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("#111"#) -}
+42f598dd951bccebc00f69005f9ae78f
+  getAdminR8 :: Text.Blaze.Internal.ChoiceString
+  {- Strictness: m3,
+     Unfolding: (Text.Blaze.Internal.Text Handlers.Admin.getAdminR9) -}
+369e0783e665420a09add99e5101a9b3
+  getAdminR80 ::
+    (Data.Text.Internal.Builder.Buffer s
+     -> GHC.ST.ST s [Data.Text.Internal.Text])
+    -> Data.Text.Internal.Builder.Buffer s
+    -> GHC.Prim.State# s
+    -> (# GHC.Prim.State# s, [Data.Text.Internal.Text] #)
+  {- Arity: 3, Strictness: <L,1*C1(C1(U(U,U)))><L,U(U,U,U,U)><S,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ s
+                   (x :: Data.Text.Internal.Builder.Buffer s
+                         -> GHC.ST.ST s [Data.Text.Internal.Text])
+                   (eta :: Data.Text.Internal.Builder.Buffer s)
+                   (eta1 :: GHC.Prim.State# s) ->
+                 ((Text.Internal.Css.fromText Handlers.Admin.getAdminR81)
+                    `cast`
+                  (Data.Text.Internal.Builder.N:Builder[0])
+                    @ s
+                    (\ (buf :: Data.Text.Internal.Builder.Buffer s) -> x buf)
+                    eta)
+                   `cast`
+                 (GHC.ST.N:ST[0] <s>_N <[Data.Text.Internal.Text]>_R)
+                   eta1) -}
+a562b9d81fb2d86819e0efb42c23c8b3
+  getAdminR81 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString#
+                   Handlers.Admin.getAdminR82) -}
+a969d731478d3cc2bbf80fed1acb9f1a
+  getAdminR82 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("li a:hover:not(.active)"#) -}
+308cb0001d1dd98a9119006fcba2865a
+  getAdminR83 ::
+    Text.Internal.Css.TopLevel Text.Internal.Css.Resolved
+  {- Strictness: m1,
+     Unfolding: (Text.Internal.Css.TopBlock
+                   @ Text.Internal.Css.Resolved
+                   Handlers.Admin.getAdminR84) -}
+131d22b19571d246350a6d8ac981f4cd
+  getAdminR84 :: Text.Internal.Css.Block Text.Internal.Css.Resolved
+  {- Strictness: m,
+     Unfolding: (Text.Internal.Css.Block
+                   @ Text.Internal.Css.Resolved
+                   Handlers.Admin.getAdminR98
+                     `cast`
+                   ((forall (s :: <*>_N).
+                     <Data.Text.Internal.Builder.Buffer s
+                      -> GHC.ST.ST s [Data.Text.Internal.Text]>_R
+                     ->_R <Data.Text.Internal.Builder.Buffer s>_R
+                     ->_R Sym (GHC.ST.N:ST[0]
+                                   <s>_N
+                                   <[Data.Text.Internal.Text]>_R)) ; (Sym (Data.Text.Internal.Builder.N:Builder[0]) ; Sub (Sym (Text.Internal.Css.D:R:SelectorResolved[0]))))
+                   Handlers.Admin.getAdminR85
+                   GHC.Tuple.()
+                     `cast`
+                   (Sub (Sym (Text.Internal.Css.D:R:ChildBlocksResolved[0])))
+                   GHC.Tuple.()
+                     `cast`
+                   (Sub (Sym (Text.Internal.Css.D:R:MixinsResolved[0])))) -}
+d8483b83e57735d88abeb8ffe83e7447
+  getAdminR85 :: [Text.Internal.Css.Attr Text.Internal.Css.Resolved]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (Text.Internal.Css.Attr Text.Internal.Css.Resolved)
+                   Handlers.Admin.getAdminR94
+                   Handlers.Admin.getAdminR86) -}
+4970586f45c1799313895b80bbacccf7
+  getAdminR86 :: [Text.Internal.Css.Attr Text.Internal.Css.Resolved]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (Text.Internal.Css.Attr Text.Internal.Css.Resolved)
+                   Handlers.Admin.getAdminR87
+                   (GHC.Types.[]
+                      @ (Text.Internal.Css.Attr Text.Internal.Css.Resolved))) -}
+742c79a4debf4c77969ef0896dd0960e
+  getAdminR87 :: Text.Internal.Css.Attr Text.Internal.Css.Resolved
+  {- Strictness: m,
+     Unfolding: (Text.Internal.Css.Attr
+                   @ Text.Internal.Css.Resolved
+                   Handlers.Admin.getAdminR91
+                     `cast`
+                   ((forall (s :: <*>_N).
+                     <Data.Text.Internal.Builder.Buffer s
+                      -> GHC.ST.ST s [Data.Text.Internal.Text]>_R
+                     ->_R <Data.Text.Internal.Builder.Buffer s>_R
+                     ->_R Sym (GHC.ST.N:ST[0]
+                                   <s>_N
+                                   <[Data.Text.Internal.Text]>_R)) ; (Sym (Data.Text.Internal.Builder.N:Builder[0]) ; Sub (Sym (Text.Internal.Css.D:R:StrResolved[0]))))
+                   Handlers.Admin.getAdminR88
+                     `cast`
+                   ((forall (s :: <*>_N).
+                     <Data.Text.Internal.Builder.Buffer s
+                      -> GHC.ST.ST s [Data.Text.Internal.Text]>_R
+                     ->_R <Data.Text.Internal.Builder.Buffer s>_R
+                     ->_R Sym (GHC.ST.N:ST[0]
+                                   <s>_N
+                                   <[Data.Text.Internal.Text]>_R)) ; (Sym (Data.Text.Internal.Builder.N:Builder[0]) ; Sub (Sym (Text.Internal.Css.D:R:StrResolved[0]))))) -}
+0aa3b7607035923cd1211043e9b163b2
+  getAdminR88 ::
+    (Data.Text.Internal.Builder.Buffer s
+     -> GHC.ST.ST s [Data.Text.Internal.Text])
+    -> Data.Text.Internal.Builder.Buffer s
+    -> GHC.Prim.State# s
+    -> (# GHC.Prim.State# s, [Data.Text.Internal.Text] #)
+  {- Arity: 3, Strictness: <L,1*C1(C1(U(U,U)))><L,U(U,U,U,U)><S,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ s
+                   (x :: Data.Text.Internal.Builder.Buffer s
+                         -> GHC.ST.ST s [Data.Text.Internal.Text])
+                   (eta :: Data.Text.Internal.Builder.Buffer s)
+                   (eta1 :: GHC.Prim.State# s) ->
+                 ((Text.Internal.Css.fromText Handlers.Admin.getAdminR89)
+                    `cast`
+                  (Data.Text.Internal.Builder.N:Builder[0])
+                    @ s
+                    (\ (buf :: Data.Text.Internal.Builder.Buffer s) -> x buf)
+                    eta)
+                   `cast`
+                 (GHC.ST.N:ST[0] <s>_N <[Data.Text.Internal.Text]>_R)
+                   eta1) -}
+7ecaad11a707e498524b59f5d58c1a65
+  getAdminR89 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString#
+                   Handlers.Admin.getAdminR90) -}
+01fb48b520f9123e38d5d83f86a66e71
+  getAdminR9 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString#
+                   Handlers.Admin.getAdminR10) -}
+a427aa9251c60598f327016b2460c0d1
+  getAdminR90 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("segoe ui light"#) -}
+cbf9b48e13cfa56bae3ce2829ee90e6f
+  getAdminR91 ::
+    (Data.Text.Internal.Builder.Buffer s
+     -> GHC.ST.ST s [Data.Text.Internal.Text])
+    -> Data.Text.Internal.Builder.Buffer s
+    -> GHC.Prim.State# s
+    -> (# GHC.Prim.State# s, [Data.Text.Internal.Text] #)
+  {- Arity: 3, Strictness: <L,1*C1(C1(U(U,U)))><L,U(U,U,U,U)><S,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ s
+                   (x :: Data.Text.Internal.Builder.Buffer s
+                         -> GHC.ST.ST s [Data.Text.Internal.Text])
+                   (eta :: Data.Text.Internal.Builder.Buffer s)
+                   (eta1 :: GHC.Prim.State# s) ->
+                 ((Text.Internal.Css.fromText Handlers.Admin.getAdminR92)
+                    `cast`
+                  (Data.Text.Internal.Builder.N:Builder[0])
+                    @ s
+                    (\ (buf :: Data.Text.Internal.Builder.Buffer s) -> x buf)
+                    eta)
+                   `cast`
+                 (GHC.ST.N:ST[0] <s>_N <[Data.Text.Internal.Text]>_R)
+                   eta1) -}
+fdbc42b6bc2e8c9ad2f6b30c6809711d
+  getAdminR92 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString#
+                   Handlers.Admin.getAdminR93) -}
+6167d1bf6ba6f1f12766db7fba572472
+  getAdminR93 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("font-family"#) -}
+071524a3c28875c239bde1e7949cd4e0
+  getAdminR94 :: Text.Internal.Css.Attr Text.Internal.Css.Resolved
+  {- Strictness: m,
+     Unfolding: (Text.Internal.Css.Attr
+                   @ Text.Internal.Css.Resolved
+                   Handlers.Admin.getAdminR39
+                     `cast`
+                   ((forall (s :: <*>_N).
+                     <Data.Text.Internal.Builder.Buffer s
+                      -> GHC.ST.ST s [Data.Text.Internal.Text]>_R
+                     ->_R <Data.Text.Internal.Builder.Buffer s>_R
+                     ->_R Sym (GHC.ST.N:ST[0]
+                                   <s>_N
+                                   <[Data.Text.Internal.Text]>_R)) ; (Sym (Data.Text.Internal.Builder.N:Builder[0]) ; Sub (Sym (Text.Internal.Css.D:R:StrResolved[0]))))
+                   Handlers.Admin.getAdminR95
+                     `cast`
+                   ((forall (s :: <*>_N).
+                     <Data.Text.Internal.Builder.Buffer s
+                      -> GHC.ST.ST s [Data.Text.Internal.Text]>_R
+                     ->_R <Data.Text.Internal.Builder.Buffer s>_R
+                     ->_R Sym (GHC.ST.N:ST[0]
+                                   <s>_N
+                                   <[Data.Text.Internal.Text]>_R)) ; (Sym (Data.Text.Internal.Builder.N:Builder[0]) ; Sub (Sym (Text.Internal.Css.D:R:StrResolved[0]))))) -}
+18080de57b04e838bfe2efac36bba563
+  getAdminR95 ::
+    (Data.Text.Internal.Builder.Buffer s
+     -> GHC.ST.ST s [Data.Text.Internal.Text])
+    -> Data.Text.Internal.Builder.Buffer s
+    -> GHC.Prim.State# s
+    -> (# GHC.Prim.State# s, [Data.Text.Internal.Text] #)
+  {- Arity: 3, Strictness: <L,1*C1(C1(U(U,U)))><L,U(U,U,U,U)><S,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ s
+                   (x :: Data.Text.Internal.Builder.Buffer s
+                         -> GHC.ST.ST s [Data.Text.Internal.Text])
+                   (eta :: Data.Text.Internal.Builder.Buffer s)
+                   (eta1 :: GHC.Prim.State# s) ->
+                 ((Text.Internal.Css.fromText Handlers.Admin.getAdminR96)
+                    `cast`
+                  (Data.Text.Internal.Builder.N:Builder[0])
+                    @ s
+                    (\ (buf :: Data.Text.Internal.Builder.Buffer s) -> x buf)
+                    eta)
+                   `cast`
+                 (GHC.ST.N:ST[0] <s>_N <[Data.Text.Internal.Text]>_R)
+                   eta1) -}
+1c1e577b418dd7daa178d85a7d672e97
+  getAdminR96 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString#
+                   Handlers.Admin.getAdminR97) -}
+b12ef578036c8bd3c527a6860b8b5f0a
+  getAdminR97 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("white"#) -}
+23b6c7659039ffd12bb113baf256e7be
+  getAdminR98 ::
+    (Data.Text.Internal.Builder.Buffer s
+     -> GHC.ST.ST s [Data.Text.Internal.Text])
+    -> Data.Text.Internal.Builder.Buffer s
+    -> GHC.Prim.State# s
+    -> (# GHC.Prim.State# s, [Data.Text.Internal.Text] #)
+  {- Arity: 3, Strictness: <L,1*C1(C1(U(U,U)))><L,U(U,U,U,U)><S,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ s
+                   (x :: Data.Text.Internal.Builder.Buffer s
+                         -> GHC.ST.ST s [Data.Text.Internal.Text])
+                   (eta :: Data.Text.Internal.Builder.Buffer s)
+                   (eta1 :: GHC.Prim.State# s) ->
+                 ((Text.Internal.Css.fromText Handlers.Admin.getAdminR99)
+                    `cast`
+                  (Data.Text.Internal.Builder.N:Builder[0])
+                    @ s
+                    (\ (buf :: Data.Text.Internal.Builder.Buffer s) -> x buf)
+                    eta)
+                   `cast`
+                 (GHC.ST.N:ST[0] <s>_N <[Data.Text.Internal.Text]>_R)
+                   eta1) -}
+e2f4d2ab98e92e533d53b55d13643748
+  getAdminR99 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString#
+                   Handlers.Admin.getAdminR100) -}
+1c46699122a355bc3475337be2ce2d1e
+  getAdminR_d ::
+    Yesod.Core.Types.GWData (Yesod.Routes.Class.Route Foundation.App)
+  {- Strictness: m,
+     Unfolding: (Yesod.Core.Types.GWData
+                   @ (Yesod.Routes.Class.Route Foundation.App)
+                   Handlers.Admin.getAdminR_nt
+                     `cast`
+                   (Sym (Yesod.Core.Types.N:Body[0]
+                             <Yesod.Routes.Class.Route Foundation.App>_R))
+                   (GHC.Base.Nothing @ Yesod.Core.Types.Title)
+                     `cast`
+                   (Sym (Data.Monoid.N:Last[0]) <Yesod.Core.Types.Title>_N)
+                   (GHC.Base.id
+                      @ [Yesod.Core.Types.Script
+                           (Yesod.Routes.Class.Route Foundation.App)])
+                     `cast`
+                   (Sym (Yesod.Core.Types.N:UniqueList[0]
+                             <Yesod.Core.Types.Script
+                                (Yesod.Routes.Class.Route Foundation.App)>_R))
+                   (GHC.Base.id
+                      @ [Yesod.Core.Types.Stylesheet
+                           (Yesod.Routes.Class.Route Foundation.App)])
+                     `cast`
+                   (Sym (Yesod.Core.Types.N:UniqueList[0]
+                             <Yesod.Core.Types.Stylesheet
+                                (Yesod.Routes.Class.Route Foundation.App)>_R))
+                   (Data.Map.Internal.Tip
+                      @ (GHC.Base.Maybe Data.Text.Internal.Text)
+                      @ ((Yesod.Routes.Class.Route Foundation.App
+                          -> [(Data.Text.Internal.Text, Data.Text.Internal.Text)]
+                          -> Data.Text.Internal.Text)
+                         -> Data.Text.Internal.Builder.Builder))
+                   (GHC.Base.Nothing
+                      @ ((Yesod.Routes.Class.Route Foundation.App
+                          -> [(Data.Text.Internal.Text, Data.Text.Internal.Text)]
+                          -> Data.Text.Internal.Text)
+                         -> Text.Julius.Javascript))
+                   (Yesod.Core.Types.$fIsStringWidgetFor2
+                      @ (Yesod.Routes.Class.Route Foundation.App))
+                     `cast`
+                   (Sym (Yesod.Core.Types.N:Head[0]
+                             <Yesod.Routes.Class.Route Foundation.App>_R))) -}
+66fecb68b4d662817806130720394933
+  getAdminR_d1 ::
+    Yesod.Core.Types.GWData (Yesod.Routes.Class.Route Foundation.App)
+  {- Strictness: m,
+     Unfolding: (Yesod.Core.Types.GWData
+                   @ (Yesod.Routes.Class.Route Foundation.App)
+                   Handlers.Admin.getAdminR_nt1
+                     `cast`
+                   (Sym (Yesod.Core.Types.N:Body[0]
+                             <Yesod.Routes.Class.Route Foundation.App>_R))
+                   (GHC.Base.Nothing @ Yesod.Core.Types.Title)
+                     `cast`
+                   (Sym (Data.Monoid.N:Last[0]) <Yesod.Core.Types.Title>_N)
+                   (GHC.Base.id
+                      @ [Yesod.Core.Types.Script
+                           (Yesod.Routes.Class.Route Foundation.App)])
+                     `cast`
+                   (Sym (Yesod.Core.Types.N:UniqueList[0]
+                             <Yesod.Core.Types.Script
+                                (Yesod.Routes.Class.Route Foundation.App)>_R))
+                   (GHC.Base.id
+                      @ [Yesod.Core.Types.Stylesheet
+                           (Yesod.Routes.Class.Route Foundation.App)])
+                     `cast`
+                   (Sym (Yesod.Core.Types.N:UniqueList[0]
+                             <Yesod.Core.Types.Stylesheet
+                                (Yesod.Routes.Class.Route Foundation.App)>_R))
+                   (Data.Map.Internal.Tip
+                      @ (GHC.Base.Maybe Data.Text.Internal.Text)
+                      @ ((Yesod.Routes.Class.Route Foundation.App
+                          -> [(Data.Text.Internal.Text, Data.Text.Internal.Text)]
+                          -> Data.Text.Internal.Text)
+                         -> Data.Text.Internal.Builder.Builder))
+                   (GHC.Base.Nothing
+                      @ ((Yesod.Routes.Class.Route Foundation.App
+                          -> [(Data.Text.Internal.Text, Data.Text.Internal.Text)]
+                          -> Data.Text.Internal.Text)
+                         -> Text.Julius.Javascript))
+                   (Yesod.Core.Types.$fIsStringWidgetFor2
+                      @ (Yesod.Routes.Class.Route Foundation.App))
+                     `cast`
+                   (Sym (Yesod.Core.Types.N:Head[0]
+                             <Yesod.Routes.Class.Route Foundation.App>_R))) -}
+02e68f92b4fbcf41fb93bc291ad2e0f1
+  getAdminR_d2 ::
+    Yesod.Core.Types.GWData (Yesod.Routes.Class.Route Foundation.App)
+  {- Strictness: m,
+     Unfolding: (Yesod.Core.Types.GWData
+                   @ (Yesod.Routes.Class.Route Foundation.App)
+                   Handlers.Admin.getAdminR_nt2
+                     `cast`
+                   (Sym (Yesod.Core.Types.N:Body[0]
+                             <Yesod.Routes.Class.Route Foundation.App>_R))
+                   (GHC.Base.Nothing @ Yesod.Core.Types.Title)
+                     `cast`
+                   (Sym (Data.Monoid.N:Last[0]) <Yesod.Core.Types.Title>_N)
+                   (GHC.Base.id
+                      @ [Yesod.Core.Types.Script
+                           (Yesod.Routes.Class.Route Foundation.App)])
+                     `cast`
+                   (Sym (Yesod.Core.Types.N:UniqueList[0]
+                             <Yesod.Core.Types.Script
+                                (Yesod.Routes.Class.Route Foundation.App)>_R))
+                   (GHC.Base.id
+                      @ [Yesod.Core.Types.Stylesheet
+                           (Yesod.Routes.Class.Route Foundation.App)])
+                     `cast`
+                   (Sym (Yesod.Core.Types.N:UniqueList[0]
+                             <Yesod.Core.Types.Stylesheet
+                                (Yesod.Routes.Class.Route Foundation.App)>_R))
+                   (Data.Map.Internal.Tip
+                      @ (GHC.Base.Maybe Data.Text.Internal.Text)
+                      @ ((Yesod.Routes.Class.Route Foundation.App
+                          -> [(Data.Text.Internal.Text, Data.Text.Internal.Text)]
+                          -> Data.Text.Internal.Text)
+                         -> Data.Text.Internal.Builder.Builder))
+                   (GHC.Base.Nothing
+                      @ ((Yesod.Routes.Class.Route Foundation.App
+                          -> [(Data.Text.Internal.Text, Data.Text.Internal.Text)]
+                          -> Data.Text.Internal.Text)
+                         -> Text.Julius.Javascript))
+                   (Yesod.Core.Types.$fIsStringWidgetFor2
+                      @ (Yesod.Routes.Class.Route Foundation.App))
+                     `cast`
+                   (Sym (Yesod.Core.Types.N:Head[0]
+                             <Yesod.Routes.Class.Route Foundation.App>_R))) -}
+06cc0dc3574c01dcc9734a562afb943c
+  getAdminR_d3 ::
+    Yesod.Core.Types.GWData (Yesod.Routes.Class.Route Foundation.App)
+  {- Strictness: m,
+     Unfolding: (Yesod.Core.Types.GWData
+                   @ (Yesod.Routes.Class.Route Foundation.App)
+                   Handlers.Admin.getAdminR_nt3
+                     `cast`
+                   (Sym (Yesod.Core.Types.N:Body[0]
+                             <Yesod.Routes.Class.Route Foundation.App>_R))
+                   (GHC.Base.Nothing @ Yesod.Core.Types.Title)
+                     `cast`
+                   (Sym (Data.Monoid.N:Last[0]) <Yesod.Core.Types.Title>_N)
+                   (GHC.Base.id
+                      @ [Yesod.Core.Types.Script
+                           (Yesod.Routes.Class.Route Foundation.App)])
+                     `cast`
+                   (Sym (Yesod.Core.Types.N:UniqueList[0]
+                             <Yesod.Core.Types.Script
+                                (Yesod.Routes.Class.Route Foundation.App)>_R))
+                   (GHC.Base.id
+                      @ [Yesod.Core.Types.Stylesheet
+                           (Yesod.Routes.Class.Route Foundation.App)])
+                     `cast`
+                   (Sym (Yesod.Core.Types.N:UniqueList[0]
+                             <Yesod.Core.Types.Stylesheet
+                                (Yesod.Routes.Class.Route Foundation.App)>_R))
+                   (Data.Map.Internal.Tip
+                      @ (GHC.Base.Maybe Data.Text.Internal.Text)
+                      @ ((Yesod.Routes.Class.Route Foundation.App
+                          -> [(Data.Text.Internal.Text, Data.Text.Internal.Text)]
+                          -> Data.Text.Internal.Text)
+                         -> Data.Text.Internal.Builder.Builder))
+                   (GHC.Base.Nothing
+                      @ ((Yesod.Routes.Class.Route Foundation.App
+                          -> [(Data.Text.Internal.Text, Data.Text.Internal.Text)]
+                          -> Data.Text.Internal.Text)
+                         -> Text.Julius.Javascript))
+                   (Yesod.Core.Types.$fIsStringWidgetFor2
+                      @ (Yesod.Routes.Class.Route Foundation.App))
+                     `cast`
+                   (Sym (Yesod.Core.Types.N:Head[0]
+                             <Yesod.Routes.Class.Route Foundation.App>_R))) -}
+68aa1e9af5d1f2e0a6fb898a0ba17b96
+  getAdminR_eta :: Text.Blaze.Html.Html
+  {- Strictness: m5,
+     Unfolding: (Text.Blaze.Internal.Content
+                   @ ()
+                   Handlers.Admin.getAdminR3
+                   GHC.Tuple.()) -}
+0df38714cfd220d3d7e75cdf3bbbc924
+  getAdminR_eta1 :: Text.Blaze.Html.Html
+  {- Strictness: m5,
+     Unfolding: (Text.Blaze.Internal.Content
+                   @ ()
+                   Handlers.Admin.getAdminR7
+                   GHC.Tuple.()) -}
+13eada2c7aefb2cca892e70805e42436
+  getAdminR_eta2 :: Text.Blaze.Html.Html
+  {- Strictness: m5,
+     Unfolding: (Text.Blaze.Internal.Content
+                   @ ()
+                   Handlers.Admin.getAdminR11
+                   GHC.Tuple.()) -}
+e3b3372648c036b1c840c492a1dc41f9
+  getAdminR_eta3 :: Text.Blaze.Html.Html
+  {- Strictness: m5,
+     Unfolding: (Text.Blaze.Internal.Content
+                   @ ()
+                   Handlers.Admin.getAdminR15
+                   GHC.Tuple.()) -}
+3eeff0ec350e2c906eb668d150649d90
+  getAdminR_m1 :: Yesod.Core.Types.WidgetFor Foundation.App ()
+  {- Unfolding: (Yesod.Core.Widget.$fToWidgetHeadsite(->)1_$ctoWidget
+                   @ (Yesod.Routes.Class.Route Foundation.App
+                      -> [(Data.Text.Internal.Text, Data.Text.Internal.Text)]
+                      -> Data.Text.Internal.Text)
+                   @ Foundation.App
+                   (GHC.Types.Eq#
+                      @ *
+                      @ *
+                      @ (Yesod.Routes.Class.Route Foundation.App
+                         -> [(Data.Text.Internal.Text, Data.Text.Internal.Text)]
+                         -> Data.Text.Internal.Text)
+                      @ (Yesod.Routes.Class.Route Foundation.App
+                         -> [(Data.Text.Internal.Text, Data.Text.Internal.Text)]
+                         -> Data.Text.Internal.Text)
+                      @~ <Yesod.Routes.Class.Route Foundation.App
+                          -> [(Data.Text.Internal.Text, Data.Text.Internal.Text)]
+                          -> Data.Text.Internal.Text>_N)
+                     `cast`
+                   (Sym (Data.Type.Equality.N:~[0] <*>_N) <Yesod.Routes.Class.Route
+                                                             Foundation.App
+                                                           -> [(Data.Text.Internal.Text,
+                                                                Data.Text.Internal.Text)]
+                                                           -> Data.Text.Internal.Text>_N <Yesod.Routes.Class.Route
+                                                                                            Foundation.App
+                                                                                          -> [(Data.Text.Internal.Text,
+                                                                                               Data.Text.Internal.Text)]
+                                                                                          -> Data.Text.Internal.Text>_N)
+                   @ (Yesod.Core.Types.WidgetFor Foundation.App)
+                   (Yesod.Core.Class.Handler.$fMonadWidgetWidgetFor @ Foundation.App)
+                   (GHC.Types.Eq#
+                      @ *
+                      @ *
+                      @ Foundation.App
+                      @ Foundation.App
+                      @~ <Foundation.App>_N)
+                     `cast`
+                   (Sym (Data.Type.Equality.N:~[0]
+                             <*>_N) (Sym (Yesod.Core.Class.Handler.D:R:HandlerSiteWidgetFor[0]
+                                              <Foundation.App>_N)) <Foundation.App>_N)
+                   Handlers.Admin.getAdminR19) -}
+b73b57856f0164ed183a163c3bdb84f3
+  getAdminR_nt ::
+    Yesod.Core.Types.RY Foundation.App -> Text.Blaze.Html.Html
+  {- Arity: 1, Strictness: <L,A>m5,
+     Unfolding: InlineRule (1, True, True)
+                (\ (ds :: Yesod.Routes.Class.Route Foundation.App
+                          -> [(Data.Text.Internal.Text, Data.Text.Internal.Text)]
+                          -> Data.Text.Internal.Text) ->
+                 Handlers.Admin.getAdminR_eta) -}
+b0e798df5bb1a613558be2d7c84a4b0d
+  getAdminR_nt1 ::
+    Yesod.Core.Types.RY Foundation.App -> Text.Blaze.Html.Html
+  {- Arity: 1, Strictness: <L,A>m5,
+     Unfolding: InlineRule (1, True, True)
+                (\ (ds :: Yesod.Routes.Class.Route Foundation.App
+                          -> [(Data.Text.Internal.Text, Data.Text.Internal.Text)]
+                          -> Data.Text.Internal.Text) ->
+                 Handlers.Admin.getAdminR_eta1) -}
+819807106d753c579d79cebee9d77225
+  getAdminR_nt2 ::
+    Yesod.Core.Types.RY Foundation.App -> Text.Blaze.Html.Html
+  {- Arity: 1, Strictness: <L,A>m5,
+     Unfolding: InlineRule (1, True, True)
+                (\ (ds :: Yesod.Routes.Class.Route Foundation.App
+                          -> [(Data.Text.Internal.Text, Data.Text.Internal.Text)]
+                          -> Data.Text.Internal.Text) ->
+                 Handlers.Admin.getAdminR_eta2) -}
+0c5af0450c43d7aeeca74b33b6ab88eb
+  getAdminR_nt3 ::
+    Yesod.Core.Types.RY Foundation.App -> Text.Blaze.Html.Html
+  {- Arity: 1, Strictness: <L,A>m5,
+     Unfolding: InlineRule (1, True, True)
+                (\ (ds :: Yesod.Routes.Class.Route Foundation.App
+                          -> [(Data.Text.Internal.Text, Data.Text.Internal.Text)]
+                          -> Data.Text.Internal.Text) ->
+                 Handlers.Admin.getAdminR_eta3) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+

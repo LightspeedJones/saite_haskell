@@ -1,11 +1,11 @@
 
 ==================== FINAL INTERFACE ====================
-2018-12-04 20:45:43.592238737 UTC
+2018-12-06 23:02:48.452320096 UTC
 
 interface main:Handlers.Cardapio 8044
-  interface hash: 988a2e8848cba9670c65a29122b8b518
-  ABI hash: bdc4df06667ec20cf09e7e6e5c96daff
-  export-list hash: 332c9d12f359a5632c2f3d436319f6c6
+  interface hash: bd164a76dbd858d4a9d9564eca80ebd2
+  ABI hash: 3bc8f0466bec741cb64492ba5da310ce
+  export-list hash: 95b553455109dc20126e23fb7e7e3cfd
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
   flag hash: b3b1d09742290a21c7d4cc3b0f082b59
   opt_hash: 2c98c95d41c045ae9c2fb565ec8aabc6
@@ -19,7 +19,6 @@ exports:
   Handlers.Cardapio.getItens
   Handlers.Cardapio.getItensVisitante
   Handlers.Cardapio.postCardapioR
-  Handlers.Cardapio.postCoisa
 module dependencies: Foundation
 package dependencies: aeson-1.3.1.1 aeson-compat-0.3.9
                       ansi-terminal-0.8.2 appar-0.1.4 array-0.5.2.0 async-2.2.1
@@ -153,6 +152,7 @@ family instance modules: aeson-1.3.1.1:Data.Aeson.Types.Internal
                          yesod-core-1.6.8.1:Yesod.Core.Internal.LiteApp
                          yesod-core-1.6.8.1:Yesod.Core.Types
                          zlib-0.6.2:Codec.Compression.Zlib.Stream
+import  -/  base-4.11.1.0:Control.Applicative 55d9b3a7491623b0362290e162d67308
 import  -/  base-4.11.1.0:Data.Foldable 8ed35c38958063956af33c935ea03444
 import  -/  base-4.11.1.0:Data.Functor f522c3501272159820fd6f242510732f
 import  -/  base-4.11.1.0:Data.Maybe 409c3da2b142470b68be39ce1d97a9f7
@@ -162,20 +162,21 @@ import  -/  base-4.11.1.0:GHC.Real b4beb0389ba1ad5d9640aae67848c5d3
 import  -/  base-4.11.1.0:Prelude 0750c25585e2b797cd78291d423d39dd
 import  -/  blaze-html-0.9.1.1:Text.Blaze.Html fdd818245cad1bbfcedd87b21c62946f
 import  -/  blaze-markup-0.8.2.2:Text.Blaze.Internal 7539c43623397f23e7aba6515d74b4b1
-import  -/  Foundation 94334e874657207f8b48f126eed43e4a
-  exports: bf35f3a755e4679019142bf94c9bfdc7
-  CardapioR 79a69a1a4e990bdd225ed0e5ebab70bd
-  Form 13f3aeb51611925276de418d03a20948
-  Handler 75ae7b29b0bc8728adc2f28c19257c8c
-  HomeR e02ee93d63494a36efbb06c3c46b9774
-  ItemPedido 6c807162c3155e605c801c96d5684f29
-  LoginR 73c262bba89870ff65909bd48a395702
-  LogoutR 2e7c434db91d939b51683981f88daa19
-  Pedido 3253c84ab6b395cc57dd86418bb3b99f
-  ProdutoNome c34c42d82d6265f6ac69cda7f2802f26
-  ProdutoTipoprodutoid ec65f6c3a0310515616b11a9efc4a6c2
-  produtoNome d115186e041a4b3c4d5ea956a0e873a2
-  produtoValor d115186e041a4b3c4d5ea956a0e873a2
+import  -/  Foundation be3d333a75bfa3e86c4ced648f1189de
+  exports: 21ec649e8eacf647359bb5bc31157a7f
+  CardapioR 5701228622696646861c7e532dee096d
+  Form 08004a98fc6f44cd92ebc702149bbee2
+  Handler a00ba8e4209ea3bff10df922e701f89f
+  HomeR 4b11b15eef3a7328d85f2e676e17b205
+  ItemPedido 08292e0f100271df9f48a7757b8fc07b
+  LoginR a00d66360aed3f75ab4bc7df22309bfb
+  LogoutR 07480751cd1af5c57678bfd6e1bada10
+  Pedido b75b67daec891e9d65f4444ac1e65d45
+  ProdutoNome c8c503dffdbe8bd68d499a31190061c5
+  ProdutoTipoprodutoid 93490de625bff2729fc704b51846280f
+  produtoNome 1c6dbe5c095c59a68d5b2ecc6ccb7db3
+  produtoValor 1c6dbe5c095c59a68d5b2ecc6ccb7db3
+import  -/  monad-logger-0.3.30:Control.Monad.Logger 8543a8ea2bc3183d80bcc2e19c1fd67d
 import  -/  persistent-2.8.2:Database.Persist af4ed65f4343bcc501dbe176a498c823
 import  -/  persistent-2.8.2:Database.Persist.Class.PersistEntity cb3776dad29a4f5fc118f470e79758bf
 import  -/  persistent-2.8.2:Database.Persist.Class.PersistQuery aede4e58c84bf8f4325f3040c2cc653c
@@ -211,7 +212,7 @@ addDependentFile "templates/cardapio.julius" e6ff6fea8f73f88fc42a7fc7c17d57cf
                    @ Data.Text.Internal.Text
                    @ Data.Text.Internal.Text
                    @~ <Data.Text.Internal.Text>_N) -}
-c9b893ccaa58892dec07539a6bccc3cb
+c55e21fd0438159efbf606675de6668e
   $s$WProdutoTipoprodutoid_$d~~ ::
     (Database.Persist.Class.PersistEntity.Key
        Foundation.TipoProduto :: *)
@@ -225,7 +226,7 @@ c9b893ccaa58892dec07539a6bccc3cb
                    @ (Database.Persist.Class.PersistEntity.Key Foundation.TipoProduto)
                    @~ <Database.Persist.Class.PersistEntity.Key
                          Foundation.TipoProduto>_N) -}
-3a9e3e27f813cfec9c1347b67992e7a6
+c44d99bc0808c2a32c3698bc056daf0a
   $sareq1_$d~~ ::
     (Foundation.App :: *) GHC.Types.~~ (Foundation.App :: *)
   {- HasNoCafRefs, Strictness: m,
@@ -255,7 +256,7 @@ d9193e4a00e1f8ddcf8dd6646f7d873e
 6ab8509fe0f8058ca4e2360d50c3790a
   $trModule4 :: GHC.Prim.Addr#
   {- HasNoCafRefs, Unfolding: ("main"#) -}
-c6850ac402bf57028415b824821d5b74
+a41bd7510ad44a59842e702473f61859
   $wds ::
     [Data.Text.Internal.Text]
     -> Foundation.Handler
@@ -396,7 +397,7 @@ c6850ac402bf57028415b824821d5b74
                                                                                                         Foundation.Handler))
                                                                                                   (GHC.Base.Maybe
                                                                                                      Data.Text.Internal.Text)>_R)) } } } } } }) -}
-e0d5ba56dc027f9bdc5e67a87b9ba4ec
+7f6963b6995ee0a86401b3133f435b11
   formPedido ::
     Foundation.Form (Data.Text.Internal.Text, Data.Text.Internal.Text)
   {- Arity: 3,
@@ -418,7 +419,7 @@ e0d5ba56dc027f9bdc5e67a87b9ba4ec
                                      (Sym (Yesod.Core.Class.Handler.D:R:HandlerSiteHandlerFor[0]
                                                <Foundation.App>_N))
                                      <()>_N)_N)_N)) -}
-7a88460e45a5db424fc6dceb3526aef3
+e93420c8ad5f3ada0d4512478cc7bb7c
   formPedido1 ::
     Text.Blaze.Internal.Markup
     -> (GHC.Base.Maybe
@@ -443,7 +444,7 @@ e0d5ba56dc027f9bdc5e67a87b9ba4ec
                    (Sym (Yesod.Form.Types.N:AForm[0]
                              <Yesod.Core.Types.HandlerFor Foundation.App>_N
                              <(Data.Text.Internal.Text, Data.Text.Internal.Text)>_N))) -}
-85901beec70accfab2a2f3c3a0c97f26
+146670729bdc312264113503ea37878a
   formPedido10 ::
     [Data.Text.Internal.Text]
     -> [Yesod.Core.Types.FileInfo]
@@ -457,7 +458,7 @@ e0d5ba56dc027f9bdc5e67a87b9ba4ec
                 (\ (w :: [Data.Text.Internal.Text])
                    (w1 :: [Yesod.Core.Types.FileInfo]) ->
                  Handlers.Cardapio.$wds w) -}
-2fade6e74247efbfb4292eba1be70897
+dbe4a20052476157f816d5abfaf7771b
   formPedido11 ::
     Yesod.Core.Types.HandlerData Foundation.App Foundation.App
     -> GHC.Prim.State# GHC.Prim.RealWorld
@@ -474,7 +475,7 @@ e0d5ba56dc027f9bdc5e67a87b9ba4ec
                     Yesod.Form.Functions.parseHelperGen1
                       @ Data.Text.Internal.Text
                       @ (Yesod.Core.Class.Handler.HandlerSite Foundation.Handler) #)) -}
-99e9a2fb9a6b5327d997adbf158b1a34
+0143e652003b1b5edc41dfc32d8a18b3
   formPedido2 ::
     (Yesod.Core.Class.Handler.HandlerSite
        (Yesod.Core.Types.HandlerFor Foundation.App),
@@ -610,7 +611,7 @@ e0d5ba56dc027f9bdc5e67a87b9ba4ec
 fb60624c9e9bc5828ee15b81b16534de
   formPedido3 :: GHC.Prim.Addr#
   {- HasNoCafRefs, Unfolding: ("1"#) -}
-7c065157e51ea89f36c62c0e1657c5b0
+fa7f9feeee6107a1074e3d534b1c481e
   formPedido4 :: Yesod.Form.Types.FieldSettings Foundation.App
   {- Strictness: m,
      Unfolding: (Yesod.Form.Types.FieldSettings
@@ -622,7 +623,7 @@ fb60624c9e9bc5828ee15b81b16534de
                    (GHC.Base.Nothing @ Data.Text.Internal.Text)
                    (GHC.Types.[]
                       @ (Data.Text.Internal.Text, Data.Text.Internal.Text))) -}
-0d61b8d9edb24bfda827618873af8687
+095485d2d43522e896e89af41bd6a48a
   formPedido5 :: Text.Shakespeare.I18N.SomeMessage Foundation.App
   {- Unfolding: (Text.Shakespeare.I18N.SomeMessage
                    @ Foundation.App
@@ -662,7 +663,7 @@ fb60624c9e9bc5828ee15b81b16534de
 f04d2a747c52cbd81639567fb9c23930
   formPedido8 :: GHC.Prim.Addr#
   {- HasNoCafRefs, Unfolding: ("Login"#) -}
-273af0373a39a2f22e5d4adb65638bc2
+001e14bf06e8c2af9a16f7a895848d52
   formPedido9 ::
     Yesod.Form.Types.Field Foundation.Handler Data.Text.Internal.Text
   {- Strictness: m,
@@ -676,7 +677,7 @@ e0d352bc08a93d1f368f21e1251174c4
   formPedido_x :: Data.Text.Internal.Text
   {- Unfolding: (Data.Text.Show.unpackCString#
                    Handlers.Cardapio.formPedido3) -}
-4d2b16abd8f5c34a431995b30af16505
+395a22e77bcc30cc64bdc2fcb78f2cd0
   getCardapioR :: Foundation.Handler Text.Blaze.Html.Html
   {- Arity: 2,
      Strictness: <L,U(U,U(U,U,U,U(U(U,U,U(U),U,U(U),U(U,U,U),U)),U,U,U,U,U),U,U)><S,U>,
@@ -688,7 +689,7 @@ e0d352bc08a93d1f368f21e1251174c4
                                 <Text.Blaze.Html.Html>_R)) ; Sym (Yesod.Core.Types.N:HandlerFor[0]
                                                                       <Foundation.App>_N
                                                                       <Text.Blaze.Html.Html>_R)) -}
-b4c3f54f3f56f32f4214622bb4a0b23d
+440fdc2d354b3438eb3735edfa1bd4f8
   getCardapioR1 ::
     Yesod.Core.Types.HandlerData Foundation.App Foundation.App
     -> GHC.Prim.State# GHC.Prim.RealWorld
@@ -710,7 +711,7 @@ b4c3f54f3f56f32f4214622bb4a0b23d
                         s of ds1 { (#,#) ipv ipv1 ->
                  case ipv1 of wild {
                    GHC.Base.Nothing
-                   -> Foundation.$fYesodApp44 Handlers.Cardapio.getCardapioR3 r ipv
+                   -> Foundation.$fYesodApp49 Handlers.Cardapio.getCardapioR3 r ipv
                    GHC.Base.Just a1
                    -> Handlers.Cardapio.getCardapioR2
                         (case a1 of ww { Data.ByteString.Internal.PS ww1 ww2 ww3 ww4 ->
@@ -722,7 +723,7 @@ b4c3f54f3f56f32f4214622bb4a0b23d
                            ww4 })
                         r
                         ipv } }) -}
-2378f7e519f7a5a92029dbdaf67304eb
+f16a4421529a17f71b3ed000e9c214fa
   getCardapioR2 ::
     Data.Text.Internal.Text
     -> Yesod.Core.Types.HandlerData Foundation.App Foundation.App
@@ -730,7 +731,7 @@ b4c3f54f3f56f32f4214622bb4a0b23d
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, Text.Blaze.Html.Html #)
   {- Arity: 3,
      Strictness: <L,U><L,U(U,U(U,U,U,U(U(U,U,U(U),U,U(U),U(U,U,U),U)),U,U,U,U,U),U,U)><S,U> -}
-cc6650ebf0bcca0a90adedbf6f8be281
+4b757da0293a607427e38125340d3156
   getCardapioR3 :: Yesod.Core.Types.WidgetFor Foundation.App ()
   {- Unfolding: (Yesod.Core.Handler.redirect
                    @ (Yesod.Core.Types.WidgetFor Foundation.App)
@@ -752,7 +753,7 @@ cc6650ebf0bcca0a90adedbf6f8be281
 6d91be7874c993b63c813308ccd6cf9f
   getCardapioR5 :: GHC.Prim.Addr#
   {- HasNoCafRefs, Unfolding: ("_NOME"#) -}
-44e5a795d72587202d1eabbf7f07e185
+cab0fbdbf1861d024ec16f241a12fe63
   getCardapioR_ds ::
     Yesod.Core.Types.HandlerFor
       Foundation.App (GHC.Base.Maybe Data.ByteString.Internal.ByteString)
@@ -761,7 +762,7 @@ cc6650ebf0bcca0a90adedbf6f8be281
                    (Yesod.Core.Class.Handler.$fMonadHandlerHandlerFor
                       @ Foundation.App)
                    Handlers.Cardapio.getCardapioR4) -}
-b06b182ea2fa56641b07c1f507c092c1
+00008563847bc31cc2e5c54480f77ba5
   getItens ::
     Data.Text.Internal.Text -> Foundation.Handler Text.Blaze.Html.Html
   {- Arity: 3,
@@ -776,7 +777,7 @@ b06b182ea2fa56641b07c1f507c092c1
                                      <Text.Blaze.Html.Html>_R)) ; Sym (Yesod.Core.Types.N:HandlerFor[0]
                                                                            <Foundation.App>_N
                                                                            <Text.Blaze.Html.Html>_R)) -}
-ed4b414e51df35384c436b089b5fe64d
+864a7d72ef9a1b4be014c6eedb819e8d
   getItensVisitante :: Foundation.Handler Text.Blaze.Html.Html
   {- Arity: 2,
      Unfolding: InlineRule (0, True, True)
@@ -787,18 +788,19 @@ ed4b414e51df35384c436b089b5fe64d
                                 <Text.Blaze.Html.Html>_R)) ; Sym (Yesod.Core.Types.N:HandlerFor[0]
                                                                       <Foundation.App>_N
                                                                       <Text.Blaze.Html.Html>_R)) -}
-58c888042d6e2f440cfd1f8574840770
+bfa320cbd13b80ed03d23dee82c0b56c
   getItensVisitante1 ::
     Yesod.Core.Types.HandlerData Foundation.App Foundation.App
     -> GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld,
           Text.Blaze.Internal.MarkupM () #)
   {- Arity: 2,
-     Unfolding: (Foundation.$fYesodApp44
+     Unfolding: (Foundation.$fYesodApp49
                    Handlers.Cardapio.getCardapioR3) -}
-c9d4d2bd6f4356737149590f0354cc11
+318384a45c95ad417a24bcddf71ec7f1
   postCardapioR :: Foundation.Handler Text.Blaze.Html.Html
-  {- Arity: 2, Strictness: <L,U><S,U>,
+  {- Arity: 2,
+     Strictness: <L,U(U,U(U,U,U,U(U(U,U,U(U),U,U(U),U(U,U,U),U)),U,U,U,U,U),U,U)><S,U>,
      Unfolding: InlineRule (0, True, True)
                 Handlers.Cardapio.postCardapioR1
                   `cast`
@@ -807,12 +809,13 @@ c9d4d2bd6f4356737149590f0354cc11
                                 <Text.Blaze.Html.Html>_R)) ; Sym (Yesod.Core.Types.N:HandlerFor[0]
                                                                       <Foundation.App>_N
                                                                       <Text.Blaze.Html.Html>_R)) -}
-c8fb88c2ab3854aca01a172fc3b52d0b
+6ee527cf495a3b92343ccd3fe4631e74
   postCardapioR1 ::
     Yesod.Core.Types.HandlerData Foundation.App Foundation.App
     -> GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, Text.Blaze.Html.Html #)
-  {- Arity: 2, Strictness: <L,U><S,U>,
+  {- Arity: 2,
+     Strictness: <L,U(U,U(U,U,U,U(U(U,U,U(U),U,U(U),U(U,U,U),U)),U,U,U,U,U),U,U)><S,U>,
      Unfolding: (\ (r :: Yesod.Core.Types.HandlerData
                            Foundation.App Foundation.App)
                    (s :: GHC.Prim.State# GHC.Prim.RealWorld) ->
@@ -828,432 +831,354 @@ c8fb88c2ab3854aca01a172fc3b52d0b
                         s of ds1 { (#,#) ipv ipv1 ->
                  case ipv1 of wild {
                    GHC.Base.Nothing
-                   -> case Handlers.Cardapio.postCardapioR4
+                   -> case Handlers.Cardapio.postCardapioR14
                       ret_ty (# GHC.Prim.State# GHC.Prim.RealWorld,
                                 Text.Blaze.Html.Html #)
                       of {}
                    GHC.Base.Just a1
-                   -> case ((Handlers.Cardapio.postCoisa
-                               (case a1 of ww { Data.ByteString.Internal.PS ww1 ww2 ww3 ww4 ->
-                                Data.Text.Encoding.$wdecodeUtf8With
-                                  Data.Text.Encoding.Error.lenientDecode
-                                  ww1
-                                  ww2
-                                  ww3
-                                  ww4 })
-                               Handlers.Cardapio.postCardapioR2)
+                   -> case ((Database.Persist.Sql.Run.runSqlPool
+                               @ (Yesod.Core.Types.HandlerFor Foundation.App)
+                               @ Database.Persist.Sql.Types.Internal.SqlBackend
+                               @ (Database.Persist.Class.PersistEntity.Key Foundation.Pedido)
+                               (Yesod.Core.Types.$fMonadUnliftIOHandlerFor @ Foundation.App)
+                               Foundation.$fYesodPersistApp2
+                                 `cast`
+                               (GHC.Classes.(%,%)
+                                  <Database.Persist.Class.PersistStore.IsPersistBackend
+                                     Database.Persist.Sql.Types.Internal.SqlBackend>_N
+                                  ((Data.Type.Equality.~)
+                                     <*>_N
+                                     (Sym (Database.Persist.Sql.Types.Internal.D:R:BaseBackendSqlBackend[0]))
+                                     <Database.Persist.Sql.Types.Internal.SqlBackend>_N)_N)_R
+                               (Database.Persist.Sql.Orphan.PersistStore.$fPersistStoreWriteSqlBackend_$cinsert
+                                  @ (Yesod.Core.Types.HandlerFor Foundation.App)
+                                  @ Foundation.Pedido
+                                  (Yesod.Core.Types.$fMonadIOHandlerFor @ Foundation.App)
+                                  Handlers.Cardapio.postCardapioR13
+                                    `cast`
+                                  (GHC.Classes.(%,%)
+                                     <Database.Persist.Class.PersistEntity.PersistEntity
+                                        Foundation.Pedido>_N
+                                     ((Data.Type.Equality.~)
+                                        <*>_N
+                                        (Sym (Foundation.D:R:PersistEntityBackendPedido[0]))
+                                        (Sym (Database.Persist.Sql.Types.Internal.D:R:BaseBackendSqlBackend[0])))_N)_R
+                                  (case a1 of ww { Data.ByteString.Internal.PS ww1 ww2 ww3 ww4 ->
+                                   case Data.Text.Encoding.$wdecodeUtf8With
+                                          Data.Text.Encoding.Error.lenientDecode
+                                          ww1
+                                          ww2
+                                          ww3
+                                          ww4 of dt114 { Data.Text.Internal.Text ipv2 ipv3 ipv4 ->
+                                   Foundation.Pedido dt114 0.0## 19.0## GHC.Types.False } }))
+                               (case r `cast`
+                                     (Yesod.Core.Types.HandlerData
+                                        (Sym (Yesod.Core.Class.Handler.D:R:HandlerSiteHandlerFor[0]
+                                                  <Foundation.App>_N))
+                                        (Sym (Yesod.Core.Class.Handler.D:R:HandlerSiteHandlerFor[0]
+                                                  <Foundation.App>_N)))_R of wild1 { Yesod.Core.Types.HandlerData ds2 ds3 dt114 dt115 ->
+                                case ds3 of wild2 { Yesod.Core.Types.RunHandlerEnv ds4 ds5 ds7 ds6 ds8 ds9 ds10 ds11 ds12 ->
+                                case ds6
+                                       `cast`
+                                     (Sub (Yesod.Core.Class.Handler.D:R:HandlerSiteHandlerFor[0]
+                                               <Foundation.App>_N)) of wild3 { Foundation.App ds13 ->
+                                ds13 } } }))
+                              `cast`
+                            (Yesod.Core.Types.N:HandlerFor[0]
+                                 <Foundation.App>_N
+                                 <Database.Persist.Class.PersistEntity.Key Foundation.Pedido>_R)
+                              r)
+                             `cast`
+                           (GHC.Types.N:IO[0]
+                                <Database.Persist.Class.PersistEntity.Key Foundation.Pedido>_R)
+                             ipv of ds2 { (#,#) ipv2 ipv3 ->
+                      case ((Database.Persist.Sql.Run.runSqlPool
+                               @ (Yesod.Core.Types.HandlerFor Foundation.App)
+                               @ Database.Persist.Sql.Types.Internal.SqlBackend
+                               @ (GHC.Base.Maybe
+                                    (Database.Persist.Class.PersistEntity.Entity
+                                       Foundation.Produto))
+                               (Yesod.Core.Types.$fMonadUnliftIOHandlerFor @ Foundation.App)
+                               Foundation.$fYesodPersistApp2
+                                 `cast`
+                               (GHC.Classes.(%,%)
+                                  <Database.Persist.Class.PersistStore.IsPersistBackend
+                                     Database.Persist.Sql.Types.Internal.SqlBackend>_N
+                                  ((Data.Type.Equality.~)
+                                     <*>_N
+                                     (Sym (Database.Persist.Sql.Types.Internal.D:R:BaseBackendSqlBackend[0]))
+                                     <Database.Persist.Sql.Types.Internal.SqlBackend>_N)_N)_R
+                               Handlers.Cardapio.postCardapioR4
+                                 `cast`
+                               (Sym (Control.Monad.Trans.Reader.N:ReaderT[0]
+                                         <*>_N
+                                         <Database.Persist.Sql.Types.Internal.SqlBackend>_R
+                                         <Yesod.Core.Types.HandlerFor Foundation.App>_R
+                                         <GHC.Base.Maybe
+                                            (Database.Persist.Class.PersistEntity.Entity
+                                               Foundation.Produto)>_N))
+                               (case r `cast`
+                                     (Yesod.Core.Types.HandlerData
+                                        (Sym (Yesod.Core.Class.Handler.D:R:HandlerSiteHandlerFor[0]
+                                                  <Foundation.App>_N))
+                                        (Sym (Yesod.Core.Class.Handler.D:R:HandlerSiteHandlerFor[0]
+                                                  <Foundation.App>_N)))_R of wild1 { Yesod.Core.Types.HandlerData ds3 ds4 dt114 dt115 ->
+                                case ds4 of wild2 { Yesod.Core.Types.RunHandlerEnv ds5 ds6 ds7 ds8 ds9 ds10 ds11 ds12 ds13 ->
+                                case ds8
+                                       `cast`
+                                     (Sub (Yesod.Core.Class.Handler.D:R:HandlerSiteHandlerFor[0]
+                                               <Foundation.App>_N)) of wild3 { Foundation.App ds14 ->
+                                ds14 } } }))
+                              `cast`
+                            (Yesod.Core.Types.N:HandlerFor[0]
+                                 <Foundation.App>_N
+                                 <GHC.Base.Maybe
+                                    (Database.Persist.Class.PersistEntity.Entity
+                                       Foundation.Produto)>_R)
+                              r)
+                             `cast`
+                           (GHC.Types.N:IO[0]
+                                <GHC.Base.Maybe
+                                   (Database.Persist.Class.PersistEntity.Entity
+                                      Foundation.Produto)>_R)
+                             ipv2 of ds3 { (#,#) ipv4 ipv5 ->
+                      case ipv5 of wild1 {
+                        GHC.Base.Nothing
+                        -> case Handlers.Cardapio.postCardapioR3
+                           ret_ty (# GHC.Prim.State# GHC.Prim.RealWorld,
+                                     Text.Blaze.Html.Html #)
+                           of {}
+                        GHC.Base.Just ds4
+                        -> case ds4 of wild2 { Database.Persist.Class.PersistEntity.Entity prod produto ->
+                           case ((Database.Persist.Sql.Run.runSqlPool
+                                    @ (Yesod.Core.Types.HandlerFor Foundation.App)
+                                    @ Database.Persist.Sql.Types.Internal.SqlBackend
+                                    @ (Database.Persist.Class.PersistEntity.Key
+                                         Foundation.ItemPedido)
+                                    (Yesod.Core.Types.$fMonadUnliftIOHandlerFor @ Foundation.App)
+                                    Foundation.$fYesodPersistApp2
+                                      `cast`
+                                    (GHC.Classes.(%,%)
+                                       <Database.Persist.Class.PersistStore.IsPersistBackend
+                                          Database.Persist.Sql.Types.Internal.SqlBackend>_N
+                                       ((Data.Type.Equality.~)
+                                          <*>_N
+                                          (Sym (Database.Persist.Sql.Types.Internal.D:R:BaseBackendSqlBackend[0]))
+                                          <Database.Persist.Sql.Types.Internal.SqlBackend>_N)_N)_R
+                                    (Database.Persist.Sql.Orphan.PersistStore.$fPersistStoreWriteSqlBackend_$cinsert
+                                       @ (Yesod.Core.Types.HandlerFor Foundation.App)
+                                       @ Foundation.ItemPedido
+                                       (Yesod.Core.Types.$fMonadIOHandlerFor @ Foundation.App)
+                                       Handlers.Cardapio.postCardapioR2
+                                         `cast`
+                                       (GHC.Classes.(%,%)
+                                          <Database.Persist.Class.PersistEntity.PersistEntity
+                                             Foundation.ItemPedido>_N
+                                          ((Data.Type.Equality.~)
+                                             <*>_N
+                                             (Sym (Foundation.D:R:PersistEntityBackendItemPedido[0]))
+                                             (Sym (Database.Persist.Sql.Types.Internal.D:R:BaseBackendSqlBackend[0])))_N)_R
+                                       (case Handlers.Cardapio.formPedido_x of dt114 { Data.Text.Internal.Text ipv6 ipv7 ipv8 ->
+                                        case prod
+                                               `cast`
+                                             (Foundation.D:R:KeyProduto0[0] ; (Foundation.N:R:KeyProduto[0] ; (Database.Persist.Sql.Orphan.PersistStore.D:R:BackendKeySqlBackend0[0] ; Database.Persist.Sql.Orphan.PersistStore.N:R:BackendKeySqlBackend[0]))) of dt115 { GHC.Int.I64# dt116 ->
+                                        Foundation.ItemPedido dt114 dt116 20.0## } }))
+                                    (case r `cast`
+                                          (Yesod.Core.Types.HandlerData
+                                             (Sym (Yesod.Core.Class.Handler.D:R:HandlerSiteHandlerFor[0]
+                                                       <Foundation.App>_N))
+                                             (Sym (Yesod.Core.Class.Handler.D:R:HandlerSiteHandlerFor[0]
+                                                       <Foundation.App>_N)))_R of wild3 { Yesod.Core.Types.HandlerData ds5 ds6 dt114 dt115 ->
+                                     case ds6 of wild4 { Yesod.Core.Types.RunHandlerEnv ds7 ds8 ds9 ds10 ds11 ds12 ds13 ds14 ds15 ->
+                                     case ds10
+                                            `cast`
+                                          (Sub (Yesod.Core.Class.Handler.D:R:HandlerSiteHandlerFor[0]
+                                                    <Foundation.App>_N)) of wild5 { Foundation.App ds16 ->
+                                     ds16 } } }))
+                                   `cast`
+                                 (Yesod.Core.Types.N:HandlerFor[0]
+                                      <Foundation.App>_N
+                                      <Database.Persist.Class.PersistEntity.Key
+                                         Foundation.ItemPedido>_R)
+                                   r)
+                                  `cast`
+                                (GHC.Types.N:IO[0]
+                                     <Database.Persist.Class.PersistEntity.Key
+                                        Foundation.ItemPedido>_R)
+                                  ipv4 of ds5 { (#,#) ipv6 ipv7 ->
+                           ((Yesod.Core.Handler.redirect
+                               @ (Yesod.Core.Types.HandlerFor Foundation.App)
+                               @ (Yesod.Routes.Class.Route Foundation.App)
+                               @ Text.Blaze.Html.Html
+                               (Yesod.Core.Class.Handler.$fMonadHandlerHandlerFor
+                                  @ Foundation.App)
+                               (Yesod.Core.Handler.$fRedirectUrlmasterRoute_$ctoTextUrl
+                                  @ Foundation.App)
+                                 `cast`
+                               (Sym (Yesod.Core.Handler.N:RedirectUrl[0]
+                                         (Yesod.Core.Class.Handler.D:R:HandlerSiteHandlerFor[0]
+                                              <Foundation.App>_N)
+                                         <Yesod.Routes.Class.Route Foundation.App>_N))
+                               Foundation.CardapioR `cast` (Sym (Foundation.D:R:RouteApp0[0])))
                               `cast`
                             (Yesod.Core.Types.N:HandlerFor[0]
                                  <Foundation.App>_N <Text.Blaze.Html.Html>_R)
                               r)
                              `cast`
                            (GHC.Types.N:IO[0] <Text.Blaze.Html.Html>_R)
-                             ipv of ds2 { (#,#) ipv2 ipv3 ->
-                      ((Yesod.Core.Handler.redirect
-                          @ (Yesod.Core.Types.HandlerFor Foundation.App)
-                          @ (Yesod.Routes.Class.Route Foundation.App)
-                          @ Text.Blaze.Html.Html
-                          (Yesod.Core.Class.Handler.$fMonadHandlerHandlerFor
-                             @ Foundation.App)
-                          (Yesod.Core.Handler.$fRedirectUrlmasterRoute_$ctoTextUrl
-                             @ Foundation.App)
-                            `cast`
-                          (Sym (Yesod.Core.Handler.N:RedirectUrl[0]
-                                    (Yesod.Core.Class.Handler.D:R:HandlerSiteHandlerFor[0]
-                                         <Foundation.App>_N)
-                                    <Yesod.Routes.Class.Route Foundation.App>_N))
-                          Foundation.CardapioR `cast` (Sym (Foundation.D:R:RouteApp0[0])))
-                         `cast`
-                       (Yesod.Core.Types.N:HandlerFor[0]
-                            <Foundation.App>_N <Text.Blaze.Html.Html>_R)
-                         r)
-                        `cast`
-                      (GHC.Types.N:IO[0] <Text.Blaze.Html.Html>_R)
-                        ipv2 } } }) -}
-20b71b72e8bb78785b42756cbff703d5
-  postCardapioR2 :: Data.Text.Internal.Text
-  {- Unfolding: (Data.Text.Show.unpackCString#
-                   Handlers.Cardapio.postCardapioR3) -}
-f678789297b36ec245954ccff1be9305
-  postCardapioR3 :: GHC.Prim.Addr#
-  {- HasNoCafRefs, Unfolding: ("Pastel"#) -}
-72dbb193585c864cf43f4b71c95a593a
-  postCardapioR4 ::
+                             ipv6 } } } } } } }) -}
+bb40ad7843c49e484feec369859bc2ea
+  postCardapioR10 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("coiso"#) -}
+8f39155cea4a13f29af54d31e7bebf03
+  postCardapioR11 ::
+    Foundation.R:EntityFieldProdutotyp Data.Text.Internal.Text
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (Foundation.ProdutoNome
+                   @ Data.Text.Internal.Text
+                   Handlers.Cardapio.$s$WProdutoNome_$d~~
+                     `cast`
+                   (Sym (Data.Type.Equality.N:~[0]
+                             <*>_N) <Data.Text.Internal.Text>_N <Data.Text.Internal.Text>_N)) -}
+d445cd5eff197e4bce1e210404670d2d
+  postCardapioR12 ::
+    (Database.Persist.Class.PersistEntity.PersistEntity
+       Foundation.Produto,
+     (Database.Persist.Sql.Types.Internal.SqlBackend :: *)
+     Data.Type.Equality.~ (Database.Persist.Sql.Types.Internal.SqlBackend :: *))
+  {- Strictness: m,
+     Unfolding: ((Foundation.$fPersistEntityProduto,
+                  Handlers.Cardapio.postCardapioR_$d~~
+                    `cast`
+                  (Sym (Data.Type.Equality.N:~[0]
+                            <*>_N) <Database.Persist.Sql.Types.Internal.SqlBackend>_N <Database.Persist.Sql.Types.Internal.SqlBackend>_N))) -}
+72f8ac60bf68b8d8f6240ca9316123bb
+  postCardapioR13 ::
+    (Database.Persist.Class.PersistEntity.PersistEntity
+       Foundation.Pedido,
+     (Database.Persist.Sql.Types.Internal.SqlBackend :: *)
+     Data.Type.Equality.~ (Database.Persist.Sql.Types.Internal.SqlBackend :: *))
+  {- Strictness: m,
+     Unfolding: ((Foundation.$fPersistEntityPedido,
+                  Handlers.Cardapio.postCardapioR_$d~~
+                    `cast`
+                  (Sym (Data.Type.Equality.N:~[0]
+                            <*>_N) <Database.Persist.Sql.Types.Internal.SqlBackend>_N <Database.Persist.Sql.Types.Internal.SqlBackend>_N))) -}
+811199c0667d42a45ce5806d29ea4040
+  postCardapioR14 ::
     Yesod.Core.Types.HandlerFor Foundation.App Text.Blaze.Html.Html
   {- Strictness: x -}
-2a54c98e2298153568b8a87c2f74e733
-  postCardapioR5 :: Data.Text.Internal.Text
+f752b2b8c5ba3d1893f9893d8d48287c
+  postCardapioR15 :: Data.Text.Internal.Text
   {- Unfolding: (Data.Text.Show.unpackCString#
-                   Handlers.Cardapio.postCardapioR6) -}
-1c8673a46bf08642e3c40722a1700867
-  postCardapioR6 :: GHC.Prim.Addr#
+                   Handlers.Cardapio.postCardapioR16) -}
+709daa1d7f09baff4c459a7a5506e105
+  postCardapioR16 :: GHC.Prim.Addr#
   {- HasNoCafRefs, Unfolding: ("_ID"#) -}
-332ad336599f5efa69ba5d960b4ef317
-  postCardapioR_ds ::
-    Yesod.Core.Types.HandlerFor
-      Foundation.App (GHC.Base.Maybe Data.ByteString.Internal.ByteString)
-  {- Unfolding: (Yesod.Core.Handler.lookupSessionBS
-                   @ (Yesod.Core.Types.HandlerFor Foundation.App)
-                   (Yesod.Core.Class.Handler.$fMonadHandlerHandlerFor
-                      @ Foundation.App)
-                   Handlers.Cardapio.postCardapioR5) -}
-0478857139d82f8357d434eda40b6037
-  postCoisa ::
-    Data.Text.Internal.Text
-    -> Data.Text.Internal.Text
-    -> Foundation.Handler Text.Blaze.Html.Html
-  {- Arity: 2, Strictness: <L,1*U(U,U,U)><L,U>,
-     Unfolding: (\ (coisa :: Data.Text.Internal.Text)
-                   (treco :: Data.Text.Internal.Text) ->
-                 let {
-                   f42 :: Control.Monad.Trans.Reader.ReaderT
-                            Database.Persist.Sql.Types.Internal.SqlBackend
-                            (Yesod.Core.Types.HandlerFor Foundation.App)
-                            (Database.Persist.Class.PersistEntity.Key Foundation.Pedido)
-                   = Database.Persist.Sql.Orphan.PersistStore.$fPersistStoreWriteSqlBackend_$cinsert
-                       @ (Yesod.Core.Types.HandlerFor Foundation.App)
-                       @ Foundation.Pedido
-                       (Yesod.Core.Types.$fMonadIOHandlerFor @ Foundation.App)
-                       Handlers.Cardapio.postCoisa6
-                         `cast`
-                       (GHC.Classes.(%,%)
-                          <Database.Persist.Class.PersistEntity.PersistEntity
-                             Foundation.Pedido>_N
-                          ((Data.Type.Equality.~)
-                             <*>_N
-                             (Sym (Foundation.D:R:PersistEntityBackendPedido[0]))
-                             (Sym (Database.Persist.Sql.Types.Internal.D:R:BaseBackendSqlBackend[0])))_N)_R
-                       (case coisa of dt114 { Data.Text.Internal.Text ipv ipv1 ipv2 ->
-                        Foundation.Pedido dt114 0.0## 19.0## GHC.Types.False })
-                 } in
-                 let {
-                   m3 :: Control.Monad.Trans.Reader.ReaderT
-                           Database.Persist.Sql.Types.Internal.SqlBackend
-                           (Yesod.Core.Types.HandlerFor Foundation.App)
-                           (Data.Acquire.Internal.Acquire
-                              (Data.Conduit.Internal.Conduit.ConduitM
-                                 ()
-                                 (Database.Persist.Class.PersistEntity.Entity Foundation.Produto)
-                                 GHC.Types.IO
-                                 ()))
-                   = Database.Persist.Sql.Orphan.PersistQuery.$fPersistQueryReadSqlBackend_$cselectSourceRes
-                       @ Foundation.Produto
-                       @ (Yesod.Core.Types.HandlerFor Foundation.App)
-                       @ GHC.Types.IO
-                       Handlers.Cardapio.postCoisa5
-                         `cast`
-                       (GHC.Classes.(%,%)
-                          <Database.Persist.Class.PersistEntity.PersistEntity
-                             Foundation.Produto>_N
-                          ((Data.Type.Equality.~)
-                             <*>_N
-                             (Sym (Foundation.D:R:PersistEntityBackendProduto[0]))
-                             (Sym (Database.Persist.Sql.Types.Internal.D:R:BaseBackendSqlBackend[0])))_N)_R
-                       (Yesod.Core.Types.$fMonadIOHandlerFor @ Foundation.App)
-                       Control.Monad.IO.Class.$fMonadIOIO
-                       (GHC.Types.:
-                          @ (Database.Persist.Class.PersistEntity.Filter Foundation.Produto)
-                          (Database.Persist.Class.PersistEntity.Filter
-                             @ Foundation.Produto
-                             @ Data.Text.Internal.Text
-                             Database.Persist.Class.PersistField.$fPersistFieldText0
-                             Handlers.Cardapio.postCoisa4
-                               `cast`
-                             (Sym (Foundation.D:R:EntityFieldProdutotyp0[0]) <Data.Text.Internal.Text>_N)
-                             (Data.Either.Left
-                                @ Data.Text.Internal.Text
-                                @ [Data.Text.Internal.Text]
-                                treco)
-                             Database.Persist.Types.Base.Eq)
-                          (GHC.Types.[]
-                             @ (Database.Persist.Class.PersistEntity.Filter
-                                  Foundation.Produto)))
-                       Handlers.Cardapio.postCoisa3
-                 } in
-                 let {
-                   f43 :: Database.Persist.Sql.Types.Internal.SqlBackend
-                          -> Yesod.Core.Types.HandlerFor
-                               Foundation.App
-                               (GHC.Base.Maybe
-                                  (Database.Persist.Class.PersistEntity.Entity Foundation.Produto))
-                     {- Arity: 1, Strictness: <L,U> -}
-                   = \ (r1 :: Database.Persist.Sql.Types.Internal.SqlBackend) ->
-                     let {
-                       ds1 :: Yesod.Core.Types.HandlerFor
-                                Foundation.App
-                                (Data.Acquire.Internal.Acquire
-                                   (Data.Conduit.Internal.Conduit.ConduitM
-                                      ()
-                                      (Database.Persist.Class.PersistEntity.Entity
-                                         Foundation.Produto)
-                                      GHC.Types.IO
-                                      ()))
-                       = m3
-                           `cast`
-                         (Control.Monad.Trans.Reader.N:ReaderT[0]
-                              <*>_N
-                              <Database.Persist.Sql.Types.Internal.SqlBackend>_R
-                              <Yesod.Core.Types.HandlerFor Foundation.App>_R
-                              <Data.Acquire.Internal.Acquire
-                                 (Data.Conduit.Internal.Conduit.ConduitM
-                                    ()
-                                    (Database.Persist.Class.PersistEntity.Entity Foundation.Produto)
-                                    GHC.Types.IO
-                                    ())>_N)
-                           r1
-                     } in
-                     (\ (r :: Yesod.Core.Types.HandlerData
-                                Foundation.App Foundation.App)
-                        (s :: GHC.Prim.State# GHC.Prim.RealWorld) ->
-                      case (ds1
-                              `cast`
-                            (Yesod.Core.Types.N:HandlerFor[0]
-                                 <Foundation.App>_N
-                                 <Data.Acquire.Internal.Acquire
-                                    (Data.Conduit.Internal.Conduit.ConduitM
-                                       ()
-                                       (Database.Persist.Class.PersistEntity.Entity
-                                          Foundation.Produto)
-                                       GHC.Types.IO
-                                       ())>_R)
-                              r)
-                             `cast`
-                           (GHC.Types.N:IO[0]
-                                <Data.Acquire.Internal.Acquire
-                                   (Data.Conduit.Internal.Conduit.ConduitM
-                                      ()
-                                      (Database.Persist.Class.PersistEntity.Entity
-                                         Foundation.Produto)
-                                      GHC.Types.IO
-                                      ())>_R)
-                             s of ds2 { (#,#) ipv ipv1 ->
-                      (Data.Acquire.Internal.with
-                         @ GHC.Types.IO
-                         @ (Data.Conduit.Internal.Conduit.ConduitM
-                              ()
-                              (Database.Persist.Class.PersistEntity.Entity Foundation.Produto)
-                              GHC.Types.IO
-                              ())
-                         @ (GHC.Base.Maybe
-                              (Database.Persist.Class.PersistEntity.Entity Foundation.Produto))
-                         Control.Monad.IO.Unlift.$fMonadUnliftIOIO
-                         ipv1
-                         (Database.Persist.Sql.Orphan.PersistQuery.$fPersistQueryReadSqlBackend3
-                            @ Foundation.Produto))
-                        `cast`
-                      (GHC.Types.N:IO[0]
-                           <GHC.Base.Maybe
-                              (Database.Persist.Class.PersistEntity.Entity
-                                 Foundation.Produto)>_R)
-                        ipv })
-                       `cast`
-                     ((<Yesod.Core.Types.HandlerData Foundation.App Foundation.App>_R
-                       ->_R Sym (GHC.Types.N:IO[0]
-                                     <GHC.Base.Maybe
-                                        (Database.Persist.Class.PersistEntity.Entity
-                                           Foundation.Produto)>_R)) ; Sym (Yesod.Core.Types.N:HandlerFor[0]
-                                                                               <Foundation.App>_N
-                                                                               <GHC.Base.Maybe
-                                                                                  (Database.Persist.Class.PersistEntity.Entity
-                                                                                     Foundation.Produto)>_R))
-                 } in
-                 (\ (r :: Yesod.Core.Types.HandlerData
-                            Foundation.App Foundation.App)
-                    (s :: GHC.Prim.State# GHC.Prim.RealWorld) ->
-                  case ((Database.Persist.Sql.Run.runSqlPool
-                           @ (Yesod.Core.Types.HandlerFor Foundation.App)
-                           @ Database.Persist.Sql.Types.Internal.SqlBackend
-                           @ (Database.Persist.Class.PersistEntity.Key Foundation.Pedido)
-                           (Yesod.Core.Types.$fMonadUnliftIOHandlerFor @ Foundation.App)
-                           Foundation.$fYesodPersistApp2
-                             `cast`
-                           (GHC.Classes.(%,%)
-                              <Database.Persist.Class.PersistStore.IsPersistBackend
-                                 Database.Persist.Sql.Types.Internal.SqlBackend>_N
-                              ((Data.Type.Equality.~)
-                                 <*>_N
-                                 (Sym (Database.Persist.Sql.Types.Internal.D:R:BaseBackendSqlBackend[0]))
-                                 <Database.Persist.Sql.Types.Internal.SqlBackend>_N)_N)_R
-                           f42
-                           (case r `cast`
-                                 (Yesod.Core.Types.HandlerData
-                                    (Sym (Yesod.Core.Class.Handler.D:R:HandlerSiteHandlerFor[0]
-                                              <Foundation.App>_N))
-                                    (Sym (Yesod.Core.Class.Handler.D:R:HandlerSiteHandlerFor[0]
-                                              <Foundation.App>_N)))_R of wild { Yesod.Core.Types.HandlerData ds1 ds2 dt114 dt115 ->
-                            case ds2 of wild1 { Yesod.Core.Types.RunHandlerEnv ds4 ds5 ds3 ds6 ds7 ds8 ds9 ds10 ds11 ->
-                            case ds6
-                                   `cast`
-                                 (Sub (Yesod.Core.Class.Handler.D:R:HandlerSiteHandlerFor[0]
-                                           <Foundation.App>_N)) of wild2 { Foundation.App ds16 ->
-                            ds16 } } }))
-                          `cast`
-                        (Yesod.Core.Types.N:HandlerFor[0]
-                             <Foundation.App>_N
-                             <Database.Persist.Class.PersistEntity.Key Foundation.Pedido>_R)
-                          r)
-                         `cast`
-                       (GHC.Types.N:IO[0]
-                            <Database.Persist.Class.PersistEntity.Key Foundation.Pedido>_R)
-                         s of ds1 { (#,#) ipv ipv1 ->
-                  case ((Database.Persist.Sql.Run.runSqlPool
-                           @ (Yesod.Core.Types.HandlerFor Foundation.App)
-                           @ Database.Persist.Sql.Types.Internal.SqlBackend
-                           @ (GHC.Base.Maybe
-                                (Database.Persist.Class.PersistEntity.Entity Foundation.Produto))
-                           (Yesod.Core.Types.$fMonadUnliftIOHandlerFor @ Foundation.App)
-                           Foundation.$fYesodPersistApp2
-                             `cast`
-                           (GHC.Classes.(%,%)
-                              <Database.Persist.Class.PersistStore.IsPersistBackend
-                                 Database.Persist.Sql.Types.Internal.SqlBackend>_N
-                              ((Data.Type.Equality.~)
-                                 <*>_N
-                                 (Sym (Database.Persist.Sql.Types.Internal.D:R:BaseBackendSqlBackend[0]))
-                                 <Database.Persist.Sql.Types.Internal.SqlBackend>_N)_N)_R
-                           f43
-                             `cast`
-                           (Sym (Control.Monad.Trans.Reader.N:ReaderT[0]
-                                     <*>_N
-                                     <Database.Persist.Sql.Types.Internal.SqlBackend>_R
-                                     <Yesod.Core.Types.HandlerFor Foundation.App>_R
-                                     <GHC.Base.Maybe
-                                        (Database.Persist.Class.PersistEntity.Entity
-                                           Foundation.Produto)>_N))
-                           (case r `cast`
-                                 (Yesod.Core.Types.HandlerData
-                                    (Sym (Yesod.Core.Class.Handler.D:R:HandlerSiteHandlerFor[0]
-                                              <Foundation.App>_N))
-                                    (Sym (Yesod.Core.Class.Handler.D:R:HandlerSiteHandlerFor[0]
-                                              <Foundation.App>_N)))_R of wild { Yesod.Core.Types.HandlerData ds2 ds3 dt114 dt115 ->
-                            case ds3 of wild1 { Yesod.Core.Types.RunHandlerEnv ds4 ds5 ds7 ds6 ds8 ds9 ds10 ds11 ds12 ->
-                            case ds6
-                                   `cast`
-                                 (Sub (Yesod.Core.Class.Handler.D:R:HandlerSiteHandlerFor[0]
-                                           <Foundation.App>_N)) of wild2 { Foundation.App ds13 ->
-                            ds13 } } }))
-                          `cast`
-                        (Yesod.Core.Types.N:HandlerFor[0]
-                             <Foundation.App>_N
-                             <GHC.Base.Maybe
-                                (Database.Persist.Class.PersistEntity.Entity
-                                   Foundation.Produto)>_R)
-                          r)
-                         `cast`
-                       (GHC.Types.N:IO[0]
-                            <GHC.Base.Maybe
-                               (Database.Persist.Class.PersistEntity.Entity
-                                  Foundation.Produto)>_R)
-                         ipv of ds2 { (#,#) ipv2 ipv3 ->
-                  case ipv3 of wild {
-                    GHC.Base.Nothing
-                    -> case Handlers.Cardapio.postCoisa2
-                       ret_ty (# GHC.Prim.State# GHC.Prim.RealWorld,
-                                 Text.Blaze.Html.Html #)
-                       of {}
-                    GHC.Base.Just ds3
-                    -> case ds3 of wild1 { Database.Persist.Class.PersistEntity.Entity prod produto ->
-                       case ((Database.Persist.Sql.Run.runSqlPool
-                                @ (Yesod.Core.Types.HandlerFor Foundation.App)
-                                @ Database.Persist.Sql.Types.Internal.SqlBackend
-                                @ (Database.Persist.Class.PersistEntity.Key Foundation.ItemPedido)
-                                (Yesod.Core.Types.$fMonadUnliftIOHandlerFor @ Foundation.App)
-                                Foundation.$fYesodPersistApp2
-                                  `cast`
-                                (GHC.Classes.(%,%)
-                                   <Database.Persist.Class.PersistStore.IsPersistBackend
-                                      Database.Persist.Sql.Types.Internal.SqlBackend>_N
-                                   ((Data.Type.Equality.~)
-                                      <*>_N
-                                      (Sym (Database.Persist.Sql.Types.Internal.D:R:BaseBackendSqlBackend[0]))
-                                      <Database.Persist.Sql.Types.Internal.SqlBackend>_N)_N)_R
-                                (Database.Persist.Sql.Orphan.PersistStore.$fPersistStoreWriteSqlBackend_$cinsert
-                                   @ (Yesod.Core.Types.HandlerFor Foundation.App)
-                                   @ Foundation.ItemPedido
-                                   (Yesod.Core.Types.$fMonadIOHandlerFor @ Foundation.App)
-                                   Handlers.Cardapio.postCoisa1
-                                     `cast`
-                                   (GHC.Classes.(%,%)
-                                      <Database.Persist.Class.PersistEntity.PersistEntity
-                                         Foundation.ItemPedido>_N
-                                      ((Data.Type.Equality.~)
-                                         <*>_N
-                                         (Sym (Foundation.D:R:PersistEntityBackendItemPedido[0]))
-                                         (Sym (Database.Persist.Sql.Types.Internal.D:R:BaseBackendSqlBackend[0])))_N)_R
-                                   (case Handlers.Cardapio.formPedido_x of dt114 { Data.Text.Internal.Text ipv4 ipv5 ipv6 ->
-                                    case prod
-                                           `cast`
-                                         (Foundation.D:R:KeyProduto0[0] ; (Foundation.N:R:KeyProduto[0] ; (Database.Persist.Sql.Orphan.PersistStore.D:R:BackendKeySqlBackend0[0] ; Database.Persist.Sql.Orphan.PersistStore.N:R:BackendKeySqlBackend[0]))) of dt115 { GHC.Int.I64# dt116 ->
-                                    Foundation.ItemPedido dt114 dt116 20.0## } }))
-                                (case r `cast`
-                                      (Yesod.Core.Types.HandlerData
-                                         (Sym (Yesod.Core.Class.Handler.D:R:HandlerSiteHandlerFor[0]
-                                                   <Foundation.App>_N))
-                                         (Sym (Yesod.Core.Class.Handler.D:R:HandlerSiteHandlerFor[0]
-                                                   <Foundation.App>_N)))_R of wild2 { Yesod.Core.Types.HandlerData ds4 ds5 dt114 dt115 ->
-                                 case ds5 of wild3 { Yesod.Core.Types.RunHandlerEnv ds6 ds7 ds8 ds9 ds10 ds11 ds12 ds13 ds14 ->
-                                 case ds9
-                                        `cast`
-                                      (Sub (Yesod.Core.Class.Handler.D:R:HandlerSiteHandlerFor[0]
-                                                <Foundation.App>_N)) of wild4 { Foundation.App ds15 ->
-                                 ds15 } } }))
-                               `cast`
-                             (Yesod.Core.Types.N:HandlerFor[0]
-                                  <Foundation.App>_N
-                                  <Database.Persist.Class.PersistEntity.Key
-                                     Foundation.ItemPedido>_R)
-                               r)
-                              `cast`
-                            (GHC.Types.N:IO[0]
-                                 <Database.Persist.Class.PersistEntity.Key Foundation.ItemPedido>_R)
-                              ipv2 of ds4 { (#,#) ipv4 ipv5 ->
-                       ((Yesod.Core.Handler.redirect
-                           @ (Yesod.Core.Types.HandlerFor Foundation.App)
-                           @ (Yesod.Routes.Class.Route Foundation.App)
-                           @ Text.Blaze.Html.Html
-                           (Yesod.Core.Class.Handler.$fMonadHandlerHandlerFor
-                              @ Foundation.App)
-                           (Yesod.Core.Handler.$fRedirectUrlmasterRoute_$ctoTextUrl
-                              @ Foundation.App)
-                             `cast`
-                           (Sym (Yesod.Core.Handler.N:RedirectUrl[0]
-                                     (Yesod.Core.Class.Handler.D:R:HandlerSiteHandlerFor[0]
-                                          <Foundation.App>_N)
-                                     <Yesod.Routes.Class.Route Foundation.App>_N))
-                           Foundation.HomeR `cast` (Sym (Foundation.D:R:RouteApp0[0])))
-                          `cast`
-                        (Yesod.Core.Types.N:HandlerFor[0]
-                             <Foundation.App>_N <Text.Blaze.Html.Html>_R)
-                          r)
-                         `cast`
-                       (GHC.Types.N:IO[0] <Text.Blaze.Html.Html>_R)
-                         ipv4 } } } } })
-                   `cast`
-                 ((<Yesod.Core.Types.HandlerData Foundation.App Foundation.App>_R
-                   ->_R Sym (GHC.Types.N:IO[0]
-                                 <Text.Blaze.Html.Html>_R)) ; Sym (Yesod.Core.Types.N:HandlerFor[0]
-                                                                       <Foundation.App>_N
-                                                                       <Text.Blaze.Html.Html>_R))) -}
-288557b1fd25a2d481b106f7fa82327a
-  postCoisa1 ::
+af184b335247ab8467afb4fe2f95d7f3
+  postCardapioR2 ::
     (Database.Persist.Class.PersistEntity.PersistEntity
        Foundation.ItemPedido,
      (Database.Persist.Sql.Types.Internal.SqlBackend :: *)
      Data.Type.Equality.~ (Database.Persist.Sql.Types.Internal.SqlBackend :: *))
   {- Strictness: m,
      Unfolding: ((Foundation.$fPersistEntityItemPedido,
-                  Handlers.Cardapio.postCoisa_$d~~
+                  Handlers.Cardapio.postCardapioR_$d~~
                     `cast`
                   (Sym (Data.Type.Equality.N:~[0]
                             <*>_N) <Database.Persist.Sql.Types.Internal.SqlBackend>_N <Database.Persist.Sql.Types.Internal.SqlBackend>_N))) -}
-aa4d3024c12e96f66759a8c168d2d439
-  postCoisa2 ::
+725edbe1f303e5935128c07ed4fbe75b
+  postCardapioR3 ::
     Yesod.Core.Types.HandlerFor
       Foundation.App
       (Database.Persist.Class.PersistEntity.Key Foundation.ItemPedido)
   {- Strictness: x -}
-d482d51490970cbecb2b63919b2a805c
-  postCoisa3 ::
+794ac7930aafecf6216b7b5e0bd73d6a
+  postCardapioR4 ::
+    Database.Persist.Sql.Types.Internal.SqlBackend
+    -> Yesod.Core.Types.HandlerFor
+         Foundation.App
+         (GHC.Base.Maybe
+            (Database.Persist.Class.PersistEntity.Entity Foundation.Produto))
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: (\ (r1 :: Database.Persist.Sql.Types.Internal.SqlBackend) ->
+                 let {
+                   ds1 :: Yesod.Core.Types.HandlerFor
+                            Foundation.App
+                            (Data.Acquire.Internal.Acquire
+                               (Data.Conduit.Internal.Conduit.ConduitM
+                                  ()
+                                  (Database.Persist.Class.PersistEntity.Entity Foundation.Produto)
+                                  GHC.Types.IO
+                                  ()))
+                   = Handlers.Cardapio.postCardapioR_m1
+                       `cast`
+                     (Control.Monad.Trans.Reader.N:ReaderT[0]
+                          <*>_N
+                          <Database.Persist.Sql.Types.Internal.SqlBackend>_R
+                          <Yesod.Core.Types.HandlerFor Foundation.App>_R
+                          <Data.Acquire.Internal.Acquire
+                             (Data.Conduit.Internal.Conduit.ConduitM
+                                ()
+                                (Database.Persist.Class.PersistEntity.Entity Foundation.Produto)
+                                GHC.Types.IO
+                                ())>_N)
+                       r1
+                 } in
+                 (\ (r :: Yesod.Core.Types.HandlerData
+                            Foundation.App Foundation.App)
+                    (s :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                  case (ds1
+                          `cast`
+                        (Yesod.Core.Types.N:HandlerFor[0]
+                             <Foundation.App>_N
+                             <Data.Acquire.Internal.Acquire
+                                (Data.Conduit.Internal.Conduit.ConduitM
+                                   ()
+                                   (Database.Persist.Class.PersistEntity.Entity Foundation.Produto)
+                                   GHC.Types.IO
+                                   ())>_R)
+                          r)
+                         `cast`
+                       (GHC.Types.N:IO[0]
+                            <Data.Acquire.Internal.Acquire
+                               (Data.Conduit.Internal.Conduit.ConduitM
+                                  ()
+                                  (Database.Persist.Class.PersistEntity.Entity Foundation.Produto)
+                                  GHC.Types.IO
+                                  ())>_R)
+                         s of ds2 { (#,#) ipv ipv1 ->
+                  (Data.Acquire.Internal.with
+                     @ GHC.Types.IO
+                     @ (Data.Conduit.Internal.Conduit.ConduitM
+                          ()
+                          (Database.Persist.Class.PersistEntity.Entity Foundation.Produto)
+                          GHC.Types.IO
+                          ())
+                     @ (GHC.Base.Maybe
+                          (Database.Persist.Class.PersistEntity.Entity Foundation.Produto))
+                     Control.Monad.IO.Unlift.$fMonadUnliftIOIO
+                     ipv1
+                     (Database.Persist.Sql.Orphan.PersistQuery.$fPersistQueryReadSqlBackend3
+                        @ Foundation.Produto))
+                    `cast`
+                  (GHC.Types.N:IO[0]
+                       <GHC.Base.Maybe
+                          (Database.Persist.Class.PersistEntity.Entity
+                             Foundation.Produto)>_R)
+                    ipv })
+                   `cast`
+                 ((<Yesod.Core.Types.HandlerData Foundation.App Foundation.App>_R
+                   ->_R Sym (GHC.Types.N:IO[0]
+                                 <GHC.Base.Maybe
+                                    (Database.Persist.Class.PersistEntity.Entity
+                                       Foundation.Produto)>_R)) ; Sym (Yesod.Core.Types.N:HandlerFor[0]
+                                                                           <Foundation.App>_N
+                                                                           <GHC.Base.Maybe
+                                                                              (Database.Persist.Class.PersistEntity.Entity
+                                                                                 Foundation.Produto)>_R))) -}
+0b58a3477b249e8f2cfa2c42504a14de
+  postCardapioR5 ::
     [Database.Persist.Class.PersistEntity.SelectOpt Foundation.Produto]
   {- HasNoCafRefs, Strictness: m2,
      Unfolding: (GHC.Types.:
@@ -1264,42 +1189,43 @@ d482d51490970cbecb2b63919b2a805c
                    (GHC.Types.[]
                       @ (Database.Persist.Class.PersistEntity.SelectOpt
                            Foundation.Produto))) -}
-7c0ba406b7c5ef3bb1b606c7bce1bd51
-  postCoisa4 ::
-    Foundation.R:EntityFieldProdutotyp Data.Text.Internal.Text
-  {- HasNoCafRefs, Strictness: m2,
-     Unfolding: (Foundation.ProdutoNome
+a591f6bd4c5375bc0596d2410604a280
+  postCardapioR6 ::
+    [Database.Persist.Class.PersistEntity.Filter Foundation.Produto]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (Database.Persist.Class.PersistEntity.Filter Foundation.Produto)
+                   Handlers.Cardapio.postCardapioR7
+                   (GHC.Types.[]
+                      @ (Database.Persist.Class.PersistEntity.Filter
+                           Foundation.Produto))) -}
+1c7b62ce481fd1758b5c72a070a60648
+  postCardapioR7 ::
+    Database.Persist.Class.PersistEntity.Filter Foundation.Produto
+  {- Unfolding: (Database.Persist.Class.PersistEntity.Filter
+                   @ Foundation.Produto
                    @ Data.Text.Internal.Text
-                   Handlers.Cardapio.$s$WProdutoNome_$d~~
+                   Database.Persist.Class.PersistField.$fPersistFieldText0
+                   Handlers.Cardapio.postCardapioR11
                      `cast`
-                   (Sym (Data.Type.Equality.N:~[0]
-                             <*>_N) <Data.Text.Internal.Text>_N <Data.Text.Internal.Text>_N)) -}
-90ed7658598645fc1e56040b09e2e7f9
-  postCoisa5 ::
-    (Database.Persist.Class.PersistEntity.PersistEntity
-       Foundation.Produto,
-     (Database.Persist.Sql.Types.Internal.SqlBackend :: *)
-     Data.Type.Equality.~ (Database.Persist.Sql.Types.Internal.SqlBackend :: *))
-  {- Strictness: m,
-     Unfolding: ((Foundation.$fPersistEntityProduto,
-                  Handlers.Cardapio.postCoisa_$d~~
-                    `cast`
-                  (Sym (Data.Type.Equality.N:~[0]
-                            <*>_N) <Database.Persist.Sql.Types.Internal.SqlBackend>_N <Database.Persist.Sql.Types.Internal.SqlBackend>_N))) -}
-2062bb21fadbc3fcd425b43401a3dae6
-  postCoisa6 ::
-    (Database.Persist.Class.PersistEntity.PersistEntity
-       Foundation.Pedido,
-     (Database.Persist.Sql.Types.Internal.SqlBackend :: *)
-     Data.Type.Equality.~ (Database.Persist.Sql.Types.Internal.SqlBackend :: *))
-  {- Strictness: m,
-     Unfolding: ((Foundation.$fPersistEntityPedido,
-                  Handlers.Cardapio.postCoisa_$d~~
-                    `cast`
-                  (Sym (Data.Type.Equality.N:~[0]
-                            <*>_N) <Database.Persist.Sql.Types.Internal.SqlBackend>_N <Database.Persist.Sql.Types.Internal.SqlBackend>_N))) -}
-1553385e374744db91c3259bcbf13c8d
-  postCoisa_$d~~ ::
+                   (Sym (Foundation.D:R:EntityFieldProdutotyp0[0]) <Data.Text.Internal.Text>_N)
+                   Handlers.Cardapio.postCardapioR8
+                   Database.Persist.Types.Base.Eq) -}
+33d996933ff62c2129315999a9dce7af
+  postCardapioR8 ::
+    Data.Either.Either
+      Data.Text.Internal.Text [Data.Text.Internal.Text]
+  {- Strictness: m1,
+     Unfolding: (Data.Either.Left
+                   @ Data.Text.Internal.Text
+                   @ [Data.Text.Internal.Text]
+                   Handlers.Cardapio.postCardapioR9) -}
+f3cff530bd66db26e6e2a56e7c15237a
+  postCardapioR9 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString#
+                   Handlers.Cardapio.postCardapioR10) -}
+fca6d9e744418e2dba93754e429c8a90
+  postCardapioR_$d~~ ::
     (Database.Persist.Sql.Types.Internal.SqlBackend :: *)
     GHC.Types.~~ (Database.Persist.Sql.Types.Internal.SqlBackend :: *)
   {- HasNoCafRefs, Strictness: m,
@@ -1309,6 +1235,43 @@ d482d51490970cbecb2b63919b2a805c
                    @ Database.Persist.Sql.Types.Internal.SqlBackend
                    @ Database.Persist.Sql.Types.Internal.SqlBackend
                    @~ <Database.Persist.Sql.Types.Internal.SqlBackend>_N) -}
+c5a031b0c30983756ae9b8103d332e22
+  postCardapioR_ds ::
+    Yesod.Core.Types.HandlerFor
+      Foundation.App (GHC.Base.Maybe Data.ByteString.Internal.ByteString)
+  {- Unfolding: (Yesod.Core.Handler.lookupSessionBS
+                   @ (Yesod.Core.Types.HandlerFor Foundation.App)
+                   (Yesod.Core.Class.Handler.$fMonadHandlerHandlerFor
+                      @ Foundation.App)
+                   Handlers.Cardapio.postCardapioR15) -}
+aaebbe92897f2e6f0add295ef88455c8
+  postCardapioR_m1 ::
+    Control.Monad.Trans.Reader.ReaderT
+      Database.Persist.Sql.Types.Internal.SqlBackend
+      (Yesod.Core.Types.HandlerFor Foundation.App)
+      (Data.Acquire.Internal.Acquire
+         (Data.Conduit.Internal.Conduit.ConduitM
+            ()
+            (Database.Persist.Class.PersistEntity.Entity Foundation.Produto)
+            GHC.Types.IO
+            ()))
+  {- Unfolding: (Database.Persist.Sql.Orphan.PersistQuery.$fPersistQueryReadSqlBackend_$cselectSourceRes
+                   @ Foundation.Produto
+                   @ (Yesod.Core.Types.HandlerFor Foundation.App)
+                   @ GHC.Types.IO
+                   Handlers.Cardapio.postCardapioR12
+                     `cast`
+                   (GHC.Classes.(%,%)
+                      <Database.Persist.Class.PersistEntity.PersistEntity
+                         Foundation.Produto>_N
+                      ((Data.Type.Equality.~)
+                         <*>_N
+                         (Sym (Foundation.D:R:PersistEntityBackendProduto[0]))
+                         (Sym (Database.Persist.Sql.Types.Internal.D:R:BaseBackendSqlBackend[0])))_N)_R
+                   (Yesod.Core.Types.$fMonadIOHandlerFor @ Foundation.App)
+                   Control.Monad.IO.Class.$fMonadIOIO
+                   Handlers.Cardapio.postCardapioR6
+                   Handlers.Cardapio.postCardapioR5) -}
 vectorised variables:
 vectorised tycons:
 vectorised reused tycons:

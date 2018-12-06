@@ -45,3 +45,11 @@ li a:hover:not(.active) {
 #cadastro{
     color:black;
 }
+
+#prod{
+    color:black;
+}
+
+#ped{
+    color:black;
+}

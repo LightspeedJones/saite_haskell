@@ -28,7 +28,10 @@ getLoginR = do
 postLoginR :: Handler Html
 postLoginR = do
             ((result, _), _) <- runFormPost formLogin
-            case result of
+            case result of 
+                FormSuccess ("admin@admin.com", "admin") -> do
+                    setSession "_USR" "admin"
+                    redirect AdminR
                 FormSuccess (login, pword) -> do
                    cara <- runDB $ selectFirst [ClienteLogin ==. login,
                                                 ClientePword ==. pword] []

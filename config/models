@@ -17,6 +17,7 @@ Pedido
     hrpedido      Double
     finalizado    Bool
     
+    
 ItemPedido
     pedidoid      Text
     produtoid     ProdutoId

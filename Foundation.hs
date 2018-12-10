@@ -22,6 +22,7 @@ instance Yesod App where
     isAuthorized LoginR _ = return Authorized
     isAuthorized CardapioR _ = return Authorized
     isAuthorized LogoutR _ = return Authorized
+    isAuthorized ProdutoR _ = isAdmin
 
 instance YesodPersist App where
    type YesodPersistBackend App = SqlBackend
@@ -36,14 +37,8 @@ instance RenderMessage App FormMessage where
     renderMessage _ _ = defaultFormMessage
     
 isAdmin = do
-    logado <- lookupSession "_USR"
+    logado <- lookupSession "_NOME"
     case logado of
         Just "admin" -> return Authorized
         Just _ -> return $ Unauthorized "sai"
         Nothing -> return AuthenticationRequired
-    
---widgetForm :: Route App -> Enctype -> Widget -> Text -> Widget
---widgetForm x enctype widget y = $(whamletFile "templates/form.hamlet")
-
--- widgetFormCss :: Route App -> Enctype -> Widget -> Text -> Widget
--- widgetFormCss xis enctype widget z = $(toWidget "templates/form.julius")

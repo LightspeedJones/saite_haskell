@@ -11,6 +11,7 @@ import Handlers.Cliente
 import Handlers.Login
 import Handlers.Cardapio
 import Handlers.Admin
+import Handlers.Produto
 import Control.Monad.Logger (runStdoutLoggingT)
 import Control.Applicative
 import Data.Text
@@ -70,6 +71,7 @@ getHomeR  = do
     case maybenome of
         Nothing -> (getLayoutVisitante)
         (Just nome) -> (getLayoutLogado nome)
+        (Just "admin") -> (getLayoutLogado "admin")
         
     
 

@@ -9,7 +9,7 @@ Cliente
 Produto
     nome          Text
     valor         Double
-    tipoprodutoid TipoProdutoId      
+    tipoprodutoid Text   
 
 Pedido
     clienteid     Text

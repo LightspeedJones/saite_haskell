@@ -25,8 +25,10 @@ formPedido = renderDivs $ (,) <$>
 getItens :: Text -> Handler Html
 getItens nome = do
             (widget, enctype) <- generateFormPost formPedido
-            card <- runDB $ selectList [ProdutoTipoprodutoid ==. (toSqlKey $ fromIntegral 1)] [Asc ProdutoNome]
-            beb <- runDB $ selectList [ProdutoTipoprodutoid ==. (toSqlKey $ fromIntegral 2)] [Asc ProdutoNome]
+            -- card <- runDB $ selectList [ProdutoTipoprodutoid ==. (toSqlKey $ fromIntegral 1)] [Asc ProdutoNome]
+            -- beb <- runDB $ selectList [ProdutoTipoprodutoid ==. (toSqlKey $ fromIntegral 2)] [Asc ProdutoNome]
+            card <- runDB $ selectList [ProdutoTipoprodutoid ==. "1"] [Asc ProdutoNome]
+            beb <- runDB $ selectList [ProdutoTipoprodutoid ==. "2"] [Asc ProdutoNome]
             defaultLayout $ do
                 toWidget $(juliusFile "templates/cardapio.julius")
                 toWidget $(luciusFile "templates/cardapio.lucius")
@@ -70,3 +72,4 @@ getCardapioR = do
     case maybenome of
         Nothing -> (getItensVisitante)
         (Just nome) -> (getItens nome)
+        Just "admin" -> (getItens "admin")

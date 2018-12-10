@@ -27,6 +27,6 @@ getAdminR = defaultLayout $ do
                     <li style="float:right"> ola ademir </ul>
             
                 <h1> RESTAURANTE RESTAURANTOSO
-                <h2> <a id="prod" href=@{ClienteR}> Produtos
+                <h2> <a id="prod" href=@{ProdutoR}> Produtos
                 <h2> <a id="ped" href=@{ClienteR}> Pedidos
             |]

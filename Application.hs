@@ -18,7 +18,6 @@ import Control.Applicative
 import Data.Text
 import Text.Lucius
 
-------------------
 mkYesodDispatch "App" resourcesApp
 
 getLayoutLogado :: Text -> Handler Html

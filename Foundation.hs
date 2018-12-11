@@ -37,6 +37,7 @@ type Form a = Html -> MForm Handler (FormResult a, Widget)
 instance RenderMessage App FormMessage where
     renderMessage _ _ = defaultFormMessage
     
+    
 isAdmin = do
     logado <- lookupSession "_NOME"
     case logado of

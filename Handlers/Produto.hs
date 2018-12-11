@@ -20,7 +20,8 @@ getProdutoR = do
                  ^{widget}
                  <input type="submit" value="Cadastrar">
           |]
-          
+
+
 postProdutoR :: Handler Html
 postProdutoR = do 
     ((res,_),_) <- runFormPost formProduto

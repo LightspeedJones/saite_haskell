@@ -31,11 +31,7 @@ getLayoutLogado x = defaultLayout $ do
                 
                 <h1> RESTAURANTE RESTAURANTOSO
                 <h2> <a id="card" href=@{MenuR}> Cardapio
-                
-                
             |]
-            
-            
 
 getLayoutVisitante :: Handler Html
 getLayoutVisitante = defaultLayout $ do

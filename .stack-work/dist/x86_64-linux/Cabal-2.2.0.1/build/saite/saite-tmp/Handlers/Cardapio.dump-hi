@@ -1,10 +1,10 @@
 
 ==================== FINAL INTERFACE ====================
-2018-12-11 17:59:19.214811832 UTC
+2018-12-11 18:52:31.02680032 UTC
 
 interface main:Handlers.Cardapio 8044
-  interface hash: c6aefae7d5973f62b2a29da0128733e4
-  ABI hash: 8e8bc126b832d7ce621432eea6b3ac91
+  interface hash: 56b028c530e81bc776669eb648f38529
+  ABI hash: 43e358def80f47a6e3e9d2592f379242
   export-list hash: d659b240b5cbdee2053bdd17ee4e9fc5
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
   flag hash: b3b1d09742290a21c7d4cc3b0f082b59
@@ -198,7 +198,7 @@ import  -/  yesod-core-1.6.8.1:Yesod.Core.Widget 876e385706692ff3cccbda9bd1bf970
 import  -/  yesod-form-1.6.3:Yesod.Form.Fields fce68d328b0186733f30816379cd8110
 import  -/  yesod-form-1.6.3:Yesod.Form.Functions 3bfc50dd9c7122835a1ae46eb47e08d6
 import  -/  yesod-persistent-1.6.0.1:Yesod.Persist.Core dee21111217fc049e95690a79c442bb0
-addDependentFile "templates/cardapio.hamlet" 8601d307de8ddde7c6af28681813908e
+addDependentFile "templates/cardapio.hamlet" b32d2e11da6cf506810242134385d198
 addDependentFile "templates/cardapio.lucius" 9030cc5f7f5f7eafa762a78ebf97bb99
 addDependentFile "templates/cardapio.julius" e6ff6fea8f73f88fc42a7fc7c17d57cf
 1abaa7a504f83e548ff37715f1b767e2
@@ -255,7 +255,7 @@ d9193e4a00e1f8ddcf8dd6646f7d873e
 6ab8509fe0f8058ca4e2360d50c3790a
   $trModule4 :: GHC.Prim.Addr#
   {- HasNoCafRefs, Unfolding: ("main"#) -}
-bb3e7426acbc87ccc9ac87172ddf7710
+0b9d52ec181eb7c282bfe46f040bb2aa
   $wds ::
     [Data.Text.Internal.Text]
     -> Foundation.Handler
@@ -304,10 +304,10 @@ bb3e7426acbc87ccc9ac87172ddf7710
                                  @ (GHC.Base.Maybe Data.Text.Internal.Text)
                                  x
                            } in
-                           (\ (eta44 :: Yesod.Core.Types.HandlerData
+                           (\ (eta40 :: Yesod.Core.Types.HandlerData
                                           Foundation.App Foundation.App)
-                              (eta45 :: GHC.Prim.State# GHC.Prim.RealWorld) ->
-                            (# eta45, x1 #))
+                              (eta41 :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                            (# eta41, x1 #))
                              `cast`
                            ((<Yesod.Core.Types.HandlerData Foundation.App Foundation.App>_R
                              ->_R Sym (GHC.Types.N:IO[0]
@@ -358,10 +358,10 @@ bb3e7426acbc87ccc9ac87172ddf7710
                                       @ (GHC.Base.Maybe Data.Text.Internal.Text)
                                       x
                                 } in
-                                (\ (eta44 :: Yesod.Core.Types.HandlerData
+                                (\ (eta40 :: Yesod.Core.Types.HandlerData
                                                Foundation.App Foundation.App)
-                                   (eta45 :: GHC.Prim.State# GHC.Prim.RealWorld) ->
-                                 (# eta45, x1 #))
+                                   (eta41 :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                                 (# eta41, x1 #))
                                   `cast`
                                 ((<Yesod.Core.Types.HandlerData Foundation.App Foundation.App>_R
                                   ->_R Sym (GHC.Types.N:IO[0]
@@ -396,7 +396,7 @@ bb3e7426acbc87ccc9ac87172ddf7710
                                                                                                         Foundation.Handler))
                                                                                                   (GHC.Base.Maybe
                                                                                                      Data.Text.Internal.Text)>_R)) } } } } } }) -}
-de598ede3641f1a1fbb6fb330ebb2466
+da2d16cdd2be3a4e859c2a0ac6d91bb0
   formPedido ::
     Foundation.Form (Data.Text.Internal.Text, Data.Text.Internal.Text)
   {- Arity: 3,
@@ -418,7 +418,7 @@ de598ede3641f1a1fbb6fb330ebb2466
                                      (Sym (Yesod.Core.Class.Handler.D:R:HandlerSiteHandlerFor[0]
                                                <Foundation.App>_N))
                                      <()>_N)_N)_N)) -}
-89bb89375e8a1a23a9d147ffc9ba70f2
+dab1125cc7fd87a308e0315bc389750b
   formPedido1 ::
     Text.Blaze.Internal.Markup
     -> (GHC.Base.Maybe
@@ -443,7 +443,7 @@ de598ede3641f1a1fbb6fb330ebb2466
                    (Sym (Yesod.Form.Types.N:AForm[0]
                              <Yesod.Core.Types.HandlerFor Foundation.App>_N
                              <(Data.Text.Internal.Text, Data.Text.Internal.Text)>_N))) -}
-a97c5bf208cc7c3065df128a717ea57b
+6f49126d9c5378a4ef69415fb21a6e7a
   formPedido10 ::
     [Data.Text.Internal.Text]
     -> [Yesod.Core.Types.FileInfo]
@@ -457,7 +457,7 @@ a97c5bf208cc7c3065df128a717ea57b
                 (\ (w :: [Data.Text.Internal.Text])
                    (w1 :: [Yesod.Core.Types.FileInfo]) ->
                  Handlers.Cardapio.$wds w) -}
-8b29d72c7d95f77ab932c1a37ddb4cf5
+b1f6e6afbab838bc6c776ebe6c3e1d8e
   formPedido11 ::
     Yesod.Core.Types.HandlerData Foundation.App Foundation.App
     -> GHC.Prim.State# GHC.Prim.RealWorld
@@ -467,14 +467,14 @@ a97c5bf208cc7c3065df128a717ea57b
                (Yesod.Core.Class.Handler.HandlerSite Foundation.Handler))
             (GHC.Base.Maybe Data.Text.Internal.Text) #)
   {- Arity: 2, HasNoCafRefs, Strictness: <L,A><S,U>,
-     Unfolding: (\ (eta44 :: Yesod.Core.Types.HandlerData
+     Unfolding: (\ (eta40 :: Yesod.Core.Types.HandlerData
                                Foundation.App Foundation.App)
-                   (eta45 :: GHC.Prim.State# GHC.Prim.RealWorld) ->
-                 (# eta45,
+                   (eta41 :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 (# eta41,
                     Yesod.Form.Functions.parseHelperGen1
                       @ Data.Text.Internal.Text
                       @ (Yesod.Core.Class.Handler.HandlerSite Foundation.Handler) #)) -}
-2110a994761e1bd5e3fe705b8707ce47
+f8cefa91e229219c7109cfb578184192
   formPedido2 ::
     (Yesod.Core.Class.Handler.HandlerSite
        (Yesod.Core.Types.HandlerFor Foundation.App),
@@ -662,7 +662,7 @@ fb60624c9e9bc5828ee15b81b16534de
 f04d2a747c52cbd81639567fb9c23930
   formPedido8 :: GHC.Prim.Addr#
   {- HasNoCafRefs, Unfolding: ("Login"#) -}
-aaf0aa55d4c6a2c2aac141e9d67165b9
+3985390c5bd26525b373542b8908c8fb
   formPedido9 ::
     Yesod.Form.Types.Field Foundation.Handler Data.Text.Internal.Text
   {- Strictness: m,

@@ -1,9 +1,9 @@
 
 ==================== FINAL INTERFACE ====================
-2018-12-11 17:59:23.286236082 UTC
+2018-12-11 20:16:32.991490094 UTC
 
 interface main:Application [orphan module] 8044
-  interface hash: a3fd62dd743f0a06fab52dccb07214d6
+  interface hash: be87162d8eeeb3f7dec5d2eabcd2ba16
   ABI hash: bebac9a95f987b3ecc55e55558857822
   export-list hash: 7a2b5bd2a40c2920b73b75f1897c6bd9
   orphan hash: 6a392b50b5fed8569247bd8eb720952c
@@ -176,7 +176,7 @@ import  -/  Foundation 2c4a52fba63687f23bfb7481d87f1c33
 import  -/  Handlers.Admin b1406b801b1a13aa60cf9def370ac5df
   exports: a09d9b8cd9554d67ce8a73101059dba1
   getAdminR 35952612c31d6b4f275ad19d733ea3bf
-import  -/  Handlers.Cardapio 8e8bc126b832d7ce621432eea6b3ac91
+import  -/  Handlers.Cardapio 43e358def80f47a6e3e9d2592f379242
   exports: d659b240b5cbdee2053bdd17ee4e9fc5
   getMenuR bf6f37b3228ff4a41878f5a78df7c056
   postCardapioR 08cecc41ecde05ce068832ebb17a94fb

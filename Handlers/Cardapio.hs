@@ -25,29 +25,12 @@ formPedido = renderDivs $ (,) <$>
 getItens :: Text -> Handler Html
 getItens nome = do
             (widget, enctype) <- generateFormPost formPedido
-            -- card <- runDB $ selectList [ProdutoTipoprodutoid ==. (toSqlKey $ fromIntegral 1)] [Asc ProdutoNome]
-            -- beb <- runDB $ selectList [ProdutoTipoprodutoid ==. (toSqlKey $ fromIntegral 2)] [Asc ProdutoNome]
             card <- runDB $ selectList [ProdutoTipoprodutoid ==. "1"] [Asc ProdutoNome]
             beb <- runDB $ selectList [ProdutoTipoprodutoid ==. "2"] [Asc ProdutoNome]
             defaultLayout $ do
                 toWidget $(juliusFile "templates/cardapio.julius")
                 toWidget $(luciusFile "templates/cardapio.lucius")
                 $(whamletFile "templates/cardapio.hamlet")
-                
-                --adaddadsdadssadsdadsdddaddaasddadasadaddadadsdsadasddaddasaddadsdadadaddadads
-                -- pedidoId <- insert $ Pedido 10 $ 18.00
-                
-                
--- postCoisa :: Text -> Text -> Handler Html
--- postCoisa coisa treco = do
---                     -- ((result, _), _) <- runFormPost formPedido
---                     runDB $ insert $ Pedido coisa 0 19 False
---                     prod <- runDB $ selectFirst [ProdutoNome ==. treco] []
---                     case prod of
---                         Just (Entity prod produto) -> do
---                             runDB $ insert $ ItemPedido "1" prod 20
-                            
---                     redirect HomeR
 
 postCardapioR :: ProdutoId -> Handler Html
 postCardapioR pid = do

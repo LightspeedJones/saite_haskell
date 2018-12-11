@@ -1,9 +1,9 @@
 
 ==================== FINAL INTERFACE ====================
-2018-12-11 17:59:21.232131109 UTC
+2018-12-11 20:16:30.664676234 UTC
 
 interface main:Handlers.Produto 8044
-  interface hash: 831c18bfed9936859558f46a3eeb067a
+  interface hash: 5eb432b9a8c124af6c14865237d4bc73
   ABI hash: 1f0511d51db41c3a873957f024fc2f00
   export-list hash: 42fc1cee5dba4ee6d7586add9382d2c3
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
@@ -67,22 +67,21 @@ orphans: persistent-template-2.5.4:Database.Persist.TH
          persistent-2.8.2:Database.Persist.Sql.Orphan.PersistQuery
          persistent-2.8.2:Database.Persist.Sql.Orphan.PersistUnique
          persistent-2.8.2:Database.Persist.Sql.Orphan.PersistStore
-         unix-time-0.3.8:Data.UnixTime.Diff stm-2.4.5.1:Control.Monad.STM
          attoparsec-0.13.2.2:Data.Attoparsec.Text.Internal
          attoparsec-0.13.2.2:Data.Attoparsec.ByteString.Char8
          vector-0.12.0.1:Data.Vector.Unboxed
+         unix-time-0.3.8:Data.UnixTime.Diff
+         hashable-1.2.7.0:Data.Hashable.Generic text-1.2.3.1:Data.Text.Lazy
          time-1.8.0.2:Data.Time.Format.Parse
          time-1.8.0.2:Data.Time.LocalTime.Internal.ZonedTime
          time-1.8.0.2:Data.Time.LocalTime.Internal.LocalTime
          time-1.8.0.2:Data.Time.Calendar.Gregorian
-         vector-0.12.0.1:Data.Vector.Fusion.Bundle
-         hashable-1.2.7.0:Data.Hashable.Generic
-         transformers-0.5.5.0:Control.Monad.Trans.Error
-         text-1.2.3.1:Data.Text.Lazy text-1.2.3.1:Data.Text
+         vector-0.12.0.1:Data.Vector.Fusion.Bundle text-1.2.3.1:Data.Text
          binary-0.8.5.1:Data.Binary.Generic
          bytestring-0.10.8.2:Data.ByteString.Builder
-         text-1.2.3.1:Data.Text.Show base-4.11.1.0:GHC.Float
-         base-4.11.1.0:GHC.Base
+         text-1.2.3.1:Data.Text.Show stm-2.4.5.1:Control.Monad.STM
+         transformers-0.5.5.0:Control.Monad.Trans.Error
+         base-4.11.1.0:GHC.Float base-4.11.1.0:GHC.Base
 family instance modules: aeson-1.3.1.1:Data.Aeson.Types.Internal
                          attoparsec-0.13.2.2:Data.Attoparsec.Internal.Types
                          base-4.11.1.0:Control.Applicative base-4.11.1.0:Data.Complex
@@ -152,8 +151,6 @@ family instance modules: aeson-1.3.1.1:Data.Aeson.Types.Internal
                          yesod-core-1.6.8.1:Yesod.Core.Types
                          zlib-0.6.2:Codec.Compression.Zlib.Stream
 import  -/  base-4.11.1.0:Data.Functor f522c3501272159820fd6f242510732f
-import  -/  base-4.11.1.0:Data.Maybe 409c3da2b142470b68be39ce1d97a9f7
-import  -/  base-4.11.1.0:Data.Monoid c40cd435d79b84293ce5503253ee6d44
 import  -/  base-4.11.1.0:GHC.Base 604111500e81281298777e721c75643b
 import  -/  base-4.11.1.0:Prelude 0750c25585e2b797cd78291d423d39dd
 import  -/  blaze-html-0.9.1.1:Text.Blaze.Html fdd818245cad1bbfcedd87b21c62946f
@@ -167,8 +164,6 @@ import  -/  Foundation 2c4a52fba63687f23bfb7481d87f1c33
   Produto b46f56e885581d0817220a9e38e2b40e
   ProdutoR 7f8ea245626d81d7137e8f34f09b7c3c
 import  -/  persistent-2.8.2:Database.Persist.Class.PersistStore d817d10fae2ea58eb963d470b8d1ec75
-import  -/  persistent-postgresql-2.8.2.0:Database.Persist.Postgresql 67d2c206a72e3c251d29d480a26581a7
-import  -/  shakespeare-2.0.20:Text.Julius 1d27bc7a7ec71e631eb6a5ef8aa6672b
 import  -/  text-1.2.3.1:Data.Text cb97f965b33763b648b5393c0517cf50
 import  -/  yesod-1.6.0:Yesod 12dd731b07dae980742b80692ae0952f
 import  -/  yesod-core-1.6.8.1:Yesod.Core.Class.Yesod b52f2d36e084040c2f01914b6a7090fc

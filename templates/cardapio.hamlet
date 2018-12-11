@@ -23,4 +23,5 @@
          <tr>
              <td> #{produtoNome prod}
              <td> R$ #{produtoValor prod}
-             <td> <input id="btnAdd" type="submit" value="+"/> <input id="btnRem" type="submit" value="-"/>
+             <td> <form action=@{CardapioR pid} method=post> 
+                        <input type="submit" value="+">

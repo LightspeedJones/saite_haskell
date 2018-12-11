@@ -26,11 +26,11 @@ instance Yesod App where
     isAuthorized ProdutoR _ = isAdmin
 
 instance YesodPersist App where
-   type YesodPersistBackend App = SqlBackend
-   runDB f = do
-       master <- getYesod
-       let pool = connPool master
-       runSqlPool f pool
+  type YesodPersistBackend App = SqlBackend
+  runDB f = do
+      master <- getYesod
+      let pool = connPool master
+      runSqlPool f pool
 
 type Form a = Html -> MForm Handler (FormResult a, Widget)
 

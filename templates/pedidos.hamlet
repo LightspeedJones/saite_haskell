@@ -9,10 +9,10 @@
          <th> Valor
          <th> Horario
          <th> Finalizado
-     $forall Entity pid prod <- order
+     $forall (Entity pedid pedido) <- order
          <tr>
-             <td> #{ClienteId prod}
-             <td> #{vltot prod}
-             <td> #{hrpedido prod}
-             <td> #{finalizado prod}
+             <td> #{PedidoClienteid}
+             <td> #{PedidoVltot}
+             <td> #{PedidoHrpedido}
+             <td> #{PedidoFinalizado}
  

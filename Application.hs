@@ -12,6 +12,7 @@ import Handlers.Login
 import Handlers.Cardapio
 import Handlers.Admin
 import Handlers.Produto
+import Handlers.Pedido
 import Control.Monad.Logger (runStdoutLoggingT)
 import Control.Applicative
 import Data.Text
@@ -23,14 +24,13 @@ mkYesodDispatch "App" resourcesApp
 getLayoutLogado :: Text -> Handler Html
 getLayoutLogado x = defaultLayout $ do
             toWidget $(luciusFile "templates/home.lucius")
-            --bumb
             [whamlet|
                 <ul>
                     <li style="float:right"> <a href=@{LogoutR}>Sair </a>
                     <li style="float:right"> eae #{x} </ul>
                 
                 <h1> RESTAURANTE RESTAURANTOSO
-                <h2> <a id="card" href=@{CardapioR}> Cardapio
+                <h2> <a id="card" href=@{MenuR}> Cardapio
                 
                 
             |]

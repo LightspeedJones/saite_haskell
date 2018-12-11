@@ -1,11 +1,11 @@
 
 ==================== FINAL INTERFACE ====================
-2018-12-10 21:56:35.302864874 UTC
+2018-12-11 17:59:23.907499158 UTC
 
 interface main:Main 8044
-  interface hash: 83a6888061e0e8be2792e237f0da13a7
-  ABI hash: 967a10da31fa722a4a8fd7a1cea50f6b
-  export-list hash: cf4e6aae77faad9ad8aad019e83e6ed3
+  interface hash: 84017bed1ae17513bf2bc686494a909f
+  ABI hash: 7defa2ac1d4fca60692b7db90a51be80
+  export-list hash: 1bab3b2e63daf85d18e25c72e8d05764
   orphan hash: 75ed41540468a234cedc8651e7274fda
   flag hash: f5e73c5b064141a86732e596eac25b0e
   opt_hash: 2c98c95d41c045ae9c2fb565ec8aabc6
@@ -17,7 +17,8 @@ exports:
   Main.connStr
   Main.main
 module dependencies: Application Foundation Handlers.Admin
-                     Handlers.Cardapio Handlers.Cliente Handlers.Login Handlers.Produto
+                     Handlers.Cardapio Handlers.Cliente Handlers.Login Handlers.Pedido
+                     Handlers.Produto
 package dependencies: aeson-1.3.1.1 aeson-compat-0.3.9
                       ansi-terminal-0.8.2 appar-0.1.4 array-0.5.2.0 async-2.2.1
                       attoparsec-0.13.2.2 attoparsec-iso8601-1.0.1.0 auto-update-0.1.4
@@ -155,11 +156,11 @@ import  -/  base-4.11.1.0:Control.Applicative 55d9b3a7491623b0362290e162d67308
 import  -/  base-4.11.1.0:Control.Monad.IO.Class 96109c36cb3c919872278540487fa39e
 import  -/  base-4.11.1.0:Prelude 0750c25585e2b797cd78291d423d39dd
 import  -/  ghc-prim-0.5.2.0:GHC.Types d9b3023de7feae4a5308d643da5543f7
-import  -/  Application aafab9b8fa05cf6e4a9d9f65e04c25da
-  exports: 49d1c18fb14c713e9a228cd146aacfc6
-import  -/  Foundation c3f228c50787eb8a2a03baa58859ac13
-  exports: 63f39f9843587d33570b3a517962b6c3
-  App 754b00b9f40554f60761cfa049f53510
+import  -/  Application bebac9a95f987b3ecc55e55558857822
+  exports: 7a2b5bd2a40c2920b73b75f1897c6bd9
+import  -/  Foundation 2c4a52fba63687f23bfb7481d87f1c33
+  exports: 2ec39b6f0eef3a7e77fa0dc1e1a5f955
+  App 23ed81e704f0ea19a802394aebd7b658
   migrateAll 1e1294bd58209efaf14c1be9e2795c6d
 import  -/  monad-logger-0.3.30:Control.Monad.Logger 8543a8ea2bc3183d80bcc2e19c1fd67d
 import  -/  persistent-2.8.2:Database.Persist.Sql.Migration e140d68c60ac3c1e46fd22459157372c
@@ -1200,7 +1201,7 @@ e5875966b74dad2d29772660b8a75e33
 d026be77cb9ced20e35a61514e0458aa
   $trModule4 :: GHC.Prim.Addr#
   {- HasNoCafRefs, Unfolding: ("main"#) -}
-afbcdd2e46e5a5cff2035cd3aaf45e58
+92360a4e82127b4fe854ebb1053bb0f2
   $wlvl ::
     Data.Pool.Pool Database.Persist.Sql.Types.Internal.SqlBackend
     -> GHC.Prim.State# GHC.Prim.RealWorld
@@ -1266,7 +1267,7 @@ b54a72f4f1a9c7914e1b0e41830bafbb
   connStr_addr# :: GHC.Prim.Addr#
   {- HasNoCafRefs,
      Unfolding: ("dbname=d2u93juttrkmet host=ec2-54-225-76-201.compute-1.amazonaws.com user=vqfphlebxqsdmn password=d3437208dc39b23262ba0aa9cc0d17e7a08c0d4b847dcb656c89bad866e73f53 port=5432"#) -}
-411d3dfc6811a31d7994ec19d2b51223
+d970eb5af0dbdb95c59d60277926c7ae
   main :: GHC.Types.IO ()
   {- Unfolding: ((Database.Persist.Postgresql.withPostgresqlPoolWithVersion
                     @ (Control.Monad.Logger.LoggingT GHC.Types.IO)
@@ -1309,7 +1310,7 @@ b54a72f4f1a9c7914e1b0e41830bafbb
                     ->_R <Control.Monad.Logger.LogLevel>_R
                     ->_R <System.Log.FastLogger.LogStr.LogStr>_R
                     ->_R Sym (GHC.Types.N:IO[0] <()>_R))) -}
-50dcc9a145b90f739709133fdbdb94c0
+48e4150f7c4d46471c0fef2a63a4f90c
   main1 ::
     Data.Pool.Pool Database.Persist.Sql.Types.Internal.SqlBackend
     -> (Language.Haskell.TH.Syntax.Loc
@@ -1389,7 +1390,7 @@ a322396d61b55b4f2029ca643fdca5b5
 2ec05e9b815ed11befdff954c4ff1bd2
   main5 :: GHC.Types.Int
   {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 10#) -}
-da6fcdbec2c0d46a473f7d967a0291cc
+7eae73333f9a556bed17bdf77a99c05b
   main6 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)

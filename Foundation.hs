@@ -20,7 +20,8 @@ instance Yesod App where
     isAuthorized AdminR _ = isAdmin
     isAuthorized HomeR _ = return Authorized
     isAuthorized LoginR _ = return Authorized
-    isAuthorized CardapioR _ = return Authorized
+    isAuthorized (CardapioR _) _ = return Authorized
+    isAuthorized MenuR _ = return Authorized
     isAuthorized LogoutR _ = return Authorized
     isAuthorized ProdutoR _ = isAdmin
 

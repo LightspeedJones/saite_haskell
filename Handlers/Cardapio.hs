@@ -49,24 +49,24 @@ getItens nome = do
                             
 --                     redirect HomeR
 
-postCardapioR :: Handler Html
-postCardapioR = do
+postCardapioR :: ProdutoId -> Handler Html
+postCardapioR pid = do
     (Just usrid) <- lookupSession "_ID"
     --postCoisa usrid "Pastel"
     runDB $ insert $ Pedido usrid 0 19 False
-    prod <- runDB $ selectFirst [ProdutoNome ==. "coiso"] []
+    prod <- runDB $ selectFirst [ProdutoId ==. pid] []
     case prod of
         Just (Entity prod produto) -> do
             runDB $ insert $ ItemPedido "1" prod 20
-    redirect CardapioR
+    redirect HomeR
                 
 getItensVisitante :: Handler Html
 getItensVisitante = do
             defaultLayout $ do
                 redirect LoginR
       
-getCardapioR :: Handler Html
-getCardapioR = do
+getMenuR :: Handler Html
+getMenuR = do
     maybenome <- lookupSession "_NOME"
     
     case maybenome of

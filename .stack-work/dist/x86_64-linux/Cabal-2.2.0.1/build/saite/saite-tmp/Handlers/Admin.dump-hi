@@ -1,10 +1,10 @@
 
 ==================== FINAL INTERFACE ====================
-2018-12-10 21:56:30.062360342 UTC
+2018-12-11 17:59:18.197628341 UTC
 
 interface main:Handlers.Admin 8044
-  interface hash: 99273ede6059b7fd155ba26952cce8fc
-  ABI hash: 36498ff73911746782cbb432ac18601c
+  interface hash: 0cb4118131d57c0e9fd22fcd5237f351
+  ABI hash: b1406b801b1a13aa60cf9def370ac5df
   export-list hash: a09d9b8cd9554d67ce8a73101059dba1
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
   flag hash: b3b1d09742290a21c7d4cc3b0f082b59
@@ -156,12 +156,12 @@ import  -/  base-4.11.1.0:GHC.Base 604111500e81281298777e721c75643b
 import  -/  base-4.11.1.0:Prelude 0750c25585e2b797cd78291d423d39dd
 import  -/  blaze-html-0.9.1.1:Text.Blaze.Html fdd818245cad1bbfcedd87b21c62946f
 import  -/  blaze-markup-0.8.2.2:Text.Blaze.Internal 7539c43623397f23e7aba6515d74b4b1
-import  -/  Foundation c3f228c50787eb8a2a03baa58859ac13
-  exports: 63f39f9843587d33570b3a517962b6c3
-  ClienteR 8b1250a4e2af1947aee4b5905ce858c1
-  Handler 710e5b25bec76a789930acb22b27edde
-  LogoutR 5a8eae9f9d96f38fc93d214c406cb224
-  ProdutoR 21a925af4e764e5f06b53c047e07695c
+import  -/  Foundation 2c4a52fba63687f23bfb7481d87f1c33
+  exports: 2ec39b6f0eef3a7e77fa0dc1e1a5f955
+  ClienteR 68c660565ada96e9f02f9a6fcf2a90f3
+  Handler 6c4dd6f8ce4e414fd0998dad07d81588
+  LogoutR 4fa62143a89b10a4b324d274ac9c75d5
+  ProdutoR 7f8ea245626d81d7137e8f34f09b7c3c
 import  -/  monad-logger-0.3.30:Control.Monad.Logger 8543a8ea2bc3183d80bcc2e19c1fd67d
 import  -/  persistent-postgresql-2.8.2.0:Database.Persist.Postgresql 67d2c206a72e3c251d29d480a26581a7
 import  -/  shakespeare-2.0.20:Text.Hamlet 492ff1ebebfc64e862ec951f3f2d79f2
@@ -194,7 +194,7 @@ b6c23b2ec346a6329d0be5f5bdb6d23e
 834d96e367bf335688f4061805feb577
   $trModule4 :: GHC.Prim.Addr#
   {- HasNoCafRefs, Unfolding: ("main"#) -}
-bacedbe14d44da976401e4a06f3fb45d
+35952612c31d6b4f275ad19d733ea3bf
   getAdminR :: Foundation.Handler Text.Blaze.Html.Html
   {- Arity: 2,
      Unfolding: InlineRule (0, True, True)
@@ -205,7 +205,7 @@ bacedbe14d44da976401e4a06f3fb45d
                                 <Text.Blaze.Html.Html>_R)) ; Sym (Yesod.Core.Types.N:HandlerFor[0]
                                                                       <Foundation.App>_N
                                                                       <Text.Blaze.Html.Html>_R)) -}
-90dfe1d13f358537f140bf88fe7762e9
+50c9581e7c1ee0edf8b663f79b1175fd
   getAdminR1 ::
     Yesod.Core.Types.HandlerData Foundation.App Foundation.App
     -> GHC.Prim.State# GHC.Prim.RealWorld
@@ -1298,7 +1298,7 @@ bcb30a990d25b3507ea866b4ed351d0e
   getAdminR189 :: Data.Text.Internal.Text
   {- Unfolding: (Data.Text.Show.unpackCString#
                    Handlers.Admin.getAdminR190) -}
-395b6f493a2e7c122a435a06192432a3
+5fafbbe8cc6070ce79082c261b8d4a54
   getAdminR19 ::
     (Yesod.Routes.Class.Route Foundation.App
      -> [(Data.Text.Internal.Text, Data.Text.Internal.Text)]
@@ -1372,7 +1372,7 @@ f289cba6d56d318e989b5e8c09197b6d
 7d2ac31c4d02082ef58e96b8e61947f9
   getAdminR196 :: GHC.Prim.Addr#
   {- HasNoCafRefs, Unfolding: ("h1"#) -}
-b89b6a099342527faa4f643a616ee7a6
+1893dc7b9495b8d4a11c0a0d8b17a0b1
   getAdminR2 ::
     Yesod.Core.Types.WidgetData Foundation.App
     -> GHC.Prim.State# GHC.Prim.RealWorld
@@ -2688,7 +2688,7 @@ e2f4d2ab98e92e533d53b55d13643748
   getAdminR99 :: Data.Text.Internal.Text
   {- Unfolding: (Data.Text.Show.unpackCString#
                    Handlers.Admin.getAdminR100) -}
-5668a0eeab20b159cd2d7d1a6db3aff1
+48de9bfb955292860911c9fcc32e0169
   getAdminR_d ::
     Yesod.Core.Types.GWData (Yesod.Routes.Class.Route Foundation.App)
   {- Strictness: m,
@@ -2731,7 +2731,7 @@ e2f4d2ab98e92e533d53b55d13643748
                      `cast`
                    (Sym (Yesod.Core.Types.N:Head[0]
                              <Yesod.Routes.Class.Route Foundation.App>_R))) -}
-7b29efc4fb7a6c695472a133dc61899e
+ea21760a0281d99098ace235566ee089
   getAdminR_d1 ::
     Yesod.Core.Types.GWData (Yesod.Routes.Class.Route Foundation.App)
   {- Strictness: m,
@@ -2774,7 +2774,7 @@ e2f4d2ab98e92e533d53b55d13643748
                      `cast`
                    (Sym (Yesod.Core.Types.N:Head[0]
                              <Yesod.Routes.Class.Route Foundation.App>_R))) -}
-3d309366313fff3c9ebff8570f997d24
+59b60e1b0047112726c5ca94e6dde843
   getAdminR_d2 ::
     Yesod.Core.Types.GWData (Yesod.Routes.Class.Route Foundation.App)
   {- Strictness: m,
@@ -2817,7 +2817,7 @@ e2f4d2ab98e92e533d53b55d13643748
                      `cast`
                    (Sym (Yesod.Core.Types.N:Head[0]
                              <Yesod.Routes.Class.Route Foundation.App>_R))) -}
-292ec583b69043df05093692ada4b117
+ece1c640678c8ea0dd4daf738d4c7a8f
   getAdminR_d3 ::
     Yesod.Core.Types.GWData (Yesod.Routes.Class.Route Foundation.App)
   {- Strictness: m,
@@ -2888,7 +2888,7 @@ e3b3372648c036b1c840c492a1dc41f9
                    @ ()
                    Handlers.Admin.getAdminR15
                    GHC.Tuple.()) -}
-ec6add7821aa8e29dd0ea2b021551f8b
+e723cf6ec9086fea3d2a7ca498a41a9e
   getAdminR_m1 :: Yesod.Core.Types.WidgetFor Foundation.App ()
   {- Unfolding: (Yesod.Core.Widget.$fToWidgetHeadsite(->)1_$ctoWidget
                    @ (Yesod.Routes.Class.Route Foundation.App
@@ -2930,7 +2930,7 @@ ec6add7821aa8e29dd0ea2b021551f8b
                              <*>_N) (Sym (Yesod.Core.Class.Handler.D:R:HandlerSiteWidgetFor[0]
                                               <Foundation.App>_N)) <Foundation.App>_N)
                    Handlers.Admin.getAdminR19) -}
-b088328727245cb5c63c692b212e383b
+153053c1f5f16c1a7bbf597cd5ff482e
   getAdminR_nt ::
     Yesod.Core.Types.RY Foundation.App -> Text.Blaze.Html.Html
   {- Arity: 1, Strictness: <L,A>m5,
@@ -2939,7 +2939,7 @@ b088328727245cb5c63c692b212e383b
                           -> [(Data.Text.Internal.Text, Data.Text.Internal.Text)]
                           -> Data.Text.Internal.Text) ->
                  Handlers.Admin.getAdminR_eta) -}
-9262c9075f6cfd78b3e8173d90e4b620
+5e2b09c20f5da3d6470eaea0b15bb58b
   getAdminR_nt1 ::
     Yesod.Core.Types.RY Foundation.App -> Text.Blaze.Html.Html
   {- Arity: 1, Strictness: <L,A>m5,
@@ -2948,7 +2948,7 @@ b088328727245cb5c63c692b212e383b
                           -> [(Data.Text.Internal.Text, Data.Text.Internal.Text)]
                           -> Data.Text.Internal.Text) ->
                  Handlers.Admin.getAdminR_eta1) -}
-09669a82cb021c2c6e3126a373fced57
+f3b19a839a133d438f0b1f804910f634
   getAdminR_nt2 ::
     Yesod.Core.Types.RY Foundation.App -> Text.Blaze.Html.Html
   {- Arity: 1, Strictness: <L,A>m5,
@@ -2957,7 +2957,7 @@ b088328727245cb5c63c692b212e383b
                           -> [(Data.Text.Internal.Text, Data.Text.Internal.Text)]
                           -> Data.Text.Internal.Text) ->
                  Handlers.Admin.getAdminR_eta2) -}
-6f79243b6667478f7cbb305ecc1d466c
+3020e51fc336312daafaaf9b14156832
   getAdminR_nt3 ::
     Yesod.Core.Types.RY Foundation.App -> Text.Blaze.Html.Html
   {- Arity: 1, Strictness: <L,A>m5,

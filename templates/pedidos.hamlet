@@ -1,0 +1,18 @@
+<ul>
+    <li> <a href=@{HomeR}>Home
+    <li style="float:right"> <a href=@{LogoutR}>Sair </a>
+    <li style="float:right"> eae ademir </ul>
+                
+ <table id="tblprod">
+     <tr>
+         <th> Cliente
+         <th> Valor
+         <th> Horario
+         <th> Finalizado
+     $forall Entity pid prod <- order
+         <tr>
+             <td> #{ClienteId prod}
+             <td> #{vltot prod}
+             <td> #{hrpedido prod}
+             <td> #{finalizado prod}
+ 

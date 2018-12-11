@@ -1,9 +1,11 @@
-/                 HomeR      GET
-/cliente          ClienteR   GET    POST
-/login            LoginR     GET    POST
-/cardapio         CardapioR  GET    POST
+/                            HomeR      GET
+/cliente                     ClienteR   GET    POST
+/login                       LoginR     GET    POST
+/cardapio/#ProdutoId         CardapioR  POST
+/cardapio                    MenuR      GET
 /logout           LogoutR    GET
 
 
 /admin            AdminR     GET
 /admin/produtos   ProdutoR   GET    POST
+/admin/pedidos    PedidoR    GET

@@ -8,11 +8,11 @@
          <th> Pratos
          <th>
          <th> Adicionar
-     $forall Entity pid prod <- card
+     $forall (Entity pid prod) <- card
          <tr>
              <td> #{produtoNome prod}
              <td> R$ #{produtoValor prod}
-             <td> <form action=@{CardapioR} method=post> 
+             <td> <form action=@{CardapioR pid} method=post> 
                         <input type="submit" value="+">
  <table>
      <tr>

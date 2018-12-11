@@ -11,6 +11,7 @@ executable          saite
                     Handlers.Cliente
                     Handlers.Login
                     Handlers.Cardapio
+                    Handlers.Pedido
                     Handlers.Admin
                     Handlers.Produto
                     
